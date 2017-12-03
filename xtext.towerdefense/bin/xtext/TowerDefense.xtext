@@ -1,0 +1,110 @@
+grammar xtext.TowerDefense with org.eclipse.xtext.common.Terminals
+
+generate towerDefense "http://www.TowerDefense.xtext"
+
+Jeu :
+	'Jeu' name=ID '{'
+		parties+=Partie
+	'}';
+
+FLOAT hidden(): INT"."(INT);
+	
+Partie:
+	'Partie' name=ID '{'
+		partiesElements+=PartieElement*
+		niveaux+=Niveau*
+	'}'
+;
+	
+PartieElement:
+	'PartieElement' name=ID 
+	'EnergieCourante' energieCourante=Energie
+	Obstacle="obstacle" | Mobile="mobile" | Projectile="projectile" | NatureTerrain="nature"
+;
+
+Energie :
+	'Energie'
+	infini?='infini'
+	'Valeur' valeur=INT 
+;
+
+Obstacle:
+	'Obstacle'
+	'Campement' campement=Case
+	'PV' quantiteEnergieMax=Energie
+	'PA' pontsAction=Energie
+	'Tactique' tactique=Tactique
+;
+
+Tactique :
+	'Tactique'
+	proche='proche'|faible='faible'|fort='fort'
+	
+;
+Mobile:
+	'Mobile'
+	'Force' force=INT
+	'Volume' volume=INT
+	'NumVague' numVague=INT
+	'Entrée' caseEntree=Case
+	'Sortie' caseSortie=Case
+	'PV' quantiteEnergieMax=INT
+	'PA' pointsAction=Energie
+;
+
+Projectile:
+	'Projectile'
+	'Portée' portee=INT
+	'Masse' masse=INT
+	'Vitesse' vitesse=INT
+;
+
+NatureTerrain:
+	'Nature'
+	'Volume' volume=INT
+	'Type' type=TYPE_TERRAIN
+;
+
+enum TYPE_TERRAIN: 
+	entree='entree' | sortie='sortie' |chemin='chemin'|campement='camp'|decoration='deco'
+	
+;
+
+Niveau:
+	'Niveau' name=ID
+	'Difficulté' difficulte=STRING
+	'DureePauses' dureePause=INT
+	'EnergieInit' energieInitJoueur=INT
+	'MobSortisMax' mobSortisLimite=INT
+	'Terrain' terrain=TerrainDeJeu
+	'Vague' vagues+=Vague
+	
+;
+TerrainDeJeu:
+	'Terrain'
+	'Damier' damier=Damier
+;
+
+Damier :
+	'Damier'
+	'Lignes' nbLignes=INT
+	'Colonnes' nbColonnes=INT
+	'Cases' cases+=Case*
+	
+;
+
+Case :
+	'i' i=INT
+	'j' j=INT
+	'Nature' natureTerrain=NatureTerrain
+;
+
+Vague : 
+	'Mobiles' mobiles+=Mobile*
+	'Obstacles' obstacles+=Obstacle*
+	'Gain' gainVictoire = Energie
+;
+
+
+
+
