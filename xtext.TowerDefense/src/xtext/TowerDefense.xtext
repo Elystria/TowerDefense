@@ -1,0 +1,127 @@
+grammar xtext.TowerDefense with org.eclipse.xtext.common.Terminals
+
+generate towerDefense "http://www.TowerDefense.xtext"
+
+
+Jeu:
+	'Jeu' name=ID '{'
+		parties+=Partie*
+		terr+=NatureTerrain*
+		obs+=Obstacle*
+		mobs+=Mobile*
+		pro+=Projectile*
+		energies+=Energie*
+		damiers+=Damier*
+	'}';
+	
+Partie:
+	'Partie' name=ID '{'
+		partiesElements+=PartieElement*
+		niveaux+=Niveau*
+	'}'
+;
+
+PartieElement:
+	Obstacle | NatureTerrain | Mobile | Projectile
+	
+;
+	
+
+Energie :
+	infini?='infini' | valeur=INT 
+;
+
+Obstacle:
+	'Obstacle' name=ID '{'
+	'Campement' campement=Case
+	'PVmax' quantiteEnergieMax=Energie
+	'PV' quantiteEnergieCourant=Energie
+	'PA' pontsAction=Energie
+	tactique=Tactique
+	'}'
+;
+
+Tactique :
+	'Tactique'
+	proche='procheFirst'|faible='faibleFirst'|fort='fortFirst'
+	
+;
+Mobile:
+	'Mobile' name=ID '{'
+	'F' force=INT
+	'V' volume=INT
+	'NumVague' numVague=INT
+	'In' caseEntree=Case
+	'Out' caseSortie=Case
+	'PVmax' quantiteEnergieMax=Energie
+	'PV' quantiteEnergieCourant=Energie
+	'PA' pointsAction=Energie
+	'}'
+;
+
+Projectile:
+	'Projectile'name=ID '{'
+	'Portee' portee=INT
+	'Masse' masse=INT
+	'Vitesse' vitesse=INT
+	'Position' case=Case
+	'Direction' cible=Case
+	'Degat' degat=Energie
+	'}'	
+;
+
+NatureTerrain:
+	'NatureTerrain'name=ID '{'
+	'Volume' volume=INT
+	'Type' type=TYPE_TERRAIN
+	'FatigueEntree' fatigue=Energie
+	'}'
+;
+
+enum TYPE_TERRAIN: 
+	entree='entree' | sortie='sortie' | chemin='chemin'| campement='camp' | decoration='deco'
+	
+;
+
+Niveau:
+	'Niveau' name=ID '{'
+	'Difficulte' difficulte=Difficulte
+	'DureePauses' dureePause=INT
+	'Argent' argent=INT
+	'MobSortisMax' mobSortisLimite=INT
+	terrain=TerrainDeJeu
+	'Vague' vagues+=Vague
+	'}'
+;
+
+enum Difficulte:
+	facile='facile' | moyen='moyen' | difficile='difficile'
+;
+
+TerrainDeJeu:
+	'Terrain' 
+	damier=[Damier]
+;
+
+Damier:
+	'Damier' name=ID '{'
+	'Lignes' nbLignes=INT
+	'Colonnes' nbColonnes=INT
+	'Cases' cases+=Case*
+	'}'
+;
+
+Case :
+	'i' i=INT
+	'j' j=INT
+	natureTerrain=NatureTerrain
+;
+
+Vague : 
+	'{'
+	'Mobiles' mobiles+=[Mobile]*
+	'Obstacles' obstacles+=[Obstacle]*
+	'Gain' gainVictoire = INT
+	'}'
+;
+	
