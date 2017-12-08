@@ -1,0 +1,116 @@
+grammar org.xtext.example.mydsl.MyDsl with org.eclipse.xtext.common.Terminals
+
+generate myDsl "http://www.xtext.org/example/mydsl/MyDsl"
+
+
+Jeu:
+	'Jeu' name=ID '{'
+		parties+=Partie*
+	'}';
+	
+Partie:
+	'Partie' name=ID '{'
+		natures+=NatureTerrain*
+		cases+=Case*
+		cartes+=Carte*
+		partieElements+=PartieElement*
+		niveaux+=Niveau*
+	'}'
+;
+	
+PartieElement:
+	Obstacle | Mobile | Projectile | NatureTerrain
+;
+
+Energie :
+	infini?='infini' | valeur=INT 
+;
+
+Obstacle:
+	'Obstacle' name=ID '{'
+	'Campement' campement=[Case]
+	'PVmax' quantiteEnergieMax=Energie
+	'PV' quantiteEnergieCourant=Energie
+	'PA' pontsAction=Energie
+	'Tactique' tactique=TactiqueType
+	'}'
+;
+
+enum TactiqueType:
+	proche='procheFirst' | faible='faibleFirst' | fort='fortFirst'
+;
+
+Mobile:
+	'Mobile' name=ID '{'
+	'F' force=INT
+	'V' volume=INT
+	'NumVague' numVague=INT
+	'In' caseEntree=[Case]
+	'Out' caseSortie=[Case]
+	'PVmax' quantiteEnergieMax=Energie
+	'PV' quantiteEnergieCourant=Energie
+	'PA' pointsAction=Energie
+	'Tactique' tactique=Tactique
+	'}'
+;
+
+Projectile:
+	'Projectile' name=ID '{'
+	'Portee' portee=INT
+	'Masse' masse=INT
+	'Vitesse' vitesse=INT
+	'Position' case=[Case]
+	'Direction' cible=[Case]
+	'Degat' degat=Energie
+	'}'	
+;
+
+NatureTerrain:
+	'NatureTerrain' name=ID '{'
+	'Volume' volume=INT
+	'Type' type=TYPE_TERRAIN
+	'FatigueEntree' fatigue=Energie
+	'}'
+;
+
+enum TYPE_TERRAIN: 
+	entree='entree' | sortie='sortie' | chemin='chemin'| campement='camp' | decoration='deco'
+;
+
+Niveau:
+	'Niveau' name=ID difficulte=Difficulte '{'
+	'DureePauses' dureePause=INT
+	'Argent' argent=INT
+	'MobSortisMax' mobSortisLimite=INT
+	'Carte' carte=[Carte]
+	'Vague' vagues+=Vague
+	'}'
+;
+
+enum Difficulte:
+	facile='facile' | moyen='moyen' | difficile='difficile'
+;
+
+Carte:
+	'Carte' name=ID '{'
+	'Lignes' nbLignes=INT
+	'Colonnes' nbColonnes=INT
+	'Cases' cases+=[Case]*
+	'}'
+;
+
+Case :
+	name=ID
+	i=INT
+	j=INT
+	natureTerrain=[NatureTerrain]
+;
+
+Vague : 
+	'{'
+	'Mobiles' mobiles+=[Mobile]*
+	'Obstacles' obstacles+=[Obstacle]*
+	'Gain' gainVictoire = INT
+	'}'
+;
+	
