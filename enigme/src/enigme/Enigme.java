@@ -1,6 +1,12 @@
+package enigme;
+
+import data.EnigmeVue;
+import enigme.*;
+import org.lwjgl.Sys;
 import org.lwjgl.opengl.Display;
 
 import javax.print.attribute.standard.MediaSize;
+import javax.sound.midi.SysexMessage;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -10,7 +16,7 @@ import static helpers.Artist.*;
 // La classe principale
 public class Enigme {
 
-    public static void main(String[] args){
+    public static void main (String[] args) {
         // Initialiser le jeu
         Energie e1 = new Energie(false, 1);
         Energie e3 = new Energie(false, 3);
@@ -81,22 +87,29 @@ public class Enigme {
         Partie partie = new Partie("partie", natures, cases, cartes, pe, niveaux);
 
         // Initialiser l'affichage
-        BeginSession();
+        EnigmeVue vue = new EnigmeVue(partie);
 
 
         // Tant que la partie n'est pas finie
-        while(!partie.estFinie()) {
+        while(true) {
+        //while(!partie.estFinie()) {
             // Calcul du nouveau modele
             // On fait jouer les projectiles
             partie.jouerProjectiles();
             // On fait jouer les obstacles
             partie.jouerObstacles();
             // On fait jouer les mobiles
-            partie.jouerMobiles();
+            //partie.jouerMobiles();
 
             // Affichage
+            vue.afficher();
 
             // Petite pause pour qu'on ait le temps de voir ce qu'il se passe
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
 
     }

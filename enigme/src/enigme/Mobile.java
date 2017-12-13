@@ -1,3 +1,4 @@
+package enigme;
 
 public class Mobile implements PartieElement {
 
@@ -28,17 +29,6 @@ public class Mobile implements PartieElement {
 	}
 
 	/********* METHODES *********/
-	
-	public void pertePV(Energie e, Carte carte) {
-		int vie = this.PV.getValeur();
-		int degats = e.getValeur();
-		int nouvPV = vie-degats;
-		this.PV.setValeur(nouvPV);
-		if (nouvPV<=0) {
-			/* Supprimer l'obstacle de la carte */
-			
-		}
-	}
 	
 	public void attaquer(Case direction, Carte carte) {
 		/* Dans l'exemple, un seul projectile peut être porté 
@@ -135,7 +125,6 @@ public class Mobile implements PartieElement {
 	
 	}
 
-	@Override
 	public void pertePV(Energie e, Carte carte) {
 		int vie = this.PV.getValeur();
 		int degats = e.getValeur();

@@ -1,5 +1,9 @@
 package data;
 
+import enigme.Jeu;
+
+import java.util.List;
+
 import static helpers.Artist.*;
 
 /** Pour construire la grille de jeu graphiquement */
@@ -48,7 +52,39 @@ public class TileGrid {
 			}
 		}
 	}
-	
+
+	public TileGrid(List<List<Jeu.TYPE_TERRAIN>> map){
+	    int largeur = map.size();
+	    int longueur = map.get(0).size();
+		this.map = new Tile[largeur][longueur];
+		for(int i =0; i < largeur; i++){
+			for(int j = 0; j < longueur; j++){
+				switch (map.get(i).get(j)){
+					//Montagne
+					case decoration:
+						this.map[i][j] = new Tile(i * 64, j * 64, 64, 64, TileType.Montagne);
+						break;
+					//Route
+					case chemin:
+						this.map[i][j] = new Tile(i * 64, j * 64, 64, 64, TileType.Route);
+						break;
+					//Camp
+					case campement:
+						this.map[i][j] = new Tile(i * 64, j * 64, 64, 64, TileType.Camp);
+						break;
+					//Entree
+					case entree:
+						this.map[i][j] = new Tile(i * 64, j * 64, 64, 64, TileType.Entree);
+						break;
+					//Sortie
+					case sortie:
+						this.map[i][j] = new Tile(i * 64, j * 64, 64, 64, TileType.Sortie);
+						break;
+				}
+			}
+		}
+	}
+
 	public void setTile(int x, int y, TileType type){
 		int n = map[x].length;
 		map[x][y] = new Tile(x * 64, (n - y - 1) * 64, 64, 64, type);

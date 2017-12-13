@@ -1,3 +1,4 @@
+package enigme;
 import org.lwjgl.Sys;
 
 public class Obstacle implements PartieElement {
@@ -36,7 +37,7 @@ public class Obstacle implements PartieElement {
 		}
 	}
 	
-	public void attaquerAOublier(Partie p) {
+	public void attaquer(Partie p) {
 		switch (tactique) {
 			case faibleFirst:
 				// On cherche sur qui tirer

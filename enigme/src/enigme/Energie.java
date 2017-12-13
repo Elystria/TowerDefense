@@ -1,3 +1,4 @@
+package enigme;
 public class Energie {
 
 	private boolean infini;

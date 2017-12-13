@@ -1,3 +1,4 @@
+package enigme;
 import java.util.Collection;
 
 public class Projectile implements PartieElement {

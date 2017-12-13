@@ -1,3 +1,4 @@
+package enigme;
 public class Case {
 
 	private String id;
