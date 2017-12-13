@@ -33,7 +33,7 @@ public class EnigmeVue {
         for(int i = 0; i < largeur; i++) {
             map.add(new ArrayList<>());
             for(int j = 0; j < longueur; j++) {
-                Case c = p.getCartes().get(0).getCase(i + 1, j + 1);
+                Case c = p.getCartes().get(0).getCase(i, j);
                 map.get(i).add(c.getNature().getType());
             }
         }
