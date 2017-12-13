@@ -1,4 +1,5 @@
 public interface PartieElement 
 {
-	void pertePV(Energie e, Carte carte);
+	public void pertePV(Energie e, Carte carte);
+	public void attaquer(Case direction, Carte carte);
 }
