@@ -1,6 +1,8 @@
 package enigme;
 
-public class Mobile {
+import enigme.Jeu.TactiqueType;
+
+public class Mobile implements PartieElement {
 
 	private String nom;
 	private int force;

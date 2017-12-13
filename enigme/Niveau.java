@@ -2,6 +2,8 @@ package enigme;
 
 import java.util.Collection;
 
+import enigme.Jeu.Difficulte;
+
 public class Niveau {
 	
 	private String nom;

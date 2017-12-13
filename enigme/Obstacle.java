@@ -1,6 +1,8 @@
 package enigme;
 
-public class Obstacle {
+import enigme.Jeu.TactiqueType;
+
+public class Obstacle implements PartieElement {
 
 	private String nom;
 	private Case campement;

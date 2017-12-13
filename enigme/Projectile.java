@@ -1,6 +1,6 @@
 package enigme;
 
-public class Projectile {
+public class Projectile implements PartieElement {
 
 	private String nom;
 	private int portee;
