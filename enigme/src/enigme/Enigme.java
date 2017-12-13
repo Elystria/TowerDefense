@@ -89,9 +89,8 @@ public class Enigme {
         // Initialiser l'affichage
         EnigmeVue vue = new EnigmeVue(partie);
 
-
         // Tant que la partie n'est pas finie
-        while(true) {
+        while(!Display.isCloseRequested()) {
         //while(!partie.estFinie()) {
             // Calcul du nouveau modele
             // On fait jouer les projectiles
@@ -101,15 +100,13 @@ public class Enigme {
             // On fait jouer les mobiles
             //partie.jouerMobiles();
 
+            // Transferer le modèle à la vue
+            vue.update(partie);
+
             // Affichage
             vue.afficher();
 
             // Petite pause pour qu'on ait le temps de voir ce qu'il se passe
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
         }
 
     }

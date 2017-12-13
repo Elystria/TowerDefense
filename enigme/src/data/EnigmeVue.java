@@ -4,12 +4,14 @@ import enigme.Case;
 import enigme.Jeu;
 import enigme.Partie;
 import org.lwjgl.opengl.Display;
+import org.newdawn.slick.opengl.Texture;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static helpers.Artist.BeginSession;
 import static helpers.Artist.FPS;
+import static helpers.Artist.LoadTexture;
 
 public class EnigmeVue {
 
@@ -31,7 +33,7 @@ public class EnigmeVue {
         for(int i = 0; i < largeur; i++) {
             map.add(new ArrayList<>());
             for(int j = 0; j < longueur; j++) {
-                Case c = p.getCartes().get(0).getCase(i, j);
+                Case c = p.getCartes().get(0).getCase(i + 1, j + 1);
                 map.get(i).add(c.getNature().getType());
             }
         }
@@ -57,6 +59,26 @@ public class EnigmeVue {
         }
         Display.update();
         Display.sync(FPS);
+    }
+
+    public void update(Partie p) {
+        // On récupère toutes les tours
+        tours = new ArrayList<>();
+        Texture tex = LoadTexture("res/sprite_tour.png", "PNG");
+
+        //Maj des tours présentes sur la map
+        for(enigme.Obstacle o : p.getObstacles()) {
+            tours.add(new Tour(o.getPosition().getI(), o.getPosition().getJ(), tex));
+        }
+        // On récupère toutes les mobiles
+        mobiles = new ArrayList<>();
+        tex = LoadTexture("res/sprite_mechant.png", "PNG");
+       for (enigme.Mobile m : p.getMobiles()){
+           Tile tile = new Tile(m.getEntree().getI() * 64, m.getEntree().getJ() * 64, 64,64,TileType.Entree);
+           mobiles.add(new data.Mobile(tex, tile, m.getPosition().getI() * 64, m.getPosition().getJ() * 64, 64, 64));
+       }
+
+
     }
 
 

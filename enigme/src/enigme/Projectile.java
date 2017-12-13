@@ -1,4 +1,6 @@
 package enigme;
+import org.lwjgl.input.Mouse;
+
 import java.util.Collection;
 
 public class Projectile implements PartieElement {
@@ -44,7 +46,11 @@ public class Projectile implements PartieElement {
 				Collection<PartieElement>contenu = carte.contenuCase(pos);
 				if (contenu!=null) {
 					for (PartieElement elt : contenu) {
-						this.infligerDegats(elt, carte);
+					    if(elt instanceof Mobile) {
+							this.infligerDegats((Mobile) elt, carte);
+						} else {
+							this.infligerDegats((Obstacle) elt, carte);
+						}
 					}
 					/* Supprimer le projectile de la carte*/
 					carte.supprimerProjectiles(this);
@@ -67,10 +73,14 @@ public class Projectile implements PartieElement {
 		this.setPosition(nouvPosition);
 	}
 	
-	public void infligerDegats(PartieElement elt, Carte carte) {
-		elt.pertePV(this.degat, carte);
+	public void infligerDegats(Obstacle o, Carte carte) {
+		o.pertePV(this.degat, carte);
 	}
-	
+
+	public void infligerDegats(Mobile m, Carte carte) {
+		m.pertePV(this.degat, carte);
+	}
+
 	
 	/********* SETTERS & GETTERS *********/
 	

@@ -106,7 +106,7 @@ public class Carte {
 	}
 
 	public void supprimerObstacle(Obstacle obstacle) {
-		obstacles.remove(obstacle.getCampement());
+		obstacles.remove(obstacle.getPosition());
 	}
 
 	public void supprimerProjectiles(Projectile projectile) {
@@ -122,16 +122,13 @@ public class Carte {
 	}
 
 	public Case getCase(int i, int j) {
-		Boolean trouve = false;
-		Iterator<Case> it = cases.iterator();
-		Case casePossible = it.next();
-
-		while (it.hasNext() && !trouve) {
-			if (casePossible.getI() == i && casePossible.getJ() == j) {
-				trouve = true;
+		for(Case c : cases) {
+			if(c.getI() == i && c.getJ() == j) {
+				return c;
 			}
 		}
-		return casePossible;
+		System.out.println("Cette case n'existe pas !");
+		return null;
 	}
 
 

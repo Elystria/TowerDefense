@@ -38,6 +38,7 @@ public class Obstacle implements PartieElement {
 	}
 	
 	public void attaquer(Partie p) {
+	    /*
 		switch (tactique) {
 			case faibleFirst:
 				// On cherche sur qui tirer
@@ -72,6 +73,7 @@ public class Obstacle implements PartieElement {
 				System.out.println("Cette tactique n'a pas encore été implémenté !");
 				break;
 		}
+		*/
 	}
 
 	private int distance2mobile(Mobile m) {
