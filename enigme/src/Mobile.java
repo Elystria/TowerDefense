@@ -29,16 +29,7 @@ public class Mobile implements PartieElement {
 
 	/********* METHODES *********/
 	
-	public void pertePV(Energie e, Carte carte) {
-		int vie = this.PV.getValeur();
-		int degats = e.getValeur();
-		int nouvPV = vie-degats;
-		this.PV.setValeur(nouvPV);
-		if (nouvPV<=0) {
-			/* Supprimer l'obstacle de la carte */
-			
-		}
-	}
+
 	
 	public void attaquer(Case direction, Carte carte) {
 		/* Dans l'exemple, un seul projectile peut être porté 
@@ -56,6 +47,16 @@ public class Mobile implements PartieElement {
 		Projectile p = new Projectile("P", 1, 1, 1, position, direction, new Energie(false, 1));
 	}
 	
+	public void pertePV(Energie e, Carte carte) {
+		int vie = this.PV.getValeur();
+		int degats = e.getValeur();
+		int nouvPV = vie-degats;
+		this.PV.setValeur(nouvPV);
+		if (nouvPV<=0) {
+			carte.supprimerMobile(this);
+			
+		}
+	}
 	/********* SETTERS & GETTERS *********/
 	
 	public String getNom() {
@@ -135,17 +136,7 @@ public class Mobile implements PartieElement {
 	
 	}
 
-	@Override
-	public void pertePV(Energie e, Carte carte) {
-		int vie = this.PV.getValeur();
-		int degats = e.getValeur();
-		int nouvPV = vie-degats;
-		this.PV.setValeur(nouvPV);
-		if (nouvPV<=0) {
-			carte.supprimerMobile(this);
-			
-		}
-	}
+
 
 
 }
