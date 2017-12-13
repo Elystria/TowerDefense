@@ -99,7 +99,6 @@ public class Enigme {
             partie.jouerObstacles();
             // On fait jouer les mobiles
             partie.jouerMobiles();
-            System.out.println(partie.getMobiles().get(0).getPosition().getI());
 
             // Transferer le modèle à la vue
             vue.update(partie);
@@ -107,13 +106,13 @@ public class Enigme {
             // Affichage
             vue.afficher();
 
+            // Petite pause pour qu'on ait le temps de voir ce qu'il se passe
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
 
-            // Petite pause pour qu'on ait le temps de voir ce qu'il se passe
         }
 
     }

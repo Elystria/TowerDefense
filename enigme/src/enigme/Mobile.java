@@ -153,7 +153,6 @@ public class Mobile implements PartieElement {
 		PA.setValeur(PVmax.getValeur());
 		// Si on assez d'énergie
 		if(PA.getValeur() >= caseDroite.getNature().getFatigueEntree().getValeur()) {
-		    System.out.println("premier if");
 			// Si il n'y a personne déjà sur la carte
 			int nb = 0;
 			for(Mobile m : partie.getMobiles()) {
@@ -161,9 +160,7 @@ public class Mobile implements PartieElement {
 					nb ++;
 				}
 			}
-			System.out.println("volume " + caseDroite.getNature().getNom());
 			if(nb + 1 <= caseDroite.getNature().getVolume()) {
-				System.out.println("deuxième if");
 				// alors on peut entrer :D
 				PA.setValeur(PA.getValeur() - caseDroite.getNature().getFatigueEntree().getValeur());
 				setPosition(caseDroite);
