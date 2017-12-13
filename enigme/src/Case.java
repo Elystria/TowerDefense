@@ -12,6 +12,25 @@ public class Case {
 		this.nature = nature;
 	}
 
+	/********* METHODES *********/
+	
+	public boolean egale(Case c) {
+		boolean egales;
+		int i1, i2, j1, j2;
+		i1 = this.getI();
+		i2 = c.getI();
+		j1 = this.getJ();
+		j2 = c.getJ();
+		
+		if ((i1==i2) && (j1==j2)) {
+			egales = true;
+		} else {
+			egales = false;
+		}
+		return egales;
+	}
+	
+	/********* SETTERS & GETTERS *********/
 	public String getId() {
 		return id;
 	}
