@@ -34,17 +34,8 @@ public class Mobile implements PartieElement {
 	public void attaquerAutre(Case direction, Carte carte) {
 		/* Dans l'exemple, un seul projectile peut être porté 
 		 * On ne considèrera donc pas les PA */
-		int iPos, iDir, jPos, jDir, diffI, diffJ;
-		Case position;
-		Case nouvPosition;
-		iPos = this.getPosition().getI();
-		iDir = direction.getI();
-		jPos = this.getPosition().getJ();
-		jDir = direction.getJ();
-		diffI = iDir-iPos;
-		diffJ = jDir-jPos;
-		position = carte.getCase(iPos+diffI/Math.abs(diffI), jPos+diffJ/Math.abs(diffJ));
 		Projectile p = new Projectile("P", 1, 1, 1, position, direction, new Energie(false, 1));
+		p.seDeplacer(carte);
 	}
 	public void attaquer(Partie p) {
 	    // TODO !

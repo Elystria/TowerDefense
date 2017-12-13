@@ -85,9 +85,9 @@ public class Obstacle implements PartieElement {
 	public void attaquer(Case direction, Carte carte) {
 		/* Dans l'exemple, un seul projectile peut être porté 
 		 * On ne considèrera donc pas les PA */
-		int iCamp, iDir, jCamp, jDir, diffI, diffJ;
+		
+		/*int iCamp, iDir, jCamp, jDir, diffI, diffJ;
 		Case position;
-		Case nouvPosition;
 		iCamp = this.getPosition().getI();
 		iDir = direction.getI();
 		jCamp = this.getPosition().getJ();
@@ -95,7 +95,10 @@ public class Obstacle implements PartieElement {
 		diffI = iDir-iCamp;
 		diffJ = jDir-jCamp;
 		position = carte.getCase(iCamp+diffI/Math.abs(diffI), jCamp+diffJ/Math.abs(diffJ));
+		Projectile p = new Projectile("P", 1, 1, 1, position, direction, new Energie(false, 1));*/
 		Projectile p = new Projectile("P", 1, 1, 1, position, direction, new Energie(false, 1));
+		p.seDeplacer(carte);
+		
 	}
 	
 	/********* SETTERS & GETTERS *********/
