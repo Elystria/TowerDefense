@@ -17,6 +17,57 @@ public class Projectile implements PartieElement {
 		this.direction = direction;
 		this.degat = degat;
 	}
+
+	/********* METHODES *********/
+	
+	public void seDeplacer(Carte carte) {
+		Case pos = this.getPosition();
+		Case dir = this.getDirection();
+		if (pos.egale(dir)) {
+			/* Supprimer le projectile de la carte */
+			
+		} else {
+			int i = 1;
+			while (!(pos.egale(dir)) | i<vitesse) {
+				this.avancer(carte);
+				i++;
+				pos = this.getPosition();
+				/* Maj position dans la carte */
+				
+				/* Vérifier qu'il y ait un élément dans la case Position */
+				
+				if (contenu!=null) {
+					for (PartieElement elt : contenu) {
+						this.infligerDegats(elt, carte);
+					}
+					/* Supprimer le projectile de la carte*/
+					
+				}
+			}
+		}
+	}
+
+	public void avancer(Carte carte) {
+		int iPos, iDir, jPos, jDir, pas;
+		int diffI, diffJ;
+		Case nouvPosition;
+		iPos = this.getPosition().getI();
+		iDir = this.getDirection().getI();
+		jPos = this.getPosition().getJ();
+		jDir = this.getDirection().getJ();
+		diffI = iDir-iPos;
+		diffJ = jDir-jPos;
+		nouvPosition = carte.getCase(iPos+diffI/Math.abs(diffI), jPos+diffJ/Math.abs(diffJ));
+		this.setPosition(nouvPosition);
+		
+	}
+	
+	public void infligerDegats(PartieElement elt, Carte carte) {
+		elt.pertePV(this.degat, carte);
+	}
+	
+	
+	/********* SETTERS & GETTERS *********/
 	
 	public String getNom() {
 		return nom;
