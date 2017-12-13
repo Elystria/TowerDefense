@@ -50,7 +50,8 @@ public class TileGrid {
 	}
 	
 	public void setTile(int x, int y, TileType type){
-		map[x][y] = new Tile(x, y, 64, 64, type);
+		int n = map[x].length;
+		map[x][y] = new Tile(x * 64, (n - y - 1) * 64, 64, 64, type);
 	}
 	
 	public Tile getTile(int x, int y){
@@ -61,7 +62,7 @@ public class TileGrid {
 		for(int i =0; i < map.length; i++){
 			for(int j = 0; j < map[i].length; j++){
 				Tile t = map[i][j];
-				DrawQuad(t.getTexture(), t.getX(), t.getY(), t.getLongueur(), t.getLargeur());;
+				DrawQuad(t.getTexture(), t.getX(), t.getY(), t.getLongueur(), t.getLargeur());
 			}
 		}
 	}

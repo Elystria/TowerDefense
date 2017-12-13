@@ -1,9 +1,13 @@
 package data;
 
 import org.lwjgl.LWJGLException;
+import org.lwjgl.input.Mouse;
 import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.DisplayMode;
 import org.newdawn.slick.opengl.Texture;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static helpers.Artist.*;
 
@@ -26,32 +30,33 @@ public class Boot {
 				{0,0,0,0,0},
 				{4,1,1,1,5},
 				{2,2,2,2,2},
-
 		};
 		
 		TileGrid grid = new TileGrid(map);
 		Tile entree = grid.getTile(0, 1);
-		
-		Mobile m = new Mobile(LoadTexture("res/sprite_mechant.png", "PNG"), grid.getTile(0, 1), entree.getX(), entree.getY(), 64, 64);
-		Player player = new Player(grid);
-		
+
+		List<Tour> tours = new ArrayList<>();
+
+		List<Mobile> mobiles = new ArrayList<>();
+		mobiles.add(new Mobile(LoadTexture("res/sprite_mechant.png", "PNG"), grid.getTile(0, 1), entree.getX(), entree.getY(), 64, 64));
+
+		Player player = new Player(grid, tours);
+
 		while(!Display.isCloseRequested()){
-			
+
+			// Controleur
+            player.update();
+
+		    // Affichage !
 			grid.Draw();
-			m.Draw();
-			
-			player.SetTile();
-			
-			try {
-				Thread.sleep(1000);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+			for(Mobile m : mobiles) {
+				m.Draw();
 			}
-			
+			for(Tour t : tours) {
+				t.draw();
+			}
 			Display.update();
 			Display.sync(FPS);
-			
 		}
 		
 		Display.destroy();

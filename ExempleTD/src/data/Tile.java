@@ -11,7 +11,8 @@ public class Tile {
 	private float x, y, longueur, largeur;
 	private Texture texture;
 	private TileType type;
-	
+	private boolean isBuilded;
+
 	public Tile(float x, float y, float longueur, float largeur, TileType type){
 		this.x = x;
 		this.y = y;
@@ -19,7 +20,7 @@ public class Tile {
 		this.largeur = largeur;
 		this.type = type;
 		this.texture = LoadTexture(type.textureName, "PNG");
-		
+		this.isBuilded = false;
 	}
 	
 	public void Draw(){
@@ -77,7 +78,13 @@ public class Tile {
 	public void setType(TileType type) {
 		this.type = type;
 	}
-	
-	
+
+	public boolean isBuilded() {
+		return isBuilded;
+	}
+
+	public void setBuilded(boolean builded) {
+		isBuilded = builded;
+	}
 
 }
