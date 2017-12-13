@@ -9,6 +9,8 @@ import static org.lwjgl.opengl.GL11.glLoadIdentity;
 import static org.lwjgl.opengl.GL11.glMatrixMode;
 import static org.lwjgl.opengl.GL11.glOrtho;
 import static org.lwjgl.opengl.GL11.glVertex2f;
+import static org.lwjgl.opengl.GL11.glTranslatef;
+import static org.lwjgl.opengl.GL11.*;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -65,11 +67,12 @@ public class Artist {
 	
 	/** Permet de dessiner un quadrilatère avec la texture */
 	public static void DrawQuad(Texture tex, float x, float y, float longueur, float largeur){
-		
 		//Gérer et placer la texture
 		tex.bind();
+
 		//On déplace l'origine du canvas
 		glTranslatef(x, y, 0);
+
 		//On créée le carré
 		glBegin(GL_QUADS);
 		glTexCoord2f(0, 0);
@@ -82,9 +85,6 @@ public class Artist {
 		glVertex2f(0, largeur);
 		glEnd();
 		glLoadIdentity();
-
-
-
 	}
 	
 	public static Texture LoadTexture(String path, String fileType){

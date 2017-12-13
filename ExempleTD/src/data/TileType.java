@@ -14,10 +14,14 @@ public enum TileType {
 	
 	String textureName;
 	boolean buildable;
-	
+
 	TileType(String textureName, boolean buildable){
 		this.textureName = textureName;
 		this.buildable = buildable;
+	}
+
+	public boolean isBuildable() {
+		return buildable;
 	}
 
 }
