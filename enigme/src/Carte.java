@@ -76,11 +76,9 @@ public class Carte {
 	public void supprimerProjectiles(Projectile projectile) {
 		Collection<Projectile>listeProjectiles = projectiles.get(projectile.getPosition());
 		listeProjectiles.remove(projectile);
-
 	}
 
 	public void avancerMobile(Mobile mob) {
-
 		int index = cheminMobiles.indexOf(mob.getPosition());
 		mobiles.remove(mob.getPosition());
 		mob.setPosition(cheminMobiles.get(index+1));

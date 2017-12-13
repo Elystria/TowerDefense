@@ -24,11 +24,12 @@ public class Projectile implements PartieElement {
 		Case pos = this.getPosition();
 		Case dir = this.getDirection();
 		if (pos.egale(dir)) {
+			/* Faire les dégats */
 			/* Supprimer le projectile de la carte */
-			
+
 		} else {
 			int i = 1;
-			while (!(pos.egale(dir)) | i<vitesse) {
+			while (!(pos.egale(dir)) || i < vitesse) {
 				this.avancer(carte);
 				i++;
 				pos = this.getPosition();
@@ -41,7 +42,6 @@ public class Projectile implements PartieElement {
 						this.infligerDegats(elt, carte);
 					}
 					/* Supprimer le projectile de la carte*/
-					
 				}
 			}
 		}
@@ -59,7 +59,6 @@ public class Projectile implements PartieElement {
 		diffJ = jDir-jPos;
 		nouvPosition = carte.getCase(iPos+diffI/Math.abs(diffI), jPos+diffJ/Math.abs(diffJ));
 		this.setPosition(nouvPosition);
-		
 	}
 	
 	public void infligerDegats(PartieElement elt, Carte carte) {

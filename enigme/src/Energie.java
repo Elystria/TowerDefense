@@ -24,6 +24,4 @@ public class Energie {
 	public void setValeur(int valeur) {
 		this.valeur = valeur;
 	}
-	
-	
 }
