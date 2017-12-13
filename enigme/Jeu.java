@@ -4,6 +4,26 @@ import java.util.Collection;
 
 public class Jeu {
 	
+	public enum TactiqueType {
+		procheFirst,
+		faibleFirst,
+		fortFirst;
+	}
+	
+	public enum TYPE_TERRAIN {
+		entree,
+		sortie,
+		chemin,
+		campement,
+		decoration;
+	}
+	
+	public enum Difficulte {
+		facile,
+		moyen,
+		difficile;
+	}
+	
 	private String nom;
 	private Collection<Partie> parties;
 	
