@@ -46,7 +46,6 @@ public class Mobile implements PartieElement {
 		position = carte.getCase(iPos+diffI/Math.abs(diffI), jPos+diffJ/Math.abs(diffJ));
 		Projectile p = new Projectile("P", 1, 1, 1, position, direction, new Energie(false, 1));
 	}
-
 	public void attaquer(Partie p) {
 	    // TODO !
 	}
@@ -55,7 +54,6 @@ public class Mobile implements PartieElement {
 		// TODO !
 		// S'occupe de fixer la position du mobile =) Pour le faire rentrer sur le champs de bataille =)
 	}
-
 	/********* SETTERS & GETTERS *********/
 	
 	public String getNom() {
