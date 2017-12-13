@@ -27,7 +27,7 @@ public class Obstacle implements PartieElement {
 		int nouvPV = vie-degats;
 		this.PV.setValeur(nouvPV);
 		if (nouvPV<=0) {
-			/* Supprimer l'obstacle de la carte */
+			carte.supprimerObstacle(this);
 			
 		}
 	}
@@ -85,15 +85,6 @@ public class Obstacle implements PartieElement {
 	public void setTactique(Jeu.TactiqueType tactique) {
 		this.tactique = tactique;
 	}
-	
-	public void pertePV(Energie e, Carte carte) {
-		int vie = PV.getValeur();
-		int degats = e.getValeur();
-		int nouvPV = vie-degats;
-		PV.setValeur(nouvPV);
-		if (nouvPV<=0) {
-			carte.supprimerObstacle(this);
-		}
-	}
+
 	
 }

@@ -52,6 +52,40 @@ public class Carte {
 	public void setCases(Collection<Case> cases) {
 		this.cases = cases;
 	}
+	
+	
+
+	public HashMap<Case, Mobile> getMobiles() {
+		return mobiles;
+	}
+
+	public void setMobiles(HashMap<Case, Mobile> mobiles) {
+		this.mobiles = mobiles;
+	}
+
+	public HashMap<Case, Obstacle> getObstacles() {
+		return obstacles;
+	}
+
+	public void setObstacles(HashMap<Case, Obstacle> obstacles) {
+		this.obstacles = obstacles;
+	}
+
+	public HashMap<Case, Collection<Projectile>> getProjectiles() {
+		return projectiles;
+	}
+
+	public void setProjectiles(HashMap<Case, Collection<Projectile>> projectiles) {
+		this.projectiles = projectiles;
+	}
+
+	public ArrayList<Case> getCheminMobiles() {
+		return cheminMobiles;
+	}
+
+	public void setCheminMobiles(ArrayList<Case> cheminMobiles) {
+		this.cheminMobiles = cheminMobiles;
+	}
 
 	public void mobilesAutour(int portee, Case position ) {
 
@@ -78,22 +112,34 @@ public class Carte {
 		listeProjectiles.remove(projectile);
 
 	}
+	
+	public Case getCase(int i, int j) {
+		Boolean trouve = false;
+		Iterator<Case> it = cases.iterator();
+		Case casePossible = it.next();
 
-	public void avancerMobile(Mobile mob) {
-
-		int index = cheminMobiles.indexOf(mob.getPosition());
-		mobiles.remove(mob.getPosition());
-		mob.setPosition(cheminMobiles.get(index+1));
-		mobiles.put(mob.getPosition(), mob);
-	}
-
-	public void pertePV(Energie e, Obstacle o) {
-		int vie = o.getPV().getValeur();
-		int degats = e.getValeur();
-		int nouvPV = vie-degats;
-		o.getPV().setValeur(nouvPV);
-		if (nouvPV<=0) {
-			supprimerObstacle(o);
+		while (it.hasNext() && !trouve) {
+			if (casePossible.getI() == i && casePossible.getJ() == j) {
+				trouve = true;
+			}
 		}
+		return casePossible;
 	}
+
+
+	public Collection<PartieElement> contenuCase(Case c) {
+		Collection<PartieElement>contenu = null;
+		if (mobiles.containsKey(c)) {
+			contenu.add(mobiles.get(c));
+		}
+		
+		if (obstacles.containsKey(c)) {
+			contenu.add(obstacles.get(c));
+		}
+		return contenu;
+		
+	}
+
+
+
 }
