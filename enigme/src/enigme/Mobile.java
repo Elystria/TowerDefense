@@ -1,3 +1,4 @@
+package enigme;
 
 public class Mobile implements PartieElement {
 
@@ -25,13 +26,12 @@ public class Mobile implements PartieElement {
 		PV = new Energie(pVmax.getValeur());
 		PA = new Energie(pVmax.getValeur());
 		this.tactique = tactique;
+		this.position = new Case("bla", 0, 1, entree.getNature());
 	}
 
 	/********* METHODES *********/
-	
 
-	
-	public void attaquer(Case direction, Carte carte) {
+	public void attaquerAutre(Case direction, Carte carte) {
 		/* Dans l'exemple, un seul projectile peut être porté 
 		 * On ne considèrera donc pas les PA */
 		int iPos, iDir, jPos, jDir, diffI, diffJ;
@@ -46,6 +46,7 @@ public class Mobile implements PartieElement {
 		position = carte.getCase(iPos+diffI/Math.abs(diffI), jPos+diffJ/Math.abs(diffJ));
 		Projectile p = new Projectile("P", 1, 1, 1, position, direction, new Energie(false, 1));
 	}
+<<<<<<< HEAD:enigme/src/Mobile.java
 	
 	public void pertePV(Energie e, Carte carte) {
 		int vie = this.PV.getValeur();
@@ -57,6 +58,18 @@ public class Mobile implements PartieElement {
 			
 		}
 	}
+=======
+
+	public void attaquer(Partie p) {
+	    // TODO !
+	}
+
+	public void apparaitre(Partie p) {
+		// TODO !
+		// S'occupe de fixer la position du mobile =) Pour le faire rentrer sur le champs de bataille =)
+	}
+
+>>>>>>> f1752411acbc5f867f564fe5b4ce18e295284787:enigme/src/enigme/Mobile.java
 	/********* SETTERS & GETTERS *********/
 	
 	public String getNom() {
@@ -136,7 +149,22 @@ public class Mobile implements PartieElement {
 	
 	}
 
+<<<<<<< HEAD:enigme/src/Mobile.java
 
+=======
+	public void pertePV(Energie e, Carte carte) {
+		int vie = this.PV.getValeur();
+		int degats = e.getValeur();
+		int nouvPV = vie-degats;
+		this.PV.setValeur(nouvPV);
+		if (nouvPV<=0) {
+			carte.supprimerMobile(this);
+			
+		}
+	}
+>>>>>>> f1752411acbc5f867f564fe5b4ce18e295284787:enigme/src/enigme/Mobile.java
 
-
+	public void seDeplacer(Partie partie) {
+	    // TODO
+	}
 }

@@ -1,3 +1,4 @@
+package enigme;
 
 public class NatureTerrain implements PartieElement {
 	

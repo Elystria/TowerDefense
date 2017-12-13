@@ -1,3 +1,4 @@
+package enigme;
 public class Energie {
 
 	private boolean infini;
@@ -24,6 +25,4 @@ public class Energie {
 	public void setValeur(int valeur) {
 		this.valeur = valeur;
 	}
-	
-	
 }

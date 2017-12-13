@@ -5,13 +5,13 @@ import org.lwjgl.input.Mouse;
 import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.DisplayMode;
 import org.newdawn.slick.opengl.Texture;
+import static org.lwjgl.opengl.GL11.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static helpers.Artist.*;
 
-import static org.lwjgl.opengl.GL11.*;
 
 /** Permet de lancer le jeu. Initialise la fenêtre et contient la boucle infinie du jeu */
 

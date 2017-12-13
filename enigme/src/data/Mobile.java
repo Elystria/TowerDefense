@@ -12,11 +12,10 @@ public class Mobile {
 	
 	public Mobile(Texture texture, Tile startTile, float x, float y, int longueur, int largeur){
 		this.texture = texture;
-		this.x = startTile.getX();
-		this.y = startTile.getY();
+		this.x = x;
+		this.y = y;
 		this.longueur = longueur;
 		this.largeur = largeur;
-		
 	}
 	
 	public void Draw(){
