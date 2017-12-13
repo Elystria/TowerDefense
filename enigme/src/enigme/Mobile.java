@@ -145,6 +145,7 @@ public class Mobile implements PartieElement {
 	}
 
 	public void seDeplacer(Partie partie) {
-	    // TODO
+		Carte carte = partie.getCartes().get(1);
+	    avancer(carte);
 	}
 }
