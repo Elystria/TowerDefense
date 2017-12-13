@@ -25,21 +25,21 @@ public class Enigme {
         NatureTerrain route = new NatureTerrain("route", 1, Jeu.TYPE_TERRAIN.chemin, e1);
         NatureTerrain garage = new NatureTerrain("garage", 1, Jeu.TYPE_TERRAIN.campement, eInf);
         List<NatureTerrain> natures = new ArrayList<>();
-        Case c11 = new Case("c11", 1, 1, montagne);
-        Case c21 = new Case("c21", 2, 1, montagne);
-        Case c31 = new Case("c31", 3, 1, montagne);
-        Case c41 = new Case("c41", 4, 1, montagne);
-        Case c51 = new Case("c51", 5, 1, montagne);
-        Case c12 = new Case("c12", 1, 2, route);
-        Case c22 = new Case("c22", 2, 2, route);
-        Case c32 = new Case("c32", 3, 2, route);
-        Case c42 = new Case("c42", 4, 2, route);
-        Case c52 = new Case("c52", 5, 2, route);
-        Case c13 = new Case("c13", 1, 3, garage);
-        Case c23 = new Case("c23", 2, 3, garage);
-        Case c33 = new Case("c33", 3, 3, garage);
-        Case c43 = new Case("c43", 4, 3, garage);
-        Case c53 = new Case("c53", 5, 3, garage);
+        Case c11 = new Case("c11", 0, 0, montagne);
+        Case c21 = new Case("c21", 1, 0, montagne);
+        Case c31 = new Case("c31", 2, 0, montagne);
+        Case c41 = new Case("c41", 3, 0, montagne);
+        Case c51 = new Case("c51", 4, 0, montagne);
+        Case c12 = new Case("c12", 0, 1, route);
+        Case c22 = new Case("c22", 1, 1, route);
+        Case c32 = new Case("c32", 2, 1, route);
+        Case c42 = new Case("c42", 3, 1, route);
+        Case c52 = new Case("c52", 4, 1, route);
+        Case c13 = new Case("c13", 0, 2, garage);
+        Case c23 = new Case("c23", 1, 2, garage);
+        Case c33 = new Case("c33", 2, 2, garage);
+        Case c43 = new Case("c43", 3, 2, garage);
+        Case c53 = new Case("c53", 4, 2, garage);
         List<Case> cases = new ArrayList<>();
         cases.add(c11);
         cases.add(c21);
@@ -98,13 +98,20 @@ public class Enigme {
             // On fait jouer les obstacles
             partie.jouerObstacles();
             // On fait jouer les mobiles
-            //partie.jouerMobiles();
+            partie.jouerMobiles();
+            System.out.println(partie.getMobiles().get(0).getPosition().getI());
 
             // Transferer le modèle à la vue
             vue.update(partie);
 
             // Affichage
             vue.afficher();
+
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
 
             // Petite pause pour qu'on ait le temps de voir ce qu'il se passe
         }

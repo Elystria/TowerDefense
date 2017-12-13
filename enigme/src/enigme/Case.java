@@ -63,4 +63,5 @@ public class Case {
 	public void setNature(NatureTerrain nature) {
 		this.nature = nature;
 	}
+
 }
