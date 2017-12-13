@@ -1,7 +1,9 @@
 package enigme;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.Iterator;
 
 public class Carte {
 
@@ -11,7 +13,8 @@ public class Carte {
 	private Collection<Case> cases;
 	private HashMap<Case, Mobile>  mobiles;
 	private HashMap<Case, Obstacle> obstacles;
-	private HashMap<Case, Projectile> projectiles;
+	private HashMap<Case, Collection<Projectile>> projectiles;
+	private ArrayList<Case> cheminMobiles;
 	
 	public Carte(String nom, int nbLignes, int nbColonnes, Collection<Case> cases) {
 		this.nom = nom;
@@ -52,9 +55,48 @@ public class Carte {
 		this.cases = cases;
 	}
 	
-	public void MobileAutour(int portee, Case position ) {
+	public void mobilesAutour(int portee, Case position ) {
+		
+		for (int i = 0; i <= portee; i++) {
+			mobiles.get(position);
+			
+	
+			for (int j = 0; j <= portee; j++) {
+				
+			}
+		}
+	}
+	
+		
+	public void supprimerMobile(Mobile mobile) {
+		mobiles.remove(mobile.getPosition());
+	}
+
+	public void supprimerObstacle(Obstacle obstacle) {
+		obstacles.remove(obstacle.getCampement());
+	}
+	
+	public void supprimerProjectiles(Projectile projectile) {
+		Collection<Projectile>listeProjectiles = projectiles.get(projectile.getPosition());
+		listeProjectiles.remove(projectile);
 		
 	}
 	
-
+	public void avancerMobile(Mobile mob) {
+		
+		int index = cheminMobiles.indexOf(mob.getPosition());
+		mobiles.remove(mob.getPosition());
+		mob.setPosition(cheminMobiles.get(index+1));
+		mobiles.put(mob.getPosition(), mob);
+	}
+	
+	public void pertePV(Energie e, Obstacle o) {
+		int vie = o.getPV().getValeur();
+		int degats = e.getValeur();
+		int nouvPV = vie-degats;
+		o.getPV().setValeur(nouvPV);
+		if (nouvPV<=0) {
+			supprimerObstacle(o);
+		}
+	}
 }

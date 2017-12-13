@@ -14,7 +14,10 @@ public class Mobile implements PartieElement {
 	private Energie PV;
 	private Energie PA;
 	private TactiqueType tactique;
+	private Case position;
 	
+
+
 	public Mobile(String nom, int force, int volume, int numVague, Case entree, Case sortie, Energie pVmax, Energie pV,
 			Energie pA, TactiqueType tactique) {
 		this.nom = nom;
@@ -28,6 +31,7 @@ public class Mobile implements PartieElement {
 		PA = pA;
 		this.tactique = tactique;
 	}
+	
 	
 	public String getNom() {
 		return nom;
@@ -47,6 +51,7 @@ public class Mobile implements PartieElement {
 	public void setVolume(int volume) {
 		this.volume = volume;
 	}
+	
 	public int getNumVague() {
 		return numVague;
 	}
@@ -88,6 +93,15 @@ public class Mobile implements PartieElement {
 	}
 	public void setTactique(TactiqueType tactique) {
 		this.tactique = tactique;
+	}
+	
+
+	public Case getPosition() {
+		return position;
+	}
+
+	public void setPosition(Case position) {
+		this.position = position;
 	}
 	
 	
