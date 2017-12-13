@@ -32,6 +32,7 @@ public class Obstacle implements PartieElement {
 		this.PV.setValeur(nouvPV);
 		if (nouvPV<=0) {
 			/* Supprimer l'obstacle de la carte */
+			carte.supprimerObstacle(this);
 		}
 	}
 	

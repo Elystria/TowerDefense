@@ -125,6 +125,27 @@ public class Mobile implements PartieElement {
 	public void setPosition(Case position) {
 		this.position = position;
 	}
+	
+	public void avancer(Carte carte){
+
+		int index = carte.getCheminMobiles().indexOf(this.position);
+		carte.getMobiles().remove(this.getPosition());
+		this.position = carte.getCheminMobiles().get(index+1);
+		carte.getMobiles().put(position, this);
+	
+	}
+
+	@Override
+	public void pertePV(Energie e, Carte carte) {
+		int vie = this.PV.getValeur();
+		int degats = e.getValeur();
+		int nouvPV = vie-degats;
+		this.PV.setValeur(nouvPV);
+		if (nouvPV<=0) {
+			carte.supprimerMobile(this);
+			
+		}
+	}
 
 
 }

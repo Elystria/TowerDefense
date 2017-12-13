@@ -1,3 +1,5 @@
+import java.util.Collection;
+
 public class Projectile implements PartieElement {
 
 	private String nom;
@@ -26,7 +28,7 @@ public class Projectile implements PartieElement {
 		if (pos.egale(dir)) {
 			/* Faire les dégats */
 			/* Supprimer le projectile de la carte */
-
+			carte.supprimerProjectiles(this);
 		} else {
 			int i = 1;
 			while (!(pos.egale(dir)) || i < vitesse) {
@@ -34,14 +36,17 @@ public class Projectile implements PartieElement {
 				i++;
 				pos = this.getPosition();
 				/* Maj position dans la carte */
-				
+				/* je pense que c'est le même projectile qu'on utilise dans la carte, 
+				 * donc il n'y a pas besoin de mettre la position du projectile a jour dans la arte
+				 */
 				/* Vérifier qu'il y ait un élément dans la case Position */
-				
+				Collection<PartieElement>contenu = carte.contenuCase(pos);
 				if (contenu!=null) {
 					for (PartieElement elt : contenu) {
 						this.infligerDegats(elt, carte);
 					}
 					/* Supprimer le projectile de la carte*/
+					carte.supprimerProjectiles(this);
 				}
 			}
 		}
