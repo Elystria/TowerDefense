@@ -1,6 +1,7 @@
 package enigme;
 
 import java.util.Collection;
+import java.util.HashMap;
 
 public class Carte {
 
@@ -8,6 +9,9 @@ public class Carte {
 	private int nbLignes;
 	private int nbColonnes;
 	private Collection<Case> cases;
+	private HashMap<Case, Mobile>  mobiles;
+	private HashMap<Case, Obstacle> obstacles;
+	private HashMap<Case, Projectile> projectiles;
 	
 	public Carte(String nom, int nbLignes, int nbColonnes, Collection<Case> cases) {
 		this.nom = nom;
@@ -48,6 +52,9 @@ public class Carte {
 		this.cases = cases;
 	}
 	
+	public void MobileAutour(int portee, Case position ) {
+		
+	}
 	
 
 }
