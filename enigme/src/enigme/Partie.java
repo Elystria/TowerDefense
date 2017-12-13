@@ -59,9 +59,10 @@ public class Partie {
 		}
 	}
 
-	public void jouerMobile() {
+	public void jouerMobiles() {
 		// pour tous les mobiles
-		for(Mobile m : mobiles) {
+		for(int i = 0; i < getMobiles().size(); i++) {
+			Mobile m = getMobiles().get(i);
 			m.seDeplacer(this);
 			m.attaquer(this);
 		}

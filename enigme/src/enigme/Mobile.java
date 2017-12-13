@@ -147,6 +147,40 @@ public class Mobile implements PartieElement {
 	}
 
 	public void seDeplacer(Partie partie) {
-	    // TODO
+	    //On se déplace a droite si la case n'est pas trop pleine et qu'on a aseez d'énergie
+		int x = getPosition().getI() + 1;
+		int y = getPosition().getJ();
+		Case caseDroite = partie.getCartes().get(0).getCase(x, y);
+		// On reset la quantité d'énergie
+		PA.setValeur(PVmax.getValeur());
+		// Si on assez d'énergie
+		if(PA.getValeur() >= caseDroite.getNature().getFatigueEntree().getValeur()) {
+		    System.out.println("premier if");
+			// Si il n'y a personne déjà sur la carte
+			int nb = 0;
+			for(Mobile m : partie.getMobiles()) {
+				if(m.getPosition().getI() == x && m.getPosition().getJ() == y) {
+					nb ++;
+				}
+			}
+			System.out.println("volume " + caseDroite.getNature().getNom());
+			if(nb + 1 <= caseDroite.getNature().getVolume()) {
+				System.out.println("deuxième if");
+				// alors on peut entrer :D
+				PA.setValeur(PA.getValeur() - caseDroite.getNature().getFatigueEntree().getValeur());
+				setPosition(caseDroite);
+			}
+		}
+
+		//Si on a atteint la case de sortie, disparaitre
+        if(getPosition().getI() == getSortie().getI() && getPosition().getJ() == getSortie().getJ()) {
+		    System.out.println("Pouf ! :D");
+		    for(int i = 0; i < partie.getMobiles().size(); i++) {
+		    	if(getNom().equals(partie.getMobiles().get(i).getNom())) {
+		    		partie.getMobiles().remove(i);
+		    		break;
+				}
+			}
+		}
 	}
 }
