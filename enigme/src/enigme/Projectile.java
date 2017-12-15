@@ -30,6 +30,19 @@ public class Projectile implements PartieElement {
 		Case dir = this.getDirection();
 		if (pos.egale(dir)) {
 			/* Faire les dégats */
+			pos = this.getPosition();
+			Collection<PartieElement>contenu = carte.contenuCase(pos);
+			if (contenu!=null) {
+				for (PartieElement elt : contenu) {
+				    if(elt instanceof Mobile) {
+						this.infligerDegats((Mobile) elt, carte);
+					} else {
+						this.infligerDegats((Obstacle) elt, carte);
+					}
+				}
+				/* Supprimer le projectile de la carte*/
+				carte.supprimerProjectiles(this);
+			}
 			/* Supprimer le projectile de la carte */
 			carte.supprimerProjectiles(this);
 		} else {
