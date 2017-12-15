@@ -64,6 +64,7 @@ public class Partie {
 		for(int i = 0; i < getMobiles().size(); i++) {
 			Mobile m = getMobiles().get(i);
 			m.seDeplacer(this);
+			//m.avancer(cartes.get(0));
 			m.attaquer(this);
 		}
 	}
