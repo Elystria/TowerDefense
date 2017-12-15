@@ -3,6 +3,8 @@
  */
 package xtext.towerDefense;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -15,6 +17,12 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link xtext.towerDefense.Niveau#getName <em>Name</em>}</li>
+ *   <li>{@link xtext.towerDefense.Niveau#getDifficulte <em>Difficulte</em>}</li>
+ *   <li>{@link xtext.towerDefense.Niveau#getDureePause <em>Duree Pause</em>}</li>
+ *   <li>{@link xtext.towerDefense.Niveau#getArgent <em>Argent</em>}</li>
+ *   <li>{@link xtext.towerDefense.Niveau#getMobSortisLimite <em>Mob Sortis Limite</em>}</li>
+ *   <li>{@link xtext.towerDefense.Niveau#getTerrain <em>Terrain</em>}</li>
+ *   <li>{@link xtext.towerDefense.Niveau#getVagues <em>Vagues</em>}</li>
  * </ul>
  *
  * @see xtext.towerDefense.TowerDefensePackage#getNiveau()
@@ -48,5 +56,154 @@ public interface Niveau extends EObject
    * @generated
    */
   void setName(String value);
+
+  /**
+   * Returns the value of the '<em><b>Difficulte</b></em>' attribute.
+   * The literals are from the enumeration {@link xtext.towerDefense.Difficulte}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Difficulte</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Difficulte</em>' attribute.
+   * @see xtext.towerDefense.Difficulte
+   * @see #setDifficulte(Difficulte)
+   * @see xtext.towerDefense.TowerDefensePackage#getNiveau_Difficulte()
+   * @model
+   * @generated
+   */
+  Difficulte getDifficulte();
+
+  /**
+   * Sets the value of the '{@link xtext.towerDefense.Niveau#getDifficulte <em>Difficulte</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Difficulte</em>' attribute.
+   * @see xtext.towerDefense.Difficulte
+   * @see #getDifficulte()
+   * @generated
+   */
+  void setDifficulte(Difficulte value);
+
+  /**
+   * Returns the value of the '<em><b>Duree Pause</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Duree Pause</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Duree Pause</em>' attribute.
+   * @see #setDureePause(int)
+   * @see xtext.towerDefense.TowerDefensePackage#getNiveau_DureePause()
+   * @model
+   * @generated
+   */
+  int getDureePause();
+
+  /**
+   * Sets the value of the '{@link xtext.towerDefense.Niveau#getDureePause <em>Duree Pause</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Duree Pause</em>' attribute.
+   * @see #getDureePause()
+   * @generated
+   */
+  void setDureePause(int value);
+
+  /**
+   * Returns the value of the '<em><b>Argent</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Argent</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Argent</em>' attribute.
+   * @see #setArgent(int)
+   * @see xtext.towerDefense.TowerDefensePackage#getNiveau_Argent()
+   * @model
+   * @generated
+   */
+  int getArgent();
+
+  /**
+   * Sets the value of the '{@link xtext.towerDefense.Niveau#getArgent <em>Argent</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Argent</em>' attribute.
+   * @see #getArgent()
+   * @generated
+   */
+  void setArgent(int value);
+
+  /**
+   * Returns the value of the '<em><b>Mob Sortis Limite</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Mob Sortis Limite</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Mob Sortis Limite</em>' attribute.
+   * @see #setMobSortisLimite(int)
+   * @see xtext.towerDefense.TowerDefensePackage#getNiveau_MobSortisLimite()
+   * @model
+   * @generated
+   */
+  int getMobSortisLimite();
+
+  /**
+   * Sets the value of the '{@link xtext.towerDefense.Niveau#getMobSortisLimite <em>Mob Sortis Limite</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Mob Sortis Limite</em>' attribute.
+   * @see #getMobSortisLimite()
+   * @generated
+   */
+  void setMobSortisLimite(int value);
+
+  /**
+   * Returns the value of the '<em><b>Terrain</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Terrain</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Terrain</em>' containment reference.
+   * @see #setTerrain(TerrainDeJeu)
+   * @see xtext.towerDefense.TowerDefensePackage#getNiveau_Terrain()
+   * @model containment="true"
+   * @generated
+   */
+  TerrainDeJeu getTerrain();
+
+  /**
+   * Sets the value of the '{@link xtext.towerDefense.Niveau#getTerrain <em>Terrain</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Terrain</em>' containment reference.
+   * @see #getTerrain()
+   * @generated
+   */
+  void setTerrain(TerrainDeJeu value);
+
+  /**
+   * Returns the value of the '<em><b>Vagues</b></em>' containment reference list.
+   * The list contents are of type {@link xtext.towerDefense.Vague}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Vagues</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Vagues</em>' containment reference list.
+   * @see xtext.towerDefense.TowerDefensePackage#getNiveau_Vagues()
+   * @model containment="true"
+   * @generated
+   */
+  EList<Vague> getVagues();
 
 } // Niveau

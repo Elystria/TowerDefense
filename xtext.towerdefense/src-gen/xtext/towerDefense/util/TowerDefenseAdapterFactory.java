@@ -91,9 +91,59 @@ public class TowerDefenseAdapterFactory extends AdapterFactoryImpl
         return createPartieElementAdapter();
       }
       @Override
+      public Adapter caseEnergie(Energie object)
+      {
+        return createEnergieAdapter();
+      }
+      @Override
+      public Adapter caseObstacle(Obstacle object)
+      {
+        return createObstacleAdapter();
+      }
+      @Override
+      public Adapter caseTactique(Tactique object)
+      {
+        return createTactiqueAdapter();
+      }
+      @Override
+      public Adapter caseMobile(Mobile object)
+      {
+        return createMobileAdapter();
+      }
+      @Override
+      public Adapter caseProjectile(Projectile object)
+      {
+        return createProjectileAdapter();
+      }
+      @Override
+      public Adapter caseNatureTerrain(NatureTerrain object)
+      {
+        return createNatureTerrainAdapter();
+      }
+      @Override
       public Adapter caseNiveau(Niveau object)
       {
         return createNiveauAdapter();
+      }
+      @Override
+      public Adapter caseTerrainDeJeu(TerrainDeJeu object)
+      {
+        return createTerrainDeJeuAdapter();
+      }
+      @Override
+      public Adapter caseDamier(Damier object)
+      {
+        return createDamierAdapter();
+      }
+      @Override
+      public Adapter caseCase(Case object)
+      {
+        return createCaseAdapter();
+      }
+      @Override
+      public Adapter caseVague(Vague object)
+      {
+        return createVagueAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -163,6 +213,96 @@ public class TowerDefenseAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link xtext.towerDefense.Energie <em>Energie</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see xtext.towerDefense.Energie
+   * @generated
+   */
+  public Adapter createEnergieAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link xtext.towerDefense.Obstacle <em>Obstacle</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see xtext.towerDefense.Obstacle
+   * @generated
+   */
+  public Adapter createObstacleAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link xtext.towerDefense.Tactique <em>Tactique</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see xtext.towerDefense.Tactique
+   * @generated
+   */
+  public Adapter createTactiqueAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link xtext.towerDefense.Mobile <em>Mobile</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see xtext.towerDefense.Mobile
+   * @generated
+   */
+  public Adapter createMobileAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link xtext.towerDefense.Projectile <em>Projectile</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see xtext.towerDefense.Projectile
+   * @generated
+   */
+  public Adapter createProjectileAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link xtext.towerDefense.NatureTerrain <em>Nature Terrain</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see xtext.towerDefense.NatureTerrain
+   * @generated
+   */
+  public Adapter createNatureTerrainAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link xtext.towerDefense.Niveau <em>Niveau</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -173,6 +313,66 @@ public class TowerDefenseAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createNiveauAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link xtext.towerDefense.TerrainDeJeu <em>Terrain De Jeu</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see xtext.towerDefense.TerrainDeJeu
+   * @generated
+   */
+  public Adapter createTerrainDeJeuAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link xtext.towerDefense.Damier <em>Damier</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see xtext.towerDefense.Damier
+   * @generated
+   */
+  public Adapter createDamierAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link xtext.towerDefense.Case <em>Case</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see xtext.towerDefense.Case
+   * @generated
+   */
+  public Adapter createCaseAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link xtext.towerDefense.Vague <em>Vague</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see xtext.towerDefense.Vague
+   * @generated
+   */
+  public Adapter createVagueAdapter()
   {
     return null;
   }

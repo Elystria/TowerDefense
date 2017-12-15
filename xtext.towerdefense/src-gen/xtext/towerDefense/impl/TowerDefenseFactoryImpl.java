@@ -4,6 +4,7 @@
 package xtext.towerDefense.impl;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -68,9 +69,57 @@ public class TowerDefenseFactoryImpl extends EFactoryImpl implements TowerDefens
       case TowerDefensePackage.JEU: return createJeu();
       case TowerDefensePackage.PARTIE: return createPartie();
       case TowerDefensePackage.PARTIE_ELEMENT: return createPartieElement();
+      case TowerDefensePackage.ENERGIE: return createEnergie();
+      case TowerDefensePackage.OBSTACLE: return createObstacle();
+      case TowerDefensePackage.TACTIQUE: return createTactique();
+      case TowerDefensePackage.MOBILE: return createMobile();
+      case TowerDefensePackage.PROJECTILE: return createProjectile();
+      case TowerDefensePackage.NATURE_TERRAIN: return createNatureTerrain();
       case TowerDefensePackage.NIVEAU: return createNiveau();
+      case TowerDefensePackage.TERRAIN_DE_JEU: return createTerrainDeJeu();
+      case TowerDefensePackage.DAMIER: return createDamier();
+      case TowerDefensePackage.CASE: return createCase();
+      case TowerDefensePackage.VAGUE: return createVague();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+    }
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Object createFromString(EDataType eDataType, String initialValue)
+  {
+    switch (eDataType.getClassifierID())
+    {
+      case TowerDefensePackage.TYPE_TERRAIN:
+        return createTYPE_TERRAINFromString(eDataType, initialValue);
+      case TowerDefensePackage.DIFFICULTE:
+        return createDifficulteFromString(eDataType, initialValue);
+      default:
+        throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+    }
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String convertToString(EDataType eDataType, Object instanceValue)
+  {
+    switch (eDataType.getClassifierID())
+    {
+      case TowerDefensePackage.TYPE_TERRAIN:
+        return convertTYPE_TERRAINToString(eDataType, instanceValue);
+      case TowerDefensePackage.DIFFICULTE:
+        return convertDifficulteToString(eDataType, instanceValue);
+      default:
+        throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
   }
 
@@ -112,10 +161,164 @@ public class TowerDefenseFactoryImpl extends EFactoryImpl implements TowerDefens
    * <!-- end-user-doc -->
    * @generated
    */
+  public Energie createEnergie()
+  {
+    EnergieImpl energie = new EnergieImpl();
+    return energie;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Obstacle createObstacle()
+  {
+    ObstacleImpl obstacle = new ObstacleImpl();
+    return obstacle;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Tactique createTactique()
+  {
+    TactiqueImpl tactique = new TactiqueImpl();
+    return tactique;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Mobile createMobile()
+  {
+    MobileImpl mobile = new MobileImpl();
+    return mobile;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Projectile createProjectile()
+  {
+    ProjectileImpl projectile = new ProjectileImpl();
+    return projectile;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NatureTerrain createNatureTerrain()
+  {
+    NatureTerrainImpl natureTerrain = new NatureTerrainImpl();
+    return natureTerrain;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Niveau createNiveau()
   {
     NiveauImpl niveau = new NiveauImpl();
     return niveau;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TerrainDeJeu createTerrainDeJeu()
+  {
+    TerrainDeJeuImpl terrainDeJeu = new TerrainDeJeuImpl();
+    return terrainDeJeu;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Damier createDamier()
+  {
+    DamierImpl damier = new DamierImpl();
+    return damier;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Case createCase()
+  {
+    CaseImpl case_ = new CaseImpl();
+    return case_;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Vague createVague()
+  {
+    VagueImpl vague = new VagueImpl();
+    return vague;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TYPE_TERRAIN createTYPE_TERRAINFromString(EDataType eDataType, String initialValue)
+  {
+    TYPE_TERRAIN result = TYPE_TERRAIN.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertTYPE_TERRAINToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Difficulte createDifficulteFromString(EDataType eDataType, String initialValue)
+  {
+    Difficulte result = Difficulte.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertDifficulteToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
   }
 
   /**
