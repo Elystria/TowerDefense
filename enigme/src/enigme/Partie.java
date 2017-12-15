@@ -57,12 +57,14 @@ public class Partie {
 		// pour tous les Obstacles
 		Carte c = cartes.get(0);
 		Collection<Mobile> mobilesPourAttaque = new ArrayList<Mobile>();
-
+		System.out.println("On joue obstacle");
 		for(Obstacle o : obstacles) {
-		    o.attaquer(this);
+			System.out.println("On parcourt les obstacles");
 		    mobilesPourAttaque = c.mobilesAutour(1,o.getPosition());
 		    for (Mobile m : mobilesPourAttaque) {
+		    	System.out.println("On parcourt les mobiles");
 		    	o.attaquerAutre(m.getPosition(), c);
+		    
 		    }
 		    
 		}

@@ -166,4 +166,19 @@ public class Carte {
 		return contenu;
 		
 	}
+	
+	public void ajouterProjectile(Projectile p) {
+		Collection<Projectile> listPro = projectiles.get(p.getPosition());
+		listPro.add(p);
+		projectiles.remove(p.getPosition());
+		projectiles.put(p.getPosition(), listPro );
+	}
+	
+	public void ajouterObstacle(Obstacle o) {
+		obstacles.put(o.getPosition(), o);
+	}
+	
+	public void ajouterMobile(Mobile m) {
+		mobiles.put(m.getPosition(), m);
+	}
 }

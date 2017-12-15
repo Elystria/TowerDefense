@@ -97,6 +97,7 @@ public class Obstacle implements PartieElement {
 		position = carte.getCase(iCamp+diffI/Math.abs(diffI), jCamp+diffJ/Math.abs(diffJ));
 		Projectile p = new Projectile("P", 1, 1, 1, position, direction, new Energie(false, 1));*/
 		Projectile p = new Projectile("P", 1, 1, 1, position, direction, new Energie(false, 1));
+		carte.ajouterProjectile(p);
 		p.seDeplacer(carte);
 		
 	}

@@ -98,7 +98,8 @@ public class Enigme {
         niveaux.add(niveau1);
 
         Partie partie = new Partie("partie", natures, cases, cartes, pe, niveaux);
-
+        partie.setObstacles(obstacles);
+        partie.setMobiles(mobiles);
         
         
         // Initialiser l'affichage

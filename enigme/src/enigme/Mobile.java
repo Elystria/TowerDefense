@@ -156,6 +156,8 @@ public class Mobile implements PartieElement {
 				// alors on peut entrer :D
 				PA.setValeur(PA.getValeur() - caseDroite.getNature().getFatigueEntree().getValeur());
 				setPosition(caseDroite);
+				//partie.getCartes().get(0).avancerMobile(this);
+				System.out.println("On déplace le mobile");
 			}
 		}
 
@@ -165,9 +167,14 @@ public class Mobile implements PartieElement {
 		    for(int i = 0; i < partie.getMobiles().size(); i++) {
 		    	if(getNom().equals(partie.getMobiles().get(i).getNom())) {
 		    		partie.getMobiles().remove(i);
+					//partie.getCartes().get(0).supprimerMobile(this);
+					System.out.println("On supprime le mobile");
+
+
 		    		break;
 				}
 			}
+		    
 		}
 	}
 }
