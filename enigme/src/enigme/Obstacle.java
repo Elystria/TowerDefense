@@ -82,7 +82,7 @@ public class Obstacle implements PartieElement {
 		return dx + dy;
 	}
 
-	public void attaquer(Case direction, Carte carte) {
+	public void attaquerAutre(Case direction, Carte carte) {
 		/* Dans l'exemple, un seul projectile peut être porté 
 		 * On ne considèrera donc pas les PA */
 		

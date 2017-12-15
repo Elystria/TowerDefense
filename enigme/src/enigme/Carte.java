@@ -88,18 +88,30 @@ public class Carte {
 	public void setCheminMobiles(ArrayList<Case> cheminMobiles) {
 		this.cheminMobiles = cheminMobiles;
 	}
+	
+	
 
-	public void mobilesAutour(int portee, Case position ) {
-
-		for (int i = 0; i <= portee; i++) {
-			mobiles.get(position);
-
-
-			for (int j = 0; j <= portee; j++) {
-
+	public Collection<Mobile> mobilesAutour(int portee, Case position ) {
+		Collection<Mobile> res = new ArrayList<Mobile>();
+		Mobile m;
+		for (Case c : cases) {
+			if (c.getI() == position.getI() && c.getJ() == position.getJ() +1) {
+					
+				if (mobiles.containsKey(c)) {
+					res.add(mobiles.get(c));
+				}
+			}
+			if (c.getI() == position.getI() && c.getJ() == position.getJ() -1) {
+				if (mobiles.containsKey(c)) {
+					res.add(mobiles.get(c));	
+				}
+			
+		
 			}
 		}
+		return res;
 	}
+	
 
 	public void supprimerMobile(Mobile mobile) {
 		mobiles.remove(mobile.getPosition());
