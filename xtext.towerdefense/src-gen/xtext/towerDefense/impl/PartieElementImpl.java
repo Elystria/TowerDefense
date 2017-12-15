@@ -21,7 +21,10 @@ import xtext.towerDefense.TowerDefensePackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link xtext.towerDefense.impl.PartieElementImpl#getName <em>Name</em>}</li>
+ *   <li>{@link xtext.towerDefense.impl.PartieElementImpl#getObstacle <em>Obstacle</em>}</li>
+ *   <li>{@link xtext.towerDefense.impl.PartieElementImpl#getMobile <em>Mobile</em>}</li>
+ *   <li>{@link xtext.towerDefense.impl.PartieElementImpl#getProjectile <em>Projectile</em>}</li>
+ *   <li>{@link xtext.towerDefense.impl.PartieElementImpl#getNature <em>Nature</em>}</li>
  * </ul>
  *
  * @generated
@@ -29,24 +32,84 @@ import xtext.towerDefense.TowerDefensePackage;
 public class PartieElementImpl extends MinimalEObjectImpl.Container implements PartieElement
 {
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The default value of the '{@link #getObstacle() <em>Obstacle</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getObstacle()
    * @generated
    * @ordered
    */
-  protected static final String NAME_EDEFAULT = null;
+  protected static final String OBSTACLE_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The cached value of the '{@link #getObstacle() <em>Obstacle</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getObstacle()
    * @generated
    * @ordered
    */
-  protected String name = NAME_EDEFAULT;
+  protected String obstacle = OBSTACLE_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getMobile() <em>Mobile</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getMobile()
+   * @generated
+   * @ordered
+   */
+  protected static final String MOBILE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getMobile() <em>Mobile</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getMobile()
+   * @generated
+   * @ordered
+   */
+  protected String mobile = MOBILE_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getProjectile() <em>Projectile</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getProjectile()
+   * @generated
+   * @ordered
+   */
+  protected static final String PROJECTILE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getProjectile() <em>Projectile</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getProjectile()
+   * @generated
+   * @ordered
+   */
+  protected String projectile = PROJECTILE_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getNature() <em>Nature</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getNature()
+   * @generated
+   * @ordered
+   */
+  protected static final String NATURE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getNature() <em>Nature</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getNature()
+   * @generated
+   * @ordered
+   */
+  protected String nature = NATURE_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -74,9 +137,9 @@ public class PartieElementImpl extends MinimalEObjectImpl.Container implements P
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getName()
+  public String getObstacle()
   {
-    return name;
+    return obstacle;
   }
 
   /**
@@ -84,12 +147,81 @@ public class PartieElementImpl extends MinimalEObjectImpl.Container implements P
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setName(String newName)
+  public void setObstacle(String newObstacle)
   {
-    String oldName = name;
-    name = newName;
+    String oldObstacle = obstacle;
+    obstacle = newObstacle;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.PARTIE_ELEMENT__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.PARTIE_ELEMENT__OBSTACLE, oldObstacle, obstacle));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getMobile()
+  {
+    return mobile;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setMobile(String newMobile)
+  {
+    String oldMobile = mobile;
+    mobile = newMobile;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.PARTIE_ELEMENT__MOBILE, oldMobile, mobile));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getProjectile()
+  {
+    return projectile;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setProjectile(String newProjectile)
+  {
+    String oldProjectile = projectile;
+    projectile = newProjectile;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.PARTIE_ELEMENT__PROJECTILE, oldProjectile, projectile));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getNature()
+  {
+    return nature;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setNature(String newNature)
+  {
+    String oldNature = nature;
+    nature = newNature;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.PARTIE_ELEMENT__NATURE, oldNature, nature));
   }
 
   /**
@@ -102,8 +234,14 @@ public class PartieElementImpl extends MinimalEObjectImpl.Container implements P
   {
     switch (featureID)
     {
-      case TowerDefensePackage.PARTIE_ELEMENT__NAME:
-        return getName();
+      case TowerDefensePackage.PARTIE_ELEMENT__OBSTACLE:
+        return getObstacle();
+      case TowerDefensePackage.PARTIE_ELEMENT__MOBILE:
+        return getMobile();
+      case TowerDefensePackage.PARTIE_ELEMENT__PROJECTILE:
+        return getProjectile();
+      case TowerDefensePackage.PARTIE_ELEMENT__NATURE:
+        return getNature();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -118,8 +256,17 @@ public class PartieElementImpl extends MinimalEObjectImpl.Container implements P
   {
     switch (featureID)
     {
-      case TowerDefensePackage.PARTIE_ELEMENT__NAME:
-        setName((String)newValue);
+      case TowerDefensePackage.PARTIE_ELEMENT__OBSTACLE:
+        setObstacle((String)newValue);
+        return;
+      case TowerDefensePackage.PARTIE_ELEMENT__MOBILE:
+        setMobile((String)newValue);
+        return;
+      case TowerDefensePackage.PARTIE_ELEMENT__PROJECTILE:
+        setProjectile((String)newValue);
+        return;
+      case TowerDefensePackage.PARTIE_ELEMENT__NATURE:
+        setNature((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -135,8 +282,17 @@ public class PartieElementImpl extends MinimalEObjectImpl.Container implements P
   {
     switch (featureID)
     {
-      case TowerDefensePackage.PARTIE_ELEMENT__NAME:
-        setName(NAME_EDEFAULT);
+      case TowerDefensePackage.PARTIE_ELEMENT__OBSTACLE:
+        setObstacle(OBSTACLE_EDEFAULT);
+        return;
+      case TowerDefensePackage.PARTIE_ELEMENT__MOBILE:
+        setMobile(MOBILE_EDEFAULT);
+        return;
+      case TowerDefensePackage.PARTIE_ELEMENT__PROJECTILE:
+        setProjectile(PROJECTILE_EDEFAULT);
+        return;
+      case TowerDefensePackage.PARTIE_ELEMENT__NATURE:
+        setNature(NATURE_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -152,8 +308,14 @@ public class PartieElementImpl extends MinimalEObjectImpl.Container implements P
   {
     switch (featureID)
     {
-      case TowerDefensePackage.PARTIE_ELEMENT__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case TowerDefensePackage.PARTIE_ELEMENT__OBSTACLE:
+        return OBSTACLE_EDEFAULT == null ? obstacle != null : !OBSTACLE_EDEFAULT.equals(obstacle);
+      case TowerDefensePackage.PARTIE_ELEMENT__MOBILE:
+        return MOBILE_EDEFAULT == null ? mobile != null : !MOBILE_EDEFAULT.equals(mobile);
+      case TowerDefensePackage.PARTIE_ELEMENT__PROJECTILE:
+        return PROJECTILE_EDEFAULT == null ? projectile != null : !PROJECTILE_EDEFAULT.equals(projectile);
+      case TowerDefensePackage.PARTIE_ELEMENT__NATURE:
+        return NATURE_EDEFAULT == null ? nature != null : !NATURE_EDEFAULT.equals(nature);
     }
     return super.eIsSet(featureID);
   }
@@ -169,8 +331,14 @@ public class PartieElementImpl extends MinimalEObjectImpl.Container implements P
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (name: ");
-    result.append(name);
+    result.append(" (Obstacle: ");
+    result.append(obstacle);
+    result.append(", Mobile: ");
+    result.append(mobile);
+    result.append(", Projectile: ");
+    result.append(projectile);
+    result.append(", Nature: ");
+    result.append(nature);
     result.append(')');
     return result.toString();
   }

@@ -2,12 +2,11 @@ grammar xtext.TowerDefense with org.eclipse.xtext.common.Terminals
 
 generate towerDefense "http://www.TowerDefense.xtext"
 
-Jeu :
-	'Jeu' name=ID '{'
-		parties+=Partie
-	'}';
 
-FLOAT hidden(): INT"."(INT);
+Jeu:
+	'Jeu' name=ID '{'
+		parties+=Partie*
+	'}';
 	
 Partie:
 	'Partie' name=ID '{'
@@ -17,94 +16,104 @@ Partie:
 ;
 	
 PartieElement:
-	'PartieElement' name=ID 
-	'EnergieCourante' energieCourante=Energie
-	Obstacle="obstacle" | Mobile="mobile" | Projectile="projectile" | NatureTerrain="nature"
+	Obstacle='Obstacle' | Mobile='Mobile' | Projectile='Projectile' | Nature='Nature'
 ;
 
 Energie :
-	'Energie'
-	infini?='infini'
-	'Valeur' valeur=INT 
+	infini?='infini' | valeur=INT 
 ;
 
 Obstacle:
-	'Obstacle'
-	'Campement' campement=Case
-	'PV' quantiteEnergieMax=Energie
-	'PA' pontsAction=Energie
-	'Tactique' tactique=Tactique
+	name=ID '{'
+	'Campement' campement=[Case]
+	'PVmax' quantiteEnergieMax=[Energie]
+	'PV' quantiteEnergieCourant=[Energie]
+	'PA' pontsAction=[Energie]
+	tactique=Tactique
+	'}'
 ;
 
 Tactique :
 	'Tactique'
-	proche='proche'|faible='faible'|fort='fort'
+	proche='procheFirst'|faible='faibleFirst'|fort='fortFirst'
 	
 ;
 Mobile:
-	'Mobile'
-	'Force' force=INT
-	'Volume' volume=INT
+	name=ID '{'
+	'F' force=INT
+	'V' volume=INT
 	'NumVague' numVague=INT
-	'Entrée' caseEntree=Case
-	'Sortie' caseSortie=Case
-	'PV' quantiteEnergieMax=INT
-	'PA' pointsAction=Energie
+	'In' caseEntree=[Case]
+	'Out' caseSortie=[Case]
+	'PVmax' quantiteEnergieMax=[Energie]
+	'PV' quantiteEnergieCourant=[Energie]
+	'PA' pointsAction=[Energie]
+	'}'
 ;
 
 Projectile:
-	'Projectile'
-	'Portée' portee=INT
+	name=ID '{'
+	'Portee' portee=INT
 	'Masse' masse=INT
 	'Vitesse' vitesse=INT
+	'Position' case=[Case]
+	'Direction' cible=[Case]
+	'Degat' degat=[Energie]
+	'}'	
 ;
 
 NatureTerrain:
-	'Nature'
+	name=ID '{'
 	'Volume' volume=INT
 	'Type' type=TYPE_TERRAIN
+	'FatigueEntree' fatigue=[Energie]
+	'}'
 ;
 
 enum TYPE_TERRAIN: 
-	entree='entree' | sortie='sortie' |chemin='chemin'|campement='camp'|decoration='deco'
+	entree='entree' | sortie='sortie' | chemin='chemin'| campement='camp' | decoration='deco'
 	
 ;
 
 Niveau:
-	'Niveau' name=ID
-	'Difficulté' difficulte=STRING
+	'Niveau' name=ID '{'
+	'Difficulte' difficulte=Difficulte
 	'DureePauses' dureePause=INT
-	'EnergieInit' energieInitJoueur=INT
+	'Argent' argent=INT
 	'MobSortisMax' mobSortisLimite=INT
-	'Terrain' terrain=TerrainDeJeu
+	terrain=TerrainDeJeu
 	'Vague' vagues+=Vague
-	
-;
-TerrainDeJeu:
-	'Terrain'
-	'Damier' damier=Damier
+	'}'
 ;
 
-Damier :
-	'Damier'
+enum Difficulte:
+	facile='facile' | moyen='moyen' | difficile='difficile'
+;
+
+TerrainDeJeu:
+	'Terrain' 
+	damier=[Damier]
+;
+
+Damier:
+	'Damier' name=ID '{'
 	'Lignes' nbLignes=INT
 	'Colonnes' nbColonnes=INT
 	'Cases' cases+=Case*
-	
+	'}'
 ;
 
 Case :
 	'i' i=INT
 	'j' j=INT
-	'Nature' natureTerrain=NatureTerrain
+	natureTerrain=NatureTerrain
 ;
 
 Vague : 
-	'Mobiles' mobiles+=Mobile*
-	'Obstacles' obstacles+=Obstacle*
-	'Gain' gainVictoire = Energie
+	'{'
+	'Mobiles' mobiles+=[Mobile]*
+	'Obstacles' obstacles+=[Obstacle]*
+	'Gain' gainVictoire = INT
+	'}'
 ;
-
-
-
-
+	

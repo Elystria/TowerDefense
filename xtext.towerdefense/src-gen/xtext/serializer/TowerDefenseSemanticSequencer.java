@@ -15,11 +15,21 @@ import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
 import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 import xtext.services.TowerDefenseGrammarAccess;
+import xtext.towerDefense.Case;
+import xtext.towerDefense.Damier;
+import xtext.towerDefense.Energie;
 import xtext.towerDefense.Jeu;
+import xtext.towerDefense.Mobile;
+import xtext.towerDefense.NatureTerrain;
 import xtext.towerDefense.Niveau;
+import xtext.towerDefense.Obstacle;
 import xtext.towerDefense.Partie;
 import xtext.towerDefense.PartieElement;
+import xtext.towerDefense.Projectile;
+import xtext.towerDefense.Tactique;
+import xtext.towerDefense.TerrainDeJeu;
 import xtext.towerDefense.TowerDefensePackage;
+import xtext.towerDefense.Vague;
 
 @SuppressWarnings("all")
 public class TowerDefenseSemanticSequencer extends AbstractDelegatingSemanticSequencer {
@@ -35,17 +45,47 @@ public class TowerDefenseSemanticSequencer extends AbstractDelegatingSemanticSeq
 		Set<Parameter> parameters = context.getEnabledBooleanParameters();
 		if (epackage == TowerDefensePackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
+			case TowerDefensePackage.CASE:
+				sequence_Case(context, (Case) semanticObject); 
+				return; 
+			case TowerDefensePackage.DAMIER:
+				sequence_Damier(context, (Damier) semanticObject); 
+				return; 
+			case TowerDefensePackage.ENERGIE:
+				sequence_Energie(context, (Energie) semanticObject); 
+				return; 
 			case TowerDefensePackage.JEU:
 				sequence_Jeu(context, (Jeu) semanticObject); 
+				return; 
+			case TowerDefensePackage.MOBILE:
+				sequence_Mobile(context, (Mobile) semanticObject); 
+				return; 
+			case TowerDefensePackage.NATURE_TERRAIN:
+				sequence_NatureTerrain(context, (NatureTerrain) semanticObject); 
 				return; 
 			case TowerDefensePackage.NIVEAU:
 				sequence_Niveau(context, (Niveau) semanticObject); 
 				return; 
+			case TowerDefensePackage.OBSTACLE:
+				sequence_Obstacle(context, (Obstacle) semanticObject); 
+				return; 
 			case TowerDefensePackage.PARTIE:
-				sequence_PartieRule(context, (Partie) semanticObject); 
+				sequence_Partie(context, (Partie) semanticObject); 
 				return; 
 			case TowerDefensePackage.PARTIE_ELEMENT:
 				sequence_PartieElement(context, (PartieElement) semanticObject); 
+				return; 
+			case TowerDefensePackage.PROJECTILE:
+				sequence_Projectile(context, (Projectile) semanticObject); 
+				return; 
+			case TowerDefensePackage.TACTIQUE:
+				sequence_Tactique(context, (Tactique) semanticObject); 
+				return; 
+			case TowerDefensePackage.TERRAIN_DE_JEU:
+				sequence_TerrainDeJeu(context, (TerrainDeJeu) semanticObject); 
+				return; 
+			case TowerDefensePackage.VAGUE:
+				sequence_Vague(context, (Vague) semanticObject); 
 				return; 
 			}
 		if (errorAcceptor != null)
@@ -54,10 +94,58 @@ public class TowerDefenseSemanticSequencer extends AbstractDelegatingSemanticSeq
 	
 	/**
 	 * Contexts:
+	 *     Case returns Case
+	 *
+	 * Constraint:
+	 *     (i=INT j=INT natureTerrain=NatureTerrain)
+	 */
+	protected void sequence_Case(ISerializationContext context, Case semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, TowerDefensePackage.Literals.CASE__I) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TowerDefensePackage.Literals.CASE__I));
+			if (transientValues.isValueTransient(semanticObject, TowerDefensePackage.Literals.CASE__J) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TowerDefensePackage.Literals.CASE__J));
+			if (transientValues.isValueTransient(semanticObject, TowerDefensePackage.Literals.CASE__NATURE_TERRAIN) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TowerDefensePackage.Literals.CASE__NATURE_TERRAIN));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getCaseAccess().getIINTTerminalRuleCall_1_0(), semanticObject.getI());
+		feeder.accept(grammarAccess.getCaseAccess().getJINTTerminalRuleCall_3_0(), semanticObject.getJ());
+		feeder.accept(grammarAccess.getCaseAccess().getNatureTerrainNatureTerrainParserRuleCall_4_0(), semanticObject.getNatureTerrain());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Damier returns Damier
+	 *
+	 * Constraint:
+	 *     (name=ID nbLignes=INT nbColonnes=INT cases+=Case*)
+	 */
+	protected void sequence_Damier(ISerializationContext context, Damier semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Energie returns Energie
+	 *
+	 * Constraint:
+	 *     (infini?='infini' | valeur=INT)
+	 */
+	protected void sequence_Energie(ISerializationContext context, Energie semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     Jeu returns Jeu
 	 *
 	 * Constraint:
-	 *     (name=ID parties+=PartieRule*)
+	 *     (name=ID parties+=Partie*)
 	 */
 	protected void sequence_Jeu(ISerializationContext context, Jeu semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -66,18 +154,139 @@ public class TowerDefenseSemanticSequencer extends AbstractDelegatingSemanticSeq
 	
 	/**
 	 * Contexts:
+	 *     Mobile returns Mobile
+	 *
+	 * Constraint:
+	 *     (
+	 *         name=ID 
+	 *         force=INT 
+	 *         volume=INT 
+	 *         numVague=INT 
+	 *         caseEntree=[Case|ID] 
+	 *         caseSortie=[Case|ID] 
+	 *         quantiteEnergieMax=[Energie|ID] 
+	 *         quantiteEnergieCourant=[Energie|ID] 
+	 *         pointsAction=[Energie|ID]
+	 *     )
+	 */
+	protected void sequence_Mobile(ISerializationContext context, Mobile semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, TowerDefensePackage.Literals.MOBILE__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TowerDefensePackage.Literals.MOBILE__NAME));
+			if (transientValues.isValueTransient(semanticObject, TowerDefensePackage.Literals.MOBILE__FORCE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TowerDefensePackage.Literals.MOBILE__FORCE));
+			if (transientValues.isValueTransient(semanticObject, TowerDefensePackage.Literals.MOBILE__VOLUME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TowerDefensePackage.Literals.MOBILE__VOLUME));
+			if (transientValues.isValueTransient(semanticObject, TowerDefensePackage.Literals.MOBILE__NUM_VAGUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TowerDefensePackage.Literals.MOBILE__NUM_VAGUE));
+			if (transientValues.isValueTransient(semanticObject, TowerDefensePackage.Literals.MOBILE__CASE_ENTREE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TowerDefensePackage.Literals.MOBILE__CASE_ENTREE));
+			if (transientValues.isValueTransient(semanticObject, TowerDefensePackage.Literals.MOBILE__CASE_SORTIE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TowerDefensePackage.Literals.MOBILE__CASE_SORTIE));
+			if (transientValues.isValueTransient(semanticObject, TowerDefensePackage.Literals.MOBILE__QUANTITE_ENERGIE_MAX) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TowerDefensePackage.Literals.MOBILE__QUANTITE_ENERGIE_MAX));
+			if (transientValues.isValueTransient(semanticObject, TowerDefensePackage.Literals.MOBILE__QUANTITE_ENERGIE_COURANT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TowerDefensePackage.Literals.MOBILE__QUANTITE_ENERGIE_COURANT));
+			if (transientValues.isValueTransient(semanticObject, TowerDefensePackage.Literals.MOBILE__POINTS_ACTION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TowerDefensePackage.Literals.MOBILE__POINTS_ACTION));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getMobileAccess().getNameIDTerminalRuleCall_0_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getMobileAccess().getForceINTTerminalRuleCall_3_0(), semanticObject.getForce());
+		feeder.accept(grammarAccess.getMobileAccess().getVolumeINTTerminalRuleCall_5_0(), semanticObject.getVolume());
+		feeder.accept(grammarAccess.getMobileAccess().getNumVagueINTTerminalRuleCall_7_0(), semanticObject.getNumVague());
+		feeder.accept(grammarAccess.getMobileAccess().getCaseEntreeCaseIDTerminalRuleCall_9_0_1(), semanticObject.eGet(TowerDefensePackage.Literals.MOBILE__CASE_ENTREE, false));
+		feeder.accept(grammarAccess.getMobileAccess().getCaseSortieCaseIDTerminalRuleCall_11_0_1(), semanticObject.eGet(TowerDefensePackage.Literals.MOBILE__CASE_SORTIE, false));
+		feeder.accept(grammarAccess.getMobileAccess().getQuantiteEnergieMaxEnergieIDTerminalRuleCall_13_0_1(), semanticObject.eGet(TowerDefensePackage.Literals.MOBILE__QUANTITE_ENERGIE_MAX, false));
+		feeder.accept(grammarAccess.getMobileAccess().getQuantiteEnergieCourantEnergieIDTerminalRuleCall_15_0_1(), semanticObject.eGet(TowerDefensePackage.Literals.MOBILE__QUANTITE_ENERGIE_COURANT, false));
+		feeder.accept(grammarAccess.getMobileAccess().getPointsActionEnergieIDTerminalRuleCall_17_0_1(), semanticObject.eGet(TowerDefensePackage.Literals.MOBILE__POINTS_ACTION, false));
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     NatureTerrain returns NatureTerrain
+	 *
+	 * Constraint:
+	 *     (name=ID volume=INT type=TYPE_TERRAIN fatigue=[Energie|ID])
+	 */
+	protected void sequence_NatureTerrain(ISerializationContext context, NatureTerrain semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, TowerDefensePackage.Literals.NATURE_TERRAIN__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TowerDefensePackage.Literals.NATURE_TERRAIN__NAME));
+			if (transientValues.isValueTransient(semanticObject, TowerDefensePackage.Literals.NATURE_TERRAIN__VOLUME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TowerDefensePackage.Literals.NATURE_TERRAIN__VOLUME));
+			if (transientValues.isValueTransient(semanticObject, TowerDefensePackage.Literals.NATURE_TERRAIN__TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TowerDefensePackage.Literals.NATURE_TERRAIN__TYPE));
+			if (transientValues.isValueTransient(semanticObject, TowerDefensePackage.Literals.NATURE_TERRAIN__FATIGUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TowerDefensePackage.Literals.NATURE_TERRAIN__FATIGUE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getNatureTerrainAccess().getNameIDTerminalRuleCall_0_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getNatureTerrainAccess().getVolumeINTTerminalRuleCall_3_0(), semanticObject.getVolume());
+		feeder.accept(grammarAccess.getNatureTerrainAccess().getTypeTYPE_TERRAINEnumRuleCall_5_0(), semanticObject.getType());
+		feeder.accept(grammarAccess.getNatureTerrainAccess().getFatigueEnergieIDTerminalRuleCall_7_0_1(), semanticObject.eGet(TowerDefensePackage.Literals.NATURE_TERRAIN__FATIGUE, false));
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     Niveau returns Niveau
 	 *
 	 * Constraint:
-	 *     name=ID
+	 *     (
+	 *         name=ID 
+	 *         difficulte=Difficulte 
+	 *         dureePause=INT 
+	 *         argent=INT 
+	 *         mobSortisLimite=INT 
+	 *         terrain=TerrainDeJeu 
+	 *         vagues+=Vague
+	 *     )
 	 */
 	protected void sequence_Niveau(ISerializationContext context, Niveau semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Obstacle returns Obstacle
+	 *
+	 * Constraint:
+	 *     (
+	 *         name=ID 
+	 *         campement=[Case|ID] 
+	 *         quantiteEnergieMax=[Energie|ID] 
+	 *         quantiteEnergieCourant=[Energie|ID] 
+	 *         pontsAction=[Energie|ID] 
+	 *         tactique=Tactique
+	 *     )
+	 */
+	protected void sequence_Obstacle(ISerializationContext context, Obstacle semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, TowerDefensePackage.Literals.NIVEAU__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TowerDefensePackage.Literals.NIVEAU__NAME));
+			if (transientValues.isValueTransient(semanticObject, TowerDefensePackage.Literals.OBSTACLE__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TowerDefensePackage.Literals.OBSTACLE__NAME));
+			if (transientValues.isValueTransient(semanticObject, TowerDefensePackage.Literals.OBSTACLE__CAMPEMENT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TowerDefensePackage.Literals.OBSTACLE__CAMPEMENT));
+			if (transientValues.isValueTransient(semanticObject, TowerDefensePackage.Literals.OBSTACLE__QUANTITE_ENERGIE_MAX) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TowerDefensePackage.Literals.OBSTACLE__QUANTITE_ENERGIE_MAX));
+			if (transientValues.isValueTransient(semanticObject, TowerDefensePackage.Literals.OBSTACLE__QUANTITE_ENERGIE_COURANT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TowerDefensePackage.Literals.OBSTACLE__QUANTITE_ENERGIE_COURANT));
+			if (transientValues.isValueTransient(semanticObject, TowerDefensePackage.Literals.OBSTACLE__PONTS_ACTION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TowerDefensePackage.Literals.OBSTACLE__PONTS_ACTION));
+			if (transientValues.isValueTransient(semanticObject, TowerDefensePackage.Literals.OBSTACLE__TACTIQUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TowerDefensePackage.Literals.OBSTACLE__TACTIQUE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getNiveauAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getObstacleAccess().getNameIDTerminalRuleCall_0_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getObstacleAccess().getCampementCaseIDTerminalRuleCall_3_0_1(), semanticObject.eGet(TowerDefensePackage.Literals.OBSTACLE__CAMPEMENT, false));
+		feeder.accept(grammarAccess.getObstacleAccess().getQuantiteEnergieMaxEnergieIDTerminalRuleCall_5_0_1(), semanticObject.eGet(TowerDefensePackage.Literals.OBSTACLE__QUANTITE_ENERGIE_MAX, false));
+		feeder.accept(grammarAccess.getObstacleAccess().getQuantiteEnergieCourantEnergieIDTerminalRuleCall_7_0_1(), semanticObject.eGet(TowerDefensePackage.Literals.OBSTACLE__QUANTITE_ENERGIE_COURANT, false));
+		feeder.accept(grammarAccess.getObstacleAccess().getPontsActionEnergieIDTerminalRuleCall_9_0_1(), semanticObject.eGet(TowerDefensePackage.Literals.OBSTACLE__PONTS_ACTION, false));
+		feeder.accept(grammarAccess.getObstacleAccess().getTactiqueTactiqueParserRuleCall_10_0(), semanticObject.getTactique());
 		feeder.finish();
 	}
 	
@@ -87,27 +296,107 @@ public class TowerDefenseSemanticSequencer extends AbstractDelegatingSemanticSeq
 	 *     PartieElement returns PartieElement
 	 *
 	 * Constraint:
-	 *     name=ID
+	 *     (Obstacle='Obstacle' | Mobile='Mobile' | Projectile='Projectile' | Nature='Nature')
 	 */
 	protected void sequence_PartieElement(ISerializationContext context, PartieElement semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Partie returns Partie
+	 *
+	 * Constraint:
+	 *     (name=ID partiesElements+=PartieElement* niveaux+=Niveau*)
+	 */
+	protected void sequence_Partie(ISerializationContext context, Partie semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Projectile returns Projectile
+	 *
+	 * Constraint:
+	 *     (
+	 *         name=ID 
+	 *         portee=INT 
+	 *         masse=INT 
+	 *         vitesse=INT 
+	 *         case=[Case|ID] 
+	 *         cible=[Case|ID] 
+	 *         degat=[Energie|ID]
+	 *     )
+	 */
+	protected void sequence_Projectile(ISerializationContext context, Projectile semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, TowerDefensePackage.Literals.PARTIE_ELEMENT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TowerDefensePackage.Literals.PARTIE_ELEMENT__NAME));
+			if (transientValues.isValueTransient(semanticObject, TowerDefensePackage.Literals.PROJECTILE__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TowerDefensePackage.Literals.PROJECTILE__NAME));
+			if (transientValues.isValueTransient(semanticObject, TowerDefensePackage.Literals.PROJECTILE__PORTEE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TowerDefensePackage.Literals.PROJECTILE__PORTEE));
+			if (transientValues.isValueTransient(semanticObject, TowerDefensePackage.Literals.PROJECTILE__MASSE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TowerDefensePackage.Literals.PROJECTILE__MASSE));
+			if (transientValues.isValueTransient(semanticObject, TowerDefensePackage.Literals.PROJECTILE__VITESSE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TowerDefensePackage.Literals.PROJECTILE__VITESSE));
+			if (transientValues.isValueTransient(semanticObject, TowerDefensePackage.Literals.PROJECTILE__CASE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TowerDefensePackage.Literals.PROJECTILE__CASE));
+			if (transientValues.isValueTransient(semanticObject, TowerDefensePackage.Literals.PROJECTILE__CIBLE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TowerDefensePackage.Literals.PROJECTILE__CIBLE));
+			if (transientValues.isValueTransient(semanticObject, TowerDefensePackage.Literals.PROJECTILE__DEGAT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TowerDefensePackage.Literals.PROJECTILE__DEGAT));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getPartieElementAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getProjectileAccess().getNameIDTerminalRuleCall_0_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getProjectileAccess().getPorteeINTTerminalRuleCall_3_0(), semanticObject.getPortee());
+		feeder.accept(grammarAccess.getProjectileAccess().getMasseINTTerminalRuleCall_5_0(), semanticObject.getMasse());
+		feeder.accept(grammarAccess.getProjectileAccess().getVitesseINTTerminalRuleCall_7_0(), semanticObject.getVitesse());
+		feeder.accept(grammarAccess.getProjectileAccess().getCaseCaseIDTerminalRuleCall_9_0_1(), semanticObject.eGet(TowerDefensePackage.Literals.PROJECTILE__CASE, false));
+		feeder.accept(grammarAccess.getProjectileAccess().getCibleCaseIDTerminalRuleCall_11_0_1(), semanticObject.eGet(TowerDefensePackage.Literals.PROJECTILE__CIBLE, false));
+		feeder.accept(grammarAccess.getProjectileAccess().getDegatEnergieIDTerminalRuleCall_13_0_1(), semanticObject.eGet(TowerDefensePackage.Literals.PROJECTILE__DEGAT, false));
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     PartieRule returns Partie
+	 *     Tactique returns Tactique
 	 *
 	 * Constraint:
-	 *     (name=ID partiesElements+=PartieElement* niveaux+=Niveau*)
+	 *     (proche='procheFirst' | faible='faibleFirst' | fort='fortFirst')
 	 */
-	protected void sequence_PartieRule(ISerializationContext context, Partie semanticObject) {
+	protected void sequence_Tactique(ISerializationContext context, Tactique semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     TerrainDeJeu returns TerrainDeJeu
+	 *
+	 * Constraint:
+	 *     damier=[Damier|ID]
+	 */
+	protected void sequence_TerrainDeJeu(ISerializationContext context, TerrainDeJeu semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, TowerDefensePackage.Literals.TERRAIN_DE_JEU__DAMIER) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TowerDefensePackage.Literals.TERRAIN_DE_JEU__DAMIER));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getTerrainDeJeuAccess().getDamierDamierIDTerminalRuleCall_1_0_1(), semanticObject.eGet(TowerDefensePackage.Literals.TERRAIN_DE_JEU__DAMIER, false));
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Vague returns Vague
+	 *
+	 * Constraint:
+	 *     (mobiles+=[Mobile|ID]* obstacles+=[Obstacle|ID]* gainVictoire=INT)
+	 */
+	protected void sequence_Vague(ISerializationContext context, Vague semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
