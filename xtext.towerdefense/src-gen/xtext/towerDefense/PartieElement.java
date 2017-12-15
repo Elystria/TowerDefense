@@ -14,7 +14,10 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link xtext.towerDefense.PartieElement#getName <em>Name</em>}</li>
+ *   <li>{@link xtext.towerDefense.PartieElement#getObstacle <em>Obstacle</em>}</li>
+ *   <li>{@link xtext.towerDefense.PartieElement#getMobile <em>Mobile</em>}</li>
+ *   <li>{@link xtext.towerDefense.PartieElement#getProjectile <em>Projectile</em>}</li>
+ *   <li>{@link xtext.towerDefense.PartieElement#getNature <em>Nature</em>}</li>
  * </ul>
  *
  * @see xtext.towerDefense.TowerDefensePackage#getPartieElement()
@@ -24,29 +27,107 @@ import org.eclipse.emf.ecore.EObject;
 public interface PartieElement extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Name</b></em>' attribute.
+   * Returns the value of the '<em><b>Obstacle</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Name</em>' attribute isn't clear,
+   * If the meaning of the '<em>Obstacle</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Name</em>' attribute.
-   * @see #setName(String)
-   * @see xtext.towerDefense.TowerDefensePackage#getPartieElement_Name()
+   * @return the value of the '<em>Obstacle</em>' attribute.
+   * @see #setObstacle(String)
+   * @see xtext.towerDefense.TowerDefensePackage#getPartieElement_Obstacle()
    * @model
    * @generated
    */
-  String getName();
+  String getObstacle();
 
   /**
-   * Sets the value of the '{@link xtext.towerDefense.PartieElement#getName <em>Name</em>}' attribute.
+   * Sets the value of the '{@link xtext.towerDefense.PartieElement#getObstacle <em>Obstacle</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name</em>' attribute.
-   * @see #getName()
+   * @param value the new value of the '<em>Obstacle</em>' attribute.
+   * @see #getObstacle()
    * @generated
    */
-  void setName(String value);
+  void setObstacle(String value);
+
+  /**
+   * Returns the value of the '<em><b>Mobile</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Mobile</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Mobile</em>' attribute.
+   * @see #setMobile(String)
+   * @see xtext.towerDefense.TowerDefensePackage#getPartieElement_Mobile()
+   * @model
+   * @generated
+   */
+  String getMobile();
+
+  /**
+   * Sets the value of the '{@link xtext.towerDefense.PartieElement#getMobile <em>Mobile</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Mobile</em>' attribute.
+   * @see #getMobile()
+   * @generated
+   */
+  void setMobile(String value);
+
+  /**
+   * Returns the value of the '<em><b>Projectile</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Projectile</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Projectile</em>' attribute.
+   * @see #setProjectile(String)
+   * @see xtext.towerDefense.TowerDefensePackage#getPartieElement_Projectile()
+   * @model
+   * @generated
+   */
+  String getProjectile();
+
+  /**
+   * Sets the value of the '{@link xtext.towerDefense.PartieElement#getProjectile <em>Projectile</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Projectile</em>' attribute.
+   * @see #getProjectile()
+   * @generated
+   */
+  void setProjectile(String value);
+
+  /**
+   * Returns the value of the '<em><b>Nature</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Nature</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Nature</em>' attribute.
+   * @see #setNature(String)
+   * @see xtext.towerDefense.TowerDefensePackage#getPartieElement_Nature()
+   * @model
+   * @generated
+   */
+  String getNature();
+
+  /**
+   * Sets the value of the '{@link xtext.towerDefense.PartieElement#getNature <em>Nature</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Nature</em>' attribute.
+   * @see #getNature()
+   * @generated
+   */
+  void setNature(String value);
 
 } // PartieElement

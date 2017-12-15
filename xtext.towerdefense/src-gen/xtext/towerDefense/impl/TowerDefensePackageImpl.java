@@ -5,17 +5,29 @@ package xtext.towerDefense.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import xtext.towerDefense.Case;
+import xtext.towerDefense.Damier;
+import xtext.towerDefense.Difficulte;
+import xtext.towerDefense.Energie;
 import xtext.towerDefense.Jeu;
+import xtext.towerDefense.Mobile;
+import xtext.towerDefense.NatureTerrain;
 import xtext.towerDefense.Niveau;
+import xtext.towerDefense.Obstacle;
 import xtext.towerDefense.Partie;
 import xtext.towerDefense.PartieElement;
+import xtext.towerDefense.Projectile;
+import xtext.towerDefense.Tactique;
+import xtext.towerDefense.TerrainDeJeu;
 import xtext.towerDefense.TowerDefenseFactory;
 import xtext.towerDefense.TowerDefensePackage;
+import xtext.towerDefense.Vague;
 
 /**
  * <!-- begin-user-doc -->
@@ -51,7 +63,91 @@ public class TowerDefensePackageImpl extends EPackageImpl implements TowerDefens
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass energieEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass obstacleEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass tactiqueEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass mobileEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass projectileEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass natureTerrainEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass niveauEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass terrainDeJeuEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass damierEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass caseEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass vagueEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EEnum typE_TERRAINEEnum = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EEnum difficulteEEnum = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -201,9 +297,409 @@ public class TowerDefensePackageImpl extends EPackageImpl implements TowerDefens
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getPartieElement_Name()
+  public EAttribute getPartieElement_Obstacle()
   {
     return (EAttribute)partieElementEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getPartieElement_Mobile()
+  {
+    return (EAttribute)partieElementEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getPartieElement_Projectile()
+  {
+    return (EAttribute)partieElementEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getPartieElement_Nature()
+  {
+    return (EAttribute)partieElementEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getEnergie()
+  {
+    return energieEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getEnergie_Infini()
+  {
+    return (EAttribute)energieEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getEnergie_Valeur()
+  {
+    return (EAttribute)energieEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getObstacle()
+  {
+    return obstacleEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getObstacle_Name()
+  {
+    return (EAttribute)obstacleEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getObstacle_Campement()
+  {
+    return (EReference)obstacleEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getObstacle_QuantiteEnergieMax()
+  {
+    return (EReference)obstacleEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getObstacle_QuantiteEnergieCourant()
+  {
+    return (EReference)obstacleEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getObstacle_PontsAction()
+  {
+    return (EReference)obstacleEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getObstacle_Tactique()
+  {
+    return (EReference)obstacleEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getTactique()
+  {
+    return tactiqueEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getTactique_Proche()
+  {
+    return (EAttribute)tactiqueEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getTactique_Faible()
+  {
+    return (EAttribute)tactiqueEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getTactique_Fort()
+  {
+    return (EAttribute)tactiqueEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getMobile()
+  {
+    return mobileEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getMobile_Name()
+  {
+    return (EAttribute)mobileEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getMobile_Force()
+  {
+    return (EAttribute)mobileEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getMobile_Volume()
+  {
+    return (EAttribute)mobileEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getMobile_NumVague()
+  {
+    return (EAttribute)mobileEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getMobile_CaseEntree()
+  {
+    return (EReference)mobileEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getMobile_CaseSortie()
+  {
+    return (EReference)mobileEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getMobile_QuantiteEnergieMax()
+  {
+    return (EReference)mobileEClass.getEStructuralFeatures().get(6);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getMobile_QuantiteEnergieCourant()
+  {
+    return (EReference)mobileEClass.getEStructuralFeatures().get(7);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getMobile_PointsAction()
+  {
+    return (EReference)mobileEClass.getEStructuralFeatures().get(8);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getProjectile()
+  {
+    return projectileEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getProjectile_Name()
+  {
+    return (EAttribute)projectileEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getProjectile_Portee()
+  {
+    return (EAttribute)projectileEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getProjectile_Masse()
+  {
+    return (EAttribute)projectileEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getProjectile_Vitesse()
+  {
+    return (EAttribute)projectileEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getProjectile_Case()
+  {
+    return (EReference)projectileEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getProjectile_Cible()
+  {
+    return (EReference)projectileEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getProjectile_Degat()
+  {
+    return (EReference)projectileEClass.getEStructuralFeatures().get(6);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getNatureTerrain()
+  {
+    return natureTerrainEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getNatureTerrain_Name()
+  {
+    return (EAttribute)natureTerrainEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getNatureTerrain_Volume()
+  {
+    return (EAttribute)natureTerrainEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getNatureTerrain_Type()
+  {
+    return (EAttribute)natureTerrainEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getNatureTerrain_Fatigue()
+  {
+    return (EReference)natureTerrainEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -224,6 +720,236 @@ public class TowerDefensePackageImpl extends EPackageImpl implements TowerDefens
   public EAttribute getNiveau_Name()
   {
     return (EAttribute)niveauEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getNiveau_Difficulte()
+  {
+    return (EAttribute)niveauEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getNiveau_DureePause()
+  {
+    return (EAttribute)niveauEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getNiveau_Argent()
+  {
+    return (EAttribute)niveauEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getNiveau_MobSortisLimite()
+  {
+    return (EAttribute)niveauEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getNiveau_Terrain()
+  {
+    return (EReference)niveauEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getNiveau_Vagues()
+  {
+    return (EReference)niveauEClass.getEStructuralFeatures().get(6);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getTerrainDeJeu()
+  {
+    return terrainDeJeuEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getTerrainDeJeu_Damier()
+  {
+    return (EReference)terrainDeJeuEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getDamier()
+  {
+    return damierEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getDamier_Name()
+  {
+    return (EAttribute)damierEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getDamier_NbLignes()
+  {
+    return (EAttribute)damierEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getDamier_NbColonnes()
+  {
+    return (EAttribute)damierEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getDamier_Cases()
+  {
+    return (EReference)damierEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getCase()
+  {
+    return caseEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getCase_I()
+  {
+    return (EAttribute)caseEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getCase_J()
+  {
+    return (EAttribute)caseEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getCase_NatureTerrain()
+  {
+    return (EReference)caseEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getVague()
+  {
+    return vagueEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getVague_Mobiles()
+  {
+    return (EReference)vagueEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getVague_Obstacles()
+  {
+    return (EReference)vagueEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getVague_GainVictoire()
+  {
+    return (EAttribute)vagueEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EEnum getTYPE_TERRAIN()
+  {
+    return typE_TERRAINEEnum;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EEnum getDifficulte()
+  {
+    return difficulteEEnum;
   }
 
   /**
@@ -266,10 +992,85 @@ public class TowerDefensePackageImpl extends EPackageImpl implements TowerDefens
     createEReference(partieEClass, PARTIE__NIVEAUX);
 
     partieElementEClass = createEClass(PARTIE_ELEMENT);
-    createEAttribute(partieElementEClass, PARTIE_ELEMENT__NAME);
+    createEAttribute(partieElementEClass, PARTIE_ELEMENT__OBSTACLE);
+    createEAttribute(partieElementEClass, PARTIE_ELEMENT__MOBILE);
+    createEAttribute(partieElementEClass, PARTIE_ELEMENT__PROJECTILE);
+    createEAttribute(partieElementEClass, PARTIE_ELEMENT__NATURE);
+
+    energieEClass = createEClass(ENERGIE);
+    createEAttribute(energieEClass, ENERGIE__INFINI);
+    createEAttribute(energieEClass, ENERGIE__VALEUR);
+
+    obstacleEClass = createEClass(OBSTACLE);
+    createEAttribute(obstacleEClass, OBSTACLE__NAME);
+    createEReference(obstacleEClass, OBSTACLE__CAMPEMENT);
+    createEReference(obstacleEClass, OBSTACLE__QUANTITE_ENERGIE_MAX);
+    createEReference(obstacleEClass, OBSTACLE__QUANTITE_ENERGIE_COURANT);
+    createEReference(obstacleEClass, OBSTACLE__PONTS_ACTION);
+    createEReference(obstacleEClass, OBSTACLE__TACTIQUE);
+
+    tactiqueEClass = createEClass(TACTIQUE);
+    createEAttribute(tactiqueEClass, TACTIQUE__PROCHE);
+    createEAttribute(tactiqueEClass, TACTIQUE__FAIBLE);
+    createEAttribute(tactiqueEClass, TACTIQUE__FORT);
+
+    mobileEClass = createEClass(MOBILE);
+    createEAttribute(mobileEClass, MOBILE__NAME);
+    createEAttribute(mobileEClass, MOBILE__FORCE);
+    createEAttribute(mobileEClass, MOBILE__VOLUME);
+    createEAttribute(mobileEClass, MOBILE__NUM_VAGUE);
+    createEReference(mobileEClass, MOBILE__CASE_ENTREE);
+    createEReference(mobileEClass, MOBILE__CASE_SORTIE);
+    createEReference(mobileEClass, MOBILE__QUANTITE_ENERGIE_MAX);
+    createEReference(mobileEClass, MOBILE__QUANTITE_ENERGIE_COURANT);
+    createEReference(mobileEClass, MOBILE__POINTS_ACTION);
+
+    projectileEClass = createEClass(PROJECTILE);
+    createEAttribute(projectileEClass, PROJECTILE__NAME);
+    createEAttribute(projectileEClass, PROJECTILE__PORTEE);
+    createEAttribute(projectileEClass, PROJECTILE__MASSE);
+    createEAttribute(projectileEClass, PROJECTILE__VITESSE);
+    createEReference(projectileEClass, PROJECTILE__CASE);
+    createEReference(projectileEClass, PROJECTILE__CIBLE);
+    createEReference(projectileEClass, PROJECTILE__DEGAT);
+
+    natureTerrainEClass = createEClass(NATURE_TERRAIN);
+    createEAttribute(natureTerrainEClass, NATURE_TERRAIN__NAME);
+    createEAttribute(natureTerrainEClass, NATURE_TERRAIN__VOLUME);
+    createEAttribute(natureTerrainEClass, NATURE_TERRAIN__TYPE);
+    createEReference(natureTerrainEClass, NATURE_TERRAIN__FATIGUE);
 
     niveauEClass = createEClass(NIVEAU);
     createEAttribute(niveauEClass, NIVEAU__NAME);
+    createEAttribute(niveauEClass, NIVEAU__DIFFICULTE);
+    createEAttribute(niveauEClass, NIVEAU__DUREE_PAUSE);
+    createEAttribute(niveauEClass, NIVEAU__ARGENT);
+    createEAttribute(niveauEClass, NIVEAU__MOB_SORTIS_LIMITE);
+    createEReference(niveauEClass, NIVEAU__TERRAIN);
+    createEReference(niveauEClass, NIVEAU__VAGUES);
+
+    terrainDeJeuEClass = createEClass(TERRAIN_DE_JEU);
+    createEReference(terrainDeJeuEClass, TERRAIN_DE_JEU__DAMIER);
+
+    damierEClass = createEClass(DAMIER);
+    createEAttribute(damierEClass, DAMIER__NAME);
+    createEAttribute(damierEClass, DAMIER__NB_LIGNES);
+    createEAttribute(damierEClass, DAMIER__NB_COLONNES);
+    createEReference(damierEClass, DAMIER__CASES);
+
+    caseEClass = createEClass(CASE);
+    createEAttribute(caseEClass, CASE__I);
+    createEAttribute(caseEClass, CASE__J);
+    createEReference(caseEClass, CASE__NATURE_TERRAIN);
+
+    vagueEClass = createEClass(VAGUE);
+    createEReference(vagueEClass, VAGUE__MOBILES);
+    createEReference(vagueEClass, VAGUE__OBSTACLES);
+    createEAttribute(vagueEClass, VAGUE__GAIN_VICTOIRE);
+
+    // Create enums
+    typE_TERRAINEEnum = createEEnum(TYPE_TERRAIN);
+    difficulteEEnum = createEEnum(DIFFICULTE);
   }
 
   /**
@@ -313,10 +1114,94 @@ public class TowerDefensePackageImpl extends EPackageImpl implements TowerDefens
     initEReference(getPartie_Niveaux(), this.getNiveau(), null, "niveaux", null, 0, -1, Partie.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(partieElementEClass, PartieElement.class, "PartieElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getPartieElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, PartieElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getPartieElement_Obstacle(), ecorePackage.getEString(), "Obstacle", null, 0, 1, PartieElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getPartieElement_Mobile(), ecorePackage.getEString(), "Mobile", null, 0, 1, PartieElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getPartieElement_Projectile(), ecorePackage.getEString(), "Projectile", null, 0, 1, PartieElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getPartieElement_Nature(), ecorePackage.getEString(), "Nature", null, 0, 1, PartieElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(energieEClass, Energie.class, "Energie", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getEnergie_Infini(), ecorePackage.getEBoolean(), "infini", null, 0, 1, Energie.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getEnergie_Valeur(), ecorePackage.getEInt(), "valeur", null, 0, 1, Energie.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(obstacleEClass, Obstacle.class, "Obstacle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getObstacle_Name(), ecorePackage.getEString(), "name", null, 0, 1, Obstacle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getObstacle_Campement(), this.getCase(), null, "campement", null, 0, 1, Obstacle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getObstacle_QuantiteEnergieMax(), this.getEnergie(), null, "quantiteEnergieMax", null, 0, 1, Obstacle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getObstacle_QuantiteEnergieCourant(), this.getEnergie(), null, "quantiteEnergieCourant", null, 0, 1, Obstacle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getObstacle_PontsAction(), this.getEnergie(), null, "pontsAction", null, 0, 1, Obstacle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getObstacle_Tactique(), this.getTactique(), null, "tactique", null, 0, 1, Obstacle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(tactiqueEClass, Tactique.class, "Tactique", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getTactique_Proche(), ecorePackage.getEString(), "proche", null, 0, 1, Tactique.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getTactique_Faible(), ecorePackage.getEString(), "faible", null, 0, 1, Tactique.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getTactique_Fort(), ecorePackage.getEString(), "fort", null, 0, 1, Tactique.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(mobileEClass, Mobile.class, "Mobile", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getMobile_Name(), ecorePackage.getEString(), "name", null, 0, 1, Mobile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMobile_Force(), ecorePackage.getEInt(), "force", null, 0, 1, Mobile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMobile_Volume(), ecorePackage.getEInt(), "volume", null, 0, 1, Mobile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMobile_NumVague(), ecorePackage.getEInt(), "numVague", null, 0, 1, Mobile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMobile_CaseEntree(), this.getCase(), null, "caseEntree", null, 0, 1, Mobile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMobile_CaseSortie(), this.getCase(), null, "caseSortie", null, 0, 1, Mobile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMobile_QuantiteEnergieMax(), this.getEnergie(), null, "quantiteEnergieMax", null, 0, 1, Mobile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMobile_QuantiteEnergieCourant(), this.getEnergie(), null, "quantiteEnergieCourant", null, 0, 1, Mobile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMobile_PointsAction(), this.getEnergie(), null, "pointsAction", null, 0, 1, Mobile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(projectileEClass, Projectile.class, "Projectile", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getProjectile_Name(), ecorePackage.getEString(), "name", null, 0, 1, Projectile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getProjectile_Portee(), ecorePackage.getEInt(), "portee", null, 0, 1, Projectile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getProjectile_Masse(), ecorePackage.getEInt(), "masse", null, 0, 1, Projectile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getProjectile_Vitesse(), ecorePackage.getEInt(), "vitesse", null, 0, 1, Projectile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getProjectile_Case(), this.getCase(), null, "case", null, 0, 1, Projectile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getProjectile_Cible(), this.getCase(), null, "cible", null, 0, 1, Projectile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getProjectile_Degat(), this.getEnergie(), null, "degat", null, 0, 1, Projectile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(natureTerrainEClass, NatureTerrain.class, "NatureTerrain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getNatureTerrain_Name(), ecorePackage.getEString(), "name", null, 0, 1, NatureTerrain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getNatureTerrain_Volume(), ecorePackage.getEInt(), "volume", null, 0, 1, NatureTerrain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getNatureTerrain_Type(), this.getTYPE_TERRAIN(), "type", null, 0, 1, NatureTerrain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getNatureTerrain_Fatigue(), this.getEnergie(), null, "fatigue", null, 0, 1, NatureTerrain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(niveauEClass, Niveau.class, "Niveau", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getNiveau_Name(), ecorePackage.getEString(), "name", null, 0, 1, Niveau.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getNiveau_Difficulte(), this.getDifficulte(), "difficulte", null, 0, 1, Niveau.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getNiveau_DureePause(), ecorePackage.getEInt(), "dureePause", null, 0, 1, Niveau.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getNiveau_Argent(), ecorePackage.getEInt(), "argent", null, 0, 1, Niveau.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getNiveau_MobSortisLimite(), ecorePackage.getEInt(), "mobSortisLimite", null, 0, 1, Niveau.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getNiveau_Terrain(), this.getTerrainDeJeu(), null, "terrain", null, 0, 1, Niveau.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getNiveau_Vagues(), this.getVague(), null, "vagues", null, 0, -1, Niveau.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(terrainDeJeuEClass, TerrainDeJeu.class, "TerrainDeJeu", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getTerrainDeJeu_Damier(), this.getDamier(), null, "damier", null, 0, 1, TerrainDeJeu.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(damierEClass, Damier.class, "Damier", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getDamier_Name(), ecorePackage.getEString(), "name", null, 0, 1, Damier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getDamier_NbLignes(), ecorePackage.getEInt(), "nbLignes", null, 0, 1, Damier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getDamier_NbColonnes(), ecorePackage.getEInt(), "nbColonnes", null, 0, 1, Damier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDamier_Cases(), this.getCase(), null, "cases", null, 0, -1, Damier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(caseEClass, Case.class, "Case", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getCase_I(), ecorePackage.getEInt(), "i", null, 0, 1, Case.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getCase_J(), ecorePackage.getEInt(), "j", null, 0, 1, Case.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getCase_NatureTerrain(), this.getNatureTerrain(), null, "natureTerrain", null, 0, 1, Case.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(vagueEClass, Vague.class, "Vague", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getVague_Mobiles(), this.getMobile(), null, "mobiles", null, 0, -1, Vague.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getVague_Obstacles(), this.getObstacle(), null, "obstacles", null, 0, -1, Vague.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getVague_GainVictoire(), ecorePackage.getEInt(), "gainVictoire", null, 0, 1, Vague.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    // Initialize enums and add enum literals
+    initEEnum(typE_TERRAINEEnum, xtext.towerDefense.TYPE_TERRAIN.class, "TYPE_TERRAIN");
+    addEEnumLiteral(typE_TERRAINEEnum, xtext.towerDefense.TYPE_TERRAIN.ENTREE);
+    addEEnumLiteral(typE_TERRAINEEnum, xtext.towerDefense.TYPE_TERRAIN.SORTIE);
+    addEEnumLiteral(typE_TERRAINEEnum, xtext.towerDefense.TYPE_TERRAIN.CHEMIN);
+    addEEnumLiteral(typE_TERRAINEEnum, xtext.towerDefense.TYPE_TERRAIN.CAMPEMENT);
+    addEEnumLiteral(typE_TERRAINEEnum, xtext.towerDefense.TYPE_TERRAIN.DECORATION);
+
+    initEEnum(difficulteEEnum, Difficulte.class, "Difficulte");
+    addEEnumLiteral(difficulteEEnum, Difficulte.FACILE);
+    addEEnumLiteral(difficulteEEnum, Difficulte.MOYEN);
+    addEEnumLiteral(difficulteEEnum, Difficulte.DIFFICILE);
 
     // Create resource
     createResource(eNS_URI);

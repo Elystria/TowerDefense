@@ -94,10 +94,80 @@ public class TowerDefenseSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case TowerDefensePackage.ENERGIE:
+      {
+        Energie energie = (Energie)theEObject;
+        T result = caseEnergie(energie);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case TowerDefensePackage.OBSTACLE:
+      {
+        Obstacle obstacle = (Obstacle)theEObject;
+        T result = caseObstacle(obstacle);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case TowerDefensePackage.TACTIQUE:
+      {
+        Tactique tactique = (Tactique)theEObject;
+        T result = caseTactique(tactique);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case TowerDefensePackage.MOBILE:
+      {
+        Mobile mobile = (Mobile)theEObject;
+        T result = caseMobile(mobile);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case TowerDefensePackage.PROJECTILE:
+      {
+        Projectile projectile = (Projectile)theEObject;
+        T result = caseProjectile(projectile);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case TowerDefensePackage.NATURE_TERRAIN:
+      {
+        NatureTerrain natureTerrain = (NatureTerrain)theEObject;
+        T result = caseNatureTerrain(natureTerrain);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case TowerDefensePackage.NIVEAU:
       {
         Niveau niveau = (Niveau)theEObject;
         T result = caseNiveau(niveau);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case TowerDefensePackage.TERRAIN_DE_JEU:
+      {
+        TerrainDeJeu terrainDeJeu = (TerrainDeJeu)theEObject;
+        T result = caseTerrainDeJeu(terrainDeJeu);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case TowerDefensePackage.DAMIER:
+      {
+        Damier damier = (Damier)theEObject;
+        T result = caseDamier(damier);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case TowerDefensePackage.CASE:
+      {
+        Case case_ = (Case)theEObject;
+        T result = caseCase(case_);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case TowerDefensePackage.VAGUE:
+      {
+        Vague vague = (Vague)theEObject;
+        T result = caseVague(vague);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -154,6 +224,102 @@ public class TowerDefenseSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Energie</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Energie</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseEnergie(Energie object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Obstacle</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Obstacle</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseObstacle(Obstacle object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Tactique</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Tactique</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTactique(Tactique object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Mobile</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Mobile</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseMobile(Mobile object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Projectile</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Projectile</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseProjectile(Projectile object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Nature Terrain</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Nature Terrain</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseNatureTerrain(NatureTerrain object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Niveau</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -165,6 +331,70 @@ public class TowerDefenseSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseNiveau(Niveau object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Terrain De Jeu</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Terrain De Jeu</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTerrainDeJeu(TerrainDeJeu object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Damier</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Damier</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDamier(Damier object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Case</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Case</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCase(Case object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Vague</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Vague</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseVague(Vague object)
   {
     return null;
   }

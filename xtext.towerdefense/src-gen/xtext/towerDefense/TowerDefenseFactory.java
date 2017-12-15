@@ -51,6 +51,60 @@ public interface TowerDefenseFactory extends EFactory
   PartieElement createPartieElement();
 
   /**
+   * Returns a new object of class '<em>Energie</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Energie</em>'.
+   * @generated
+   */
+  Energie createEnergie();
+
+  /**
+   * Returns a new object of class '<em>Obstacle</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Obstacle</em>'.
+   * @generated
+   */
+  Obstacle createObstacle();
+
+  /**
+   * Returns a new object of class '<em>Tactique</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Tactique</em>'.
+   * @generated
+   */
+  Tactique createTactique();
+
+  /**
+   * Returns a new object of class '<em>Mobile</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Mobile</em>'.
+   * @generated
+   */
+  Mobile createMobile();
+
+  /**
+   * Returns a new object of class '<em>Projectile</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Projectile</em>'.
+   * @generated
+   */
+  Projectile createProjectile();
+
+  /**
+   * Returns a new object of class '<em>Nature Terrain</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Nature Terrain</em>'.
+   * @generated
+   */
+  NatureTerrain createNatureTerrain();
+
+  /**
    * Returns a new object of class '<em>Niveau</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -58,6 +112,42 @@ public interface TowerDefenseFactory extends EFactory
    * @generated
    */
   Niveau createNiveau();
+
+  /**
+   * Returns a new object of class '<em>Terrain De Jeu</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Terrain De Jeu</em>'.
+   * @generated
+   */
+  TerrainDeJeu createTerrainDeJeu();
+
+  /**
+   * Returns a new object of class '<em>Damier</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Damier</em>'.
+   * @generated
+   */
+  Damier createDamier();
+
+  /**
+   * Returns a new object of class '<em>Case</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Case</em>'.
+   * @generated
+   */
+  Case createCase();
+
+  /**
+   * Returns a new object of class '<em>Vague</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Vague</em>'.
+   * @generated
+   */
+  Vague createVague();
 
   /**
    * Returns the package supported by this factory.
