@@ -65,9 +65,8 @@ public class Enigme {
         chemin.add(c22);
         chemin.add(c23);
         
-        Carte carte = new Carte("carte", 3, 5, cases, chemin);
-        List<Carte> cartes = new ArrayList<>();
-        cartes.add(carte);
+        
+       
 
         Mobile m1 = new Mobile("m1", 1, 1, 1, c12, c52, new Energie(1), Jeu.TactiqueType.procheFirst);
         Mobile m2 = new Mobile("m2", 1, 1, 2, c12, c52, new Energie(1), Jeu.TactiqueType.procheFirst);
@@ -88,6 +87,11 @@ public class Enigme {
         List<PartieElement> pe = new ArrayList<>();
         pe.addAll(mobiles);
         pe.addAll(obstacles);
+        
+        // On cré la carte
+        Carte carte = new Carte("carte", 3, 5, cases, chemin,  obstacles, mobiles);
+        List<Carte> cartes = new ArrayList<>();
+        cartes.add(carte);
 
         Niveau niveau1 = new Niveau("niveau1", Jeu.Difficulte.facile, 1, 3, 2, carte, vagues);
         List<Niveau> niveaux = new ArrayList<>();
@@ -95,6 +99,8 @@ public class Enigme {
 
         Partie partie = new Partie("partie", natures, cases, cartes, pe, niveaux);
 
+        
+        
         // Initialiser l'affichage
         EnigmeVue vue = new EnigmeVue(partie);
 

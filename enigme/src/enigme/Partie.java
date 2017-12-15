@@ -1,5 +1,6 @@
 package enigme;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 public class Partie {
@@ -54,18 +55,26 @@ public class Partie {
 
 	public void jouerObstacles() {
 		// pour tous les Obstacles
+		Carte c = cartes.get(0);
+		Collection<Mobile> mobilesPourAttaque = new ArrayList<Mobile>();
+
 		for(Obstacle o : obstacles) {
 		    o.attaquer(this);
+		    mobilesPourAttaque = c.mobilesAutour(1,o.getPosition());
+		    for (Mobile m : mobilesPourAttaque) {
+		    	o.attaquerAutre(m.getPosition(), c);
+		    }
+		    
 		}
 	}
 
 	public void jouerMobiles() {
+		Collection<Mobile> mobilesAutours = new ArrayList<Mobile>();
+		Carte c = cartes.get(0);
 		// pour tous les mobiles
 		for(int i = 0; i < getMobiles().size(); i++) {
 			Mobile m = getMobiles().get(i);
 			m.seDeplacer(this);
-			//m.avancer(cartes.get(0));
-			m.attaquer(this);
 		}
 	}
 
