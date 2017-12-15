@@ -17,12 +17,20 @@ public class Carte {
 	private HashMap<Case, Collection<Projectile>> projectiles;
 	private ArrayList<Case> cheminMobiles;
 
-	public Carte(String nom, int nbLignes, int nbColonnes, Collection<Case> cases, ArrayList<Case> chemin) {
+	public Carte(String nom, int nbLignes, int nbColonnes, Collection<Case> cases, ArrayList<Case> chemin, List<Obstacle> obstacleList, List<Mobile> mobileList) {
 		this.nom = nom;
 		this.nbLignes = nbLignes;
 		this.nbColonnes = nbColonnes;
 		this.cases = cases;
 		this.cheminMobiles = chemin;
+		this.obstacles = new HashMap<Case,Obstacle>();
+		this.mobiles = new HashMap<Case,Mobile>();
+		for (Obstacle o: obstacleList) {
+			obstacles.put(o.getPosition(), o);
+		}
+		for (Mobile m: mobileList) {
+			mobiles.put(m.getPosition(), m);
+		}
 	}
 
 	public String getNom() {
