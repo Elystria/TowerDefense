@@ -1,3 +1,5 @@
+// TODO : implémentation projectiles
+// TODO : 
 package enigme;
 
 import data.EnigmeVue;
@@ -56,7 +58,14 @@ public class Enigme {
         cases.add(c33);
         cases.add(c43);
         cases.add(c53);
-        Carte carte = new Carte("carte", 3, 5, cases);
+        
+        //Le chemin des mobiles
+        ArrayList<Case> chemin = new ArrayList<Case>();
+        chemin.add(c21);
+        chemin.add(c22);
+        chemin.add(c23);
+        
+        Carte carte = new Carte("carte", 3, 5, cases, chemin);
         List<Carte> cartes = new ArrayList<>();
         cartes.add(carte);
 

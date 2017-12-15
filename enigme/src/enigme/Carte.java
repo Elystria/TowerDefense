@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 
 public class Carte {
 
@@ -16,11 +17,12 @@ public class Carte {
 	private HashMap<Case, Collection<Projectile>> projectiles;
 	private ArrayList<Case> cheminMobiles;
 
-	public Carte(String nom, int nbLignes, int nbColonnes, Collection<Case> cases) {
+	public Carte(String nom, int nbLignes, int nbColonnes, Collection<Case> cases, ArrayList<Case> chemin) {
 		this.nom = nom;
 		this.nbLignes = nbLignes;
 		this.nbColonnes = nbColonnes;
 		this.cases = cases;
+		this.cheminMobiles = chemin;
 	}
 
 	public String getNom() {
