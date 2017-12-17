@@ -18,6 +18,7 @@ Jeu exemple1 {
 		c34 3 4 garage
 		c35 3 5 garage
 		
+		
 		/* On définie la carte */
 		Carte carte1 {
 			Lignes 3
@@ -51,6 +52,7 @@ Jeu exemple1 {
 			Type camp
 			FatigueEntree 0
 		}
+	
 		
 		/* On définie les projectiles */
 		Projectile p {
