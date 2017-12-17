@@ -4,7 +4,7 @@ generate towerDefense "http://www.TowerDefense.xtext"
 
 Jeu:
 	'Jeu' name=ID '{'
-		parties+=Partie*
+		parties+=Partie* 
 	'}';
 	
 Partie:
