@@ -1,0 +1,11 @@
+[comment encoding = UTF-8 /]
+[module game2prototype('http://www.TowerDefense.xtext')]
+
+
+[template public game2prototype(aJeu : Jeu)]
+[comment @main/]
+[file (aJeu.name.concat('.java'), false, 'UTF-8')]
+public class
+
+[/file]
+[/template]
