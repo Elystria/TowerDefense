@@ -1,12 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
-  <mtl:Module name="game2prototype" nsURI="acceleo::game2prototype::main::game2prototype" startHeaderPosition="29" endHeaderPosition="147">
+  <mtl:Module name="game2prototype" nsURI="acceleo::game2prototype::main::game2prototype" startHeaderPosition="29" endHeaderPosition="140">
     <input>
       <takesTypesFrom href="http://www.TowerDefense.xtext#/"/>
     </input>
+    <imports href="platform:/resource/acceleo.game2prototype/bin/acceleo/game2prototype/files/generatePartie.emtl#/0"/>
     <ownedModuleElement xsi:type="mtl:Template" name="game2prototype" visibility="Public" main="true">
       <body xsi:type="mtl:FileBlock" openMode="OverWrite">
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="public class&#xA;&#xA;"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="package ceJeu;&#xA;&#xA;import data.ceJeuVue;&#xA;&#xA;public class "/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aJeu" referredVariable="/0/game2prototype/aJeu">
+            <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Jeu"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://www.TowerDefense.xtext#//Jeu/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" {&#xA;&#xA;&#x9;public static void main (String"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="[">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" "/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="]">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="args) {&#xA;&#x9;&#xA;&#x9;&#x9;\\Initialisation du jeu&#xA;&#xA;"/>
+        <body xsi:type="mtl:ForBlock">
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;"/>
+          <body xsi:type="mtl:TemplateInvocation">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <definition href="platform:/resource/acceleo.game2prototype/bin/acceleo/game2prototype/files/generatePartie.emtl#/0/generatePartie"/>
+            <argument xsi:type="ocl.ecore:VariableExp" name="p" referredVariable="/0/game2prototype/%/%.7/p">
+              <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Partie"/>
+            </argument>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+          <loopVariable name="p">
+            <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Partie"/>
+          </loopVariable>
+          <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/11/OrderedSet(Partie)">
+            <source xsi:type="ocl.ecore:VariableExp" name="aJeu" referredVariable="/0/game2prototype/aJeu">
+              <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Jeu"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="http://www.TowerDefense.xtext#//Jeu/parties"/>
+          </iterSet>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#xA;&#xA;&#xA;"/>
         <fileUrl xsi:type="ocl.ecore:OperationCallExp">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           <source xsi:type="ocl.ecore:PropertyCallExp">
@@ -60,6 +98,18 @@
           <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Jeu"/>
         </eParameters>
       </eOperations>
+      <eOperations name="generatePartie">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="platform:/resource/acceleo.game2prototype/bin/acceleo/game2prototype/files/generatePartie.emtl#/0/generatePartie"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aPartie">
+          <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Partie"/>
+        </eParameters>
+      </eOperations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OclAny_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
@@ -86,6 +136,16 @@
         <references href="http://www.TowerDefense.xtext#//Jeu"/>
       </eAnnotations>
     </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="towerDefense_Partie_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.TowerDefense.xtext#//Partie"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="collections_OrderedSet(PartieElement)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="platform:/resource/acceleo.game2prototype/bin/acceleo/game2prototype/files/generatePartie.emtl#/3/OrderedSet(PartieElement)"/>
+      </eAnnotations>
+    </eClassifiers>
   </ecore:EPackage>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
@@ -106,52 +166,161 @@
     <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Jeu"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Jeu"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Jeu"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Jeu"/>
+  </ocl.ecore:Variable>
+  <ecore:EPackage name="collections">
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(Partie)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Partie"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Jeu"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Partie"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Partie"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Jeu"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
   </ocl.ecore:Variable>
   <ecore:EAnnotation source="positions">
     <eAnnotations source="positions.0" references="/0/game2prototype">
-      <details key="start" value="88"/>
-      <details key="end" value="234"/>
+      <details key="start" value="144"/>
+      <details key="end" value="501"/>
       <details key="line" value="5"/>
     </eAnnotations>
     <eAnnotations source="positions.1" references="/0/game2prototype/%">
-      <details key="start" value="150"/>
-      <details key="end" value="222"/>
+      <details key="start" value="206"/>
+      <details key="end" value="489"/>
       <details key="line" value="7"/>
     </eAnnotations>
     <eAnnotations source="positions.2" references="/0/game2prototype/%/%">
-      <details key="start" value="201"/>
-      <details key="end" value="215"/>
+      <details key="start" value="257"/>
+      <details key="end" value="309"/>
       <details key="line" value="8"/>
     </eAnnotations>
     <eAnnotations source="positions.3" references="/0/game2prototype/%/%.1">
-      <details key="start" value="157"/>
-      <details key="end" value="182"/>
+      <details key="start" value="310"/>
+      <details key="end" value="319"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.4" references="/0/game2prototype/%/%.1/%">
-      <details key="start" value="157"/>
-      <details key="end" value="166"/>
+    <eAnnotations source="positions.4" references="/0/game2prototype/%/%.1/aJeu">
+      <details key="start" value="310"/>
+      <details key="end" value="314"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.5" references="/0/game2prototype/%/%.1/%/aJeu">
-      <details key="start" value="157"/>
-      <details key="end" value="161"/>
+    <eAnnotations source="positions.5" references="/0/game2prototype/%/%.2">
+      <details key="start" value="321"/>
+      <details key="end" value="357"/>
+      <details key="line" value="12"/>
+    </eAnnotations>
+    <eAnnotations source="positions.6" references="/0/game2prototype/%/%.3">
+      <details key="start" value="358"/>
+      <details key="end" value="361"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.6" references="/0/game2prototype/%/%.1/%.1">
-      <details key="start" value="174"/>
-      <details key="end" value="181"/>
+    <eAnnotations source="positions.7" references="/0/game2prototype/%/%.4">
+      <details key="start" value="363"/>
+      <details key="end" value="364"/>
+      <details key="line" value="14"/>
+    </eAnnotations>
+    <eAnnotations source="positions.8" references="/0/game2prototype/%/%.5">
+      <details key="start" value="366"/>
+      <details key="end" value="369"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.7" references="/0/game2prototype/%/%.2">
-      <details key="start" value="191"/>
-      <details key="end" value="198"/>
+    <eAnnotations source="positions.9" references="/0/game2prototype/%/%.6">
+      <details key="start" value="371"/>
+      <details key="end" value="408"/>
+      <details key="line" value="14"/>
+    </eAnnotations>
+    <eAnnotations source="positions.10" references="/0/game2prototype/%/%.7">
+      <details key="start" value="410"/>
+      <details key="end" value="476"/>
+      <details key="line" value="18"/>
+    </eAnnotations>
+    <eAnnotations source="positions.11" references="/0/game2prototype/%/%.7/%">
+      <details key="start" value="444"/>
+      <details key="end" value="446"/>
+      <details key="line" value="19"/>
+    </eAnnotations>
+    <eAnnotations source="positions.12" references="/0/game2prototype/%/%.7/%.1">
+      <details key="start" value="447"/>
+      <details key="end" value="465"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.8" references="/0/game2prototype/aJeu">
-      <details key="start" value="120"/>
-      <details key="end" value="130"/>
+    <eAnnotations source="positions.13" references="/0/game2prototype/%/%.7/%.1/p">
+      <details key="start" value="447"/>
+      <details key="end" value="448"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.14" references="/0/game2prototype/%/%.7/%.2">
+      <details key="start" value="467"/>
+      <details key="end" value="468"/>
+      <details key="line" value="20"/>
+    </eAnnotations>
+    <eAnnotations source="positions.15" references="/0/game2prototype/%/%.7/p">
+      <details key="start" value="416"/>
+      <details key="end" value="426"/>
+      <details key="line" value="18"/>
+    </eAnnotations>
+    <eAnnotations source="positions.16" references="/0/game2prototype/%/%.7/%.3">
+      <details key="start" value="429"/>
+      <details key="end" value="441"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.17" references="/0/game2prototype/%/%.7/%.3/aJeu">
+      <details key="start" value="429"/>
+      <details key="end" value="433"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.18" references="/0/game2prototype/%/%.8">
+      <details key="start" value="477"/>
+      <details key="end" value="482"/>
+      <details key="line" value="21"/>
+    </eAnnotations>
+    <eAnnotations source="positions.19" references="/0/game2prototype/%/%.9">
+      <details key="start" value="213"/>
+      <details key="end" value="238"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.20" references="/0/game2prototype/%/%.9/%">
+      <details key="start" value="213"/>
+      <details key="end" value="222"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.21" references="/0/game2prototype/%/%.9/%/aJeu">
+      <details key="start" value="213"/>
+      <details key="end" value="217"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.22" references="/0/game2prototype/%/%.9/%.1">
+      <details key="start" value="230"/>
+      <details key="end" value="237"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.23" references="/0/game2prototype/%/%.10">
+      <details key="start" value="247"/>
+      <details key="end" value="254"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.24" references="/0/game2prototype/aJeu">
+      <details key="start" value="176"/>
+      <details key="end" value="186"/>
       <details key="line" value="5"/>
     </eAnnotations>
   </ecore:EAnnotation>

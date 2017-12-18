@@ -19,8 +19,6 @@ package xtext.towerDefense;
  *   <li>{@link xtext.towerDefense.Mobile#getCaseEntree <em>Case Entree</em>}</li>
  *   <li>{@link xtext.towerDefense.Mobile#getCaseSortie <em>Case Sortie</em>}</li>
  *   <li>{@link xtext.towerDefense.Mobile#getQuantiteEnergieMax <em>Quantite Energie Max</em>}</li>
- *   <li>{@link xtext.towerDefense.Mobile#getQuantiteEnergieCourant <em>Quantite Energie Courant</em>}</li>
- *   <li>{@link xtext.towerDefense.Mobile#getPointsAction <em>Points Action</em>}</li>
  *   <li>{@link xtext.towerDefense.Mobile#getTactique <em>Tactique</em>}</li>
  * </ul>
  *
@@ -185,58 +183,6 @@ public interface Mobile extends PartieElement
    * @generated
    */
   void setQuantiteEnergieMax(Energie value);
-
-  /**
-   * Returns the value of the '<em><b>Quantite Energie Courant</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Quantite Energie Courant</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Quantite Energie Courant</em>' containment reference.
-   * @see #setQuantiteEnergieCourant(Energie)
-   * @see xtext.towerDefense.TowerDefensePackage#getMobile_QuantiteEnergieCourant()
-   * @model containment="true"
-   * @generated
-   */
-  Energie getQuantiteEnergieCourant();
-
-  /**
-   * Sets the value of the '{@link xtext.towerDefense.Mobile#getQuantiteEnergieCourant <em>Quantite Energie Courant</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Quantite Energie Courant</em>' containment reference.
-   * @see #getQuantiteEnergieCourant()
-   * @generated
-   */
-  void setQuantiteEnergieCourant(Energie value);
-
-  /**
-   * Returns the value of the '<em><b>Points Action</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Points Action</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Points Action</em>' containment reference.
-   * @see #setPointsAction(Energie)
-   * @see xtext.towerDefense.TowerDefensePackage#getMobile_PointsAction()
-   * @model containment="true"
-   * @generated
-   */
-  Energie getPointsAction();
-
-  /**
-   * Sets the value of the '{@link xtext.towerDefense.Mobile#getPointsAction <em>Points Action</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Points Action</em>' containment reference.
-   * @see #getPointsAction()
-   * @generated
-   */
-  void setPointsAction(Energie value);
 
   /**
    * Returns the value of the '<em><b>Tactique</b></em>' attribute.

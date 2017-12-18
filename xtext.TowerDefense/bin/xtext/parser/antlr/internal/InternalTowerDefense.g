@@ -442,62 +442,16 @@ ruleObstacle returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_7='PV'
+		otherlv_7='Tactique'
 		{
-			newLeafNode(otherlv_7, grammarAccess.getObstacleAccess().getPVKeyword_7());
+			newLeafNode(otherlv_7, grammarAccess.getObstacleAccess().getTactiqueKeyword_7());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getObstacleAccess().getQuantiteEnergieCourantEnergieParserRuleCall_8_0());
+					newCompositeNode(grammarAccess.getObstacleAccess().getTactiqueTactiqueTypeEnumRuleCall_8_0());
 				}
-				lv_quantiteEnergieCourant_8_0=ruleEnergie
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getObstacleRule());
-					}
-					set(
-						$current,
-						"quantiteEnergieCourant",
-						lv_quantiteEnergieCourant_8_0,
-						"xtext.TowerDefense.Energie");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_9='PA'
-		{
-			newLeafNode(otherlv_9, grammarAccess.getObstacleAccess().getPAKeyword_9());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getObstacleAccess().getPontsActionEnergieParserRuleCall_10_0());
-				}
-				lv_pontsAction_10_0=ruleEnergie
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getObstacleRule());
-					}
-					set(
-						$current,
-						"pontsAction",
-						lv_pontsAction_10_0,
-						"xtext.TowerDefense.Energie");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_11='Tactique'
-		{
-			newLeafNode(otherlv_11, grammarAccess.getObstacleAccess().getTactiqueKeyword_11());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getObstacleAccess().getTactiqueTactiqueTypeEnumRuleCall_12_0());
-				}
-				lv_tactique_12_0=ruleTactiqueType
+				lv_tactique_8_0=ruleTactiqueType
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getObstacleRule());
@@ -505,15 +459,15 @@ ruleObstacle returns [EObject current=null]
 					set(
 						$current,
 						"tactique",
-						lv_tactique_12_0,
+						lv_tactique_8_0,
 						"xtext.TowerDefense.TactiqueType");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_13='}'
+		otherlv_9='}'
 		{
-			newLeafNode(otherlv_13, grammarAccess.getObstacleAccess().getRightCurlyBracketKeyword_13());
+			newLeafNode(otherlv_9, grammarAccess.getObstacleAccess().getRightCurlyBracketKeyword_9());
 		}
 	)
 ;
@@ -683,62 +637,16 @@ ruleMobile returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_15='PV'
+		otherlv_15='Tactique'
 		{
-			newLeafNode(otherlv_15, grammarAccess.getMobileAccess().getPVKeyword_15());
+			newLeafNode(otherlv_15, grammarAccess.getMobileAccess().getTactiqueKeyword_15());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getMobileAccess().getQuantiteEnergieCourantEnergieParserRuleCall_16_0());
+					newCompositeNode(grammarAccess.getMobileAccess().getTactiqueTactiqueTypeEnumRuleCall_16_0());
 				}
-				lv_quantiteEnergieCourant_16_0=ruleEnergie
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getMobileRule());
-					}
-					set(
-						$current,
-						"quantiteEnergieCourant",
-						lv_quantiteEnergieCourant_16_0,
-						"xtext.TowerDefense.Energie");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_17='PA'
-		{
-			newLeafNode(otherlv_17, grammarAccess.getMobileAccess().getPAKeyword_17());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getMobileAccess().getPointsActionEnergieParserRuleCall_18_0());
-				}
-				lv_pointsAction_18_0=ruleEnergie
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getMobileRule());
-					}
-					set(
-						$current,
-						"pointsAction",
-						lv_pointsAction_18_0,
-						"xtext.TowerDefense.Energie");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_19='Tactique'
-		{
-			newLeafNode(otherlv_19, grammarAccess.getMobileAccess().getTactiqueKeyword_19());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getMobileAccess().getTactiqueTactiqueTypeEnumRuleCall_20_0());
-				}
-				lv_tactique_20_0=ruleTactiqueType
+				lv_tactique_16_0=ruleTactiqueType
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getMobileRule());
@@ -746,15 +654,15 @@ ruleMobile returns [EObject current=null]
 					set(
 						$current,
 						"tactique",
-						lv_tactique_20_0,
+						lv_tactique_16_0,
 						"xtext.TowerDefense.TactiqueType");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_21='}'
+		otherlv_17='}'
 		{
-			newLeafNode(otherlv_21, grammarAccess.getMobileAccess().getRightCurlyBracketKeyword_21());
+			newLeafNode(otherlv_17, grammarAccess.getMobileAccess().getRightCurlyBracketKeyword_17());
 		}
 	)
 ;
@@ -1434,13 +1342,31 @@ ruleVague returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='{'
+		(
+			(
+				lv_name_0_0=RULE_ID
+				{
+					newLeafNode(lv_name_0_0, grammarAccess.getVagueAccess().getNameIDTerminalRuleCall_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVagueRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_0_0,
+						"org.eclipse.xtext.common.Terminals.ID");
+				}
+			)
+		)
+		otherlv_1='{'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getVagueAccess().getLeftCurlyBracketKeyword_0());
+			newLeafNode(otherlv_1, grammarAccess.getVagueAccess().getLeftCurlyBracketKeyword_1());
 		}
-		otherlv_1='Mobiles'
+		otherlv_2='Mobiles'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getVagueAccess().getMobilesKeyword_1());
+			newLeafNode(otherlv_2, grammarAccess.getVagueAccess().getMobilesKeyword_2());
 		}
 		(
 			(
@@ -1449,15 +1375,15 @@ ruleVague returns [EObject current=null]
 						$current = createModelElement(grammarAccess.getVagueRule());
 					}
 				}
-				otherlv_2=RULE_ID
+				otherlv_3=RULE_ID
 				{
-					newLeafNode(otherlv_2, grammarAccess.getVagueAccess().getMobilesMobileCrossReference_2_0());
+					newLeafNode(otherlv_3, grammarAccess.getVagueAccess().getMobilesMobileCrossReference_3_0());
 				}
 			)
 		)*
-		otherlv_3='Obstacles'
+		otherlv_4='Obstacles'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getVagueAccess().getObstaclesKeyword_3());
+			newLeafNode(otherlv_4, grammarAccess.getVagueAccess().getObstaclesKeyword_4());
 		}
 		(
 			(
@@ -1466,21 +1392,21 @@ ruleVague returns [EObject current=null]
 						$current = createModelElement(grammarAccess.getVagueRule());
 					}
 				}
-				otherlv_4=RULE_ID
+				otherlv_5=RULE_ID
 				{
-					newLeafNode(otherlv_4, grammarAccess.getVagueAccess().getObstaclesObstacleCrossReference_4_0());
+					newLeafNode(otherlv_5, grammarAccess.getVagueAccess().getObstaclesObstacleCrossReference_5_0());
 				}
 			)
 		)*
-		otherlv_5='Gain'
+		otherlv_6='Gain'
 		{
-			newLeafNode(otherlv_5, grammarAccess.getVagueAccess().getGainKeyword_5());
+			newLeafNode(otherlv_6, grammarAccess.getVagueAccess().getGainKeyword_6());
 		}
 		(
 			(
-				lv_gainVictoire_6_0=RULE_INT
+				lv_gainVictoire_7_0=RULE_INT
 				{
-					newLeafNode(lv_gainVictoire_6_0, grammarAccess.getVagueAccess().getGainVictoireINTTerminalRuleCall_6_0());
+					newLeafNode(lv_gainVictoire_7_0, grammarAccess.getVagueAccess().getGainVictoireINTTerminalRuleCall_7_0());
 				}
 				{
 					if ($current==null) {
@@ -1489,14 +1415,14 @@ ruleVague returns [EObject current=null]
 					setWithLastConsumed(
 						$current,
 						"gainVictoire",
-						lv_gainVictoire_6_0,
+						lv_gainVictoire_7_0,
 						"org.eclipse.xtext.common.Terminals.INT");
 				}
 			)
 		)
-		otherlv_7='}'
+		otherlv_8='}'
 		{
-			newLeafNode(otherlv_7, grammarAccess.getVagueAccess().getRightCurlyBracketKeyword_7());
+			newLeafNode(otherlv_8, grammarAccess.getVagueAccess().getRightCurlyBracketKeyword_8());
 		}
 	)
 ;

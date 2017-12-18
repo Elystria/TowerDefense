@@ -29,6 +29,7 @@ import xtext.towerDefense.Vague;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link xtext.towerDefense.impl.VagueImpl#getName <em>Name</em>}</li>
  *   <li>{@link xtext.towerDefense.impl.VagueImpl#getMobiles <em>Mobiles</em>}</li>
  *   <li>{@link xtext.towerDefense.impl.VagueImpl#getObstacles <em>Obstacles</em>}</li>
  *   <li>{@link xtext.towerDefense.impl.VagueImpl#getGainVictoire <em>Gain Victoire</em>}</li>
@@ -38,6 +39,26 @@ import xtext.towerDefense.Vague;
  */
 public class VagueImpl extends MinimalEObjectImpl.Container implements Vague
 {
+  /**
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected static final String NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected String name = NAME_EDEFAULT;
+
   /**
    * The cached value of the '{@link #getMobiles() <em>Mobiles</em>}' reference list.
    * <!-- begin-user-doc -->
@@ -104,6 +125,29 @@ public class VagueImpl extends MinimalEObjectImpl.Container implements Vague
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getName()
+  {
+    return name;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setName(String newName)
+  {
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.VAGUE__NAME, oldName, name));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<Mobile> getMobiles()
   {
     if (mobiles == null)
@@ -160,6 +204,8 @@ public class VagueImpl extends MinimalEObjectImpl.Container implements Vague
   {
     switch (featureID)
     {
+      case TowerDefensePackage.VAGUE__NAME:
+        return getName();
       case TowerDefensePackage.VAGUE__MOBILES:
         return getMobiles();
       case TowerDefensePackage.VAGUE__OBSTACLES:
@@ -181,6 +227,9 @@ public class VagueImpl extends MinimalEObjectImpl.Container implements Vague
   {
     switch (featureID)
     {
+      case TowerDefensePackage.VAGUE__NAME:
+        setName((String)newValue);
+        return;
       case TowerDefensePackage.VAGUE__MOBILES:
         getMobiles().clear();
         getMobiles().addAll((Collection<? extends Mobile>)newValue);
@@ -206,6 +255,9 @@ public class VagueImpl extends MinimalEObjectImpl.Container implements Vague
   {
     switch (featureID)
     {
+      case TowerDefensePackage.VAGUE__NAME:
+        setName(NAME_EDEFAULT);
+        return;
       case TowerDefensePackage.VAGUE__MOBILES:
         getMobiles().clear();
         return;
@@ -229,6 +281,8 @@ public class VagueImpl extends MinimalEObjectImpl.Container implements Vague
   {
     switch (featureID)
     {
+      case TowerDefensePackage.VAGUE__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case TowerDefensePackage.VAGUE__MOBILES:
         return mobiles != null && !mobiles.isEmpty();
       case TowerDefensePackage.VAGUE__OBSTACLES:
@@ -250,7 +304,9 @@ public class VagueImpl extends MinimalEObjectImpl.Container implements Vague
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (gainVictoire: ");
+    result.append(" (name: ");
+    result.append(name);
+    result.append(", gainVictoire: ");
     result.append(gainVictoire);
     result.append(')');
     return result.toString();

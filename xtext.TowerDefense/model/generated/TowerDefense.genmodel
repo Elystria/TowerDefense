@@ -44,8 +44,6 @@
     <genClasses ecoreClass="TowerDefense.ecore#//Obstacle">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TowerDefense.ecore#//Obstacle/campement"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TowerDefense.ecore#//Obstacle/quantiteEnergieMax"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TowerDefense.ecore#//Obstacle/quantiteEnergieCourant"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TowerDefense.ecore#//Obstacle/pontsAction"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TowerDefense.ecore#//Obstacle/tactique"/>
     </genClasses>
     <genClasses ecoreClass="TowerDefense.ecore#//Mobile">
@@ -55,8 +53,6 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TowerDefense.ecore#//Mobile/caseEntree"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TowerDefense.ecore#//Mobile/caseSortie"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TowerDefense.ecore#//Mobile/quantiteEnergieMax"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TowerDefense.ecore#//Mobile/quantiteEnergieCourant"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TowerDefense.ecore#//Mobile/pointsAction"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TowerDefense.ecore#//Mobile/tactique"/>
     </genClasses>
     <genClasses ecoreClass="TowerDefense.ecore#//Projectile">
@@ -94,6 +90,7 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TowerDefense.ecore#//Case/natureDuTerrain"/>
     </genClasses>
     <genClasses ecoreClass="TowerDefense.ecore#//Vague">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TowerDefense.ecore#//Vague/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TowerDefense.ecore#//Vague/mobiles"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TowerDefense.ecore#//Vague/obstacles"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TowerDefense.ecore#//Vague/gainVictoire"/>

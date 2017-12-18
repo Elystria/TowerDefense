@@ -1,6 +1,7 @@
 Jeu exemple1 { 
 	Partie partie_unique {
 		
+		 
 		/* On définie les cases qui vont être utilisées */
 		c11 1 1 montagne
 		c12 1 2 montagne
@@ -93,7 +94,7 @@ Jeu exemple1 {
 			Argent 0
 			MobSortisMax 2
 			Carte carte1
-			Vague { 
+			Vague v1 { 
 					Mobiles m m m
 					Obstacles o
 					Gain 3

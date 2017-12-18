@@ -206,29 +206,21 @@ public class TowerDefenseGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cPVmaxKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		private final Assignment cQuantiteEnergieMaxAssignment_6 = (Assignment)cGroup.eContents().get(6);
 		private final RuleCall cQuantiteEnergieMaxEnergieParserRuleCall_6_0 = (RuleCall)cQuantiteEnergieMaxAssignment_6.eContents().get(0);
-		private final Keyword cPVKeyword_7 = (Keyword)cGroup.eContents().get(7);
-		private final Assignment cQuantiteEnergieCourantAssignment_8 = (Assignment)cGroup.eContents().get(8);
-		private final RuleCall cQuantiteEnergieCourantEnergieParserRuleCall_8_0 = (RuleCall)cQuantiteEnergieCourantAssignment_8.eContents().get(0);
-		private final Keyword cPAKeyword_9 = (Keyword)cGroup.eContents().get(9);
-		private final Assignment cPontsActionAssignment_10 = (Assignment)cGroup.eContents().get(10);
-		private final RuleCall cPontsActionEnergieParserRuleCall_10_0 = (RuleCall)cPontsActionAssignment_10.eContents().get(0);
-		private final Keyword cTactiqueKeyword_11 = (Keyword)cGroup.eContents().get(11);
-		private final Assignment cTactiqueAssignment_12 = (Assignment)cGroup.eContents().get(12);
-		private final RuleCall cTactiqueTactiqueTypeEnumRuleCall_12_0 = (RuleCall)cTactiqueAssignment_12.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_13 = (Keyword)cGroup.eContents().get(13);
+		private final Keyword cTactiqueKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Assignment cTactiqueAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final RuleCall cTactiqueTactiqueTypeEnumRuleCall_8_0 = (RuleCall)cTactiqueAssignment_8.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		
 		//Obstacle:
 		//	'Obstacle' name=ID '{'
 		//	'Campement' campement=[Case]
 		//	'PVmax' quantiteEnergieMax=Energie
-		//	'PV' quantiteEnergieCourant=Energie
-		//	'PA' pontsAction=Energie
 		//	'Tactique' tactique=TactiqueType
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'Obstacle' name=ID '{' 'Campement' campement=[Case] 'PVmax' quantiteEnergieMax=Energie 'PV'
-		//quantiteEnergieCourant=Energie 'PA' pontsAction=Energie 'Tactique' tactique=TactiqueType '}'
+		//'Obstacle' name=ID '{' 'Campement' campement=[Case] 'PVmax' quantiteEnergieMax=Energie 'Tactique' tactique=TactiqueType
+		//'}'
 		public Group getGroup() { return cGroup; }
 		
 		//'Obstacle'
@@ -264,35 +256,17 @@ public class TowerDefenseGrammarAccess extends AbstractGrammarElementFinder {
 		//Energie
 		public RuleCall getQuantiteEnergieMaxEnergieParserRuleCall_6_0() { return cQuantiteEnergieMaxEnergieParserRuleCall_6_0; }
 		
-		//'PV'
-		public Keyword getPVKeyword_7() { return cPVKeyword_7; }
-		
-		//quantiteEnergieCourant=Energie
-		public Assignment getQuantiteEnergieCourantAssignment_8() { return cQuantiteEnergieCourantAssignment_8; }
-		
-		//Energie
-		public RuleCall getQuantiteEnergieCourantEnergieParserRuleCall_8_0() { return cQuantiteEnergieCourantEnergieParserRuleCall_8_0; }
-		
-		//'PA'
-		public Keyword getPAKeyword_9() { return cPAKeyword_9; }
-		
-		//pontsAction=Energie
-		public Assignment getPontsActionAssignment_10() { return cPontsActionAssignment_10; }
-		
-		//Energie
-		public RuleCall getPontsActionEnergieParserRuleCall_10_0() { return cPontsActionEnergieParserRuleCall_10_0; }
-		
 		//'Tactique'
-		public Keyword getTactiqueKeyword_11() { return cTactiqueKeyword_11; }
+		public Keyword getTactiqueKeyword_7() { return cTactiqueKeyword_7; }
 		
 		//tactique=TactiqueType
-		public Assignment getTactiqueAssignment_12() { return cTactiqueAssignment_12; }
+		public Assignment getTactiqueAssignment_8() { return cTactiqueAssignment_8; }
 		
 		//TactiqueType
-		public RuleCall getTactiqueTactiqueTypeEnumRuleCall_12_0() { return cTactiqueTactiqueTypeEnumRuleCall_12_0; }
+		public RuleCall getTactiqueTactiqueTypeEnumRuleCall_8_0() { return cTactiqueTactiqueTypeEnumRuleCall_8_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_13() { return cRightCurlyBracketKeyword_13; }
+		public Keyword getRightCurlyBracketKeyword_9() { return cRightCurlyBracketKeyword_9; }
 	}
 	public class MobileElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "xtext.TowerDefense.Mobile");
@@ -321,16 +295,10 @@ public class TowerDefenseGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cPVmaxKeyword_13 = (Keyword)cGroup.eContents().get(13);
 		private final Assignment cQuantiteEnergieMaxAssignment_14 = (Assignment)cGroup.eContents().get(14);
 		private final RuleCall cQuantiteEnergieMaxEnergieParserRuleCall_14_0 = (RuleCall)cQuantiteEnergieMaxAssignment_14.eContents().get(0);
-		private final Keyword cPVKeyword_15 = (Keyword)cGroup.eContents().get(15);
-		private final Assignment cQuantiteEnergieCourantAssignment_16 = (Assignment)cGroup.eContents().get(16);
-		private final RuleCall cQuantiteEnergieCourantEnergieParserRuleCall_16_0 = (RuleCall)cQuantiteEnergieCourantAssignment_16.eContents().get(0);
-		private final Keyword cPAKeyword_17 = (Keyword)cGroup.eContents().get(17);
-		private final Assignment cPointsActionAssignment_18 = (Assignment)cGroup.eContents().get(18);
-		private final RuleCall cPointsActionEnergieParserRuleCall_18_0 = (RuleCall)cPointsActionAssignment_18.eContents().get(0);
-		private final Keyword cTactiqueKeyword_19 = (Keyword)cGroup.eContents().get(19);
-		private final Assignment cTactiqueAssignment_20 = (Assignment)cGroup.eContents().get(20);
-		private final RuleCall cTactiqueTactiqueTypeEnumRuleCall_20_0 = (RuleCall)cTactiqueAssignment_20.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_21 = (Keyword)cGroup.eContents().get(21);
+		private final Keyword cTactiqueKeyword_15 = (Keyword)cGroup.eContents().get(15);
+		private final Assignment cTactiqueAssignment_16 = (Assignment)cGroup.eContents().get(16);
+		private final RuleCall cTactiqueTactiqueTypeEnumRuleCall_16_0 = (RuleCall)cTactiqueAssignment_16.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_17 = (Keyword)cGroup.eContents().get(17);
 		
 		//Mobile:
 		//	'Mobile' name=ID '{'
@@ -340,15 +308,12 @@ public class TowerDefenseGrammarAccess extends AbstractGrammarElementFinder {
 		//	'In' caseEntree=[Case]
 		//	'Out' caseSortie=[Case]
 		//	'PVmax' quantiteEnergieMax=Energie
-		//	'PV' quantiteEnergieCourant=Energie
-		//	'PA' pointsAction=Energie
 		//	'Tactique' tactique=TactiqueType
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'Mobile' name=ID '{' 'F' force=INT 'V' volume=INT 'NumVague' numVague=INT 'In' caseEntree=[Case] 'Out' caseSortie=[Case]
-		//'PVmax' quantiteEnergieMax=Energie 'PV' quantiteEnergieCourant=Energie 'PA' pointsAction=Energie 'Tactique'
-		//tactique=TactiqueType '}'
+		//'PVmax' quantiteEnergieMax=Energie 'Tactique' tactique=TactiqueType '}'
 		public Group getGroup() { return cGroup; }
 		
 		//'Mobile'
@@ -423,35 +388,17 @@ public class TowerDefenseGrammarAccess extends AbstractGrammarElementFinder {
 		//Energie
 		public RuleCall getQuantiteEnergieMaxEnergieParserRuleCall_14_0() { return cQuantiteEnergieMaxEnergieParserRuleCall_14_0; }
 		
-		//'PV'
-		public Keyword getPVKeyword_15() { return cPVKeyword_15; }
-		
-		//quantiteEnergieCourant=Energie
-		public Assignment getQuantiteEnergieCourantAssignment_16() { return cQuantiteEnergieCourantAssignment_16; }
-		
-		//Energie
-		public RuleCall getQuantiteEnergieCourantEnergieParserRuleCall_16_0() { return cQuantiteEnergieCourantEnergieParserRuleCall_16_0; }
-		
-		//'PA'
-		public Keyword getPAKeyword_17() { return cPAKeyword_17; }
-		
-		//pointsAction=Energie
-		public Assignment getPointsActionAssignment_18() { return cPointsActionAssignment_18; }
-		
-		//Energie
-		public RuleCall getPointsActionEnergieParserRuleCall_18_0() { return cPointsActionEnergieParserRuleCall_18_0; }
-		
 		//'Tactique'
-		public Keyword getTactiqueKeyword_19() { return cTactiqueKeyword_19; }
+		public Keyword getTactiqueKeyword_15() { return cTactiqueKeyword_15; }
 		
 		//tactique=TactiqueType
-		public Assignment getTactiqueAssignment_20() { return cTactiqueAssignment_20; }
+		public Assignment getTactiqueAssignment_16() { return cTactiqueAssignment_16; }
 		
 		//TactiqueType
-		public RuleCall getTactiqueTactiqueTypeEnumRuleCall_20_0() { return cTactiqueTactiqueTypeEnumRuleCall_20_0; }
+		public RuleCall getTactiqueTactiqueTypeEnumRuleCall_16_0() { return cTactiqueTactiqueTypeEnumRuleCall_16_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_21() { return cRightCurlyBracketKeyword_21; }
+		public Keyword getRightCurlyBracketKeyword_17() { return cRightCurlyBracketKeyword_17; }
 	}
 	public class ProjectileElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "xtext.TowerDefense.Projectile");
@@ -881,21 +828,24 @@ public class TowerDefenseGrammarAccess extends AbstractGrammarElementFinder {
 	public class VagueElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "xtext.TowerDefense.Vague");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cLeftCurlyBracketKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cMobilesKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cMobilesAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final CrossReference cMobilesMobileCrossReference_2_0 = (CrossReference)cMobilesAssignment_2.eContents().get(0);
-		private final RuleCall cMobilesMobileIDTerminalRuleCall_2_0_1 = (RuleCall)cMobilesMobileCrossReference_2_0.eContents().get(1);
-		private final Keyword cObstaclesKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cObstaclesAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final CrossReference cObstaclesObstacleCrossReference_4_0 = (CrossReference)cObstaclesAssignment_4.eContents().get(0);
-		private final RuleCall cObstaclesObstacleIDTerminalRuleCall_4_0_1 = (RuleCall)cObstaclesObstacleCrossReference_4_0.eContents().get(1);
-		private final Keyword cGainKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Assignment cGainVictoireAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cGainVictoireINTTerminalRuleCall_6_0 = (RuleCall)cGainVictoireAssignment_6.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameIDTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cMobilesKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cMobilesAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final CrossReference cMobilesMobileCrossReference_3_0 = (CrossReference)cMobilesAssignment_3.eContents().get(0);
+		private final RuleCall cMobilesMobileIDTerminalRuleCall_3_0_1 = (RuleCall)cMobilesMobileCrossReference_3_0.eContents().get(1);
+		private final Keyword cObstaclesKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cObstaclesAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final CrossReference cObstaclesObstacleCrossReference_5_0 = (CrossReference)cObstaclesAssignment_5.eContents().get(0);
+		private final RuleCall cObstaclesObstacleIDTerminalRuleCall_5_0_1 = (RuleCall)cObstaclesObstacleCrossReference_5_0.eContents().get(1);
+		private final Keyword cGainKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Assignment cGainVictoireAssignment_7 = (Assignment)cGroup.eContents().get(7);
+		private final RuleCall cGainVictoireINTTerminalRuleCall_7_0 = (RuleCall)cGainVictoireAssignment_7.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
 		//Vague:
+		//	name=ID // j'ai rajoute un nom aux vagues
 		//	'{'
 		//	'Mobiles' mobiles+=[Mobile]*
 		//	'Obstacles' obstacles+=[Obstacle]*
@@ -903,47 +853,55 @@ public class TowerDefenseGrammarAccess extends AbstractGrammarElementFinder {
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
+		//name=ID // j'ai rajoute un nom aux vagues
 		//'{' 'Mobiles' mobiles+=[Mobile]* 'Obstacles' obstacles+=[Obstacle]* 'Gain' gainVictoire=INT '}'
 		public Group getGroup() { return cGroup; }
 		
+		//name=ID
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+		
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_0_0() { return cNameIDTerminalRuleCall_0_0; }
+		
+		//// j'ai rajoute un nom aux vagues
 		//'{'
-		public Keyword getLeftCurlyBracketKeyword_0() { return cLeftCurlyBracketKeyword_0; }
+		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 		
 		//'Mobiles'
-		public Keyword getMobilesKeyword_1() { return cMobilesKeyword_1; }
+		public Keyword getMobilesKeyword_2() { return cMobilesKeyword_2; }
 		
 		//mobiles+=[Mobile]*
-		public Assignment getMobilesAssignment_2() { return cMobilesAssignment_2; }
+		public Assignment getMobilesAssignment_3() { return cMobilesAssignment_3; }
 		
 		//[Mobile]
-		public CrossReference getMobilesMobileCrossReference_2_0() { return cMobilesMobileCrossReference_2_0; }
+		public CrossReference getMobilesMobileCrossReference_3_0() { return cMobilesMobileCrossReference_3_0; }
 		
 		//ID
-		public RuleCall getMobilesMobileIDTerminalRuleCall_2_0_1() { return cMobilesMobileIDTerminalRuleCall_2_0_1; }
+		public RuleCall getMobilesMobileIDTerminalRuleCall_3_0_1() { return cMobilesMobileIDTerminalRuleCall_3_0_1; }
 		
 		//'Obstacles'
-		public Keyword getObstaclesKeyword_3() { return cObstaclesKeyword_3; }
+		public Keyword getObstaclesKeyword_4() { return cObstaclesKeyword_4; }
 		
 		//obstacles+=[Obstacle]*
-		public Assignment getObstaclesAssignment_4() { return cObstaclesAssignment_4; }
+		public Assignment getObstaclesAssignment_5() { return cObstaclesAssignment_5; }
 		
 		//[Obstacle]
-		public CrossReference getObstaclesObstacleCrossReference_4_0() { return cObstaclesObstacleCrossReference_4_0; }
+		public CrossReference getObstaclesObstacleCrossReference_5_0() { return cObstaclesObstacleCrossReference_5_0; }
 		
 		//ID
-		public RuleCall getObstaclesObstacleIDTerminalRuleCall_4_0_1() { return cObstaclesObstacleIDTerminalRuleCall_4_0_1; }
+		public RuleCall getObstaclesObstacleIDTerminalRuleCall_5_0_1() { return cObstaclesObstacleIDTerminalRuleCall_5_0_1; }
 		
 		//'Gain'
-		public Keyword getGainKeyword_5() { return cGainKeyword_5; }
+		public Keyword getGainKeyword_6() { return cGainKeyword_6; }
 		
 		//gainVictoire=INT
-		public Assignment getGainVictoireAssignment_6() { return cGainVictoireAssignment_6; }
+		public Assignment getGainVictoireAssignment_7() { return cGainVictoireAssignment_7; }
 		
 		//INT
-		public RuleCall getGainVictoireINTTerminalRuleCall_6_0() { return cGainVictoireINTTerminalRuleCall_6_0; }
+		public RuleCall getGainVictoireINTTerminalRuleCall_7_0() { return cGainVictoireINTTerminalRuleCall_7_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
+		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
 	}
 	
 	public class TactiqueTypeElements extends AbstractEnumRuleElementFinder {
@@ -1189,8 +1147,6 @@ public class TowerDefenseGrammarAccess extends AbstractGrammarElementFinder {
 	//	'Obstacle' name=ID '{'
 	//	'Campement' campement=[Case]
 	//	'PVmax' quantiteEnergieMax=Energie
-	//	'PV' quantiteEnergieCourant=Energie
-	//	'PA' pontsAction=Energie
 	//	'Tactique' tactique=TactiqueType
 	//	'}';
 	public ObstacleElements getObstacleAccess() {
@@ -1219,8 +1175,6 @@ public class TowerDefenseGrammarAccess extends AbstractGrammarElementFinder {
 	//	'In' caseEntree=[Case]
 	//	'Out' caseSortie=[Case]
 	//	'PVmax' quantiteEnergieMax=Energie
-	//	'PV' quantiteEnergieCourant=Energie
-	//	'PA' pointsAction=Energie
 	//	'Tactique' tactique=TactiqueType
 	//	'}';
 	public MobileElements getMobileAccess() {
@@ -1326,6 +1280,7 @@ public class TowerDefenseGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Vague:
+	//	name=ID // j'ai rajoute un nom aux vagues
 	//	'{'
 	//	'Mobiles' mobiles+=[Mobile]*
 	//	'Obstacles' obstacles+=[Obstacle]*

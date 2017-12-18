@@ -28,10 +28,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="campement" eType="#//Case"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="quantiteEnergieMax" eType="#//Energie"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="quantiteEnergieCourant"
-        eType="#//Energie" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="pontsAction" eType="#//Energie"
-        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tactique" eType="#//TactiqueType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="TactiqueType">
@@ -46,10 +42,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="caseEntree" eType="#//Case"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="caseSortie" eType="#//Case"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="quantiteEnergieMax" eType="#//Energie"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="quantiteEnergieCourant"
-        eType="#//Energie" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="pointsAction" eType="#//Energie"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tactique" eType="#//TactiqueType"/>
   </eClassifiers>
@@ -104,6 +96,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="natureDuTerrain" eType="#//NatureTerrain"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Vague">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="mobiles" unique="false"
         upperBound="-1" eType="#//Mobile"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="obstacles" unique="false"

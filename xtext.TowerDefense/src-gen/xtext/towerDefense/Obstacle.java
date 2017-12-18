@@ -15,8 +15,6 @@ package xtext.towerDefense;
  * <ul>
  *   <li>{@link xtext.towerDefense.Obstacle#getCampement <em>Campement</em>}</li>
  *   <li>{@link xtext.towerDefense.Obstacle#getQuantiteEnergieMax <em>Quantite Energie Max</em>}</li>
- *   <li>{@link xtext.towerDefense.Obstacle#getQuantiteEnergieCourant <em>Quantite Energie Courant</em>}</li>
- *   <li>{@link xtext.towerDefense.Obstacle#getPontsAction <em>Ponts Action</em>}</li>
  *   <li>{@link xtext.towerDefense.Obstacle#getTactique <em>Tactique</em>}</li>
  * </ul>
  *
@@ -77,58 +75,6 @@ public interface Obstacle extends PartieElement
    * @generated
    */
   void setQuantiteEnergieMax(Energie value);
-
-  /**
-   * Returns the value of the '<em><b>Quantite Energie Courant</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Quantite Energie Courant</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Quantite Energie Courant</em>' containment reference.
-   * @see #setQuantiteEnergieCourant(Energie)
-   * @see xtext.towerDefense.TowerDefensePackage#getObstacle_QuantiteEnergieCourant()
-   * @model containment="true"
-   * @generated
-   */
-  Energie getQuantiteEnergieCourant();
-
-  /**
-   * Sets the value of the '{@link xtext.towerDefense.Obstacle#getQuantiteEnergieCourant <em>Quantite Energie Courant</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Quantite Energie Courant</em>' containment reference.
-   * @see #getQuantiteEnergieCourant()
-   * @generated
-   */
-  void setQuantiteEnergieCourant(Energie value);
-
-  /**
-   * Returns the value of the '<em><b>Ponts Action</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Ponts Action</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Ponts Action</em>' containment reference.
-   * @see #setPontsAction(Energie)
-   * @see xtext.towerDefense.TowerDefensePackage#getObstacle_PontsAction()
-   * @model containment="true"
-   * @generated
-   */
-  Energie getPontsAction();
-
-  /**
-   * Sets the value of the '{@link xtext.towerDefense.Obstacle#getPontsAction <em>Ponts Action</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Ponts Action</em>' containment reference.
-   * @see #getPontsAction()
-   * @generated
-   */
-  void setPontsAction(Energie value);
 
   /**
    * Returns the value of the '<em><b>Tactique</b></em>' attribute.

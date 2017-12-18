@@ -379,29 +379,9 @@ public class TowerDefensePackageImpl extends EPackageImpl implements TowerDefens
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getObstacle_QuantiteEnergieCourant()
-  {
-    return (EReference)obstacleEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getObstacle_PontsAction()
-  {
-    return (EReference)obstacleEClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EAttribute getObstacle_Tactique()
   {
-    return (EAttribute)obstacleEClass.getEStructuralFeatures().get(4);
+    return (EAttribute)obstacleEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -479,29 +459,9 @@ public class TowerDefensePackageImpl extends EPackageImpl implements TowerDefens
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getMobile_QuantiteEnergieCourant()
-  {
-    return (EReference)mobileEClass.getEStructuralFeatures().get(6);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getMobile_PointsAction()
-  {
-    return (EReference)mobileEClass.getEStructuralFeatures().get(7);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EAttribute getMobile_Tactique()
   {
-    return (EAttribute)mobileEClass.getEStructuralFeatures().get(8);
+    return (EAttribute)mobileEClass.getEStructuralFeatures().get(6);
   }
 
   /**
@@ -809,9 +769,9 @@ public class TowerDefensePackageImpl extends EPackageImpl implements TowerDefens
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getVague_Mobiles()
+  public EAttribute getVague_Name()
   {
-    return (EReference)vagueEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)vagueEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -819,7 +779,7 @@ public class TowerDefensePackageImpl extends EPackageImpl implements TowerDefens
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getVague_Obstacles()
+  public EReference getVague_Mobiles()
   {
     return (EReference)vagueEClass.getEStructuralFeatures().get(1);
   }
@@ -829,9 +789,19 @@ public class TowerDefensePackageImpl extends EPackageImpl implements TowerDefens
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getVague_Obstacles()
+  {
+    return (EReference)vagueEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EAttribute getVague_GainVictoire()
   {
-    return (EAttribute)vagueEClass.getEStructuralFeatures().get(2);
+    return (EAttribute)vagueEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -915,8 +885,6 @@ public class TowerDefensePackageImpl extends EPackageImpl implements TowerDefens
     obstacleEClass = createEClass(OBSTACLE);
     createEReference(obstacleEClass, OBSTACLE__CAMPEMENT);
     createEReference(obstacleEClass, OBSTACLE__QUANTITE_ENERGIE_MAX);
-    createEReference(obstacleEClass, OBSTACLE__QUANTITE_ENERGIE_COURANT);
-    createEReference(obstacleEClass, OBSTACLE__PONTS_ACTION);
     createEAttribute(obstacleEClass, OBSTACLE__TACTIQUE);
 
     mobileEClass = createEClass(MOBILE);
@@ -926,8 +894,6 @@ public class TowerDefensePackageImpl extends EPackageImpl implements TowerDefens
     createEReference(mobileEClass, MOBILE__CASE_ENTREE);
     createEReference(mobileEClass, MOBILE__CASE_SORTIE);
     createEReference(mobileEClass, MOBILE__QUANTITE_ENERGIE_MAX);
-    createEReference(mobileEClass, MOBILE__QUANTITE_ENERGIE_COURANT);
-    createEReference(mobileEClass, MOBILE__POINTS_ACTION);
     createEAttribute(mobileEClass, MOBILE__TACTIQUE);
 
     projectileEClass = createEClass(PROJECTILE);
@@ -965,6 +931,7 @@ public class TowerDefensePackageImpl extends EPackageImpl implements TowerDefens
     createEReference(caseEClass, CASE__NATURE_DU_TERRAIN);
 
     vagueEClass = createEClass(VAGUE);
+    createEAttribute(vagueEClass, VAGUE__NAME);
     createEReference(vagueEClass, VAGUE__MOBILES);
     createEReference(vagueEClass, VAGUE__OBSTACLES);
     createEAttribute(vagueEClass, VAGUE__GAIN_VICTOIRE);
@@ -1031,8 +998,6 @@ public class TowerDefensePackageImpl extends EPackageImpl implements TowerDefens
     initEClass(obstacleEClass, Obstacle.class, "Obstacle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getObstacle_Campement(), this.getCase(), null, "campement", null, 0, 1, Obstacle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getObstacle_QuantiteEnergieMax(), this.getEnergie(), null, "quantiteEnergieMax", null, 0, 1, Obstacle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getObstacle_QuantiteEnergieCourant(), this.getEnergie(), null, "quantiteEnergieCourant", null, 0, 1, Obstacle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getObstacle_PontsAction(), this.getEnergie(), null, "pontsAction", null, 0, 1, Obstacle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getObstacle_Tactique(), this.getTactiqueType(), "tactique", null, 0, 1, Obstacle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(mobileEClass, Mobile.class, "Mobile", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1042,8 +1007,6 @@ public class TowerDefensePackageImpl extends EPackageImpl implements TowerDefens
     initEReference(getMobile_CaseEntree(), this.getCase(), null, "caseEntree", null, 0, 1, Mobile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getMobile_CaseSortie(), this.getCase(), null, "caseSortie", null, 0, 1, Mobile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getMobile_QuantiteEnergieMax(), this.getEnergie(), null, "quantiteEnergieMax", null, 0, 1, Mobile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getMobile_QuantiteEnergieCourant(), this.getEnergie(), null, "quantiteEnergieCourant", null, 0, 1, Mobile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getMobile_PointsAction(), this.getEnergie(), null, "pointsAction", null, 0, 1, Mobile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getMobile_Tactique(), this.getTactiqueType(), "tactique", null, 0, 1, Mobile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(projectileEClass, Projectile.class, "Projectile", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1081,6 +1044,7 @@ public class TowerDefensePackageImpl extends EPackageImpl implements TowerDefens
     initEReference(getCase_NatureDuTerrain(), this.getNatureTerrain(), null, "natureDuTerrain", null, 0, 1, Case.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(vagueEClass, Vague.class, "Vague", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getVague_Name(), ecorePackage.getEString(), "name", null, 0, 1, Vague.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getVague_Mobiles(), this.getMobile(), null, "mobiles", null, 0, -1, Vague.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getVague_Obstacles(), this.getObstacle(), null, "obstacles", null, 0, -1, Vague.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getVague_GainVictoire(), ecorePackage.getEInt(), "gainVictoire", null, 0, 1, Vague.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
