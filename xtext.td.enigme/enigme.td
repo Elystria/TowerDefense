@@ -73,8 +73,6 @@ Jeu exemple1 {
 			In c21
 			Out c25
 			PVmax 1
-			PV 1
-			PA 1
 			Tactique procheFirst
 		}
 		
@@ -82,8 +80,6 @@ Jeu exemple1 {
 		Obstacle o {
 			Campement c33
 			PVmax 1
-			PV 1
-			PA 1
 			Tactique faibleFirst
 		}
 		

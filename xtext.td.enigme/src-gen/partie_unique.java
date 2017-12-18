@@ -5,12 +5,20 @@ import data.ceJeuVue;
 
 public class partie_unique {
 
+public static void main (String[ ]args) {
+
 	// On definie les natures de terrain de la carte
+	List<NatureTerrain> natures = new ArrayList<>();
 	NatureTerrain route_entree = new NatureTerrain("route_entree",1,   Jeu.TYPE_TERRAIN.entree, new Energie(1));
+	natures.add(route_entree);
 	NatureTerrain route_sortie = new NatureTerrain("route_sortie",1,   Jeu.TYPE_TERRAIN.sortie, new Energie(1));
+	natures.add(route_sortie);
 	NatureTerrain montagne = new NatureTerrain("montagne",0,   Jeu.TYPE_TERRAIN.deco, new Energie(0));
+	natures.add(montagne);
 	NatureTerrain route = new NatureTerrain("route",1,   Jeu.TYPE_TERRAIN.chemin, new Energie(1));
+	natures.add(route);
 	NatureTerrain garage = new NatureTerrain("garage",0,   Jeu.TYPE_TERRAIN.camp, new Energie(0));
+	natures.add(garage);
 
 	// On definie les cases de la carte
 	List<Case> cases = new Arraylist<>();
@@ -47,7 +55,7 @@ public class partie_unique {
 
 	// On definie les mobiles
 	List<Mobile> mobiles = new ArrayList<>();
-	Mobile m = new Mobile("m", 1, 1, 1, xtext.towerDefense.impl.CaseImpl@1f861cf3 (name: c21, i: 2, j: 1), xtext.towerDefense.impl.CaseImpl@3f5cfe38 (name: c25, i: 2, j: 5), new Energie(new Energie(1),procheFirst);
+	Mobile m = new Mobile("m", 1, 1, 1, c21, c25, new Energie(1),Jeu.TactiqueTypeprocheFirst);
 	mobiles.add(m); 
 
 	// On definie les obstacles
@@ -56,13 +64,22 @@ public class partie_unique {
 	obstacles.add(o); 
 
 	// On definie les niveaux
+	List<Niveau> niveaux = new ArrayList<>();
 	List<Vague> vagues;
-		List<Niveau> niveaux = new ArrayList<>();
+	List<Carte> cartes;
 		// On definie les vagues du niveau
-		vagues = newArrayList<>();
+		cartes = new ArrayList<>();
+		vagues = new ArrayList<>();
 			Vague v1 = new Vague(mobiles, obstacles, 3);
 			vagues.add(v1);
 
+		// On definie les cartes du niveau
+		Carte carte1 = new Carte("carte1", 3, 5, cases, chemin, obstacles, mobiles);
+		cartes.add(carte1);
+		
+		// Enfin on definie le niveau
+		Niveau niv = new Niveau("niv", Jeu.Difficulte.facile,n.dureePause, n.argent, n.mobSortisLimite, carte1 ,vagues);
+		niveaux.add(niv;
 
 	
 
@@ -70,6 +87,43 @@ public class partie_unique {
         pe.addAll(mobiles);
         pe.addAll(obstacles);
 	
+	Partie partie_unique = new Partie("partie_unique",partie natures, cases, cartes, pe, niveaux);
+	partie_unique.setObstacles(obstacles);
+	partie_unique.setMobiles(mobiles);
+
+	    // Initialiser l'affichage
+        EnigmeVue vue = new EnigmeVue(partie_unique);
+
+        // Tant que la partie n'est pas finie
+        while(!Display.isCloseRequested()) {
+        //while(!partie_unique.estFinie()) {
+            // Calcul du nouveau modele
+            // On fait jouer les projectiles
+            partie_unique.jouerProjectiles();
+            // On fait jouer les obstacles
+            partie_unique.jouerObstacles();
+            // On fait jouer les mobiles
+            partie_unique.jouerMobiles();
+
+            // Transferer le modèle à la vue
+            vue.update(partie_unique);
+
+            // Affichage
+            vue.afficher();
+
+            // Petite pause pour qu'on ait le temps de voir ce qu'il se passe
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+        }
+
+    }
+
+}
+
 
 	
 

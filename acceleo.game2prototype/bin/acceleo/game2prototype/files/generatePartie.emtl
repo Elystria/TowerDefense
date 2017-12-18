@@ -15,12 +15,20 @@
           </source>
           <referredProperty xsi:type="ecore:EAttribute" href="http://www.TowerDefense.xtext#//Partie/name"/>
         </body>
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" {&#xA;&#xA;&#x9;// On definie les natures de terrain de la carte&#xA;"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" {&#xA;&#xA;public static void main (String"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="[">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" "/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="]">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="args) {&#xA;&#xA;&#x9;// On definie les natures de terrain de la carte&#xA;&#x9;List&lt;NatureTerrain> natures = new ArrayList&lt;>();&#xA;"/>
         <body xsi:type="mtl:ForBlock">
           <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;NatureTerrain "/>
           <body xsi:type="ocl.ecore:PropertyCallExp">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-            <source xsi:type="ocl.ecore:VariableExp" name="nt" referredVariable="/0/generatePartie/%.1/%.3/nt">
+            <source xsi:type="ocl.ecore:VariableExp" name="nt" referredVariable="/0/generatePartie/%.1/%.7/nt">
               <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//NatureTerrain"/>
             </source>
             <referredProperty xsi:type="ecore:EAttribute" href="http://www.TowerDefense.xtext#//PartieElement/name"/>
@@ -28,7 +36,7 @@
           <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" = new NatureTerrain(&quot;"/>
           <body xsi:type="ocl.ecore:PropertyCallExp">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-            <source xsi:type="ocl.ecore:VariableExp" name="nt" referredVariable="/0/generatePartie/%.1/%.3/nt">
+            <source xsi:type="ocl.ecore:VariableExp" name="nt" referredVariable="/0/generatePartie/%.1/%.7/nt">
               <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//NatureTerrain"/>
             </source>
             <referredProperty xsi:type="ecore:EAttribute" href="http://www.TowerDefense.xtext#//PartieElement/name"/>
@@ -36,7 +44,7 @@
           <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;,"/>
           <body xsi:type="ocl.ecore:PropertyCallExp">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
-            <source xsi:type="ocl.ecore:VariableExp" name="nt" referredVariable="/0/generatePartie/%.1/%.3/nt">
+            <source xsi:type="ocl.ecore:VariableExp" name="nt" referredVariable="/0/generatePartie/%.1/%.7/nt">
               <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//NatureTerrain"/>
             </source>
             <referredProperty xsi:type="ecore:EAttribute" href="http://www.TowerDefense.xtext#//NatureTerrain/volume"/>
@@ -44,7 +52,7 @@
           <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=",   Jeu.TYPE_TERRAIN."/>
           <body xsi:type="ocl.ecore:PropertyCallExp">
             <eType xsi:type="ecore:EEnum" href="http://www.TowerDefense.xtext#//TYPE_TERRAIN"/>
-            <source xsi:type="ocl.ecore:VariableExp" name="nt" referredVariable="/0/generatePartie/%.1/%.3/nt">
+            <source xsi:type="ocl.ecore:VariableExp" name="nt" referredVariable="/0/generatePartie/%.1/%.7/nt">
               <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//NatureTerrain"/>
             </source>
             <referredProperty xsi:type="ecore:EAttribute" href="http://www.TowerDefense.xtext#//NatureTerrain/type"/>
@@ -56,7 +64,7 @@
               <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
               <source xsi:type="ocl.ecore:PropertyCallExp">
                 <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Energie"/>
-                <source xsi:type="ocl.ecore:VariableExp" name="nt" referredVariable="/0/generatePartie/%.1/%.3/nt">
+                <source xsi:type="ocl.ecore:VariableExp" name="nt" referredVariable="/0/generatePartie/%.1/%.7/nt">
                   <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//NatureTerrain"/>
                 </source>
                 <referredProperty xsi:type="ecore:EReference" href="http://www.TowerDefense.xtext#//NatureTerrain/fatigue"/>
@@ -69,7 +77,7 @@
                 <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
                 <source xsi:type="ocl.ecore:PropertyCallExp">
                   <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Energie"/>
-                  <source xsi:type="ocl.ecore:VariableExp" name="nt" referredVariable="/0/generatePartie/%.1/%.3/nt">
+                  <source xsi:type="ocl.ecore:VariableExp" name="nt" referredVariable="/0/generatePartie/%.1/%.7/nt">
                     <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//NatureTerrain"/>
                   </source>
                   <referredProperty xsi:type="ecore:EReference" href="http://www.TowerDefense.xtext#//NatureTerrain/fatigue"/>
@@ -78,6 +86,14 @@
               </body>
               <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=")"/>
             </else>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=");&#xA;&#x9;natures.add("/>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="nt" referredVariable="/0/generatePartie/%.1/%.7/nt">
+              <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//NatureTerrain"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://www.TowerDefense.xtext#//PartieElement/name"/>
           </body>
           <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=");&#xA;"/>
           <loopVariable name="nt">
@@ -92,12 +108,12 @@
             </argument>
           </iterSet>
         </body>
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#x9;// On definie les cases de la carte&#xA;&#x9;List&lt;Case> cases = new Arraylist&lt;>();&#xA;"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#x9;// On definie les cases de la carte&#xA;&#x9;List&lt;Case> cases = new ArrayList&lt;>();&#xA;"/>
         <body xsi:type="mtl:ForBlock">
           <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;Case "/>
           <body xsi:type="ocl.ecore:PropertyCallExp">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-            <source xsi:type="ocl.ecore:VariableExp" name="c" referredVariable="/0/generatePartie/%.1/%.5/c">
+            <source xsi:type="ocl.ecore:VariableExp" name="c" referredVariable="/0/generatePartie/%.1/%.9/c">
               <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Case"/>
             </source>
             <referredProperty xsi:type="ecore:EAttribute" href="http://www.TowerDefense.xtext#//Case/name"/>
@@ -105,7 +121,7 @@
           <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" = new Case(&quot;"/>
           <body xsi:type="ocl.ecore:PropertyCallExp">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-            <source xsi:type="ocl.ecore:VariableExp" name="c" referredVariable="/0/generatePartie/%.1/%.5/c">
+            <source xsi:type="ocl.ecore:VariableExp" name="c" referredVariable="/0/generatePartie/%.1/%.9/c">
               <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Case"/>
             </source>
             <referredProperty xsi:type="ecore:EAttribute" href="http://www.TowerDefense.xtext#//Case/name"/>
@@ -113,7 +129,7 @@
           <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;, "/>
           <body xsi:type="ocl.ecore:PropertyCallExp">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
-            <source xsi:type="ocl.ecore:VariableExp" name="c" referredVariable="/0/generatePartie/%.1/%.5/c">
+            <source xsi:type="ocl.ecore:VariableExp" name="c" referredVariable="/0/generatePartie/%.1/%.9/c">
               <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Case"/>
             </source>
             <referredProperty xsi:type="ecore:EAttribute" href="http://www.TowerDefense.xtext#//Case/i"/>
@@ -121,7 +137,7 @@
           <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=", "/>
           <body xsi:type="ocl.ecore:PropertyCallExp">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
-            <source xsi:type="ocl.ecore:VariableExp" name="c" referredVariable="/0/generatePartie/%.1/%.5/c">
+            <source xsi:type="ocl.ecore:VariableExp" name="c" referredVariable="/0/generatePartie/%.1/%.9/c">
               <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Case"/>
             </source>
             <referredProperty xsi:type="ecore:EAttribute" href="http://www.TowerDefense.xtext#//Case/j"/>
@@ -131,7 +147,7 @@
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
             <source xsi:type="ocl.ecore:PropertyCallExp">
               <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//NatureTerrain"/>
-              <source xsi:type="ocl.ecore:VariableExp" name="c" referredVariable="/0/generatePartie/%.1/%.5/c">
+              <source xsi:type="ocl.ecore:VariableExp" name="c" referredVariable="/0/generatePartie/%.1/%.9/c">
                 <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Case"/>
               </source>
               <referredProperty xsi:type="ecore:EReference" href="http://www.TowerDefense.xtext#//Case/natureDuTerrain"/>
@@ -141,7 +157,7 @@
           <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=");  &#xA;&#x9;cases.add("/>
           <body xsi:type="ocl.ecore:PropertyCallExp">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-            <source xsi:type="ocl.ecore:VariableExp" name="c" referredVariable="/0/generatePartie/%.1/%.5/c">
+            <source xsi:type="ocl.ecore:VariableExp" name="c" referredVariable="/0/generatePartie/%.1/%.9/c">
               <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Case"/>
             </source>
             <referredProperty xsi:type="ecore:EAttribute" href="http://www.TowerDefense.xtext#//Case/name"/>
@@ -162,7 +178,7 @@
           <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;Mobile "/>
           <body xsi:type="ocl.ecore:PropertyCallExp">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-            <source xsi:type="ocl.ecore:VariableExp" name="m" referredVariable="/0/generatePartie/%.1/%.7/m">
+            <source xsi:type="ocl.ecore:VariableExp" name="m" referredVariable="/0/generatePartie/%.1/%.11/m">
               <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Mobile"/>
             </source>
             <referredProperty xsi:type="ecore:EAttribute" href="http://www.TowerDefense.xtext#//PartieElement/name"/>
@@ -170,7 +186,7 @@
           <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" = new Mobile(&quot;"/>
           <body xsi:type="ocl.ecore:PropertyCallExp">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-            <source xsi:type="ocl.ecore:VariableExp" name="m" referredVariable="/0/generatePartie/%.1/%.7/m">
+            <source xsi:type="ocl.ecore:VariableExp" name="m" referredVariable="/0/generatePartie/%.1/%.11/m">
               <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Mobile"/>
             </source>
             <referredProperty xsi:type="ecore:EAttribute" href="http://www.TowerDefense.xtext#//PartieElement/name"/>
@@ -178,7 +194,7 @@
           <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;, "/>
           <body xsi:type="ocl.ecore:PropertyCallExp">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
-            <source xsi:type="ocl.ecore:VariableExp" name="m" referredVariable="/0/generatePartie/%.1/%.7/m">
+            <source xsi:type="ocl.ecore:VariableExp" name="m" referredVariable="/0/generatePartie/%.1/%.11/m">
               <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Mobile"/>
             </source>
             <referredProperty xsi:type="ecore:EAttribute" href="http://www.TowerDefense.xtext#//Mobile/force"/>
@@ -186,7 +202,7 @@
           <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=", "/>
           <body xsi:type="ocl.ecore:PropertyCallExp">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
-            <source xsi:type="ocl.ecore:VariableExp" name="m" referredVariable="/0/generatePartie/%.1/%.7/m">
+            <source xsi:type="ocl.ecore:VariableExp" name="m" referredVariable="/0/generatePartie/%.1/%.11/m">
               <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Mobile"/>
             </source>
             <referredProperty xsi:type="ecore:EAttribute" href="http://www.TowerDefense.xtext#//Mobile/volume"/>
@@ -194,7 +210,7 @@
           <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=", "/>
           <body xsi:type="ocl.ecore:PropertyCallExp">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
-            <source xsi:type="ocl.ecore:VariableExp" name="m" referredVariable="/0/generatePartie/%.1/%.7/m">
+            <source xsi:type="ocl.ecore:VariableExp" name="m" referredVariable="/0/generatePartie/%.1/%.11/m">
               <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Mobile"/>
             </source>
             <referredProperty xsi:type="ecore:EAttribute" href="http://www.TowerDefense.xtext#//Mobile/numVague"/>
@@ -204,7 +220,7 @@
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
             <source xsi:type="ocl.ecore:PropertyCallExp">
               <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Case"/>
-              <source xsi:type="ocl.ecore:VariableExp" name="m" referredVariable="/0/generatePartie/%.1/%.7/m">
+              <source xsi:type="ocl.ecore:VariableExp" name="m" referredVariable="/0/generatePartie/%.1/%.11/m">
                 <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Mobile"/>
               </source>
               <referredProperty xsi:type="ecore:EReference" href="http://www.TowerDefense.xtext#//Mobile/caseEntree"/>
@@ -216,7 +232,7 @@
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
             <source xsi:type="ocl.ecore:PropertyCallExp">
               <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Case"/>
-              <source xsi:type="ocl.ecore:VariableExp" name="m" referredVariable="/0/generatePartie/%.1/%.7/m">
+              <source xsi:type="ocl.ecore:VariableExp" name="m" referredVariable="/0/generatePartie/%.1/%.11/m">
                 <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Mobile"/>
               </source>
               <referredProperty xsi:type="ecore:EReference" href="http://www.TowerDefense.xtext#//Mobile/caseSortie"/>
@@ -230,7 +246,7 @@
               <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
               <source xsi:type="ocl.ecore:PropertyCallExp">
                 <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Energie"/>
-                <source xsi:type="ocl.ecore:VariableExp" name="m" referredVariable="/0/generatePartie/%.1/%.7/m">
+                <source xsi:type="ocl.ecore:VariableExp" name="m" referredVariable="/0/generatePartie/%.1/%.11/m">
                   <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Mobile"/>
                 </source>
                 <referredProperty xsi:type="ecore:EReference" href="http://www.TowerDefense.xtext#//Mobile/quantiteEnergieMax"/>
@@ -242,7 +258,7 @@
                 <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
                 <source xsi:type="ocl.ecore:PropertyCallExp">
                   <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Energie"/>
-                  <source xsi:type="ocl.ecore:VariableExp" name="m" referredVariable="/0/generatePartie/%.1/%.7/m">
+                  <source xsi:type="ocl.ecore:VariableExp" name="m" referredVariable="/0/generatePartie/%.1/%.11/m">
                     <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Mobile"/>
                   </source>
                   <referredProperty xsi:type="ecore:EReference" href="http://www.TowerDefense.xtext#//Mobile/quantiteEnergieMax"/>
@@ -251,10 +267,10 @@
               </body>
             </else>
           </body>
-          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="),"/>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="),Jeu.TactiqueType."/>
           <body xsi:type="ocl.ecore:PropertyCallExp">
             <eType xsi:type="ecore:EEnum" href="http://www.TowerDefense.xtext#//TactiqueType"/>
-            <source xsi:type="ocl.ecore:VariableExp" name="m" referredVariable="/0/generatePartie/%.1/%.7/m">
+            <source xsi:type="ocl.ecore:VariableExp" name="m" referredVariable="/0/generatePartie/%.1/%.11/m">
               <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Mobile"/>
             </source>
             <referredProperty xsi:type="ecore:EAttribute" href="http://www.TowerDefense.xtext#//Mobile/tactique"/>
@@ -262,7 +278,7 @@
           <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=");&#xA;&#x9;mobiles.add("/>
           <body xsi:type="ocl.ecore:PropertyCallExp">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-            <source xsi:type="ocl.ecore:VariableExp" name="m" referredVariable="/0/generatePartie/%.1/%.7/m">
+            <source xsi:type="ocl.ecore:VariableExp" name="m" referredVariable="/0/generatePartie/%.1/%.11/m">
               <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Mobile"/>
             </source>
             <referredProperty xsi:type="ecore:EAttribute" href="http://www.TowerDefense.xtext#//PartieElement/name"/>
@@ -285,7 +301,7 @@
           <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;Obstacle "/>
           <body xsi:type="ocl.ecore:PropertyCallExp">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-            <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/generatePartie/%.1/%.9/o">
+            <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/generatePartie/%.1/%.13/o">
               <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Obstacle"/>
             </source>
             <referredProperty xsi:type="ecore:EAttribute" href="http://www.TowerDefense.xtext#//PartieElement/name"/>
@@ -293,7 +309,7 @@
           <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" = new Obstacle(&quot;"/>
           <body xsi:type="ocl.ecore:PropertyCallExp">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-            <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/generatePartie/%.1/%.9/o">
+            <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/generatePartie/%.1/%.13/o">
               <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Obstacle"/>
             </source>
             <referredProperty xsi:type="ecore:EAttribute" href="http://www.TowerDefense.xtext#//PartieElement/name"/>
@@ -303,7 +319,7 @@
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
             <source xsi:type="ocl.ecore:PropertyCallExp">
               <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Case"/>
-              <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/generatePartie/%.1/%.9/o">
+              <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/generatePartie/%.1/%.13/o">
                 <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Obstacle"/>
               </source>
               <referredProperty xsi:type="ecore:EReference" href="http://www.TowerDefense.xtext#//Obstacle/campement"/>
@@ -317,7 +333,7 @@
               <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
               <source xsi:type="ocl.ecore:PropertyCallExp">
                 <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Energie"/>
-                <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/generatePartie/%.1/%.9/o">
+                <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/generatePartie/%.1/%.13/o">
                   <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Obstacle"/>
                 </source>
                 <referredProperty xsi:type="ecore:EReference" href="http://www.TowerDefense.xtext#//Obstacle/quantiteEnergieMax"/>
@@ -330,7 +346,7 @@
                 <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
                 <source xsi:type="ocl.ecore:PropertyCallExp">
                   <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Energie"/>
-                  <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/generatePartie/%.1/%.9/o">
+                  <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/generatePartie/%.1/%.13/o">
                     <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Obstacle"/>
                   </source>
                   <referredProperty xsi:type="ecore:EReference" href="http://www.TowerDefense.xtext#//Obstacle/quantiteEnergieMax"/>
@@ -340,10 +356,10 @@
               <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=")"/>
             </else>
           </body>
-          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=","/>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=",Jeu.TactiqueType."/>
           <body xsi:type="ocl.ecore:PropertyCallExp">
             <eType xsi:type="ecore:EEnum" href="http://www.TowerDefense.xtext#//TactiqueType"/>
-            <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/generatePartie/%.1/%.9/o">
+            <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/generatePartie/%.1/%.13/o">
               <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Obstacle"/>
             </source>
             <referredProperty xsi:type="ecore:EAttribute" href="http://www.TowerDefense.xtext#//Obstacle/tactique"/>
@@ -351,7 +367,7 @@
           <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=");&#xA;&#x9;obstacles.add("/>
           <body xsi:type="ocl.ecore:PropertyCallExp">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-            <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/generatePartie/%.1/%.9/o">
+            <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/generatePartie/%.1/%.13/o">
               <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Obstacle"/>
             </source>
             <referredProperty xsi:type="ecore:EAttribute" href="http://www.TowerDefense.xtext#//PartieElement/name"/>
@@ -369,14 +385,14 @@
             </argument>
           </iterSet>
         </body>
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#x9;// On definie les niveaux&#xA;&#x9;List&lt;Vague> vagues;&#xA;"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#x9;// On definie les niveaux&#xA;&#x9;List&lt;Niveau> niveaux = new ArrayList&lt;>();&#xA;&#x9;List&lt;Vague> vagues;&#xA;&#x9;List&lt;Carte> cartes;&#xA;"/>
         <body xsi:type="mtl:ForBlock">
-          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;List&lt;Niveau> niveaux = new ArrayList&lt;>();&#xA;&#x9;&#x9;// On definie les vagues du niveau&#xA;&#x9;&#x9;vagues = newArrayList&lt;>();&#xA;"/>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;// On definie les vagues du niveau&#xA;&#x9;&#x9;cartes = new ArrayList&lt;>();&#xA;&#x9;&#x9;vagues = new ArrayList&lt;>();&#xA;"/>
           <body xsi:type="mtl:ForBlock">
             <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;Vague "/>
             <body xsi:type="ocl.ecore:PropertyCallExp">
               <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-              <source xsi:type="ocl.ecore:VariableExp" name="v" referredVariable="/0/generatePartie/%.1/%.11/%.1/v">
+              <source xsi:type="ocl.ecore:VariableExp" name="v" referredVariable="/0/generatePartie/%.1/%.15/%.1/v">
                 <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Vague"/>
               </source>
               <referredProperty xsi:type="ecore:EAttribute" href="http://www.TowerDefense.xtext#//Vague/name"/>
@@ -384,7 +400,7 @@
             <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" = new Vague(mobiles, obstacles, 3);&#xA;&#x9;&#x9;&#x9;vagues.add("/>
             <body xsi:type="ocl.ecore:PropertyCallExp">
               <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-              <source xsi:type="ocl.ecore:VariableExp" name="v" referredVariable="/0/generatePartie/%.1/%.11/%.1/v">
+              <source xsi:type="ocl.ecore:VariableExp" name="v" referredVariable="/0/generatePartie/%.1/%.15/%.1/v">
                 <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Vague"/>
               </source>
               <referredProperty xsi:type="ecore:EAttribute" href="http://www.TowerDefense.xtext#//Vague/name"/>
@@ -394,13 +410,117 @@
               <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Vague"/>
             </loopVariable>
             <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/3/OrderedSet(Vague)">
-              <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/generatePartie/%.1/%.11/n">
+              <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/generatePartie/%.1/%.15/n">
                 <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Niveau"/>
               </source>
               <referredProperty xsi:type="ecore:EReference" href="http://www.TowerDefense.xtext#//Niveau/vagues"/>
             </iterSet>
           </body>
-          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#xA;&#x9;&#xA;"/>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#x9;&#x9;// On definie les cartes du niveau&#xA;&#x9;&#x9;Carte "/>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Carte"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/generatePartie/%.1/%.15/n">
+                <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Niveau"/>
+              </source>
+              <referredProperty xsi:type="ecore:EReference" href="http://www.TowerDefense.xtext#//Niveau/carte"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://www.TowerDefense.xtext#//Carte/name"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" = new Carte(&quot;"/>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Carte"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/generatePartie/%.1/%.15/n">
+                <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Niveau"/>
+              </source>
+              <referredProperty xsi:type="ecore:EReference" href="http://www.TowerDefense.xtext#//Niveau/carte"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://www.TowerDefense.xtext#//Carte/name"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;, "/>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Carte"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/generatePartie/%.1/%.15/n">
+                <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Niveau"/>
+              </source>
+              <referredProperty xsi:type="ecore:EReference" href="http://www.TowerDefense.xtext#//Niveau/carte"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://www.TowerDefense.xtext#//Carte/nbLignes"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=", "/>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Carte"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/generatePartie/%.1/%.15/n">
+                <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Niveau"/>
+              </source>
+              <referredProperty xsi:type="ecore:EReference" href="http://www.TowerDefense.xtext#//Niveau/carte"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://www.TowerDefense.xtext#//Carte/nbColonnes"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=", cases, chemin, obstacles, mobiles);&#xA;&#x9;&#x9;cartes.add("/>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Carte"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/generatePartie/%.1/%.15/n">
+                <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Niveau"/>
+              </source>
+              <referredProperty xsi:type="ecore:EReference" href="http://www.TowerDefense.xtext#//Niveau/carte"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://www.TowerDefense.xtext#//Carte/name"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=");&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;// Enfin on definie le niveau&#xA;&#x9;&#x9;Niveau "/>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/generatePartie/%.1/%.15/n">
+              <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Niveau"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://www.TowerDefense.xtext#//Niveau/name"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" = new Niveau(&quot;"/>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/generatePartie/%.1/%.15/n">
+              <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Niveau"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://www.TowerDefense.xtext#//Niveau/name"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;, Jeu.Difficulte."/>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ecore:EEnum" href="http://www.TowerDefense.xtext#//Difficulte"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/generatePartie/%.1/%.15/n">
+              <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Niveau"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://www.TowerDefense.xtext#//Niveau/difficulte"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=",n.dureePause, n.argent, n.mobSortisLimite, "/>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Carte"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/generatePartie/%.1/%.15/n">
+                <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Niveau"/>
+              </source>
+              <referredProperty xsi:type="ecore:EReference" href="http://www.TowerDefense.xtext#//Niveau/carte"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://www.TowerDefense.xtext#//Carte/name"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" ,vagues);&#xA;&#x9;&#x9;niveaux.add("/>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/generatePartie/%.1/%.15/n">
+              <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Niveau"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://www.TowerDefense.xtext#//Niveau/name"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=");&#xA;&#xA;&#x9;&#xA;"/>
           <loopVariable name="n">
             <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Niveau"/>
           </loopVariable>
@@ -411,8 +531,87 @@
             <referredProperty xsi:type="ecore:EReference" href="http://www.TowerDefense.xtext#//Partie/niveaux"/>
           </iterSet>
         </body>
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#x9;List&lt;PartieElement> pe = new ArrayList&lt;>();&#xA;        pe.addAll(mobiles);&#xA;        pe.addAll(obstacles);&#xA;&#x9;&#xA;"/>
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#x9;&#xA;&#xA;&#xA;"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#x9;List&lt;PartieElement> pe = new ArrayList&lt;>();&#xA;        pe.addAll(mobiles);&#xA;        pe.addAll(obstacles);&#xA;&#x9;&#xA;&#x9;Partie "/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aPartie" referredVariable="/0/generatePartie/aPartie">
+            <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Partie"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://www.TowerDefense.xtext#//Partie/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" = new Partie(&quot;"/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aPartie" referredVariable="/0/generatePartie/aPartie">
+            <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Partie"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://www.TowerDefense.xtext#//Partie/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;, natures, cases, cartes, pe, niveaux);&#xA;&#x9;"/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aPartie" referredVariable="/0/generatePartie/aPartie">
+            <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Partie"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://www.TowerDefense.xtext#//Partie/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=".setObstacles(obstacles);&#xA;&#x9;"/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aPartie" referredVariable="/0/generatePartie/aPartie">
+            <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Partie"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://www.TowerDefense.xtext#//Partie/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=".setMobiles(mobiles);&#xA;&#xA;&#x9;    // Initialiser l'affichage&#xA;        EnigmeVue vue = new EnigmeVue("/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aPartie" referredVariable="/0/generatePartie/aPartie">
+            <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Partie"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://www.TowerDefense.xtext#//Partie/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=");&#xA;&#xA;        // Tant que la partie n'est pas finie&#xA;        while(!Display.isCloseRequested()) {&#xA;        //while(!"/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aPartie" referredVariable="/0/generatePartie/aPartie">
+            <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Partie"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://www.TowerDefense.xtext#//Partie/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=".estFinie()) {&#xA;            // Calcul du nouveau modele&#xA;            // On fait jouer les projectiles&#xA;            "/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aPartie" referredVariable="/0/generatePartie/aPartie">
+            <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Partie"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://www.TowerDefense.xtext#//Partie/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=".jouerProjectiles();&#xA;            // On fait jouer les obstacles&#xA;            "/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aPartie" referredVariable="/0/generatePartie/aPartie">
+            <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Partie"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://www.TowerDefense.xtext#//Partie/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=".jouerObstacles();&#xA;            // On fait jouer les mobiles&#xA;            "/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aPartie" referredVariable="/0/generatePartie/aPartie">
+            <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Partie"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://www.TowerDefense.xtext#//Partie/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=".jouerMobiles();&#xA;&#xA;            // Transferer le modèle à la vue&#xA;            vue.update("/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aPartie" referredVariable="/0/generatePartie/aPartie">
+            <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Partie"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://www.TowerDefense.xtext#//Partie/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=");&#xA;&#xA;            // Affichage&#xA;            vue.afficher();&#xA;&#xA;            // Petite pause pour qu'on ait le temps de voir ce qu'il se passe&#xA;            try {&#xA;                Thread.sleep(1000);&#xA;            } catch (InterruptedException e) {&#xA;                e.printStackTrace();&#xA;            }&#xA;&#xA;        }&#xA;&#xA;    }&#xA;&#xA;}&#xA;&#xA;&#xA;&#x9;&#xA;&#xA;&#xA;"/>
         <fileUrl xsi:type="ocl.ecore:OperationCallExp">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           <source xsi:type="ocl.ecore:PropertyCallExp">
@@ -447,7 +646,7 @@
               <source xsi:type="ocl.ecore:VariableExp" name="e" referredVariable="/0/getNatureTerrains/%/collect/select/e">
                 <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//PartieElement"/>
               </source>
-              <argument xsi:type="ocl.ecore:TypeExp" eType="/68/NatureTerrain">
+              <argument xsi:type="ocl.ecore:TypeExp" eType="/91/NatureTerrain">
                 <referredType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//NatureTerrain"/>
               </argument>
               <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclIsKindOf"/>
@@ -461,7 +660,7 @@
             <source xsi:type="ocl.ecore:VariableExp" name="e" referredVariable="/0/getNatureTerrains/%/collect/e">
               <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//PartieElement"/>
             </source>
-            <argument xsi:type="ocl.ecore:TypeExp" eType="/68/NatureTerrain">
+            <argument xsi:type="ocl.ecore:TypeExp" eType="/91/NatureTerrain">
               <referredType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//NatureTerrain"/>
             </argument>
             <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclAsType"/>
@@ -484,7 +683,7 @@
               <source xsi:type="ocl.ecore:VariableExp" name="e" referredVariable="/0/getObstacles/%/collect/select/e">
                 <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//PartieElement"/>
               </source>
-              <argument xsi:type="ocl.ecore:TypeExp" eType="/68/Obstacle">
+              <argument xsi:type="ocl.ecore:TypeExp" eType="/91/Obstacle">
                 <referredType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Obstacle"/>
               </argument>
               <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclIsKindOf"/>
@@ -498,7 +697,7 @@
             <source xsi:type="ocl.ecore:VariableExp" name="e" referredVariable="/0/getObstacles/%/collect/e">
               <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//PartieElement"/>
             </source>
-            <argument xsi:type="ocl.ecore:TypeExp" eType="/68/Obstacle">
+            <argument xsi:type="ocl.ecore:TypeExp" eType="/91/Obstacle">
               <referredType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Obstacle"/>
             </argument>
             <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclAsType"/>
@@ -521,7 +720,7 @@
               <source xsi:type="ocl.ecore:VariableExp" name="e" referredVariable="/0/getMobiles/%/collect/select/e">
                 <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//PartieElement"/>
               </source>
-              <argument xsi:type="ocl.ecore:TypeExp" eType="/68/Mobile">
+              <argument xsi:type="ocl.ecore:TypeExp" eType="/91/Mobile">
                 <referredType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Mobile"/>
               </argument>
               <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclIsKindOf"/>
@@ -535,7 +734,7 @@
             <source xsi:type="ocl.ecore:VariableExp" name="e" referredVariable="/0/getMobiles/%/collect/e">
               <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//PartieElement"/>
             </source>
-            <argument xsi:type="ocl.ecore:TypeExp" eType="/68/Mobile">
+            <argument xsi:type="ocl.ecore:TypeExp" eType="/91/Mobile">
               <referredType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Mobile"/>
             </argument>
             <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclAsType"/>
@@ -558,7 +757,7 @@
               <source xsi:type="ocl.ecore:VariableExp" name="e" referredVariable="/0/getProjectiles/%/collect/select/e">
                 <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//PartieElement"/>
               </source>
-              <argument xsi:type="ocl.ecore:TypeExp" eType="/68/Projectile">
+              <argument xsi:type="ocl.ecore:TypeExp" eType="/91/Projectile">
                 <referredType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Projectile"/>
               </argument>
               <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclIsKindOf"/>
@@ -572,7 +771,7 @@
             <source xsi:type="ocl.ecore:VariableExp" name="e" referredVariable="/0/getProjectiles/%/collect/e">
               <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//PartieElement"/>
             </source>
-            <argument xsi:type="ocl.ecore:TypeExp" eType="/68/Projectile">
+            <argument xsi:type="ocl.ecore:TypeExp" eType="/91/Projectile">
               <referredType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Projectile"/>
             </argument>
             <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclAsType"/>
@@ -736,6 +935,15 @@
     <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Partie"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Partie"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Partie"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//NatureTerrain"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//NatureTerrain"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
@@ -895,10 +1103,70 @@
     <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Niveau"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Niveau"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Niveau"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Niveau"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Niveau"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Niveau"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Niveau"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Niveau"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Niveau"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Niveau"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Partie"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="i">
     <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Partie"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Partie"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Partie"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Partie"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Partie"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Partie"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Partie"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Partie"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Partie"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.TowerDefense.xtext#//Partie"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
@@ -940,7 +1208,7 @@
   <ecore:EAnnotation source="positions">
     <eAnnotations source="positions.0" references="/0/generatePartie">
       <details key="start" value="88"/>
-      <details key="end" value="2176"/>
+      <details key="end" value="3787"/>
       <details key="line" value="5"/>
     </eAnnotations>
     <eAnnotations source="positions.1" references="/0/generatePartie/%">
@@ -950,7 +1218,7 @@
     </eAnnotations>
     <eAnnotations source="positions.2" references="/0/generatePartie/%.1">
       <details key="start" value="140"/>
-      <details key="end" value="2162"/>
+      <details key="end" value="3773"/>
       <details key="line" value="7"/>
     </eAnnotations>
     <eAnnotations source="positions.3" references="/0/generatePartie/%.1/%">
@@ -970,1102 +1238,1462 @@
     </eAnnotations>
     <eAnnotations source="positions.6" references="/0/generatePartie/%.1/%.2">
       <details key="start" value="262"/>
-      <details key="end" value="316"/>
+      <details key="end" value="297"/>
       <details key="line" value="13"/>
     </eAnnotations>
     <eAnnotations source="positions.7" references="/0/generatePartie/%.1/%.3">
-      <details key="start" value="317"/>
-      <details key="end" value="593"/>
-      <details key="line" value="16"/>
-    </eAnnotations>
-    <eAnnotations source="positions.8" references="/0/generatePartie/%.1/%.3/%">
-      <details key="start" value="392"/>
-      <details key="end" value="407"/>
-      <details key="line" value="17"/>
-    </eAnnotations>
-    <eAnnotations source="positions.9" references="/0/generatePartie/%.1/%.3/%.1">
-      <details key="start" value="408"/>
-      <details key="end" value="415"/>
+      <details key="start" value="298"/>
+      <details key="end" value="301"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.10" references="/0/generatePartie/%.1/%.3/%.1/nt">
-      <details key="start" value="408"/>
-      <details key="end" value="410"/>
+    <eAnnotations source="positions.8" references="/0/generatePartie/%.1/%.4">
+      <details key="start" value="303"/>
+      <details key="end" value="304"/>
+      <details key="line" value="15"/>
+    </eAnnotations>
+    <eAnnotations source="positions.9" references="/0/generatePartie/%.1/%.5">
+      <details key="start" value="306"/>
+      <details key="end" value="309"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.11" references="/0/generatePartie/%.1/%.3/%.2">
-      <details key="start" value="417"/>
-      <details key="end" value="439"/>
-      <details key="line" value="17"/>
+    <eAnnotations source="positions.10" references="/0/generatePartie/%.1/%.6">
+      <details key="start" value="311"/>
+      <details key="end" value="420"/>
+      <details key="line" value="15"/>
     </eAnnotations>
-    <eAnnotations source="positions.12" references="/0/generatePartie/%.1/%.3/%.3">
-      <details key="start" value="440"/>
-      <details key="end" value="447"/>
-      <details key="line" value="0"/>
+    <eAnnotations source="positions.11" references="/0/generatePartie/%.1/%.7">
+      <details key="start" value="421"/>
+      <details key="end" value="723"/>
+      <details key="line" value="19"/>
     </eAnnotations>
-    <eAnnotations source="positions.13" references="/0/generatePartie/%.1/%.3/%.3/nt">
-      <details key="start" value="440"/>
-      <details key="end" value="442"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.14" references="/0/generatePartie/%.1/%.3/%.4">
-      <details key="start" value="449"/>
-      <details key="end" value="451"/>
-      <details key="line" value="17"/>
-    </eAnnotations>
-    <eAnnotations source="positions.15" references="/0/generatePartie/%.1/%.3/%.5">
-      <details key="start" value="452"/>
-      <details key="end" value="461"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.16" references="/0/generatePartie/%.1/%.3/%.5/nt">
-      <details key="start" value="452"/>
-      <details key="end" value="454"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.17" references="/0/generatePartie/%.1/%.3/%.6">
-      <details key="start" value="463"/>
-      <details key="end" value="484"/>
-      <details key="line" value="17"/>
-    </eAnnotations>
-    <eAnnotations source="positions.18" references="/0/generatePartie/%.1/%.3/%.7">
-      <details key="start" value="485"/>
-      <details key="end" value="492"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.19" references="/0/generatePartie/%.1/%.3/%.7/nt">
-      <details key="start" value="485"/>
-      <details key="end" value="487"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.20" references="/0/generatePartie/%.1/%.3/%.8">
-      <details key="start" value="494"/>
-      <details key="end" value="496"/>
-      <details key="line" value="17"/>
-    </eAnnotations>
-    <eAnnotations source="positions.21" references="/0/generatePartie/%.1/%.3/%.9">
+    <eAnnotations source="positions.12" references="/0/generatePartie/%.1/%.7/%">
       <details key="start" value="496"/>
-      <details key="end" value="583"/>
-      <details key="line" value="17"/>
+      <details key="end" value="511"/>
+      <details key="line" value="20"/>
     </eAnnotations>
-    <eAnnotations source="positions.22" references="/0/generatePartie/%.1/%.3/%.9/%">
-      <details key="start" value="520"/>
-      <details key="end" value="539"/>
-      <details key="line" value="17"/>
-    </eAnnotations>
-    <eAnnotations source="positions.23" references="/0/generatePartie/%.1/%.3/%.9/%.1">
-      <details key="start" value="500"/>
+    <eAnnotations source="positions.13" references="/0/generatePartie/%.1/%.7/%.1">
+      <details key="start" value="512"/>
       <details key="end" value="519"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.24" references="/0/generatePartie/%.1/%.3/%.9/%.1/%">
-      <details key="start" value="501"/>
-      <details key="end" value="511"/>
+    <eAnnotations source="positions.14" references="/0/generatePartie/%.1/%.7/%.1/nt">
+      <details key="start" value="512"/>
+      <details key="end" value="514"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.25" references="/0/generatePartie/%.1/%.3/%.9/%.1/%/nt">
-      <details key="start" value="501"/>
-      <details key="end" value="503"/>
+    <eAnnotations source="positions.15" references="/0/generatePartie/%.1/%.7/%.2">
+      <details key="start" value="521"/>
+      <details key="end" value="543"/>
+      <details key="line" value="20"/>
+    </eAnnotations>
+    <eAnnotations source="positions.16" references="/0/generatePartie/%.1/%.7/%.3">
+      <details key="start" value="544"/>
+      <details key="end" value="551"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.26" references="/0/generatePartie/%.1/%.3/%.9/%.2">
-      <details key="start" value="539"/>
-      <details key="end" value="578"/>
-      <details key="line" value="17"/>
-    </eAnnotations>
-    <eAnnotations source="positions.27" references="/0/generatePartie/%.1/%.3/%.9/%.2/%">
-      <details key="start" value="545"/>
-      <details key="end" value="557"/>
-      <details key="line" value="17"/>
-    </eAnnotations>
-    <eAnnotations source="positions.28" references="/0/generatePartie/%.1/%.3/%.9/%.2/%.1">
-      <details key="start" value="558"/>
-      <details key="end" value="575"/>
+    <eAnnotations source="positions.17" references="/0/generatePartie/%.1/%.7/%.3/nt">
+      <details key="start" value="544"/>
+      <details key="end" value="546"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.29" references="/0/generatePartie/%.1/%.3/%.9/%.2/%.1/%">
-      <details key="start" value="558"/>
-      <details key="end" value="568"/>
+    <eAnnotations source="positions.18" references="/0/generatePartie/%.1/%.7/%.4">
+      <details key="start" value="553"/>
+      <details key="end" value="555"/>
+      <details key="line" value="20"/>
+    </eAnnotations>
+    <eAnnotations source="positions.19" references="/0/generatePartie/%.1/%.7/%.5">
+      <details key="start" value="556"/>
+      <details key="end" value="565"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.30" references="/0/generatePartie/%.1/%.3/%.9/%.2/%.1/%/nt">
-      <details key="start" value="558"/>
-      <details key="end" value="560"/>
+    <eAnnotations source="positions.20" references="/0/generatePartie/%.1/%.7/%.5/nt">
+      <details key="start" value="556"/>
+      <details key="end" value="558"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.31" references="/0/generatePartie/%.1/%.3/%.9/%.2/%.2">
-      <details key="start" value="577"/>
-      <details key="end" value="578"/>
-      <details key="line" value="17"/>
+    <eAnnotations source="positions.21" references="/0/generatePartie/%.1/%.7/%.6">
+      <details key="start" value="567"/>
+      <details key="end" value="588"/>
+      <details key="line" value="20"/>
     </eAnnotations>
-    <eAnnotations source="positions.32" references="/0/generatePartie/%.1/%.3/%.10">
-      <details key="start" value="583"/>
-      <details key="end" value="586"/>
-      <details key="line" value="17"/>
-    </eAnnotations>
-    <eAnnotations source="positions.33" references="/0/generatePartie/%.1/%.3/nt">
-      <details key="start" value="323"/>
-      <details key="end" value="341"/>
-      <details key="line" value="16"/>
-    </eAnnotations>
-    <eAnnotations source="positions.34" references="/0/generatePartie/%.1/%.3/%.11">
-      <details key="start" value="344"/>
-      <details key="end" value="389"/>
+    <eAnnotations source="positions.22" references="/0/generatePartie/%.1/%.7/%.7">
+      <details key="start" value="589"/>
+      <details key="end" value="596"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.35" references="/0/generatePartie/%.1/%.3/%.11/%">
-      <details key="start" value="344"/>
-      <details key="end" value="366"/>
+    <eAnnotations source="positions.23" references="/0/generatePartie/%.1/%.7/%.7/nt">
+      <details key="start" value="589"/>
+      <details key="end" value="591"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.36" references="/0/generatePartie/%.1/%.3/%.11/%/aPartie">
-      <details key="start" value="344"/>
-      <details key="end" value="351"/>
+    <eAnnotations source="positions.24" references="/0/generatePartie/%.1/%.7/%.8">
+      <details key="start" value="598"/>
+      <details key="end" value="600"/>
+      <details key="line" value="20"/>
+    </eAnnotations>
+    <eAnnotations source="positions.25" references="/0/generatePartie/%.1/%.7/%.9">
+      <details key="start" value="600"/>
+      <details key="end" value="687"/>
+      <details key="line" value="20"/>
+    </eAnnotations>
+    <eAnnotations source="positions.26" references="/0/generatePartie/%.1/%.7/%.9/%">
+      <details key="start" value="624"/>
+      <details key="end" value="643"/>
+      <details key="line" value="20"/>
+    </eAnnotations>
+    <eAnnotations source="positions.27" references="/0/generatePartie/%.1/%.7/%.9/%.1">
+      <details key="start" value="604"/>
+      <details key="end" value="623"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.37" references="/0/generatePartie/%.1/%.4">
-      <details key="start" value="594"/>
-      <details key="end" value="671"/>
+    <eAnnotations source="positions.28" references="/0/generatePartie/%.1/%.7/%.9/%.1/%">
+      <details key="start" value="605"/>
+      <details key="end" value="615"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.29" references="/0/generatePartie/%.1/%.7/%.9/%.1/%/nt">
+      <details key="start" value="605"/>
+      <details key="end" value="607"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.30" references="/0/generatePartie/%.1/%.7/%.9/%.2">
+      <details key="start" value="643"/>
+      <details key="end" value="682"/>
+      <details key="line" value="20"/>
+    </eAnnotations>
+    <eAnnotations source="positions.31" references="/0/generatePartie/%.1/%.7/%.9/%.2/%">
+      <details key="start" value="649"/>
+      <details key="end" value="661"/>
+      <details key="line" value="20"/>
+    </eAnnotations>
+    <eAnnotations source="positions.32" references="/0/generatePartie/%.1/%.7/%.9/%.2/%.1">
+      <details key="start" value="662"/>
+      <details key="end" value="679"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.33" references="/0/generatePartie/%.1/%.7/%.9/%.2/%.1/%">
+      <details key="start" value="662"/>
+      <details key="end" value="672"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.34" references="/0/generatePartie/%.1/%.7/%.9/%.2/%.1/%/nt">
+      <details key="start" value="662"/>
+      <details key="end" value="664"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.35" references="/0/generatePartie/%.1/%.7/%.9/%.2/%.2">
+      <details key="start" value="681"/>
+      <details key="end" value="682"/>
+      <details key="line" value="20"/>
+    </eAnnotations>
+    <eAnnotations source="positions.36" references="/0/generatePartie/%.1/%.7/%.10">
+      <details key="start" value="687"/>
+      <details key="end" value="703"/>
+      <details key="line" value="20"/>
+    </eAnnotations>
+    <eAnnotations source="positions.37" references="/0/generatePartie/%.1/%.7/%.11">
+      <details key="start" value="704"/>
+      <details key="end" value="711"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.38" references="/0/generatePartie/%.1/%.7/%.11/nt">
+      <details key="start" value="704"/>
+      <details key="end" value="706"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.39" references="/0/generatePartie/%.1/%.7/%.12">
+      <details key="start" value="713"/>
+      <details key="end" value="716"/>
+      <details key="line" value="21"/>
+    </eAnnotations>
+    <eAnnotations source="positions.40" references="/0/generatePartie/%.1/%.7/nt">
+      <details key="start" value="427"/>
+      <details key="end" value="445"/>
       <details key="line" value="19"/>
     </eAnnotations>
-    <eAnnotations source="positions.38" references="/0/generatePartie/%.1/%.5">
-      <details key="start" value="672"/>
-      <details key="end" value="821"/>
-      <details key="line" value="22"/>
+    <eAnnotations source="positions.41" references="/0/generatePartie/%.1/%.7/%.13">
+      <details key="start" value="448"/>
+      <details key="end" value="493"/>
+      <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.39" references="/0/generatePartie/%.1/%.5/%">
-      <details key="start" value="705"/>
-      <details key="end" value="711"/>
+    <eAnnotations source="positions.42" references="/0/generatePartie/%.1/%.7/%.13/%">
+      <details key="start" value="448"/>
+      <details key="end" value="470"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.43" references="/0/generatePartie/%.1/%.7/%.13/%/aPartie">
+      <details key="start" value="448"/>
+      <details key="end" value="455"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.44" references="/0/generatePartie/%.1/%.8">
+      <details key="start" value="724"/>
+      <details key="end" value="801"/>
       <details key="line" value="23"/>
     </eAnnotations>
-    <eAnnotations source="positions.40" references="/0/generatePartie/%.1/%.5/%.1">
-      <details key="start" value="712"/>
-      <details key="end" value="718"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.41" references="/0/generatePartie/%.1/%.5/%.1/c">
-      <details key="start" value="712"/>
-      <details key="end" value="713"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.42" references="/0/generatePartie/%.1/%.5/%.2">
-      <details key="start" value="720"/>
-      <details key="end" value="733"/>
-      <details key="line" value="23"/>
-    </eAnnotations>
-    <eAnnotations source="positions.43" references="/0/generatePartie/%.1/%.5/%.3">
-      <details key="start" value="734"/>
-      <details key="end" value="740"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.44" references="/0/generatePartie/%.1/%.5/%.3/c">
-      <details key="start" value="734"/>
-      <details key="end" value="735"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.45" references="/0/generatePartie/%.1/%.5/%.4">
-      <details key="start" value="742"/>
-      <details key="end" value="745"/>
-      <details key="line" value="23"/>
-    </eAnnotations>
-    <eAnnotations source="positions.46" references="/0/generatePartie/%.1/%.5/%.5">
-      <details key="start" value="746"/>
-      <details key="end" value="749"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.47" references="/0/generatePartie/%.1/%.5/%.5/c">
-      <details key="start" value="746"/>
-      <details key="end" value="747"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.48" references="/0/generatePartie/%.1/%.5/%.6">
-      <details key="start" value="751"/>
-      <details key="end" value="753"/>
-      <details key="line" value="23"/>
-    </eAnnotations>
-    <eAnnotations source="positions.49" references="/0/generatePartie/%.1/%.5/%.7">
-      <details key="start" value="754"/>
-      <details key="end" value="757"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.50" references="/0/generatePartie/%.1/%.5/%.7/c">
-      <details key="start" value="754"/>
-      <details key="end" value="755"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.51" references="/0/generatePartie/%.1/%.5/%.8">
-      <details key="start" value="759"/>
-      <details key="end" value="761"/>
-      <details key="line" value="23"/>
-    </eAnnotations>
-    <eAnnotations source="positions.52" references="/0/generatePartie/%.1/%.5/%.9">
-      <details key="start" value="762"/>
-      <details key="end" value="784"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.53" references="/0/generatePartie/%.1/%.5/%.9/%">
-      <details key="start" value="762"/>
-      <details key="end" value="779"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.54" references="/0/generatePartie/%.1/%.5/%.9/%/c">
-      <details key="start" value="762"/>
-      <details key="end" value="763"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.55" references="/0/generatePartie/%.1/%.5/%.10">
-      <details key="start" value="786"/>
-      <details key="end" value="802"/>
-      <details key="line" value="23"/>
-    </eAnnotations>
-    <eAnnotations source="positions.56" references="/0/generatePartie/%.1/%.5/%.11">
-      <details key="start" value="803"/>
-      <details key="end" value="809"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.57" references="/0/generatePartie/%.1/%.5/%.11/c">
-      <details key="start" value="803"/>
-      <details key="end" value="804"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.58" references="/0/generatePartie/%.1/%.5/%.12">
-      <details key="start" value="811"/>
-      <details key="end" value="814"/>
-      <details key="line" value="24"/>
-    </eAnnotations>
-    <eAnnotations source="positions.59" references="/0/generatePartie/%.1/%.5/c">
-      <details key="start" value="678"/>
-      <details key="end" value="686"/>
-      <details key="line" value="22"/>
-    </eAnnotations>
-    <eAnnotations source="positions.60" references="/0/generatePartie/%.1/%.5/%.13">
-      <details key="start" value="689"/>
-      <details key="end" value="702"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.61" references="/0/generatePartie/%.1/%.5/%.13/aPartie">
-      <details key="start" value="689"/>
-      <details key="end" value="696"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.62" references="/0/generatePartie/%.1/%.6">
-      <details key="start" value="822"/>
-      <details key="end" value="893"/>
+    <eAnnotations source="positions.45" references="/0/generatePartie/%.1/%.9">
+      <details key="start" value="802"/>
+      <details key="end" value="951"/>
       <details key="line" value="26"/>
     </eAnnotations>
-    <eAnnotations source="positions.63" references="/0/generatePartie/%.1/%.7">
-      <details key="start" value="894"/>
-      <details key="end" value="1226"/>
-      <details key="line" value="29"/>
+    <eAnnotations source="positions.46" references="/0/generatePartie/%.1/%.9/%">
+      <details key="start" value="835"/>
+      <details key="end" value="841"/>
+      <details key="line" value="27"/>
     </eAnnotations>
-    <eAnnotations source="positions.64" references="/0/generatePartie/%.1/%.7/%">
-      <details key="start" value="954"/>
-      <details key="end" value="962"/>
-      <details key="line" value="30"/>
-    </eAnnotations>
-    <eAnnotations source="positions.65" references="/0/generatePartie/%.1/%.7/%.1">
-      <details key="start" value="963"/>
-      <details key="end" value="969"/>
+    <eAnnotations source="positions.47" references="/0/generatePartie/%.1/%.9/%.1">
+      <details key="start" value="842"/>
+      <details key="end" value="848"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.66" references="/0/generatePartie/%.1/%.7/%.1/m">
-      <details key="start" value="963"/>
-      <details key="end" value="964"/>
+    <eAnnotations source="positions.48" references="/0/generatePartie/%.1/%.9/%.1/c">
+      <details key="start" value="842"/>
+      <details key="end" value="843"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.67" references="/0/generatePartie/%.1/%.7/%.2">
-      <details key="start" value="971"/>
-      <details key="end" value="986"/>
-      <details key="line" value="30"/>
+    <eAnnotations source="positions.49" references="/0/generatePartie/%.1/%.9/%.2">
+      <details key="start" value="850"/>
+      <details key="end" value="863"/>
+      <details key="line" value="27"/>
     </eAnnotations>
-    <eAnnotations source="positions.68" references="/0/generatePartie/%.1/%.7/%.3">
-      <details key="start" value="987"/>
-      <details key="end" value="993"/>
+    <eAnnotations source="positions.50" references="/0/generatePartie/%.1/%.9/%.3">
+      <details key="start" value="864"/>
+      <details key="end" value="870"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.69" references="/0/generatePartie/%.1/%.7/%.3/m">
-      <details key="start" value="987"/>
-      <details key="end" value="988"/>
+    <eAnnotations source="positions.51" references="/0/generatePartie/%.1/%.9/%.3/c">
+      <details key="start" value="864"/>
+      <details key="end" value="865"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.70" references="/0/generatePartie/%.1/%.7/%.4">
-      <details key="start" value="995"/>
-      <details key="end" value="998"/>
-      <details key="line" value="30"/>
+    <eAnnotations source="positions.52" references="/0/generatePartie/%.1/%.9/%.4">
+      <details key="start" value="872"/>
+      <details key="end" value="875"/>
+      <details key="line" value="27"/>
     </eAnnotations>
-    <eAnnotations source="positions.71" references="/0/generatePartie/%.1/%.7/%.5">
-      <details key="start" value="999"/>
-      <details key="end" value="1006"/>
+    <eAnnotations source="positions.53" references="/0/generatePartie/%.1/%.9/%.5">
+      <details key="start" value="876"/>
+      <details key="end" value="879"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.72" references="/0/generatePartie/%.1/%.7/%.5/m">
-      <details key="start" value="999"/>
-      <details key="end" value="1000"/>
+    <eAnnotations source="positions.54" references="/0/generatePartie/%.1/%.9/%.5/c">
+      <details key="start" value="876"/>
+      <details key="end" value="877"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.73" references="/0/generatePartie/%.1/%.7/%.6">
-      <details key="start" value="1008"/>
-      <details key="end" value="1010"/>
-      <details key="line" value="30"/>
+    <eAnnotations source="positions.55" references="/0/generatePartie/%.1/%.9/%.6">
+      <details key="start" value="881"/>
+      <details key="end" value="883"/>
+      <details key="line" value="27"/>
     </eAnnotations>
-    <eAnnotations source="positions.74" references="/0/generatePartie/%.1/%.7/%.7">
-      <details key="start" value="1011"/>
-      <details key="end" value="1019"/>
+    <eAnnotations source="positions.56" references="/0/generatePartie/%.1/%.9/%.7">
+      <details key="start" value="884"/>
+      <details key="end" value="887"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.75" references="/0/generatePartie/%.1/%.7/%.7/m">
-      <details key="start" value="1011"/>
-      <details key="end" value="1012"/>
+    <eAnnotations source="positions.57" references="/0/generatePartie/%.1/%.9/%.7/c">
+      <details key="start" value="884"/>
+      <details key="end" value="885"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.76" references="/0/generatePartie/%.1/%.7/%.8">
-      <details key="start" value="1021"/>
+    <eAnnotations source="positions.58" references="/0/generatePartie/%.1/%.9/%.8">
+      <details key="start" value="889"/>
+      <details key="end" value="891"/>
+      <details key="line" value="27"/>
+    </eAnnotations>
+    <eAnnotations source="positions.59" references="/0/generatePartie/%.1/%.9/%.9">
+      <details key="start" value="892"/>
+      <details key="end" value="914"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.60" references="/0/generatePartie/%.1/%.9/%.9/%">
+      <details key="start" value="892"/>
+      <details key="end" value="909"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.61" references="/0/generatePartie/%.1/%.9/%.9/%/c">
+      <details key="start" value="892"/>
+      <details key="end" value="893"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.62" references="/0/generatePartie/%.1/%.9/%.10">
+      <details key="start" value="916"/>
+      <details key="end" value="932"/>
+      <details key="line" value="27"/>
+    </eAnnotations>
+    <eAnnotations source="positions.63" references="/0/generatePartie/%.1/%.9/%.11">
+      <details key="start" value="933"/>
+      <details key="end" value="939"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.64" references="/0/generatePartie/%.1/%.9/%.11/c">
+      <details key="start" value="933"/>
+      <details key="end" value="934"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.65" references="/0/generatePartie/%.1/%.9/%.12">
+      <details key="start" value="941"/>
+      <details key="end" value="944"/>
+      <details key="line" value="28"/>
+    </eAnnotations>
+    <eAnnotations source="positions.66" references="/0/generatePartie/%.1/%.9/c">
+      <details key="start" value="808"/>
+      <details key="end" value="816"/>
+      <details key="line" value="26"/>
+    </eAnnotations>
+    <eAnnotations source="positions.67" references="/0/generatePartie/%.1/%.9/%.13">
+      <details key="start" value="819"/>
+      <details key="end" value="832"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.68" references="/0/generatePartie/%.1/%.9/%.13/aPartie">
+      <details key="start" value="819"/>
+      <details key="end" value="826"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.69" references="/0/generatePartie/%.1/%.10">
+      <details key="start" value="952"/>
       <details key="end" value="1023"/>
       <details key="line" value="30"/>
     </eAnnotations>
-    <eAnnotations source="positions.77" references="/0/generatePartie/%.1/%.7/%.9">
+    <eAnnotations source="positions.70" references="/0/generatePartie/%.1/%.11">
       <details key="start" value="1024"/>
-      <details key="end" value="1034"/>
+      <details key="end" value="1373"/>
+      <details key="line" value="33"/>
+    </eAnnotations>
+    <eAnnotations source="positions.71" references="/0/generatePartie/%.1/%.11/%">
+      <details key="start" value="1084"/>
+      <details key="end" value="1092"/>
+      <details key="line" value="34"/>
+    </eAnnotations>
+    <eAnnotations source="positions.72" references="/0/generatePartie/%.1/%.11/%.1">
+      <details key="start" value="1093"/>
+      <details key="end" value="1099"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.78" references="/0/generatePartie/%.1/%.7/%.9/m">
-      <details key="start" value="1024"/>
-      <details key="end" value="1025"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.79" references="/0/generatePartie/%.1/%.7/%.10">
-      <details key="start" value="1036"/>
-      <details key="end" value="1038"/>
-      <details key="line" value="30"/>
-    </eAnnotations>
-    <eAnnotations source="positions.80" references="/0/generatePartie/%.1/%.7/%.11">
-      <details key="start" value="1039"/>
-      <details key="end" value="1056"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.81" references="/0/generatePartie/%.1/%.7/%.11/%">
-      <details key="start" value="1039"/>
-      <details key="end" value="1051"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.82" references="/0/generatePartie/%.1/%.7/%.11/%/m">
-      <details key="start" value="1039"/>
-      <details key="end" value="1040"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.83" references="/0/generatePartie/%.1/%.7/%.12">
-      <details key="start" value="1058"/>
-      <details key="end" value="1060"/>
-      <details key="line" value="30"/>
-    </eAnnotations>
-    <eAnnotations source="positions.84" references="/0/generatePartie/%.1/%.7/%.13">
-      <details key="start" value="1061"/>
-      <details key="end" value="1078"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.85" references="/0/generatePartie/%.1/%.7/%.13/%">
-      <details key="start" value="1061"/>
-      <details key="end" value="1073"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.86" references="/0/generatePartie/%.1/%.7/%.13/%/m">
-      <details key="start" value="1061"/>
-      <details key="end" value="1062"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.87" references="/0/generatePartie/%.1/%.7/%.14">
-      <details key="start" value="1080"/>
+    <eAnnotations source="positions.73" references="/0/generatePartie/%.1/%.11/%.1/m">
+      <details key="start" value="1093"/>
       <details key="end" value="1094"/>
-      <details key="line" value="30"/>
-    </eAnnotations>
-    <eAnnotations source="positions.88" references="/0/generatePartie/%.1/%.7/%.15">
-      <details key="start" value="1094"/>
-      <details key="end" value="1175"/>
-      <details key="line" value="30"/>
-    </eAnnotations>
-    <eAnnotations source="positions.89" references="/0/generatePartie/%.1/%.7/%.15/%">
-      <details key="start" value="1128"/>
-      <details key="end" value="1134"/>
-      <details key="line" value="30"/>
-    </eAnnotations>
-    <eAnnotations source="positions.90" references="/0/generatePartie/%.1/%.7/%.15/%.1">
-      <details key="start" value="1098"/>
-      <details key="end" value="1127"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.91" references="/0/generatePartie/%.1/%.7/%.15/%.1/%">
-      <details key="start" value="1099"/>
-      <details key="end" value="1119"/>
+    <eAnnotations source="positions.74" references="/0/generatePartie/%.1/%.11/%.2">
+      <details key="start" value="1101"/>
+      <details key="end" value="1116"/>
+      <details key="line" value="34"/>
+    </eAnnotations>
+    <eAnnotations source="positions.75" references="/0/generatePartie/%.1/%.11/%.3">
+      <details key="start" value="1117"/>
+      <details key="end" value="1123"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.92" references="/0/generatePartie/%.1/%.7/%.15/%.1/%/m">
-      <details key="start" value="1099"/>
-      <details key="end" value="1100"/>
+    <eAnnotations source="positions.76" references="/0/generatePartie/%.1/%.11/%.3/m">
+      <details key="start" value="1117"/>
+      <details key="end" value="1118"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.93" references="/0/generatePartie/%.1/%.7/%.15/%.2">
-      <details key="start" value="1134"/>
-      <details key="end" value="1170"/>
-      <details key="line" value="30"/>
+    <eAnnotations source="positions.77" references="/0/generatePartie/%.1/%.11/%.4">
+      <details key="start" value="1125"/>
+      <details key="end" value="1128"/>
+      <details key="line" value="34"/>
     </eAnnotations>
-    <eAnnotations source="positions.94" references="/0/generatePartie/%.1/%.7/%.15/%.2/%">
+    <eAnnotations source="positions.78" references="/0/generatePartie/%.1/%.11/%.5">
+      <details key="start" value="1129"/>
+      <details key="end" value="1136"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.79" references="/0/generatePartie/%.1/%.11/%.5/m">
+      <details key="start" value="1129"/>
+      <details key="end" value="1130"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.80" references="/0/generatePartie/%.1/%.11/%.6">
+      <details key="start" value="1138"/>
+      <details key="end" value="1140"/>
+      <details key="line" value="34"/>
+    </eAnnotations>
+    <eAnnotations source="positions.81" references="/0/generatePartie/%.1/%.11/%.7">
       <details key="start" value="1141"/>
-      <details key="end" value="1168"/>
+      <details key="end" value="1149"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.95" references="/0/generatePartie/%.1/%.7/%.15/%.2/%/%">
-      <details key="start" value="1141"/>
-      <details key="end" value="1161"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.96" references="/0/generatePartie/%.1/%.7/%.15/%.2/%/%/m">
+    <eAnnotations source="positions.82" references="/0/generatePartie/%.1/%.11/%.7/m">
       <details key="start" value="1141"/>
       <details key="end" value="1142"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.97" references="/0/generatePartie/%.1/%.7/%.16">
-      <details key="start" value="1175"/>
-      <details key="end" value="1177"/>
-      <details key="line" value="30"/>
+    <eAnnotations source="positions.83" references="/0/generatePartie/%.1/%.11/%.8">
+      <details key="start" value="1151"/>
+      <details key="end" value="1153"/>
+      <details key="line" value="34"/>
     </eAnnotations>
-    <eAnnotations source="positions.98" references="/0/generatePartie/%.1/%.7/%.17">
-      <details key="start" value="1178"/>
-      <details key="end" value="1188"/>
+    <eAnnotations source="positions.84" references="/0/generatePartie/%.1/%.11/%.9">
+      <details key="start" value="1154"/>
+      <details key="end" value="1164"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.99" references="/0/generatePartie/%.1/%.7/%.17/m">
-      <details key="start" value="1178"/>
-      <details key="end" value="1179"/>
+    <eAnnotations source="positions.85" references="/0/generatePartie/%.1/%.11/%.9/m">
+      <details key="start" value="1154"/>
+      <details key="end" value="1155"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.100" references="/0/generatePartie/%.1/%.7/%.18">
-      <details key="start" value="1190"/>
-      <details key="end" value="1206"/>
-      <details key="line" value="30"/>
+    <eAnnotations source="positions.86" references="/0/generatePartie/%.1/%.11/%.10">
+      <details key="start" value="1166"/>
+      <details key="end" value="1168"/>
+      <details key="line" value="34"/>
     </eAnnotations>
-    <eAnnotations source="positions.101" references="/0/generatePartie/%.1/%.7/%.19">
-      <details key="start" value="1207"/>
-      <details key="end" value="1213"/>
+    <eAnnotations source="positions.87" references="/0/generatePartie/%.1/%.11/%.11">
+      <details key="start" value="1169"/>
+      <details key="end" value="1186"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.102" references="/0/generatePartie/%.1/%.7/%.19/m">
-      <details key="start" value="1207"/>
+    <eAnnotations source="positions.88" references="/0/generatePartie/%.1/%.11/%.11/%">
+      <details key="start" value="1169"/>
+      <details key="end" value="1181"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.89" references="/0/generatePartie/%.1/%.11/%.11/%/m">
+      <details key="start" value="1169"/>
+      <details key="end" value="1170"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.90" references="/0/generatePartie/%.1/%.11/%.12">
+      <details key="start" value="1188"/>
+      <details key="end" value="1190"/>
+      <details key="line" value="34"/>
+    </eAnnotations>
+    <eAnnotations source="positions.91" references="/0/generatePartie/%.1/%.11/%.13">
+      <details key="start" value="1191"/>
       <details key="end" value="1208"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.103" references="/0/generatePartie/%.1/%.7/%.20">
-      <details key="start" value="1215"/>
-      <details key="end" value="1219"/>
-      <details key="line" value="31"/>
-    </eAnnotations>
-    <eAnnotations source="positions.104" references="/0/generatePartie/%.1/%.7/m">
-      <details key="start" value="900"/>
-      <details key="end" value="910"/>
-      <details key="line" value="29"/>
-    </eAnnotations>
-    <eAnnotations source="positions.105" references="/0/generatePartie/%.1/%.7/%.21">
-      <details key="start" value="913"/>
-      <details key="end" value="951"/>
+    <eAnnotations source="positions.92" references="/0/generatePartie/%.1/%.11/%.13/%">
+      <details key="start" value="1191"/>
+      <details key="end" value="1203"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.106" references="/0/generatePartie/%.1/%.7/%.21/%">
-      <details key="start" value="913"/>
-      <details key="end" value="935"/>
+    <eAnnotations source="positions.93" references="/0/generatePartie/%.1/%.11/%.13/%/m">
+      <details key="start" value="1191"/>
+      <details key="end" value="1192"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.107" references="/0/generatePartie/%.1/%.7/%.21/%/aPartie">
-      <details key="start" value="913"/>
-      <details key="end" value="920"/>
+    <eAnnotations source="positions.94" references="/0/generatePartie/%.1/%.11/%.14">
+      <details key="start" value="1210"/>
+      <details key="end" value="1224"/>
+      <details key="line" value="34"/>
+    </eAnnotations>
+    <eAnnotations source="positions.95" references="/0/generatePartie/%.1/%.11/%.15">
+      <details key="start" value="1224"/>
+      <details key="end" value="1305"/>
+      <details key="line" value="34"/>
+    </eAnnotations>
+    <eAnnotations source="positions.96" references="/0/generatePartie/%.1/%.11/%.15/%">
+      <details key="start" value="1258"/>
+      <details key="end" value="1264"/>
+      <details key="line" value="34"/>
+    </eAnnotations>
+    <eAnnotations source="positions.97" references="/0/generatePartie/%.1/%.11/%.15/%.1">
+      <details key="start" value="1228"/>
+      <details key="end" value="1257"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.108" references="/0/generatePartie/%.1/%.8">
-      <details key="start" value="1227"/>
-      <details key="end" value="1304"/>
+    <eAnnotations source="positions.98" references="/0/generatePartie/%.1/%.11/%.15/%.1/%">
+      <details key="start" value="1229"/>
+      <details key="end" value="1249"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.99" references="/0/generatePartie/%.1/%.11/%.15/%.1/%/m">
+      <details key="start" value="1229"/>
+      <details key="end" value="1230"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.100" references="/0/generatePartie/%.1/%.11/%.15/%.2">
+      <details key="start" value="1264"/>
+      <details key="end" value="1300"/>
+      <details key="line" value="34"/>
+    </eAnnotations>
+    <eAnnotations source="positions.101" references="/0/generatePartie/%.1/%.11/%.15/%.2/%">
+      <details key="start" value="1271"/>
+      <details key="end" value="1298"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.102" references="/0/generatePartie/%.1/%.11/%.15/%.2/%/%">
+      <details key="start" value="1271"/>
+      <details key="end" value="1291"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.103" references="/0/generatePartie/%.1/%.11/%.15/%.2/%/%/m">
+      <details key="start" value="1271"/>
+      <details key="end" value="1272"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.104" references="/0/generatePartie/%.1/%.11/%.16">
+      <details key="start" value="1305"/>
+      <details key="end" value="1324"/>
+      <details key="line" value="34"/>
+    </eAnnotations>
+    <eAnnotations source="positions.105" references="/0/generatePartie/%.1/%.11/%.17">
+      <details key="start" value="1325"/>
+      <details key="end" value="1335"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.106" references="/0/generatePartie/%.1/%.11/%.17/m">
+      <details key="start" value="1325"/>
+      <details key="end" value="1326"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.107" references="/0/generatePartie/%.1/%.11/%.18">
+      <details key="start" value="1337"/>
+      <details key="end" value="1353"/>
+      <details key="line" value="34"/>
+    </eAnnotations>
+    <eAnnotations source="positions.108" references="/0/generatePartie/%.1/%.11/%.19">
+      <details key="start" value="1354"/>
+      <details key="end" value="1360"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.109" references="/0/generatePartie/%.1/%.11/%.19/m">
+      <details key="start" value="1354"/>
+      <details key="end" value="1355"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.110" references="/0/generatePartie/%.1/%.11/%.20">
+      <details key="start" value="1362"/>
+      <details key="end" value="1366"/>
+      <details key="line" value="35"/>
+    </eAnnotations>
+    <eAnnotations source="positions.111" references="/0/generatePartie/%.1/%.11/m">
+      <details key="start" value="1030"/>
+      <details key="end" value="1040"/>
       <details key="line" value="33"/>
     </eAnnotations>
-    <eAnnotations source="positions.109" references="/0/generatePartie/%.1/%.9">
-      <details key="start" value="1305"/>
-      <details key="end" value="1596"/>
-      <details key="line" value="36"/>
+    <eAnnotations source="positions.112" references="/0/generatePartie/%.1/%.11/%.21">
+      <details key="start" value="1043"/>
+      <details key="end" value="1081"/>
+      <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.110" references="/0/generatePartie/%.1/%.9/%">
-      <details key="start" value="1369"/>
-      <details key="end" value="1379"/>
+    <eAnnotations source="positions.113" references="/0/generatePartie/%.1/%.11/%.21/%">
+      <details key="start" value="1043"/>
+      <details key="end" value="1065"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.114" references="/0/generatePartie/%.1/%.11/%.21/%/aPartie">
+      <details key="start" value="1043"/>
+      <details key="end" value="1050"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.115" references="/0/generatePartie/%.1/%.12">
+      <details key="start" value="1374"/>
+      <details key="end" value="1451"/>
       <details key="line" value="37"/>
     </eAnnotations>
-    <eAnnotations source="positions.111" references="/0/generatePartie/%.1/%.9/%.1">
-      <details key="start" value="1380"/>
-      <details key="end" value="1386"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.112" references="/0/generatePartie/%.1/%.9/%.1/o">
-      <details key="start" value="1380"/>
-      <details key="end" value="1381"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.113" references="/0/generatePartie/%.1/%.9/%.2">
-      <details key="start" value="1388"/>
-      <details key="end" value="1405"/>
-      <details key="line" value="37"/>
-    </eAnnotations>
-    <eAnnotations source="positions.114" references="/0/generatePartie/%.1/%.9/%.3">
-      <details key="start" value="1406"/>
-      <details key="end" value="1412"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.115" references="/0/generatePartie/%.1/%.9/%.3/o">
-      <details key="start" value="1406"/>
-      <details key="end" value="1407"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.116" references="/0/generatePartie/%.1/%.9/%.4">
-      <details key="start" value="1414"/>
-      <details key="end" value="1416"/>
-      <details key="line" value="37"/>
-    </eAnnotations>
-    <eAnnotations source="positions.117" references="/0/generatePartie/%.1/%.9/%.5">
-      <details key="start" value="1417"/>
-      <details key="end" value="1433"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.118" references="/0/generatePartie/%.1/%.9/%.5/%">
-      <details key="start" value="1417"/>
-      <details key="end" value="1428"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.119" references="/0/generatePartie/%.1/%.9/%.5/%/o">
-      <details key="start" value="1417"/>
-      <details key="end" value="1418"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.120" references="/0/generatePartie/%.1/%.9/%.6">
-      <details key="start" value="1435"/>
-      <details key="end" value="1437"/>
-      <details key="line" value="37"/>
-    </eAnnotations>
-    <eAnnotations source="positions.121" references="/0/generatePartie/%.1/%.9/%.7">
-      <details key="start" value="1437"/>
-      <details key="end" value="1544"/>
-      <details key="line" value="37"/>
-    </eAnnotations>
-    <eAnnotations source="positions.122" references="/0/generatePartie/%.1/%.9/%.7/%">
-      <details key="start" value="1471"/>
-      <details key="end" value="1490"/>
-      <details key="line" value="37"/>
-    </eAnnotations>
-    <eAnnotations source="positions.123" references="/0/generatePartie/%.1/%.9/%.7/%.1">
-      <details key="start" value="1441"/>
-      <details key="end" value="1470"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.124" references="/0/generatePartie/%.1/%.9/%.7/%.1/%">
-      <details key="start" value="1442"/>
-      <details key="end" value="1462"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.125" references="/0/generatePartie/%.1/%.9/%.7/%.1/%/o">
-      <details key="start" value="1442"/>
-      <details key="end" value="1443"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.126" references="/0/generatePartie/%.1/%.9/%.7/%.2">
-      <details key="start" value="1490"/>
-      <details key="end" value="1539"/>
-      <details key="line" value="37"/>
-    </eAnnotations>
-    <eAnnotations source="positions.127" references="/0/generatePartie/%.1/%.9/%.7/%.2/%">
-      <details key="start" value="1496"/>
-      <details key="end" value="1508"/>
-      <details key="line" value="37"/>
-    </eAnnotations>
-    <eAnnotations source="positions.128" references="/0/generatePartie/%.1/%.9/%.7/%.2/%.1">
-      <details key="start" value="1509"/>
-      <details key="end" value="1536"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.129" references="/0/generatePartie/%.1/%.9/%.7/%.2/%.1/%">
-      <details key="start" value="1509"/>
-      <details key="end" value="1529"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.130" references="/0/generatePartie/%.1/%.9/%.7/%.2/%.1/%/o">
-      <details key="start" value="1509"/>
-      <details key="end" value="1510"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.131" references="/0/generatePartie/%.1/%.9/%.7/%.2/%.2">
-      <details key="start" value="1538"/>
-      <details key="end" value="1539"/>
-      <details key="line" value="37"/>
-    </eAnnotations>
-    <eAnnotations source="positions.132" references="/0/generatePartie/%.1/%.9/%.8">
-      <details key="start" value="1544"/>
-      <details key="end" value="1545"/>
-      <details key="line" value="37"/>
-    </eAnnotations>
-    <eAnnotations source="positions.133" references="/0/generatePartie/%.1/%.9/%.9">
-      <details key="start" value="1546"/>
-      <details key="end" value="1556"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.134" references="/0/generatePartie/%.1/%.9/%.9/o">
-      <details key="start" value="1546"/>
-      <details key="end" value="1547"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.135" references="/0/generatePartie/%.1/%.9/%.10">
-      <details key="start" value="1558"/>
-      <details key="end" value="1576"/>
-      <details key="line" value="37"/>
-    </eAnnotations>
-    <eAnnotations source="positions.136" references="/0/generatePartie/%.1/%.9/%.11">
-      <details key="start" value="1577"/>
-      <details key="end" value="1583"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.137" references="/0/generatePartie/%.1/%.9/%.11/o">
-      <details key="start" value="1577"/>
-      <details key="end" value="1578"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.138" references="/0/generatePartie/%.1/%.9/%.12">
-      <details key="start" value="1585"/>
-      <details key="end" value="1589"/>
-      <details key="line" value="38"/>
-    </eAnnotations>
-    <eAnnotations source="positions.139" references="/0/generatePartie/%.1/%.9/o">
-      <details key="start" value="1311"/>
-      <details key="end" value="1323"/>
-      <details key="line" value="36"/>
-    </eAnnotations>
-    <eAnnotations source="positions.140" references="/0/generatePartie/%.1/%.9/%.13">
-      <details key="start" value="1326"/>
-      <details key="end" value="1366"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.141" references="/0/generatePartie/%.1/%.9/%.13/%">
-      <details key="start" value="1326"/>
-      <details key="end" value="1348"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.142" references="/0/generatePartie/%.1/%.9/%.13/%/aPartie">
-      <details key="start" value="1326"/>
-      <details key="end" value="1333"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.143" references="/0/generatePartie/%.1/%.10">
-      <details key="start" value="1597"/>
-      <details key="end" value="1646"/>
+    <eAnnotations source="positions.116" references="/0/generatePartie/%.1/%.13">
+      <details key="start" value="1452"/>
+      <details key="end" value="1760"/>
       <details key="line" value="40"/>
     </eAnnotations>
-    <eAnnotations source="positions.144" references="/0/generatePartie/%.1/%.11">
-      <details key="start" value="1647"/>
-      <details key="end" value="2003"/>
-      <details key="line" value="43"/>
+    <eAnnotations source="positions.117" references="/0/generatePartie/%.1/%.13/%">
+      <details key="start" value="1516"/>
+      <details key="end" value="1526"/>
+      <details key="line" value="41"/>
     </eAnnotations>
-    <eAnnotations source="positions.145" references="/0/generatePartie/%.1/%.11/%">
+    <eAnnotations source="positions.118" references="/0/generatePartie/%.1/%.13/%.1">
+      <details key="start" value="1527"/>
+      <details key="end" value="1533"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.119" references="/0/generatePartie/%.1/%.13/%.1/o">
+      <details key="start" value="1527"/>
+      <details key="end" value="1528"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.120" references="/0/generatePartie/%.1/%.13/%.2">
+      <details key="start" value="1535"/>
+      <details key="end" value="1552"/>
+      <details key="line" value="41"/>
+    </eAnnotations>
+    <eAnnotations source="positions.121" references="/0/generatePartie/%.1/%.13/%.3">
+      <details key="start" value="1553"/>
+      <details key="end" value="1559"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.122" references="/0/generatePartie/%.1/%.13/%.3/o">
+      <details key="start" value="1553"/>
+      <details key="end" value="1554"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.123" references="/0/generatePartie/%.1/%.13/%.4">
+      <details key="start" value="1561"/>
+      <details key="end" value="1563"/>
+      <details key="line" value="41"/>
+    </eAnnotations>
+    <eAnnotations source="positions.124" references="/0/generatePartie/%.1/%.13/%.5">
+      <details key="start" value="1564"/>
+      <details key="end" value="1580"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.125" references="/0/generatePartie/%.1/%.13/%.5/%">
+      <details key="start" value="1564"/>
+      <details key="end" value="1575"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.126" references="/0/generatePartie/%.1/%.13/%.5/%/o">
+      <details key="start" value="1564"/>
+      <details key="end" value="1565"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.127" references="/0/generatePartie/%.1/%.13/%.6">
+      <details key="start" value="1582"/>
+      <details key="end" value="1584"/>
+      <details key="line" value="41"/>
+    </eAnnotations>
+    <eAnnotations source="positions.128" references="/0/generatePartie/%.1/%.13/%.7">
+      <details key="start" value="1584"/>
+      <details key="end" value="1691"/>
+      <details key="line" value="41"/>
+    </eAnnotations>
+    <eAnnotations source="positions.129" references="/0/generatePartie/%.1/%.13/%.7/%">
+      <details key="start" value="1618"/>
+      <details key="end" value="1637"/>
+      <details key="line" value="41"/>
+    </eAnnotations>
+    <eAnnotations source="positions.130" references="/0/generatePartie/%.1/%.13/%.7/%.1">
+      <details key="start" value="1588"/>
+      <details key="end" value="1617"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.131" references="/0/generatePartie/%.1/%.13/%.7/%.1/%">
+      <details key="start" value="1589"/>
+      <details key="end" value="1609"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.132" references="/0/generatePartie/%.1/%.13/%.7/%.1/%/o">
+      <details key="start" value="1589"/>
+      <details key="end" value="1590"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.133" references="/0/generatePartie/%.1/%.13/%.7/%.2">
+      <details key="start" value="1637"/>
+      <details key="end" value="1686"/>
+      <details key="line" value="41"/>
+    </eAnnotations>
+    <eAnnotations source="positions.134" references="/0/generatePartie/%.1/%.13/%.7/%.2/%">
+      <details key="start" value="1643"/>
+      <details key="end" value="1655"/>
+      <details key="line" value="41"/>
+    </eAnnotations>
+    <eAnnotations source="positions.135" references="/0/generatePartie/%.1/%.13/%.7/%.2/%.1">
+      <details key="start" value="1656"/>
+      <details key="end" value="1683"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.136" references="/0/generatePartie/%.1/%.13/%.7/%.2/%.1/%">
+      <details key="start" value="1656"/>
+      <details key="end" value="1676"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.137" references="/0/generatePartie/%.1/%.13/%.7/%.2/%.1/%/o">
+      <details key="start" value="1656"/>
+      <details key="end" value="1657"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.138" references="/0/generatePartie/%.1/%.13/%.7/%.2/%.2">
       <details key="start" value="1685"/>
-      <details key="end" value="1795"/>
+      <details key="end" value="1686"/>
+      <details key="line" value="41"/>
+    </eAnnotations>
+    <eAnnotations source="positions.139" references="/0/generatePartie/%.1/%.13/%.8">
+      <details key="start" value="1691"/>
+      <details key="end" value="1709"/>
+      <details key="line" value="41"/>
+    </eAnnotations>
+    <eAnnotations source="positions.140" references="/0/generatePartie/%.1/%.13/%.9">
+      <details key="start" value="1710"/>
+      <details key="end" value="1720"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.141" references="/0/generatePartie/%.1/%.13/%.9/o">
+      <details key="start" value="1710"/>
+      <details key="end" value="1711"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.142" references="/0/generatePartie/%.1/%.13/%.10">
+      <details key="start" value="1722"/>
+      <details key="end" value="1740"/>
+      <details key="line" value="41"/>
+    </eAnnotations>
+    <eAnnotations source="positions.143" references="/0/generatePartie/%.1/%.13/%.11">
+      <details key="start" value="1741"/>
+      <details key="end" value="1747"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.144" references="/0/generatePartie/%.1/%.13/%.11/o">
+      <details key="start" value="1741"/>
+      <details key="end" value="1742"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.145" references="/0/generatePartie/%.1/%.13/%.12">
+      <details key="start" value="1749"/>
+      <details key="end" value="1753"/>
+      <details key="line" value="42"/>
+    </eAnnotations>
+    <eAnnotations source="positions.146" references="/0/generatePartie/%.1/%.13/o">
+      <details key="start" value="1458"/>
+      <details key="end" value="1470"/>
+      <details key="line" value="40"/>
+    </eAnnotations>
+    <eAnnotations source="positions.147" references="/0/generatePartie/%.1/%.13/%.13">
+      <details key="start" value="1473"/>
+      <details key="end" value="1513"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.148" references="/0/generatePartie/%.1/%.13/%.13/%">
+      <details key="start" value="1473"/>
+      <details key="end" value="1495"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.149" references="/0/generatePartie/%.1/%.13/%.13/%/aPartie">
+      <details key="start" value="1473"/>
+      <details key="end" value="1480"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.150" references="/0/generatePartie/%.1/%.14">
+      <details key="start" value="1761"/>
+      <details key="end" value="1874"/>
       <details key="line" value="44"/>
     </eAnnotations>
-    <eAnnotations source="positions.146" references="/0/generatePartie/%.1/%.11/%.1">
-      <details key="start" value="1797"/>
-      <details key="end" value="1915"/>
-      <details key="line" value="47"/>
-    </eAnnotations>
-    <eAnnotations source="positions.147" references="/0/generatePartie/%.1/%.11/%.1/%">
-      <details key="start" value="1826"/>
-      <details key="end" value="1835"/>
-      <details key="line" value="48"/>
-    </eAnnotations>
-    <eAnnotations source="positions.148" references="/0/generatePartie/%.1/%.11/%.1/%.1">
-      <details key="start" value="1836"/>
-      <details key="end" value="1842"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.149" references="/0/generatePartie/%.1/%.11/%.1/%.1/v">
-      <details key="start" value="1836"/>
-      <details key="end" value="1837"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.150" references="/0/generatePartie/%.1/%.11/%.1/%.2">
-      <details key="start" value="1844"/>
-      <details key="end" value="1895"/>
-      <details key="line" value="48"/>
-    </eAnnotations>
-    <eAnnotations source="positions.151" references="/0/generatePartie/%.1/%.11/%.1/%.3">
-      <details key="start" value="1896"/>
-      <details key="end" value="1902"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.152" references="/0/generatePartie/%.1/%.11/%.1/%.3/v">
-      <details key="start" value="1896"/>
-      <details key="end" value="1897"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.153" references="/0/generatePartie/%.1/%.11/%.1/%.4">
-      <details key="start" value="1904"/>
-      <details key="end" value="1907"/>
+    <eAnnotations source="positions.151" references="/0/generatePartie/%.1/%.15">
+      <details key="start" value="1875"/>
+      <details key="end" value="2551"/>
       <details key="line" value="49"/>
     </eAnnotations>
-    <eAnnotations source="positions.154" references="/0/generatePartie/%.1/%.11/%.1/v">
-      <details key="start" value="1803"/>
-      <details key="end" value="1812"/>
-      <details key="line" value="47"/>
+    <eAnnotations source="positions.152" references="/0/generatePartie/%.1/%.15/%">
+      <details key="start" value="1913"/>
+      <details key="end" value="2010"/>
+      <details key="line" value="50"/>
     </eAnnotations>
-    <eAnnotations source="positions.155" references="/0/generatePartie/%.1/%.11/%.1/%.5">
-      <details key="start" value="1815"/>
-      <details key="end" value="1823"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.156" references="/0/generatePartie/%.1/%.11/%.1/%.5/n">
-      <details key="start" value="1815"/>
-      <details key="end" value="1816"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.157" references="/0/generatePartie/%.1/%.11/%.2">
-      <details key="start" value="1992"/>
-      <details key="end" value="1996"/>
+    <eAnnotations source="positions.153" references="/0/generatePartie/%.1/%.15/%.1">
+      <details key="start" value="2012"/>
+      <details key="end" value="2130"/>
       <details key="line" value="53"/>
     </eAnnotations>
-    <eAnnotations source="positions.158" references="/0/generatePartie/%.1/%.11/n">
-      <details key="start" value="1653"/>
-      <details key="end" value="1663"/>
-      <details key="line" value="43"/>
+    <eAnnotations source="positions.154" references="/0/generatePartie/%.1/%.15/%.1/%">
+      <details key="start" value="2041"/>
+      <details key="end" value="2050"/>
+      <details key="line" value="54"/>
     </eAnnotations>
-    <eAnnotations source="positions.159" references="/0/generatePartie/%.1/%.11/%.3">
-      <details key="start" value="1666"/>
-      <details key="end" value="1681"/>
+    <eAnnotations source="positions.155" references="/0/generatePartie/%.1/%.15/%.1/%.1">
+      <details key="start" value="2051"/>
+      <details key="end" value="2057"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.160" references="/0/generatePartie/%.1/%.11/%.3/aPartie">
-      <details key="start" value="1666"/>
-      <details key="end" value="1673"/>
+    <eAnnotations source="positions.156" references="/0/generatePartie/%.1/%.15/%.1/%.1/v">
+      <details key="start" value="2051"/>
+      <details key="end" value="2052"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.161" references="/0/generatePartie/%.1/%.12">
-      <details key="start" value="2004"/>
+    <eAnnotations source="positions.157" references="/0/generatePartie/%.1/%.15/%.1/%.2">
+      <details key="start" value="2059"/>
       <details key="end" value="2110"/>
+      <details key="line" value="54"/>
+    </eAnnotations>
+    <eAnnotations source="positions.158" references="/0/generatePartie/%.1/%.15/%.1/%.3">
+      <details key="start" value="2111"/>
+      <details key="end" value="2117"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.159" references="/0/generatePartie/%.1/%.15/%.1/%.3/v">
+      <details key="start" value="2111"/>
+      <details key="end" value="2112"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.160" references="/0/generatePartie/%.1/%.15/%.1/%.4">
+      <details key="start" value="2119"/>
+      <details key="end" value="2122"/>
+      <details key="line" value="55"/>
+    </eAnnotations>
+    <eAnnotations source="positions.161" references="/0/generatePartie/%.1/%.15/%.1/v">
+      <details key="start" value="2018"/>
+      <details key="end" value="2027"/>
+      <details key="line" value="53"/>
+    </eAnnotations>
+    <eAnnotations source="positions.162" references="/0/generatePartie/%.1/%.15/%.1/%.5">
+      <details key="start" value="2030"/>
+      <details key="end" value="2038"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.163" references="/0/generatePartie/%.1/%.15/%.1/%.5/n">
+      <details key="start" value="2030"/>
+      <details key="end" value="2031"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.164" references="/0/generatePartie/%.1/%.15/%.2">
+      <details key="start" value="2131"/>
+      <details key="end" value="2177"/>
       <details key="line" value="57"/>
     </eAnnotations>
-    <eAnnotations source="positions.162" references="/0/generatePartie/%.1/%.13">
-      <details key="start" value="2150"/>
-      <details key="end" value="2155"/>
+    <eAnnotations source="positions.165" references="/0/generatePartie/%.1/%.15/%.3">
+      <details key="start" value="2178"/>
+      <details key="end" value="2190"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.166" references="/0/generatePartie/%.1/%.15/%.3/%">
+      <details key="start" value="2178"/>
+      <details key="end" value="2185"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.167" references="/0/generatePartie/%.1/%.15/%.3/%/n">
+      <details key="start" value="2178"/>
+      <details key="end" value="2179"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.168" references="/0/generatePartie/%.1/%.15/%.4">
+      <details key="start" value="2192"/>
+      <details key="end" value="2206"/>
+      <details key="line" value="59"/>
+    </eAnnotations>
+    <eAnnotations source="positions.169" references="/0/generatePartie/%.1/%.15/%.5">
+      <details key="start" value="2207"/>
+      <details key="end" value="2219"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.170" references="/0/generatePartie/%.1/%.15/%.5/%">
+      <details key="start" value="2207"/>
+      <details key="end" value="2214"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.171" references="/0/generatePartie/%.1/%.15/%.5/%/n">
+      <details key="start" value="2207"/>
+      <details key="end" value="2208"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.172" references="/0/generatePartie/%.1/%.15/%.6">
+      <details key="start" value="2221"/>
+      <details key="end" value="2224"/>
+      <details key="line" value="59"/>
+    </eAnnotations>
+    <eAnnotations source="positions.173" references="/0/generatePartie/%.1/%.15/%.7">
+      <details key="start" value="2225"/>
+      <details key="end" value="2241"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.174" references="/0/generatePartie/%.1/%.15/%.7/%">
+      <details key="start" value="2225"/>
+      <details key="end" value="2232"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.175" references="/0/generatePartie/%.1/%.15/%.7/%/n">
+      <details key="start" value="2225"/>
+      <details key="end" value="2226"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.176" references="/0/generatePartie/%.1/%.15/%.8">
+      <details key="start" value="2243"/>
+      <details key="end" value="2245"/>
+      <details key="line" value="59"/>
+    </eAnnotations>
+    <eAnnotations source="positions.177" references="/0/generatePartie/%.1/%.15/%.9">
+      <details key="start" value="2246"/>
+      <details key="end" value="2264"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.178" references="/0/generatePartie/%.1/%.15/%.9/%">
+      <details key="start" value="2246"/>
+      <details key="end" value="2253"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.179" references="/0/generatePartie/%.1/%.15/%.9/%/n">
+      <details key="start" value="2246"/>
+      <details key="end" value="2247"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.180" references="/0/generatePartie/%.1/%.15/%.10">
+      <details key="start" value="2266"/>
+      <details key="end" value="2317"/>
+      <details key="line" value="59"/>
+    </eAnnotations>
+    <eAnnotations source="positions.181" references="/0/generatePartie/%.1/%.15/%.11">
+      <details key="start" value="2318"/>
+      <details key="end" value="2330"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.182" references="/0/generatePartie/%.1/%.15/%.11/%">
+      <details key="start" value="2318"/>
+      <details key="end" value="2325"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.183" references="/0/generatePartie/%.1/%.15/%.11/%/n">
+      <details key="start" value="2318"/>
+      <details key="end" value="2319"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.184" references="/0/generatePartie/%.1/%.15/%.12">
+      <details key="start" value="2332"/>
+      <details key="end" value="2379"/>
+      <details key="line" value="60"/>
+    </eAnnotations>
+    <eAnnotations source="positions.185" references="/0/generatePartie/%.1/%.15/%.13">
+      <details key="start" value="2380"/>
+      <details key="end" value="2386"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.186" references="/0/generatePartie/%.1/%.15/%.13/n">
+      <details key="start" value="2380"/>
+      <details key="end" value="2381"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.187" references="/0/generatePartie/%.1/%.15/%.14">
+      <details key="start" value="2388"/>
+      <details key="end" value="2403"/>
       <details key="line" value="63"/>
     </eAnnotations>
-    <eAnnotations source="positions.163" references="/0/generatePartie/%.1/%.14">
+    <eAnnotations source="positions.188" references="/0/generatePartie/%.1/%.15/%.15">
+      <details key="start" value="2404"/>
+      <details key="end" value="2410"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.189" references="/0/generatePartie/%.1/%.15/%.15/n">
+      <details key="start" value="2404"/>
+      <details key="end" value="2405"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.190" references="/0/generatePartie/%.1/%.15/%.16">
+      <details key="start" value="2412"/>
+      <details key="end" value="2430"/>
+      <details key="line" value="63"/>
+    </eAnnotations>
+    <eAnnotations source="positions.191" references="/0/generatePartie/%.1/%.15/%.17">
+      <details key="start" value="2431"/>
+      <details key="end" value="2443"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.192" references="/0/generatePartie/%.1/%.15/%.17/n">
+      <details key="start" value="2431"/>
+      <details key="end" value="2432"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.193" references="/0/generatePartie/%.1/%.15/%.18">
+      <details key="start" value="2445"/>
+      <details key="end" value="2489"/>
+      <details key="line" value="63"/>
+    </eAnnotations>
+    <eAnnotations source="positions.194" references="/0/generatePartie/%.1/%.15/%.19">
+      <details key="start" value="2490"/>
+      <details key="end" value="2502"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.195" references="/0/generatePartie/%.1/%.15/%.19/%">
+      <details key="start" value="2490"/>
+      <details key="end" value="2497"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.196" references="/0/generatePartie/%.1/%.15/%.19/%/n">
+      <details key="start" value="2490"/>
+      <details key="end" value="2491"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.197" references="/0/generatePartie/%.1/%.15/%.20">
+      <details key="start" value="2504"/>
+      <details key="end" value="2529"/>
+      <details key="line" value="63"/>
+    </eAnnotations>
+    <eAnnotations source="positions.198" references="/0/generatePartie/%.1/%.15/%.21">
+      <details key="start" value="2530"/>
+      <details key="end" value="2536"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.199" references="/0/generatePartie/%.1/%.15/%.21/n">
+      <details key="start" value="2530"/>
+      <details key="end" value="2531"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.200" references="/0/generatePartie/%.1/%.15/%.22">
+      <details key="start" value="2538"/>
+      <details key="end" value="2544"/>
+      <details key="line" value="64"/>
+    </eAnnotations>
+    <eAnnotations source="positions.201" references="/0/generatePartie/%.1/%.15/n">
+      <details key="start" value="1881"/>
+      <details key="end" value="1891"/>
+      <details key="line" value="49"/>
+    </eAnnotations>
+    <eAnnotations source="positions.202" references="/0/generatePartie/%.1/%.15/%.23">
+      <details key="start" value="1894"/>
+      <details key="end" value="1909"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.203" references="/0/generatePartie/%.1/%.15/%.23/aPartie">
+      <details key="start" value="1894"/>
+      <details key="end" value="1901"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.204" references="/0/generatePartie/%.1/%.16">
+      <details key="start" value="2552"/>
+      <details key="end" value="2666"/>
+      <details key="line" value="68"/>
+    </eAnnotations>
+    <eAnnotations source="positions.205" references="/0/generatePartie/%.1/%.17">
+      <details key="start" value="2667"/>
+      <details key="end" value="2679"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.206" references="/0/generatePartie/%.1/%.17/aPartie">
+      <details key="start" value="2667"/>
+      <details key="end" value="2674"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.207" references="/0/generatePartie/%.1/%.18">
+      <details key="start" value="2681"/>
+      <details key="end" value="2696"/>
+      <details key="line" value="73"/>
+    </eAnnotations>
+    <eAnnotations source="positions.208" references="/0/generatePartie/%.1/%.19">
+      <details key="start" value="2697"/>
+      <details key="end" value="2709"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.209" references="/0/generatePartie/%.1/%.19/aPartie">
+      <details key="start" value="2697"/>
+      <details key="end" value="2704"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.210" references="/0/generatePartie/%.1/%.20">
+      <details key="start" value="2711"/>
+      <details key="end" value="2753"/>
+      <details key="line" value="73"/>
+    </eAnnotations>
+    <eAnnotations source="positions.211" references="/0/generatePartie/%.1/%.21">
+      <details key="start" value="2754"/>
+      <details key="end" value="2766"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.212" references="/0/generatePartie/%.1/%.21/aPartie">
+      <details key="start" value="2754"/>
+      <details key="end" value="2761"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.213" references="/0/generatePartie/%.1/%.22">
+      <details key="start" value="2768"/>
+      <details key="end" value="2795"/>
+      <details key="line" value="74"/>
+    </eAnnotations>
+    <eAnnotations source="positions.214" references="/0/generatePartie/%.1/%.23">
+      <details key="start" value="2796"/>
+      <details key="end" value="2808"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.215" references="/0/generatePartie/%.1/%.23/aPartie">
+      <details key="start" value="2796"/>
+      <details key="end" value="2803"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.216" references="/0/generatePartie/%.1/%.24">
+      <details key="start" value="2810"/>
+      <details key="end" value="2903"/>
+      <details key="line" value="75"/>
+    </eAnnotations>
+    <eAnnotations source="positions.217" references="/0/generatePartie/%.1/%.25">
+      <details key="start" value="2904"/>
+      <details key="end" value="2916"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.218" references="/0/generatePartie/%.1/%.25/aPartie">
+      <details key="start" value="2904"/>
+      <details key="end" value="2911"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.219" references="/0/generatePartie/%.1/%.26">
+      <details key="start" value="2918"/>
+      <details key="end" value="3030"/>
+      <details key="line" value="78"/>
+    </eAnnotations>
+    <eAnnotations source="positions.220" references="/0/generatePartie/%.1/%.27">
+      <details key="start" value="3031"/>
+      <details key="end" value="3043"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.221" references="/0/generatePartie/%.1/%.27/aPartie">
+      <details key="start" value="3031"/>
+      <details key="end" value="3038"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.222" references="/0/generatePartie/%.1/%.28">
+      <details key="start" value="3045"/>
+      <details key="end" value="3157"/>
+      <details key="line" value="82"/>
+    </eAnnotations>
+    <eAnnotations source="positions.223" references="/0/generatePartie/%.1/%.29">
+      <details key="start" value="3158"/>
+      <details key="end" value="3170"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.224" references="/0/generatePartie/%.1/%.29/aPartie">
+      <details key="start" value="3158"/>
+      <details key="end" value="3165"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.225" references="/0/generatePartie/%.1/%.30">
+      <details key="start" value="3172"/>
+      <details key="end" value="3248"/>
+      <details key="line" value="85"/>
+    </eAnnotations>
+    <eAnnotations source="positions.226" references="/0/generatePartie/%.1/%.31">
+      <details key="start" value="3249"/>
+      <details key="end" value="3261"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.227" references="/0/generatePartie/%.1/%.31/aPartie">
+      <details key="start" value="3249"/>
+      <details key="end" value="3256"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.228" references="/0/generatePartie/%.1/%.32">
+      <details key="start" value="3263"/>
+      <details key="end" value="3335"/>
+      <details key="line" value="87"/>
+    </eAnnotations>
+    <eAnnotations source="positions.229" references="/0/generatePartie/%.1/%.33">
+      <details key="start" value="3336"/>
+      <details key="end" value="3348"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.230" references="/0/generatePartie/%.1/%.33/aPartie">
+      <details key="start" value="3336"/>
+      <details key="end" value="3343"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.231" references="/0/generatePartie/%.1/%.34">
+      <details key="start" value="3350"/>
+      <details key="end" value="3436"/>
+      <details key="line" value="89"/>
+    </eAnnotations>
+    <eAnnotations source="positions.232" references="/0/generatePartie/%.1/%.35">
+      <details key="start" value="3437"/>
+      <details key="end" value="3449"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.233" references="/0/generatePartie/%.1/%.35/aPartie">
+      <details key="start" value="3437"/>
+      <details key="end" value="3444"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.234" references="/0/generatePartie/%.1/%.36">
+      <details key="start" value="3451"/>
+      <details key="end" value="3766"/>
+      <details key="line" value="92"/>
+    </eAnnotations>
+    <eAnnotations source="positions.235" references="/0/generatePartie/%.1/%.37">
       <details key="start" value="147"/>
       <details key="end" value="175"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.164" references="/0/generatePartie/%.1/%.14/%">
+    <eAnnotations source="positions.236" references="/0/generatePartie/%.1/%.37/%">
       <details key="start" value="147"/>
       <details key="end" value="159"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.165" references="/0/generatePartie/%.1/%.14/%/aPartie">
+    <eAnnotations source="positions.237" references="/0/generatePartie/%.1/%.37/%/aPartie">
       <details key="start" value="147"/>
       <details key="end" value="154"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.166" references="/0/generatePartie/%.1/%.14/%.1">
+    <eAnnotations source="positions.238" references="/0/generatePartie/%.1/%.37/%.1">
       <details key="start" value="167"/>
       <details key="end" value="174"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.167" references="/0/generatePartie/%.1/%.15">
+    <eAnnotations source="positions.239" references="/0/generatePartie/%.1/%.38">
       <details key="start" value="184"/>
       <details key="end" value="191"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.168" references="/0/generatePartie/%.2">
-      <details key="start" value="2163"/>
-      <details key="end" value="2164"/>
-      <details key="line" value="68"/>
+    <eAnnotations source="positions.240" references="/0/generatePartie/%.2">
+      <details key="start" value="3774"/>
+      <details key="end" value="3775"/>
+      <details key="line" value="115"/>
     </eAnnotations>
-    <eAnnotations source="positions.169" references="/0/generatePartie/aPartie">
+    <eAnnotations source="positions.241" references="/0/generatePartie/aPartie">
       <details key="start" value="120"/>
       <details key="end" value="136"/>
       <details key="line" value="5"/>
     </eAnnotations>
-    <eAnnotations source="positions.170" references="/0/getNatureTerrains">
-      <details key="start" value="2178"/>
-      <details key="end" value="2400"/>
-      <details key="line" value="72"/>
+    <eAnnotations source="positions.242" references="/0/getNatureTerrains">
+      <details key="start" value="3789"/>
+      <details key="end" value="4011"/>
+      <details key="line" value="119"/>
     </eAnnotations>
-    <eAnnotations source="positions.171" references="/0/getNatureTerrains/elements">
-      <details key="start" value="2210"/>
-      <details key="end" value="2246"/>
-      <details key="line" value="72"/>
+    <eAnnotations source="positions.243" references="/0/getNatureTerrains/elements">
+      <details key="start" value="3821"/>
+      <details key="end" value="3857"/>
+      <details key="line" value="119"/>
     </eAnnotations>
-    <eAnnotations source="positions.172" references="/0/getNatureTerrains/%">
-      <details key="start" value="2280"/>
-      <details key="end" value="2397"/>
+    <eAnnotations source="positions.244" references="/0/getNatureTerrains/%">
+      <details key="start" value="3891"/>
+      <details key="end" value="4008"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.173" references="/0/getNatureTerrains/%/collect">
-      <details key="start" value="2280"/>
-      <details key="end" value="2378"/>
+    <eAnnotations source="positions.245" references="/0/getNatureTerrains/%/collect">
+      <details key="start" value="3891"/>
+      <details key="end" value="3989"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.174" references="/0/getNatureTerrains/%/collect/select">
-      <details key="start" value="2280"/>
-      <details key="end" value="2332"/>
+    <eAnnotations source="positions.246" references="/0/getNatureTerrains/%/collect/select">
+      <details key="start" value="3891"/>
+      <details key="end" value="3943"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.175" references="/0/getNatureTerrains/%/collect/select/elements">
-      <details key="start" value="2280"/>
-      <details key="end" value="2288"/>
+    <eAnnotations source="positions.247" references="/0/getNatureTerrains/%/collect/select/elements">
+      <details key="start" value="3891"/>
+      <details key="end" value="3899"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.176" references="/0/getNatureTerrains/%/collect/select/%">
-      <details key="start" value="2302"/>
-      <details key="end" value="2330"/>
+    <eAnnotations source="positions.248" references="/0/getNatureTerrains/%/collect/select/%">
+      <details key="start" value="3913"/>
+      <details key="end" value="3941"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.177" references="/0/getNatureTerrains/%/collect/select/%/e">
-      <details key="start" value="2302"/>
-      <details key="end" value="2303"/>
+    <eAnnotations source="positions.249" references="/0/getNatureTerrains/%/collect/select/%/e">
+      <details key="start" value="3913"/>
+      <details key="end" value="3914"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.178" references="/0/getNatureTerrains/%/collect/select/%/%">
-      <details key="start" value="2316"/>
-      <details key="end" value="2329"/>
+    <eAnnotations source="positions.250" references="/0/getNatureTerrains/%/collect/select/%/%">
+      <details key="start" value="3927"/>
+      <details key="end" value="3940"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.179" references="/0/getNatureTerrains/%/collect/select/e">
-      <details key="start" value="2298"/>
-      <details key="end" value="2299"/>
+    <eAnnotations source="positions.251" references="/0/getNatureTerrains/%/collect/select/e">
+      <details key="start" value="3909"/>
+      <details key="end" value="3910"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.180" references="/0/getNatureTerrains/%/collect/%">
-      <details key="start" value="2350"/>
-      <details key="end" value="2376"/>
+    <eAnnotations source="positions.252" references="/0/getNatureTerrains/%/collect/%">
+      <details key="start" value="3961"/>
+      <details key="end" value="3987"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.181" references="/0/getNatureTerrains/%/collect/%/e">
-      <details key="start" value="2350"/>
-      <details key="end" value="2351"/>
+    <eAnnotations source="positions.253" references="/0/getNatureTerrains/%/collect/%/e">
+      <details key="start" value="3961"/>
+      <details key="end" value="3962"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.182" references="/0/getNatureTerrains/%/collect/%/%">
-      <details key="start" value="2362"/>
-      <details key="end" value="2375"/>
+    <eAnnotations source="positions.254" references="/0/getNatureTerrains/%/collect/%/%">
+      <details key="start" value="3973"/>
+      <details key="end" value="3986"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.183" references="/0/getNatureTerrains/%/collect/e">
-      <details key="start" value="2346"/>
-      <details key="end" value="2347"/>
+    <eAnnotations source="positions.255" references="/0/getNatureTerrains/%/collect/e">
+      <details key="start" value="3957"/>
+      <details key="end" value="3958"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.184" references="/0/getObstacles">
-      <details key="start" value="2402"/>
-      <details key="end" value="2604"/>
-      <details key="line" value="78"/>
+    <eAnnotations source="positions.256" references="/0/getObstacles">
+      <details key="start" value="4013"/>
+      <details key="end" value="4215"/>
+      <details key="line" value="125"/>
     </eAnnotations>
-    <eAnnotations source="positions.185" references="/0/getObstacles/elements">
-      <details key="start" value="2429"/>
-      <details key="end" value="2465"/>
-      <details key="line" value="78"/>
+    <eAnnotations source="positions.257" references="/0/getObstacles/elements">
+      <details key="start" value="4040"/>
+      <details key="end" value="4076"/>
+      <details key="line" value="125"/>
     </eAnnotations>
-    <eAnnotations source="positions.186" references="/0/getObstacles/%">
-      <details key="start" value="2494"/>
-      <details key="end" value="2601"/>
+    <eAnnotations source="positions.258" references="/0/getObstacles/%">
+      <details key="start" value="4105"/>
+      <details key="end" value="4212"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.187" references="/0/getObstacles/%/collect">
-      <details key="start" value="2494"/>
-      <details key="end" value="2582"/>
+    <eAnnotations source="positions.259" references="/0/getObstacles/%/collect">
+      <details key="start" value="4105"/>
+      <details key="end" value="4193"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.188" references="/0/getObstacles/%/collect/select">
-      <details key="start" value="2494"/>
-      <details key="end" value="2541"/>
+    <eAnnotations source="positions.260" references="/0/getObstacles/%/collect/select">
+      <details key="start" value="4105"/>
+      <details key="end" value="4152"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.189" references="/0/getObstacles/%/collect/select/elements">
-      <details key="start" value="2494"/>
-      <details key="end" value="2502"/>
+    <eAnnotations source="positions.261" references="/0/getObstacles/%/collect/select/elements">
+      <details key="start" value="4105"/>
+      <details key="end" value="4113"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.190" references="/0/getObstacles/%/collect/select/%">
-      <details key="start" value="2516"/>
-      <details key="end" value="2539"/>
+    <eAnnotations source="positions.262" references="/0/getObstacles/%/collect/select/%">
+      <details key="start" value="4127"/>
+      <details key="end" value="4150"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.191" references="/0/getObstacles/%/collect/select/%/e">
-      <details key="start" value="2516"/>
-      <details key="end" value="2517"/>
+    <eAnnotations source="positions.263" references="/0/getObstacles/%/collect/select/%/e">
+      <details key="start" value="4127"/>
+      <details key="end" value="4128"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.192" references="/0/getObstacles/%/collect/select/%/%">
-      <details key="start" value="2530"/>
-      <details key="end" value="2538"/>
+    <eAnnotations source="positions.264" references="/0/getObstacles/%/collect/select/%/%">
+      <details key="start" value="4141"/>
+      <details key="end" value="4149"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.193" references="/0/getObstacles/%/collect/select/e">
-      <details key="start" value="2512"/>
-      <details key="end" value="2513"/>
+    <eAnnotations source="positions.265" references="/0/getObstacles/%/collect/select/e">
+      <details key="start" value="4123"/>
+      <details key="end" value="4124"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.194" references="/0/getObstacles/%/collect/%">
-      <details key="start" value="2559"/>
-      <details key="end" value="2580"/>
+    <eAnnotations source="positions.266" references="/0/getObstacles/%/collect/%">
+      <details key="start" value="4170"/>
+      <details key="end" value="4191"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.195" references="/0/getObstacles/%/collect/%/e">
-      <details key="start" value="2559"/>
-      <details key="end" value="2560"/>
+    <eAnnotations source="positions.267" references="/0/getObstacles/%/collect/%/e">
+      <details key="start" value="4170"/>
+      <details key="end" value="4171"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.196" references="/0/getObstacles/%/collect/%/%">
-      <details key="start" value="2571"/>
-      <details key="end" value="2579"/>
+    <eAnnotations source="positions.268" references="/0/getObstacles/%/collect/%/%">
+      <details key="start" value="4182"/>
+      <details key="end" value="4190"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.197" references="/0/getObstacles/%/collect/e">
-      <details key="start" value="2555"/>
-      <details key="end" value="2556"/>
+    <eAnnotations source="positions.269" references="/0/getObstacles/%/collect/e">
+      <details key="start" value="4166"/>
+      <details key="end" value="4167"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.198" references="/0/getMobiles">
-      <details key="start" value="2606"/>
-      <details key="end" value="2800"/>
-      <details key="line" value="84"/>
+    <eAnnotations source="positions.270" references="/0/getMobiles">
+      <details key="start" value="4217"/>
+      <details key="end" value="4411"/>
+      <details key="line" value="131"/>
     </eAnnotations>
-    <eAnnotations source="positions.199" references="/0/getMobiles/elements">
-      <details key="start" value="2631"/>
-      <details key="end" value="2667"/>
-      <details key="line" value="84"/>
+    <eAnnotations source="positions.271" references="/0/getMobiles/elements">
+      <details key="start" value="4242"/>
+      <details key="end" value="4278"/>
+      <details key="line" value="131"/>
     </eAnnotations>
-    <eAnnotations source="positions.200" references="/0/getMobiles/%">
-      <details key="start" value="2694"/>
-      <details key="end" value="2797"/>
+    <eAnnotations source="positions.272" references="/0/getMobiles/%">
+      <details key="start" value="4305"/>
+      <details key="end" value="4408"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.201" references="/0/getMobiles/%/collect">
-      <details key="start" value="2694"/>
-      <details key="end" value="2778"/>
+    <eAnnotations source="positions.273" references="/0/getMobiles/%/collect">
+      <details key="start" value="4305"/>
+      <details key="end" value="4389"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.202" references="/0/getMobiles/%/collect/select">
-      <details key="start" value="2694"/>
-      <details key="end" value="2739"/>
+    <eAnnotations source="positions.274" references="/0/getMobiles/%/collect/select">
+      <details key="start" value="4305"/>
+      <details key="end" value="4350"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.203" references="/0/getMobiles/%/collect/select/elements">
-      <details key="start" value="2694"/>
-      <details key="end" value="2702"/>
+    <eAnnotations source="positions.275" references="/0/getMobiles/%/collect/select/elements">
+      <details key="start" value="4305"/>
+      <details key="end" value="4313"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.204" references="/0/getMobiles/%/collect/select/%">
-      <details key="start" value="2716"/>
-      <details key="end" value="2737"/>
+    <eAnnotations source="positions.276" references="/0/getMobiles/%/collect/select/%">
+      <details key="start" value="4327"/>
+      <details key="end" value="4348"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.205" references="/0/getMobiles/%/collect/select/%/e">
-      <details key="start" value="2716"/>
-      <details key="end" value="2717"/>
+    <eAnnotations source="positions.277" references="/0/getMobiles/%/collect/select/%/e">
+      <details key="start" value="4327"/>
+      <details key="end" value="4328"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.206" references="/0/getMobiles/%/collect/select/%/%">
-      <details key="start" value="2730"/>
-      <details key="end" value="2736"/>
+    <eAnnotations source="positions.278" references="/0/getMobiles/%/collect/select/%/%">
+      <details key="start" value="4341"/>
+      <details key="end" value="4347"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.207" references="/0/getMobiles/%/collect/select/e">
-      <details key="start" value="2712"/>
-      <details key="end" value="2713"/>
+    <eAnnotations source="positions.279" references="/0/getMobiles/%/collect/select/e">
+      <details key="start" value="4323"/>
+      <details key="end" value="4324"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.208" references="/0/getMobiles/%/collect/%">
-      <details key="start" value="2757"/>
-      <details key="end" value="2776"/>
+    <eAnnotations source="positions.280" references="/0/getMobiles/%/collect/%">
+      <details key="start" value="4368"/>
+      <details key="end" value="4387"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.209" references="/0/getMobiles/%/collect/%/e">
-      <details key="start" value="2757"/>
-      <details key="end" value="2758"/>
+    <eAnnotations source="positions.281" references="/0/getMobiles/%/collect/%/e">
+      <details key="start" value="4368"/>
+      <details key="end" value="4369"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.210" references="/0/getMobiles/%/collect/%/%">
-      <details key="start" value="2769"/>
-      <details key="end" value="2775"/>
+    <eAnnotations source="positions.282" references="/0/getMobiles/%/collect/%/%">
+      <details key="start" value="4380"/>
+      <details key="end" value="4386"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.211" references="/0/getMobiles/%/collect/e">
-      <details key="start" value="2753"/>
-      <details key="end" value="2754"/>
+    <eAnnotations source="positions.283" references="/0/getMobiles/%/collect/e">
+      <details key="start" value="4364"/>
+      <details key="end" value="4365"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.212" references="/0/getProjectiles">
-      <details key="start" value="2802"/>
-      <details key="end" value="3012"/>
-      <details key="line" value="90"/>
+    <eAnnotations source="positions.284" references="/0/getProjectiles">
+      <details key="start" value="4413"/>
+      <details key="end" value="4623"/>
+      <details key="line" value="137"/>
     </eAnnotations>
-    <eAnnotations source="positions.213" references="/0/getProjectiles/elements">
-      <details key="start" value="2831"/>
-      <details key="end" value="2867"/>
-      <details key="line" value="90"/>
+    <eAnnotations source="positions.285" references="/0/getProjectiles/elements">
+      <details key="start" value="4442"/>
+      <details key="end" value="4478"/>
+      <details key="line" value="137"/>
     </eAnnotations>
-    <eAnnotations source="positions.214" references="/0/getProjectiles/%">
-      <details key="start" value="2898"/>
-      <details key="end" value="3009"/>
+    <eAnnotations source="positions.286" references="/0/getProjectiles/%">
+      <details key="start" value="4509"/>
+      <details key="end" value="4620"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.215" references="/0/getProjectiles/%/collect">
-      <details key="start" value="2898"/>
-      <details key="end" value="2990"/>
+    <eAnnotations source="positions.287" references="/0/getProjectiles/%/collect">
+      <details key="start" value="4509"/>
+      <details key="end" value="4601"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.216" references="/0/getProjectiles/%/collect/select">
-      <details key="start" value="2898"/>
-      <details key="end" value="2947"/>
+    <eAnnotations source="positions.288" references="/0/getProjectiles/%/collect/select">
+      <details key="start" value="4509"/>
+      <details key="end" value="4558"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.217" references="/0/getProjectiles/%/collect/select/elements">
-      <details key="start" value="2898"/>
-      <details key="end" value="2906"/>
+    <eAnnotations source="positions.289" references="/0/getProjectiles/%/collect/select/elements">
+      <details key="start" value="4509"/>
+      <details key="end" value="4517"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.218" references="/0/getProjectiles/%/collect/select/%">
-      <details key="start" value="2920"/>
-      <details key="end" value="2945"/>
+    <eAnnotations source="positions.290" references="/0/getProjectiles/%/collect/select/%">
+      <details key="start" value="4531"/>
+      <details key="end" value="4556"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.219" references="/0/getProjectiles/%/collect/select/%/e">
-      <details key="start" value="2920"/>
-      <details key="end" value="2921"/>
+    <eAnnotations source="positions.291" references="/0/getProjectiles/%/collect/select/%/e">
+      <details key="start" value="4531"/>
+      <details key="end" value="4532"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.220" references="/0/getProjectiles/%/collect/select/%/%">
-      <details key="start" value="2934"/>
-      <details key="end" value="2944"/>
+    <eAnnotations source="positions.292" references="/0/getProjectiles/%/collect/select/%/%">
+      <details key="start" value="4545"/>
+      <details key="end" value="4555"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.221" references="/0/getProjectiles/%/collect/select/e">
-      <details key="start" value="2916"/>
-      <details key="end" value="2917"/>
+    <eAnnotations source="positions.293" references="/0/getProjectiles/%/collect/select/e">
+      <details key="start" value="4527"/>
+      <details key="end" value="4528"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.222" references="/0/getProjectiles/%/collect/%">
-      <details key="start" value="2965"/>
-      <details key="end" value="2988"/>
+    <eAnnotations source="positions.294" references="/0/getProjectiles/%/collect/%">
+      <details key="start" value="4576"/>
+      <details key="end" value="4599"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.223" references="/0/getProjectiles/%/collect/%/e">
-      <details key="start" value="2965"/>
-      <details key="end" value="2966"/>
+    <eAnnotations source="positions.295" references="/0/getProjectiles/%/collect/%/e">
+      <details key="start" value="4576"/>
+      <details key="end" value="4577"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.224" references="/0/getProjectiles/%/collect/%/%">
-      <details key="start" value="2977"/>
-      <details key="end" value="2987"/>
+    <eAnnotations source="positions.296" references="/0/getProjectiles/%/collect/%/%">
+      <details key="start" value="4588"/>
+      <details key="end" value="4598"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.225" references="/0/getProjectiles/%/collect/e">
-      <details key="start" value="2961"/>
-      <details key="end" value="2962"/>
+    <eAnnotations source="positions.297" references="/0/getProjectiles/%/collect/e">
+      <details key="start" value="4572"/>
+      <details key="end" value="4573"/>
       <details key="line" value="0"/>
     </eAnnotations>
   </ecore:EAnnotation>
