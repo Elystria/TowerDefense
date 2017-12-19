@@ -239,7 +239,6 @@ public class Mobile implements PartieElement {
 		HashMap<Case, Case> casesVisitees = new HashMap<>(); // la clé est la case visité, la valeur est la case précédant cette case
 		casesVisitees.put(getPosition(), getPosition());
 
-		System.out.println("On est rentrée !");
 		Case caseCourante = getPosition();
 		// Tant qu'on a pas trouvé la sortie
 		while(caseCourante != getSortie()) {
@@ -269,14 +268,12 @@ public class Mobile implements PartieElement {
 			// On passe à la case suivante
 			caseCourante = file.poll();
 		}
-		System.out.println("CasesVisitees : " + casesVisitees.size());
 
 		// On va reconstruire le chemin !
 		List<Case> chemin = new ArrayList<>();
 		chemin.add(getSortie());
 		caseCourante = getSortie();
 		while(casesVisitees.get(caseCourante) != getPosition()) {
-			//System.out.println("CaseCourante : " + caseCourante.getI() + " " + caseCourante.getJ());
 			caseCourante = casesVisitees.get(caseCourante);
 			chemin.add(caseCourante);
 		}

@@ -29,13 +29,13 @@ public class Enigme {
         NatureTerrain garage = new NatureTerrain("garage", 1, Jeu.TYPE_TERRAIN.campement, eInf);
         List<NatureTerrain> natures = new ArrayList<>();
         Case c11 = new Case("c11", 0, 0, montagne);
-        Case c21 = new Case("c21", 1, 0, route);
-        Case c31 = new Case("c31", 2, 0, route);
-        Case c41 = new Case("c41", 3, 0, route);
+        Case c21 = new Case("c21", 1, 0, montagne);
+        Case c31 = new Case("c31", 2, 0, montagne);
+        Case c41 = new Case("c41", 3, 0, montagne);
         Case c51 = new Case("c51", 4, 0, montagne);
         Case c12 = new Case("c12", 0, 1, route);
         Case c22 = new Case("c22", 1, 1, route);
-        Case c32 = new Case("c32", 2, 1, montagne);
+        Case c32 = new Case("c32", 2, 1, route);
         Case c42 = new Case("c42", 3, 1, route);
         Case c52 = new Case("c52", 4, 1, route);
         Case c13 = new Case("c13", 0, 2, garage);
@@ -79,7 +79,7 @@ public class Enigme {
         mobiles.add(m2);
         mobiles.add(m3);
 
-        Obstacle obstacle = new Obstacle("o1", c32, new Energie(1), Jeu.TactiqueType.faibleFirst);
+        Obstacle obstacle = new Obstacle("o1", c33, new Energie(1), Jeu.TactiqueType.faibleFirst);
         List<Obstacle> obstacles = new ArrayList<>();
         obstacles.add(obstacle);
         Vague vague = new Vague(mobiles, obstacles, 3);
@@ -113,6 +113,8 @@ public class Enigme {
         // Initialiser l'affichage
         EnigmeVue vue = new EnigmeVue(partie);
 
+        partie.validerChemins();
+
         // Tant que la partie n'est pas finie
         // Pour chaque vague
         int nbVague = partie.getNiveaux().get(0).getVagues().size();
@@ -124,14 +126,15 @@ public class Enigme {
             if(vagueCourante > 0) {
                 partie.getObstacles().addAll(partie.getNiveaux().get(0).getVagues().get(vagueCourante).getObstacles());
             }
+            partie.setMobilesSorti(0);
 
             // Jouer la vague !
             while(!partie.estTerminee() && !fermerFenetre) {
                 // Calcul du nouveau modele
-                // On fait jouer les projectiles
-                partie.jouerProjectiles();
                 // On fait jouer les obstacles
                 partie.jouerObstacles();
+                // On fait jouer les projectiles
+                partie.jouerProjectiles();
                 // On fait jouer les mobiles
                 partie.jouerMobiles();
 
@@ -150,11 +153,18 @@ public class Enigme {
 
                 fermerFenetre = Display.isCloseRequested();
             }
+            // Si on a gagné la manche
+            if(partie.getMobilesSorti() < partie.getNiveaux().get(0).getMobSortisMax()) {
+                // Alors on gagne des sous !
+                partie.setArgent(partie.getArgent() + partie.getNiveaux().get(0).getArgent());
+                System.out.println("Vous gagnez " + partie.getNiveaux().get(0).getArgent() + " pièces !");
+            }
 
             // Petit temps pour que le joueur puisse placer ses tourelles !
             long time = System.currentTimeMillis();
             Player player = new Player(vue.getGrid(), vue.getTours());
-            System.out.println("Vous pouvez ajouter des Tours !!!");
+            System.out.println("Vous pouvez ajouter des Tours !");
+            System.out.println("Il vous reste " + partie.getArgent() + " pièces.");
             while(System.currentTimeMillis() - time <= 5000 && !fermerFenetre) {
                 // On permet de rajouter des tours
                 player.update(vue, partie);
