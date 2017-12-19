@@ -53,6 +53,7 @@ Jeu exemple1 {
 			Type camp
 			FatigueEntree 0
 		}
+		
 	
 		
 		/* On définie les projectiles */
@@ -95,6 +96,7 @@ Jeu exemple1 {
 					Obstacles o
 					Gain 3
 				  }
+
 		}
 		
 	}
