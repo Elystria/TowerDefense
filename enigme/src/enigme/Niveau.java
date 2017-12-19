@@ -1,5 +1,5 @@
 package enigme;
-import java.util.Collection;
+import java.util.List;
 
 
 public class Niveau {
@@ -10,10 +10,10 @@ public class Niveau {
 	private int argent;
 	private int mobSortisMax;
 	private Carte carte;
-	private Collection<Vague> vagues;
+	private List<Vague> vagues;
 	
 	public Niveau(String nom, Jeu.Difficulte difficulte, int dureePauses, int argent, int mobSortisMax, Carte carte,
-				  Collection<Vague> vagues) {
+				  List<Vague> vagues) {
 
 		this.nom = nom;
 		this.difficulte = difficulte;
@@ -72,11 +72,11 @@ public class Niveau {
 		this.carte = carte;
 	}
 
-	public Collection<Vague> getVagues() {
+	public List<Vague> getVagues() {
 		return vagues;
 	}
 
-	public void setVagues(Collection<Vague> vagues) {
+	public void setVagues(List<Vague> vagues) {
 		this.vagues = vagues;
 	}
 	

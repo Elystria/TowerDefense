@@ -10,61 +10,71 @@ public class Obstacle implements PartieElement {
 	private Jeu.TactiqueType tactique;
 	private Case position;
 	private Projectile projectilePrototype;
+	private int nbMissilesLancees;
 
-	public Obstacle(String nom, 
-					Case campement,
-					Energie PVmax,
-					Jeu.TactiqueType tactique) {
+	public Obstacle(String nom, Case campement, Energie PVmax, Jeu.TactiqueType tactique) {
 		this.nom = nom;
 		this.PVmax = PVmax;
-		this.PV = PV;
-		this.PA = PA;
+		this.PV = new Energie(PVmax.getValeur());
+		this.PA = new Energie(PVmax.getValeur());
 		this.tactique = tactique;
 		this.position = campement;
-		this.projectilePrototype = new Projectile("missileDe" + nom, 3, 1, 1, null, null, new Energie(1));
+		this.nbMissilesLancees = 0;
+		this.projectilePrototype = new Projectile("missileDe" + nom, 1, 1, 1, null, null, true, new Energie(1));
 	}
 
 	/********* METHODES *********/
 	
-	public void pertePV(Energie e, Carte carte) {
+	public void pertePV(Energie e, Partie partie) {
 		int vie = this.PV.getValeur();
 		int degats = e.getValeur();
 		int nouvPV = vie-degats;
 		this.PV.setValeur(nouvPV);
 		if (nouvPV<=0) {
-			/* Supprimer l'obstacle de la carte */
-			carte.supprimerObstacle(this);
+		    for(int i = 0; i < partie.getObstacles().size(); i++) {
+		    	Obstacle o = partie.getObstacles().get(i);
+		    	if(o.getNom().equals(this.getNom())) {
+		    		partie.getObstacles().remove(i);
+		    		break;
+				}
+			}
 		}
 	}
 	
 	public void attaquer(Partie p) {
-	    /*
 		switch (tactique) {
 			case faibleFirst:
 				// On cherche sur qui tirer
                 Mobile cible = null;
 			    if(p.getMobiles().size() > 0) {
 					Energie min = p.getMobiles().get(0).getPV();
-					cible = p.getMobiles().get(0);
+					for(Mobile m : p.getMobiles()) {
+						if(m.getPV().getValeur() > min.getValeur()) {
+							min = m.getPV();
+						}
+					}
 					int distMax = projectilePrototype.getPortee();
 					for(Mobile m : p.getMobiles()) {
-						if(distance2mobile(m) <= distMax) {
-							if (m.getPV().getValeur() < min.getValeur()) {
+						if(m.isEnJeu() && distance2mobile(m) <= distMax) {
+							if (m.getPV().getValeur() <= min.getValeur()) {
 								min = m.getPV();
 								cible = m;
 							}
 						}
 					}
 				}
+
 				// On lui tire dessus
 				if(cible != null) {
+			    	nbMissilesLancees ++;
 					Projectile proj = new Projectile(
-							projectilePrototype.getNom(),
+							projectilePrototype.getNom() + nbMissilesLancees,
 							projectilePrototype.getPortee(),
 							projectilePrototype.getMasse(),
 							projectilePrototype.getVitesse(),
 							position,
-							cible.getPosition(),
+							cible,
+							true,
 							projectilePrototype.getDegat());
 					p.getProjectiles().add(proj);
 				}
@@ -73,10 +83,9 @@ public class Obstacle implements PartieElement {
 				System.out.println("Cette tactique n'a pas encore été implémenté !");
 				break;
 		}
-		*/
 	}
 
-	private int distance2mobile(Mobile m) {
+	public int distance2mobile(Mobile m) {
 		int dx = Math.abs(m.getPosition().getI() - getPosition().getI());
 		int dy = Math.abs(m.getPosition().getJ() - getPosition().getJ());
 		return dx + dy;
@@ -95,11 +104,10 @@ public class Obstacle implements PartieElement {
 		diffI = iDir-iCamp;
 		diffJ = jDir-jCamp;
 		position = carte.getCase(iCamp+diffI/Math.abs(diffI), jCamp+diffJ/Math.abs(diffJ));
-		Projectile p = new Projectile("P", 1, 1, 1, position, direction, new Energie(false, 1));*/
+		Projectile p = new Projectile("P", 1, 1, 1, position, direction, new Energie(false, 1));
 		Projectile p = new Projectile("P", 1, 1, 1, position, direction, new Energie(false, 1));
 		carte.ajouterProjectile(p);
-		p.seDeplacer(carte);
-		
+		p.seDeplacer(carte);*/
 	}
 	
 	/********* SETTERS & GETTERS *********/

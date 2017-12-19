@@ -1,3 +1,4 @@
+/*Démonstration des contraintes sur les obstacles, projectiles, mobiles */
 Jeu exemple1 { 
 	Partie partie_unique {
 		
@@ -18,8 +19,7 @@ Jeu exemple1 {
 		c33 3 3 garage
 		c34 3 4 garage
 		c35 3 5 garage
-		
-		
+				
 		/* On définie la carte */
 		Carte carte1 {
 			Lignes 3
@@ -53,37 +53,35 @@ Jeu exemple1 {
 			Type camp
 			FatigueEntree 0
 		}
-		
 	
 		
 		/* On définie les projectiles */
 		Projectile p {
-			Portee 1
+			Portee 0
 			Masse 1
-			Vitesse 1
-			Position c11
+			Vitesse 0
+			Position c13
 			Direction c12
 			Degat 1
 		}
 		
-		/* On définie les mobiles */
+		/* On définie les mobiles -> ce mobile est tres mal defini */
 		Mobile m {
 			F 1
-			V  1
-			NumVague 1 //inutile
-			In c21
-			Out c25
-			PVmax 1
+			V  0
+			NumVague 0 //inutile
+			In c22
+			Out c23
+			PVmax 0
 			Tactique procheFirst
 		}
 		
-		/* On définie les obstacles */
-		Obstacle o {
-			Campement c33
-			PVmax 1
+		/* On définie les obstacles -> il est sur une case deco */
+		Obstacle o1 {
+			Campement c11
+			PVmax 0
 			Tactique faibleFirst
 		}
-		
 		
 		/* On définie l'unique niveau du jeu */
 		Niveau niv facile {
@@ -93,10 +91,9 @@ Jeu exemple1 {
 			Carte carte1
 			Vague v1 { 
 					Mobiles m m m
-					Obstacles o
+					Obstacles o1
 					Gain 3
 				  }
-
 		}
 		
 	}

@@ -1,31 +1,31 @@
 package enigme;
-import java.util.Collection;
+import java.util.List;
 
 public class Vague {
 
-	private Collection<Mobile> mobiles;
-	private Collection<Obstacle> obstacles;
+	private List<Mobile> mobiles;
+	private List<Obstacle> obstacles;
 	private int gainVictoire;
 	
-	public Vague(Collection<Mobile> mobiles, Collection<Obstacle> obstacles, int gainVictoire) {
+	public Vague(List<Mobile> mobiles, List<Obstacle> obstacles, int gainVictoire) {
 		this.mobiles = mobiles;
 		this.obstacles = obstacles;
 		this.gainVictoire = gainVictoire;
 	}
 
-	public Collection<Mobile> getMobiles() {
+	public List<Mobile> getMobiles() {
 		return mobiles;
 	}
 
-	public void setMobiles(Collection<Mobile> mobiles) {
+	public void setMobiles(List<Mobile> mobiles) {
 		this.mobiles = mobiles;
 	}
 
-	public Collection<Obstacle> getObstacles() {
+	public List<Obstacle> getObstacles() {
 		return obstacles;
 	}
 
-	public void setObstacles(Collection<Obstacle> obstacles) {
+	public void setObstacles(List<Obstacle> obstacles) {
 		this.obstacles = obstacles;
 	}
 
