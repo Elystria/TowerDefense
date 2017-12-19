@@ -1122,7 +1122,7 @@ ruleNiveau returns [EObject current=null]
 					afterParserOrEnumRuleCall();
 				}
 			)
-		)
+		)*
 		otherlv_14='}'
 		{
 			newLeafNode(otherlv_14, grammarAccess.getNiveauAccess().getRightCurlyBracketKeyword_14());

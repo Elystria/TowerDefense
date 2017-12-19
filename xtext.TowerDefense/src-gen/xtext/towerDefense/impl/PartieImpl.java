@@ -46,313 +46,304 @@ import xtext.towerDefense.TowerDefensePackage;
 public class PartieImpl extends MinimalEObjectImpl.Container implements Partie
 {
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
   protected static final String NAME_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getCases() <em>Cases</em>}' containment reference list.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getCases() <em>Cases</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getCases()
-   * @generated
-   * @ordered
-   */
+	 * @see #getCases()
+	 * @generated
+	 * @ordered
+	 */
   protected EList<Case> cases;
 
   /**
-   * The cached value of the '{@link #getCartes() <em>Cartes</em>}' containment reference list.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getCartes() <em>Cartes</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getCartes()
-   * @generated
-   * @ordered
-   */
+	 * @see #getCartes()
+	 * @generated
+	 * @ordered
+	 */
   protected EList<Carte> cartes;
 
   /**
-   * The cached value of the '{@link #getPartieElements() <em>Partie Elements</em>}' containment reference list.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getPartieElements() <em>Partie Elements</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getPartieElements()
-   * @generated
-   * @ordered
-   */
+	 * @see #getPartieElements()
+	 * @generated
+	 * @ordered
+	 */
   protected EList<PartieElement> partieElements;
 
   /**
-   * The cached value of the '{@link #getNiveaux() <em>Niveaux</em>}' containment reference list.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getNiveaux() <em>Niveaux</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNiveaux()
-   * @generated
-   * @ordered
-   */
+	 * @see #getNiveaux()
+	 * @generated
+	 * @ordered
+	 */
   protected EList<Niveau> niveaux;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected PartieImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return TowerDefensePackage.Literals.PARTIE;
-  }
+		return TowerDefensePackage.Literals.PARTIE;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public String getName()
   {
-    return name;
-  }
+		return name;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public void setName(String newName)
   {
-    String oldName = name;
-    name = newName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.PARTIE__NAME, oldName, name));
-  }
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.PARTIE__NAME, oldName, name));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public EList<Case> getCases()
   {
-    if (cases == null)
-    {
-      cases = new EObjectContainmentEList<Case>(Case.class, this, TowerDefensePackage.PARTIE__CASES);
-    }
-    return cases;
-  }
+		if (cases == null) {
+			cases = new EObjectContainmentEList<Case>(Case.class, this, TowerDefensePackage.PARTIE__CASES);
+		}
+		return cases;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public EList<Carte> getCartes()
   {
-    if (cartes == null)
-    {
-      cartes = new EObjectContainmentEList<Carte>(Carte.class, this, TowerDefensePackage.PARTIE__CARTES);
-    }
-    return cartes;
-  }
+		if (cartes == null) {
+			cartes = new EObjectContainmentEList<Carte>(Carte.class, this, TowerDefensePackage.PARTIE__CARTES);
+		}
+		return cartes;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public EList<PartieElement> getPartieElements()
   {
-    if (partieElements == null)
-    {
-      partieElements = new EObjectContainmentEList<PartieElement>(PartieElement.class, this, TowerDefensePackage.PARTIE__PARTIE_ELEMENTS);
-    }
-    return partieElements;
-  }
+		if (partieElements == null) {
+			partieElements = new EObjectContainmentEList<PartieElement>(PartieElement.class, this, TowerDefensePackage.PARTIE__PARTIE_ELEMENTS);
+		}
+		return partieElements;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public EList<Niveau> getNiveaux()
   {
-    if (niveaux == null)
-    {
-      niveaux = new EObjectContainmentEList<Niveau>(Niveau.class, this, TowerDefensePackage.PARTIE__NIVEAUX);
-    }
-    return niveaux;
-  }
+		if (niveaux == null) {
+			niveaux = new EObjectContainmentEList<Niveau>(Niveau.class, this, TowerDefensePackage.PARTIE__NIVEAUX);
+		}
+		return niveaux;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
-    switch (featureID)
-    {
-      case TowerDefensePackage.PARTIE__CASES:
-        return ((InternalEList<?>)getCases()).basicRemove(otherEnd, msgs);
-      case TowerDefensePackage.PARTIE__CARTES:
-        return ((InternalEList<?>)getCartes()).basicRemove(otherEnd, msgs);
-      case TowerDefensePackage.PARTIE__PARTIE_ELEMENTS:
-        return ((InternalEList<?>)getPartieElements()).basicRemove(otherEnd, msgs);
-      case TowerDefensePackage.PARTIE__NIVEAUX:
-        return ((InternalEList<?>)getNiveaux()).basicRemove(otherEnd, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
-  }
+		switch (featureID) {
+			case TowerDefensePackage.PARTIE__CASES:
+				return ((InternalEList<?>)getCases()).basicRemove(otherEnd, msgs);
+			case TowerDefensePackage.PARTIE__CARTES:
+				return ((InternalEList<?>)getCartes()).basicRemove(otherEnd, msgs);
+			case TowerDefensePackage.PARTIE__PARTIE_ELEMENTS:
+				return ((InternalEList<?>)getPartieElements()).basicRemove(otherEnd, msgs);
+			case TowerDefensePackage.PARTIE__NIVEAUX:
+				return ((InternalEList<?>)getNiveaux()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
-    switch (featureID)
-    {
-      case TowerDefensePackage.PARTIE__NAME:
-        return getName();
-      case TowerDefensePackage.PARTIE__CASES:
-        return getCases();
-      case TowerDefensePackage.PARTIE__CARTES:
-        return getCartes();
-      case TowerDefensePackage.PARTIE__PARTIE_ELEMENTS:
-        return getPartieElements();
-      case TowerDefensePackage.PARTIE__NIVEAUX:
-        return getNiveaux();
-    }
-    return super.eGet(featureID, resolve, coreType);
-  }
+		switch (featureID) {
+			case TowerDefensePackage.PARTIE__NAME:
+				return getName();
+			case TowerDefensePackage.PARTIE__CASES:
+				return getCases();
+			case TowerDefensePackage.PARTIE__CARTES:
+				return getCartes();
+			case TowerDefensePackage.PARTIE__PARTIE_ELEMENTS:
+				return getPartieElements();
+			case TowerDefensePackage.PARTIE__NIVEAUX:
+				return getNiveaux();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
-    switch (featureID)
-    {
-      case TowerDefensePackage.PARTIE__NAME:
-        setName((String)newValue);
-        return;
-      case TowerDefensePackage.PARTIE__CASES:
-        getCases().clear();
-        getCases().addAll((Collection<? extends Case>)newValue);
-        return;
-      case TowerDefensePackage.PARTIE__CARTES:
-        getCartes().clear();
-        getCartes().addAll((Collection<? extends Carte>)newValue);
-        return;
-      case TowerDefensePackage.PARTIE__PARTIE_ELEMENTS:
-        getPartieElements().clear();
-        getPartieElements().addAll((Collection<? extends PartieElement>)newValue);
-        return;
-      case TowerDefensePackage.PARTIE__NIVEAUX:
-        getNiveaux().clear();
-        getNiveaux().addAll((Collection<? extends Niveau>)newValue);
-        return;
-    }
-    super.eSet(featureID, newValue);
-  }
+		switch (featureID) {
+			case TowerDefensePackage.PARTIE__NAME:
+				setName((String)newValue);
+				return;
+			case TowerDefensePackage.PARTIE__CASES:
+				getCases().clear();
+				getCases().addAll((Collection<? extends Case>)newValue);
+				return;
+			case TowerDefensePackage.PARTIE__CARTES:
+				getCartes().clear();
+				getCartes().addAll((Collection<? extends Carte>)newValue);
+				return;
+			case TowerDefensePackage.PARTIE__PARTIE_ELEMENTS:
+				getPartieElements().clear();
+				getPartieElements().addAll((Collection<? extends PartieElement>)newValue);
+				return;
+			case TowerDefensePackage.PARTIE__NIVEAUX:
+				getNiveaux().clear();
+				getNiveaux().addAll((Collection<? extends Niveau>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void eUnset(int featureID)
   {
-    switch (featureID)
-    {
-      case TowerDefensePackage.PARTIE__NAME:
-        setName(NAME_EDEFAULT);
-        return;
-      case TowerDefensePackage.PARTIE__CASES:
-        getCases().clear();
-        return;
-      case TowerDefensePackage.PARTIE__CARTES:
-        getCartes().clear();
-        return;
-      case TowerDefensePackage.PARTIE__PARTIE_ELEMENTS:
-        getPartieElements().clear();
-        return;
-      case TowerDefensePackage.PARTIE__NIVEAUX:
-        getNiveaux().clear();
-        return;
-    }
-    super.eUnset(featureID);
-  }
+		switch (featureID) {
+			case TowerDefensePackage.PARTIE__NAME:
+				setName(NAME_EDEFAULT);
+				return;
+			case TowerDefensePackage.PARTIE__CASES:
+				getCases().clear();
+				return;
+			case TowerDefensePackage.PARTIE__CARTES:
+				getCartes().clear();
+				return;
+			case TowerDefensePackage.PARTIE__PARTIE_ELEMENTS:
+				getPartieElements().clear();
+				return;
+			case TowerDefensePackage.PARTIE__NIVEAUX:
+				getNiveaux().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public boolean eIsSet(int featureID)
   {
-    switch (featureID)
-    {
-      case TowerDefensePackage.PARTIE__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case TowerDefensePackage.PARTIE__CASES:
-        return cases != null && !cases.isEmpty();
-      case TowerDefensePackage.PARTIE__CARTES:
-        return cartes != null && !cartes.isEmpty();
-      case TowerDefensePackage.PARTIE__PARTIE_ELEMENTS:
-        return partieElements != null && !partieElements.isEmpty();
-      case TowerDefensePackage.PARTIE__NIVEAUX:
-        return niveaux != null && !niveaux.isEmpty();
-    }
-    return super.eIsSet(featureID);
-  }
+		switch (featureID) {
+			case TowerDefensePackage.PARTIE__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case TowerDefensePackage.PARTIE__CASES:
+				return cases != null && !cases.isEmpty();
+			case TowerDefensePackage.PARTIE__CARTES:
+				return cartes != null && !cartes.isEmpty();
+			case TowerDefensePackage.PARTIE__PARTIE_ELEMENTS:
+				return partieElements != null && !partieElements.isEmpty();
+			case TowerDefensePackage.PARTIE__NIVEAUX:
+				return niveaux != null && !niveaux.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public String toString()
   {
-    if (eIsProxy()) return super.toString();
+		if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(')');
-    return result.toString();
-  }
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
+	}
 
 } //PartieImpl

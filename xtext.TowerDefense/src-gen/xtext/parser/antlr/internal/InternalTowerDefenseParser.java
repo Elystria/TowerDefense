@@ -2066,7 +2066,7 @@ public class InternalTowerDefenseParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNiveau"
-    // InternalTowerDefense.g:967:1: ruleNiveau returns [EObject current=null] : (otherlv_0= 'Niveau' ( (lv_name_1_0= RULE_ID ) ) ( (lv_difficulte_2_0= ruleDifficulte ) ) otherlv_3= '{' otherlv_4= 'DureePauses' ( (lv_dureePause_5_0= RULE_INT ) ) otherlv_6= 'Argent' ( (lv_argent_7_0= RULE_INT ) ) otherlv_8= 'MobSortisMax' ( (lv_mobSortisLimite_9_0= RULE_INT ) ) otherlv_10= 'Carte' ( (otherlv_11= RULE_ID ) ) otherlv_12= 'Vague' ( (lv_vagues_13_0= ruleVague ) ) otherlv_14= '}' ) ;
+    // InternalTowerDefense.g:967:1: ruleNiveau returns [EObject current=null] : (otherlv_0= 'Niveau' ( (lv_name_1_0= RULE_ID ) ) ( (lv_difficulte_2_0= ruleDifficulte ) ) otherlv_3= '{' otherlv_4= 'DureePauses' ( (lv_dureePause_5_0= RULE_INT ) ) otherlv_6= 'Argent' ( (lv_argent_7_0= RULE_INT ) ) otherlv_8= 'MobSortisMax' ( (lv_mobSortisLimite_9_0= RULE_INT ) ) otherlv_10= 'Carte' ( (otherlv_11= RULE_ID ) ) otherlv_12= 'Vague' ( (lv_vagues_13_0= ruleVague ) )* otherlv_14= '}' ) ;
     public final EObject ruleNiveau() throws RecognitionException {
         EObject current = null;
 
@@ -2092,11 +2092,11 @@ public class InternalTowerDefenseParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalTowerDefense.g:973:2: ( (otherlv_0= 'Niveau' ( (lv_name_1_0= RULE_ID ) ) ( (lv_difficulte_2_0= ruleDifficulte ) ) otherlv_3= '{' otherlv_4= 'DureePauses' ( (lv_dureePause_5_0= RULE_INT ) ) otherlv_6= 'Argent' ( (lv_argent_7_0= RULE_INT ) ) otherlv_8= 'MobSortisMax' ( (lv_mobSortisLimite_9_0= RULE_INT ) ) otherlv_10= 'Carte' ( (otherlv_11= RULE_ID ) ) otherlv_12= 'Vague' ( (lv_vagues_13_0= ruleVague ) ) otherlv_14= '}' ) )
-            // InternalTowerDefense.g:974:2: (otherlv_0= 'Niveau' ( (lv_name_1_0= RULE_ID ) ) ( (lv_difficulte_2_0= ruleDifficulte ) ) otherlv_3= '{' otherlv_4= 'DureePauses' ( (lv_dureePause_5_0= RULE_INT ) ) otherlv_6= 'Argent' ( (lv_argent_7_0= RULE_INT ) ) otherlv_8= 'MobSortisMax' ( (lv_mobSortisLimite_9_0= RULE_INT ) ) otherlv_10= 'Carte' ( (otherlv_11= RULE_ID ) ) otherlv_12= 'Vague' ( (lv_vagues_13_0= ruleVague ) ) otherlv_14= '}' )
+            // InternalTowerDefense.g:973:2: ( (otherlv_0= 'Niveau' ( (lv_name_1_0= RULE_ID ) ) ( (lv_difficulte_2_0= ruleDifficulte ) ) otherlv_3= '{' otherlv_4= 'DureePauses' ( (lv_dureePause_5_0= RULE_INT ) ) otherlv_6= 'Argent' ( (lv_argent_7_0= RULE_INT ) ) otherlv_8= 'MobSortisMax' ( (lv_mobSortisLimite_9_0= RULE_INT ) ) otherlv_10= 'Carte' ( (otherlv_11= RULE_ID ) ) otherlv_12= 'Vague' ( (lv_vagues_13_0= ruleVague ) )* otherlv_14= '}' ) )
+            // InternalTowerDefense.g:974:2: (otherlv_0= 'Niveau' ( (lv_name_1_0= RULE_ID ) ) ( (lv_difficulte_2_0= ruleDifficulte ) ) otherlv_3= '{' otherlv_4= 'DureePauses' ( (lv_dureePause_5_0= RULE_INT ) ) otherlv_6= 'Argent' ( (lv_argent_7_0= RULE_INT ) ) otherlv_8= 'MobSortisMax' ( (lv_mobSortisLimite_9_0= RULE_INT ) ) otherlv_10= 'Carte' ( (otherlv_11= RULE_ID ) ) otherlv_12= 'Vague' ( (lv_vagues_13_0= ruleVague ) )* otherlv_14= '}' )
             {
-            // InternalTowerDefense.g:974:2: (otherlv_0= 'Niveau' ( (lv_name_1_0= RULE_ID ) ) ( (lv_difficulte_2_0= ruleDifficulte ) ) otherlv_3= '{' otherlv_4= 'DureePauses' ( (lv_dureePause_5_0= RULE_INT ) ) otherlv_6= 'Argent' ( (lv_argent_7_0= RULE_INT ) ) otherlv_8= 'MobSortisMax' ( (lv_mobSortisLimite_9_0= RULE_INT ) ) otherlv_10= 'Carte' ( (otherlv_11= RULE_ID ) ) otherlv_12= 'Vague' ( (lv_vagues_13_0= ruleVague ) ) otherlv_14= '}' )
-            // InternalTowerDefense.g:975:3: otherlv_0= 'Niveau' ( (lv_name_1_0= RULE_ID ) ) ( (lv_difficulte_2_0= ruleDifficulte ) ) otherlv_3= '{' otherlv_4= 'DureePauses' ( (lv_dureePause_5_0= RULE_INT ) ) otherlv_6= 'Argent' ( (lv_argent_7_0= RULE_INT ) ) otherlv_8= 'MobSortisMax' ( (lv_mobSortisLimite_9_0= RULE_INT ) ) otherlv_10= 'Carte' ( (otherlv_11= RULE_ID ) ) otherlv_12= 'Vague' ( (lv_vagues_13_0= ruleVague ) ) otherlv_14= '}'
+            // InternalTowerDefense.g:974:2: (otherlv_0= 'Niveau' ( (lv_name_1_0= RULE_ID ) ) ( (lv_difficulte_2_0= ruleDifficulte ) ) otherlv_3= '{' otherlv_4= 'DureePauses' ( (lv_dureePause_5_0= RULE_INT ) ) otherlv_6= 'Argent' ( (lv_argent_7_0= RULE_INT ) ) otherlv_8= 'MobSortisMax' ( (lv_mobSortisLimite_9_0= RULE_INT ) ) otherlv_10= 'Carte' ( (otherlv_11= RULE_ID ) ) otherlv_12= 'Vague' ( (lv_vagues_13_0= ruleVague ) )* otherlv_14= '}' )
+            // InternalTowerDefense.g:975:3: otherlv_0= 'Niveau' ( (lv_name_1_0= RULE_ID ) ) ( (lv_difficulte_2_0= ruleDifficulte ) ) otherlv_3= '{' otherlv_4= 'DureePauses' ( (lv_dureePause_5_0= RULE_INT ) ) otherlv_6= 'Argent' ( (lv_argent_7_0= RULE_INT ) ) otherlv_8= 'MobSortisMax' ( (lv_mobSortisLimite_9_0= RULE_INT ) ) otherlv_10= 'Carte' ( (otherlv_11= RULE_ID ) ) otherlv_12= 'Vague' ( (lv_vagues_13_0= ruleVague ) )* otherlv_14= '}'
             {
             otherlv_0=(Token)match(input,37,FOLLOW_3); 
 
@@ -2278,40 +2278,58 @@ public class InternalTowerDefenseParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_12=(Token)match(input,42,FOLLOW_3); 
+            otherlv_12=(Token)match(input,42,FOLLOW_38); 
 
             			newLeafNode(otherlv_12, grammarAccess.getNiveauAccess().getVagueKeyword_12());
             		
-            // InternalTowerDefense.g:1107:3: ( (lv_vagues_13_0= ruleVague ) )
-            // InternalTowerDefense.g:1108:4: (lv_vagues_13_0= ruleVague )
-            {
-            // InternalTowerDefense.g:1108:4: (lv_vagues_13_0= ruleVague )
-            // InternalTowerDefense.g:1109:5: lv_vagues_13_0= ruleVague
-            {
+            // InternalTowerDefense.g:1107:3: ( (lv_vagues_13_0= ruleVague ) )*
+            loop8:
+            do {
+                int alt8=2;
+                int LA8_0 = input.LA(1);
 
-            					newCompositeNode(grammarAccess.getNiveauAccess().getVaguesVagueParserRuleCall_13_0());
-            				
-            pushFollow(FOLLOW_15);
-            lv_vagues_13_0=ruleVague();
-
-            state._fsp--;
+                if ( (LA8_0==RULE_ID) ) {
+                    alt8=1;
+                }
 
 
-            					if (current==null) {
-            						current = createModelElementForParent(grammarAccess.getNiveauRule());
-            					}
-            					add(
-            						current,
-            						"vagues",
-            						lv_vagues_13_0,
-            						"xtext.TowerDefense.Vague");
-            					afterParserOrEnumRuleCall();
-            				
+                switch (alt8) {
+            	case 1 :
+            	    // InternalTowerDefense.g:1108:4: (lv_vagues_13_0= ruleVague )
+            	    {
+            	    // InternalTowerDefense.g:1108:4: (lv_vagues_13_0= ruleVague )
+            	    // InternalTowerDefense.g:1109:5: lv_vagues_13_0= ruleVague
+            	    {
 
-            }
+            	    					newCompositeNode(grammarAccess.getNiveauAccess().getVaguesVagueParserRuleCall_13_0());
+            	    				
+            	    pushFollow(FOLLOW_38);
+            	    lv_vagues_13_0=ruleVague();
+
+            	    state._fsp--;
 
 
-            }
+            	    					if (current==null) {
+            	    						current = createModelElementForParent(grammarAccess.getNiveauRule());
+            	    					}
+            	    					add(
+            	    						current,
+            	    						"vagues",
+            	    						lv_vagues_13_0,
+            	    						"xtext.TowerDefense.Vague");
+            	    					afterParserOrEnumRuleCall();
+            	    				
+
+            	    }
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop8;
+                }
+            } while (true);
 
             otherlv_14=(Token)match(input,13,FOLLOW_2); 
 
@@ -2431,7 +2449,7 @@ public class InternalTowerDefenseParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,12,FOLLOW_38); 
+            otherlv_2=(Token)match(input,12,FOLLOW_39); 
 
             			newLeafNode(otherlv_2, grammarAccess.getCarteAccess().getLeftCurlyBracketKeyword_2());
             		
@@ -2445,7 +2463,7 @@ public class InternalTowerDefenseParser extends AbstractInternalAntlrParser {
             // InternalTowerDefense.g:1180:4: (lv_nbLignes_4_0= RULE_INT )
             // InternalTowerDefense.g:1181:5: lv_nbLignes_4_0= RULE_INT
             {
-            lv_nbLignes_4_0=(Token)match(input,RULE_INT,FOLLOW_39); 
+            lv_nbLignes_4_0=(Token)match(input,RULE_INT,FOLLOW_40); 
 
             					newLeafNode(lv_nbLignes_4_0, grammarAccess.getCarteAccess().getNbLignesINTTerminalRuleCall_4_0());
             				
@@ -2475,7 +2493,7 @@ public class InternalTowerDefenseParser extends AbstractInternalAntlrParser {
             // InternalTowerDefense.g:1202:4: (lv_nbColonnes_6_0= RULE_INT )
             // InternalTowerDefense.g:1203:5: lv_nbColonnes_6_0= RULE_INT
             {
-            lv_nbColonnes_6_0=(Token)match(input,RULE_INT,FOLLOW_40); 
+            lv_nbColonnes_6_0=(Token)match(input,RULE_INT,FOLLOW_41); 
 
             					newLeafNode(lv_nbColonnes_6_0, grammarAccess.getCarteAccess().getNbColonnesINTTerminalRuleCall_6_0());
             				
@@ -2495,22 +2513,22 @@ public class InternalTowerDefenseParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_7=(Token)match(input,45,FOLLOW_41); 
+            otherlv_7=(Token)match(input,45,FOLLOW_38); 
 
             			newLeafNode(otherlv_7, grammarAccess.getCarteAccess().getCasesKeyword_7());
             		
             // InternalTowerDefense.g:1223:3: ( (otherlv_8= RULE_ID ) )*
-            loop8:
+            loop9:
             do {
-                int alt8=2;
-                int LA8_0 = input.LA(1);
+                int alt9=2;
+                int LA9_0 = input.LA(1);
 
-                if ( (LA8_0==RULE_ID) ) {
-                    alt8=1;
+                if ( (LA9_0==RULE_ID) ) {
+                    alt9=1;
                 }
 
 
-                switch (alt8) {
+                switch (alt9) {
             	case 1 :
             	    // InternalTowerDefense.g:1224:4: (otherlv_8= RULE_ID )
             	    {
@@ -2522,7 +2540,7 @@ public class InternalTowerDefenseParser extends AbstractInternalAntlrParser {
             	    						current = createModelElement(grammarAccess.getCarteRule());
             	    					}
             	    				
-            	    otherlv_8=(Token)match(input,RULE_ID,FOLLOW_41); 
+            	    otherlv_8=(Token)match(input,RULE_ID,FOLLOW_38); 
 
             	    					newLeafNode(otherlv_8, grammarAccess.getCarteAccess().getCasesCaseCrossReference_8_0());
             	    				
@@ -2534,7 +2552,7 @@ public class InternalTowerDefenseParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop8;
+            	    break loop9;
                 }
             } while (true);
 
@@ -2837,17 +2855,17 @@ public class InternalTowerDefenseParser extends AbstractInternalAntlrParser {
             			newLeafNode(otherlv_2, grammarAccess.getVagueAccess().getMobilesKeyword_2());
             		
             // InternalTowerDefense.g:1371:3: ( (otherlv_3= RULE_ID ) )*
-            loop9:
+            loop10:
             do {
-                int alt9=2;
-                int LA9_0 = input.LA(1);
+                int alt10=2;
+                int LA10_0 = input.LA(1);
 
-                if ( (LA9_0==RULE_ID) ) {
-                    alt9=1;
+                if ( (LA10_0==RULE_ID) ) {
+                    alt10=1;
                 }
 
 
-                switch (alt9) {
+                switch (alt10) {
             	case 1 :
             	    // InternalTowerDefense.g:1372:4: (otherlv_3= RULE_ID )
             	    {
@@ -2871,7 +2889,7 @@ public class InternalTowerDefenseParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop9;
+            	    break loop10;
                 }
             } while (true);
 
@@ -2880,17 +2898,17 @@ public class InternalTowerDefenseParser extends AbstractInternalAntlrParser {
             			newLeafNode(otherlv_4, grammarAccess.getVagueAccess().getObstaclesKeyword_4());
             		
             // InternalTowerDefense.g:1388:3: ( (otherlv_5= RULE_ID ) )*
-            loop10:
+            loop11:
             do {
-                int alt10=2;
-                int LA10_0 = input.LA(1);
+                int alt11=2;
+                int LA11_0 = input.LA(1);
 
-                if ( (LA10_0==RULE_ID) ) {
-                    alt10=1;
+                if ( (LA11_0==RULE_ID) ) {
+                    alt11=1;
                 }
 
 
-                switch (alt10) {
+                switch (alt11) {
             	case 1 :
             	    // InternalTowerDefense.g:1389:4: (otherlv_5= RULE_ID )
             	    {
@@ -2914,7 +2932,7 @@ public class InternalTowerDefenseParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop10;
+            	    break loop11;
                 }
             } while (true);
 
@@ -2991,31 +3009,31 @@ public class InternalTowerDefenseParser extends AbstractInternalAntlrParser {
             // InternalTowerDefense.g:1438:2: ( (enumLiteral_0= 'procheFirst' ) | (enumLiteral_1= 'faibleFirst' ) | (enumLiteral_2= 'fortFirst' ) )
             {
             // InternalTowerDefense.g:1438:2: ( (enumLiteral_0= 'procheFirst' ) | (enumLiteral_1= 'faibleFirst' ) | (enumLiteral_2= 'fortFirst' ) )
-            int alt11=3;
+            int alt12=3;
             switch ( input.LA(1) ) {
             case 49:
                 {
-                alt11=1;
+                alt12=1;
                 }
                 break;
             case 50:
                 {
-                alt11=2;
+                alt12=2;
                 }
                 break;
             case 51:
                 {
-                alt11=3;
+                alt12=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 11, 0, input);
+                    new NoViableAltException("", 12, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt11) {
+            switch (alt12) {
                 case 1 :
                     // InternalTowerDefense.g:1439:3: (enumLiteral_0= 'procheFirst' )
                     {
@@ -3108,41 +3126,41 @@ public class InternalTowerDefenseParser extends AbstractInternalAntlrParser {
             // InternalTowerDefense.g:1473:2: ( (enumLiteral_0= 'entree' ) | (enumLiteral_1= 'sortie' ) | (enumLiteral_2= 'chemin' ) | (enumLiteral_3= 'camp' ) | (enumLiteral_4= 'deco' ) )
             {
             // InternalTowerDefense.g:1473:2: ( (enumLiteral_0= 'entree' ) | (enumLiteral_1= 'sortie' ) | (enumLiteral_2= 'chemin' ) | (enumLiteral_3= 'camp' ) | (enumLiteral_4= 'deco' ) )
-            int alt12=5;
+            int alt13=5;
             switch ( input.LA(1) ) {
             case 52:
                 {
-                alt12=1;
+                alt13=1;
                 }
                 break;
             case 53:
                 {
-                alt12=2;
+                alt13=2;
                 }
                 break;
             case 54:
                 {
-                alt12=3;
+                alt13=3;
                 }
                 break;
             case 55:
                 {
-                alt12=4;
+                alt13=4;
                 }
                 break;
             case 56:
                 {
-                alt12=5;
+                alt13=5;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 12, 0, input);
+                    new NoViableAltException("", 13, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt12) {
+            switch (alt13) {
                 case 1 :
                     // InternalTowerDefense.g:1474:3: (enumLiteral_0= 'entree' )
                     {
@@ -3267,31 +3285,31 @@ public class InternalTowerDefenseParser extends AbstractInternalAntlrParser {
             // InternalTowerDefense.g:1524:2: ( (enumLiteral_0= 'facile' ) | (enumLiteral_1= 'moyen' ) | (enumLiteral_2= 'difficile' ) )
             {
             // InternalTowerDefense.g:1524:2: ( (enumLiteral_0= 'facile' ) | (enumLiteral_1= 'moyen' ) | (enumLiteral_2= 'difficile' ) )
-            int alt13=3;
+            int alt14=3;
             switch ( input.LA(1) ) {
             case 57:
                 {
-                alt13=1;
+                alt14=1;
                 }
                 break;
             case 58:
                 {
-                alt13=2;
+                alt14=2;
                 }
                 break;
             case 59:
                 {
-                alt13=3;
+                alt14=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 13, 0, input);
+                    new NoViableAltException("", 14, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt13) {
+            switch (alt14) {
                 case 1 :
                     // InternalTowerDefense.g:1525:3: (enumLiteral_0= 'facile' )
                     {
@@ -3406,10 +3424,10 @@ public class InternalTowerDefenseParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x0000010000000000L});
     public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x0000020000000000L});
     public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x0000040000000000L});
-    public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0000100000000000L});
-    public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0000200000000000L});
-    public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0000000000002010L});
+    public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0000000000002010L});
+    public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0000100000000000L});
+    public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0000200000000000L});
     public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0000400000000000L});
     public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0000800000000010L});
     public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x0001000000000010L});

@@ -8150,7 +8150,7 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
             // InternalTowerDefense.g:2684:1: ( rule__Niveau__Group__12__Impl rule__Niveau__Group__13 )
             // InternalTowerDefense.g:2685:2: rule__Niveau__Group__12__Impl rule__Niveau__Group__13
             {
-            pushFollow(FOLLOW_3);
+            pushFollow(FOLLOW_40);
             rule__Niveau__Group__12__Impl();
 
             state._fsp--;
@@ -8225,7 +8225,7 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
             // InternalTowerDefense.g:2711:1: ( rule__Niveau__Group__13__Impl rule__Niveau__Group__14 )
             // InternalTowerDefense.g:2712:2: rule__Niveau__Group__13__Impl rule__Niveau__Group__14
             {
-            pushFollow(FOLLOW_17);
+            pushFollow(FOLLOW_40);
             rule__Niveau__Group__13__Impl();
 
             state._fsp--;
@@ -8254,29 +8254,47 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Niveau__Group__13__Impl"
-    // InternalTowerDefense.g:2719:1: rule__Niveau__Group__13__Impl : ( ( rule__Niveau__VaguesAssignment_13 ) ) ;
+    // InternalTowerDefense.g:2719:1: rule__Niveau__Group__13__Impl : ( ( rule__Niveau__VaguesAssignment_13 )* ) ;
     public final void rule__Niveau__Group__13__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTowerDefense.g:2723:1: ( ( ( rule__Niveau__VaguesAssignment_13 ) ) )
-            // InternalTowerDefense.g:2724:1: ( ( rule__Niveau__VaguesAssignment_13 ) )
+            // InternalTowerDefense.g:2723:1: ( ( ( rule__Niveau__VaguesAssignment_13 )* ) )
+            // InternalTowerDefense.g:2724:1: ( ( rule__Niveau__VaguesAssignment_13 )* )
             {
-            // InternalTowerDefense.g:2724:1: ( ( rule__Niveau__VaguesAssignment_13 ) )
-            // InternalTowerDefense.g:2725:2: ( rule__Niveau__VaguesAssignment_13 )
+            // InternalTowerDefense.g:2724:1: ( ( rule__Niveau__VaguesAssignment_13 )* )
+            // InternalTowerDefense.g:2725:2: ( rule__Niveau__VaguesAssignment_13 )*
             {
              before(grammarAccess.getNiveauAccess().getVaguesAssignment_13()); 
-            // InternalTowerDefense.g:2726:2: ( rule__Niveau__VaguesAssignment_13 )
-            // InternalTowerDefense.g:2726:3: rule__Niveau__VaguesAssignment_13
-            {
-            pushFollow(FOLLOW_2);
-            rule__Niveau__VaguesAssignment_13();
+            // InternalTowerDefense.g:2726:2: ( rule__Niveau__VaguesAssignment_13 )*
+            loop11:
+            do {
+                int alt11=2;
+                int LA11_0 = input.LA(1);
 
-            state._fsp--;
+                if ( (LA11_0==RULE_ID) ) {
+                    alt11=1;
+                }
 
 
-            }
+                switch (alt11) {
+            	case 1 :
+            	    // InternalTowerDefense.g:2726:3: rule__Niveau__VaguesAssignment_13
+            	    {
+            	    pushFollow(FOLLOW_8);
+            	    rule__Niveau__VaguesAssignment_13();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop11;
+                }
+            } while (true);
 
              after(grammarAccess.getNiveauAccess().getVaguesAssignment_13()); 
 
@@ -8540,7 +8558,7 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
             // InternalTowerDefense.g:2819:1: ( rule__Carte__Group__2__Impl rule__Carte__Group__3 )
             // InternalTowerDefense.g:2820:2: rule__Carte__Group__2__Impl rule__Carte__Group__3
             {
-            pushFollow(FOLLOW_40);
+            pushFollow(FOLLOW_41);
             rule__Carte__Group__2__Impl();
 
             state._fsp--;
@@ -8690,7 +8708,7 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
             // InternalTowerDefense.g:2873:1: ( rule__Carte__Group__4__Impl rule__Carte__Group__5 )
             // InternalTowerDefense.g:2874:2: rule__Carte__Group__4__Impl rule__Carte__Group__5
             {
-            pushFollow(FOLLOW_41);
+            pushFollow(FOLLOW_42);
             rule__Carte__Group__4__Impl();
 
             state._fsp--;
@@ -8850,7 +8868,7 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
             // InternalTowerDefense.g:2927:1: ( rule__Carte__Group__6__Impl rule__Carte__Group__7 )
             // InternalTowerDefense.g:2928:2: rule__Carte__Group__6__Impl rule__Carte__Group__7
             {
-            pushFollow(FOLLOW_42);
+            pushFollow(FOLLOW_43);
             rule__Carte__Group__6__Impl();
 
             state._fsp--;
@@ -8935,7 +8953,7 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
             // InternalTowerDefense.g:2954:1: ( rule__Carte__Group__7__Impl rule__Carte__Group__8 )
             // InternalTowerDefense.g:2955:2: rule__Carte__Group__7__Impl rule__Carte__Group__8
             {
-            pushFollow(FOLLOW_43);
+            pushFollow(FOLLOW_40);
             rule__Carte__Group__7__Impl();
 
             state._fsp--;
@@ -9010,7 +9028,7 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
             // InternalTowerDefense.g:2981:1: ( rule__Carte__Group__8__Impl rule__Carte__Group__9 )
             // InternalTowerDefense.g:2982:2: rule__Carte__Group__8__Impl rule__Carte__Group__9
             {
-            pushFollow(FOLLOW_43);
+            pushFollow(FOLLOW_40);
             rule__Carte__Group__8__Impl();
 
             state._fsp--;
@@ -9053,17 +9071,17 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
             {
              before(grammarAccess.getCarteAccess().getCasesAssignment_8()); 
             // InternalTowerDefense.g:2996:2: ( rule__Carte__CasesAssignment_8 )*
-            loop11:
+            loop12:
             do {
-                int alt11=2;
-                int LA11_0 = input.LA(1);
+                int alt12=2;
+                int LA12_0 = input.LA(1);
 
-                if ( (LA11_0==RULE_ID) ) {
-                    alt11=1;
+                if ( (LA12_0==RULE_ID) ) {
+                    alt12=1;
                 }
 
 
-                switch (alt11) {
+                switch (alt12) {
             	case 1 :
             	    // InternalTowerDefense.g:2996:3: rule__Carte__CasesAssignment_8
             	    {
@@ -9077,7 +9095,7 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
             	    break;
 
             	default :
-            	    break loop11;
+            	    break loop12;
                 }
             } while (true);
 
@@ -9796,17 +9814,17 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
             {
              before(grammarAccess.getVagueAccess().getMobilesAssignment_3()); 
             // InternalTowerDefense.g:3239:2: ( rule__Vague__MobilesAssignment_3 )*
-            loop12:
+            loop13:
             do {
-                int alt12=2;
-                int LA12_0 = input.LA(1);
+                int alt13=2;
+                int LA13_0 = input.LA(1);
 
-                if ( (LA12_0==RULE_ID) ) {
-                    alt12=1;
+                if ( (LA13_0==RULE_ID) ) {
+                    alt13=1;
                 }
 
 
-                switch (alt12) {
+                switch (alt13) {
             	case 1 :
             	    // InternalTowerDefense.g:3239:3: rule__Vague__MobilesAssignment_3
             	    {
@@ -9820,7 +9838,7 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
             	    break;
 
             	default :
-            	    break loop12;
+            	    break loop13;
                 }
             } while (true);
 
@@ -9974,17 +9992,17 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
             {
              before(grammarAccess.getVagueAccess().getObstaclesAssignment_5()); 
             // InternalTowerDefense.g:3293:2: ( rule__Vague__ObstaclesAssignment_5 )*
-            loop13:
+            loop14:
             do {
-                int alt13=2;
-                int LA13_0 = input.LA(1);
+                int alt14=2;
+                int LA14_0 = input.LA(1);
 
-                if ( (LA13_0==RULE_ID) ) {
-                    alt13=1;
+                if ( (LA14_0==RULE_ID) ) {
+                    alt14=1;
                 }
 
 
-                switch (alt13) {
+                switch (alt14) {
             	case 1 :
             	    // InternalTowerDefense.g:3293:3: rule__Vague__ObstaclesAssignment_5
             	    {
@@ -9998,7 +10016,7 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
             	    break;
 
             	default :
-            	    break loop13;
+            	    break loop14;
                 }
             } while (true);
 
@@ -12328,10 +12346,10 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
     public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x0004000000000000L});
     public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0008000000000000L});
     public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0010000000000000L});
-    public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0020000000000000L});
-    public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0040000000000000L});
-    public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0080000000000000L});
-    public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0000000001000010L});
+    public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0000000001000010L});
+    public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0020000000000000L});
+    public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0040000000000000L});
+    public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0080000000000000L});
     public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x0100000000000000L});
     public static final BitSet FOLLOW_45 = new BitSet(new long[]{0x0200000000000010L});
     public static final BitSet FOLLOW_46 = new BitSet(new long[]{0x0400000000000010L});

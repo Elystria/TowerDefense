@@ -623,12 +623,12 @@ public class TowerDefenseGrammarAccess extends AbstractGrammarElementFinder {
 		//	'Argent' argent=INT
 		//	'MobSortisMax' mobSortisLimite=INT
 		//	'Carte' carte=[Carte]
-		//	'Vague' vagues+=Vague
+		//	'Vague' vagues+=Vague*
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'Niveau' name=ID difficulte=Difficulte '{' 'DureePauses' dureePause=INT 'Argent' argent=INT 'MobSortisMax'
-		//mobSortisLimite=INT 'Carte' carte=[Carte] 'Vague' vagues+=Vague '}'
+		//mobSortisLimite=INT 'Carte' carte=[Carte] 'Vague' vagues+=Vague* '}'
 		public Group getGroup() { return cGroup; }
 		
 		//'Niveau'
@@ -691,7 +691,7 @@ public class TowerDefenseGrammarAccess extends AbstractGrammarElementFinder {
 		//'Vague'
 		public Keyword getVagueKeyword_12() { return cVagueKeyword_12; }
 		
-		//vagues+=Vague
+		//vagues+=Vague*
 		public Assignment getVaguesAssignment_13() { return cVaguesAssignment_13; }
 		
 		//Vague
@@ -1232,7 +1232,7 @@ public class TowerDefenseGrammarAccess extends AbstractGrammarElementFinder {
 	//	'Argent' argent=INT
 	//	'MobSortisMax' mobSortisLimite=INT
 	//	'Carte' carte=[Carte]
-	//	'Vague' vagues+=Vague
+	//	'Vague' vagues+=Vague*
 	//	'}';
 	public NiveauElements getNiveauAccess() {
 		return pNiveau;

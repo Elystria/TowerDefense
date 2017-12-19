@@ -27,1453 +27,1453 @@ import org.eclipse.emf.ecore.EReference;
 public interface TowerDefensePackage extends EPackage
 {
   /**
-   * The package name.
-   * <!-- begin-user-doc -->
+	 * The package name.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   String eNAME = "towerDefense";
 
   /**
-   * The package namespace URI.
-   * <!-- begin-user-doc -->
+	 * The package namespace URI.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   String eNS_URI = "http://www.TowerDefense.xtext";
 
   /**
-   * The package namespace name.
-   * <!-- begin-user-doc -->
+	 * The package namespace name.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   String eNS_PREFIX = "towerDefense";
 
   /**
-   * The singleton instance of the package.
-   * <!-- begin-user-doc -->
+	 * The singleton instance of the package.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   TowerDefensePackage eINSTANCE = xtext.towerDefense.impl.TowerDefensePackageImpl.init();
 
   /**
-   * The meta object id for the '{@link xtext.towerDefense.impl.JeuImpl <em>Jeu</em>}' class.
-   * <!-- begin-user-doc -->
+	 * The meta object id for the '{@link xtext.towerDefense.impl.JeuImpl <em>Jeu</em>}' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see xtext.towerDefense.impl.JeuImpl
-   * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getJeu()
-   * @generated
-   */
+	 * @see xtext.towerDefense.impl.JeuImpl
+	 * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getJeu()
+	 * @generated
+	 */
   int JEU = 0;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int JEU__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Parties</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Parties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int JEU__PARTIES = 1;
 
   /**
-   * The number of structural features of the '<em>Jeu</em>' class.
-   * <!-- begin-user-doc -->
+	 * The number of structural features of the '<em>Jeu</em>' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int JEU_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link xtext.towerDefense.impl.PartieImpl <em>Partie</em>}' class.
-   * <!-- begin-user-doc -->
+	 * The meta object id for the '{@link xtext.towerDefense.impl.PartieImpl <em>Partie</em>}' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see xtext.towerDefense.impl.PartieImpl
-   * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getPartie()
-   * @generated
-   */
+	 * @see xtext.towerDefense.impl.PartieImpl
+	 * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getPartie()
+	 * @generated
+	 */
   int PARTIE = 1;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int PARTIE__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Cases</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Cases</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int PARTIE__CASES = 1;
 
   /**
-   * The feature id for the '<em><b>Cartes</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Cartes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int PARTIE__CARTES = 2;
 
   /**
-   * The feature id for the '<em><b>Partie Elements</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Partie Elements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int PARTIE__PARTIE_ELEMENTS = 3;
 
   /**
-   * The feature id for the '<em><b>Niveaux</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Niveaux</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int PARTIE__NIVEAUX = 4;
 
   /**
-   * The number of structural features of the '<em>Partie</em>' class.
-   * <!-- begin-user-doc -->
+	 * The number of structural features of the '<em>Partie</em>' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int PARTIE_FEATURE_COUNT = 5;
 
   /**
-   * The meta object id for the '{@link xtext.towerDefense.impl.PartieElementImpl <em>Partie Element</em>}' class.
-   * <!-- begin-user-doc -->
+	 * The meta object id for the '{@link xtext.towerDefense.impl.PartieElementImpl <em>Partie Element</em>}' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see xtext.towerDefense.impl.PartieElementImpl
-   * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getPartieElement()
-   * @generated
-   */
+	 * @see xtext.towerDefense.impl.PartieElementImpl
+	 * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getPartieElement()
+	 * @generated
+	 */
   int PARTIE_ELEMENT = 2;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int PARTIE_ELEMENT__NAME = 0;
 
   /**
-   * The number of structural features of the '<em>Partie Element</em>' class.
-   * <!-- begin-user-doc -->
+	 * The number of structural features of the '<em>Partie Element</em>' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int PARTIE_ELEMENT_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link xtext.towerDefense.impl.EnergieImpl <em>Energie</em>}' class.
-   * <!-- begin-user-doc -->
+	 * The meta object id for the '{@link xtext.towerDefense.impl.EnergieImpl <em>Energie</em>}' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see xtext.towerDefense.impl.EnergieImpl
-   * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getEnergie()
-   * @generated
-   */
+	 * @see xtext.towerDefense.impl.EnergieImpl
+	 * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getEnergie()
+	 * @generated
+	 */
   int ENERGIE = 3;
 
   /**
-   * The feature id for the '<em><b>Infini</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Infini</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int ENERGIE__INFINI = 0;
 
   /**
-   * The feature id for the '<em><b>Valeur</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Valeur</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int ENERGIE__VALEUR = 1;
 
   /**
-   * The number of structural features of the '<em>Energie</em>' class.
-   * <!-- begin-user-doc -->
+	 * The number of structural features of the '<em>Energie</em>' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int ENERGIE_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link xtext.towerDefense.impl.ObstacleImpl <em>Obstacle</em>}' class.
-   * <!-- begin-user-doc -->
+	 * The meta object id for the '{@link xtext.towerDefense.impl.ObstacleImpl <em>Obstacle</em>}' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see xtext.towerDefense.impl.ObstacleImpl
-   * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getObstacle()
-   * @generated
-   */
+	 * @see xtext.towerDefense.impl.ObstacleImpl
+	 * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getObstacle()
+	 * @generated
+	 */
   int OBSTACLE = 4;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int OBSTACLE__NAME = PARTIE_ELEMENT__NAME;
 
   /**
-   * The feature id for the '<em><b>Campement</b></em>' reference.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Campement</b></em>' reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int OBSTACLE__CAMPEMENT = PARTIE_ELEMENT_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Quantite Energie Max</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Quantite Energie Max</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int OBSTACLE__QUANTITE_ENERGIE_MAX = PARTIE_ELEMENT_FEATURE_COUNT + 1;
 
   /**
-   * The feature id for the '<em><b>Tactique</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Tactique</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int OBSTACLE__TACTIQUE = PARTIE_ELEMENT_FEATURE_COUNT + 2;
 
   /**
-   * The number of structural features of the '<em>Obstacle</em>' class.
-   * <!-- begin-user-doc -->
+	 * The number of structural features of the '<em>Obstacle</em>' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int OBSTACLE_FEATURE_COUNT = PARTIE_ELEMENT_FEATURE_COUNT + 3;
 
   /**
-   * The meta object id for the '{@link xtext.towerDefense.impl.MobileImpl <em>Mobile</em>}' class.
-   * <!-- begin-user-doc -->
+	 * The meta object id for the '{@link xtext.towerDefense.impl.MobileImpl <em>Mobile</em>}' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see xtext.towerDefense.impl.MobileImpl
-   * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getMobile()
-   * @generated
-   */
+	 * @see xtext.towerDefense.impl.MobileImpl
+	 * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getMobile()
+	 * @generated
+	 */
   int MOBILE = 5;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int MOBILE__NAME = PARTIE_ELEMENT__NAME;
 
   /**
-   * The feature id for the '<em><b>Force</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Force</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int MOBILE__FORCE = PARTIE_ELEMENT_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Volume</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Volume</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int MOBILE__VOLUME = PARTIE_ELEMENT_FEATURE_COUNT + 1;
 
   /**
-   * The feature id for the '<em><b>Num Vague</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Num Vague</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int MOBILE__NUM_VAGUE = PARTIE_ELEMENT_FEATURE_COUNT + 2;
 
   /**
-   * The feature id for the '<em><b>Case Entree</b></em>' reference.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Case Entree</b></em>' reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int MOBILE__CASE_ENTREE = PARTIE_ELEMENT_FEATURE_COUNT + 3;
 
   /**
-   * The feature id for the '<em><b>Case Sortie</b></em>' reference.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Case Sortie</b></em>' reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int MOBILE__CASE_SORTIE = PARTIE_ELEMENT_FEATURE_COUNT + 4;
 
   /**
-   * The feature id for the '<em><b>Quantite Energie Max</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Quantite Energie Max</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int MOBILE__QUANTITE_ENERGIE_MAX = PARTIE_ELEMENT_FEATURE_COUNT + 5;
 
   /**
-   * The feature id for the '<em><b>Tactique</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Tactique</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int MOBILE__TACTIQUE = PARTIE_ELEMENT_FEATURE_COUNT + 6;
 
   /**
-   * The number of structural features of the '<em>Mobile</em>' class.
-   * <!-- begin-user-doc -->
+	 * The number of structural features of the '<em>Mobile</em>' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int MOBILE_FEATURE_COUNT = PARTIE_ELEMENT_FEATURE_COUNT + 7;
 
   /**
-   * The meta object id for the '{@link xtext.towerDefense.impl.ProjectileImpl <em>Projectile</em>}' class.
-   * <!-- begin-user-doc -->
+	 * The meta object id for the '{@link xtext.towerDefense.impl.ProjectileImpl <em>Projectile</em>}' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see xtext.towerDefense.impl.ProjectileImpl
-   * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getProjectile()
-   * @generated
-   */
+	 * @see xtext.towerDefense.impl.ProjectileImpl
+	 * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getProjectile()
+	 * @generated
+	 */
   int PROJECTILE = 6;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int PROJECTILE__NAME = PARTIE_ELEMENT__NAME;
 
   /**
-   * The feature id for the '<em><b>Portee</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Portee</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int PROJECTILE__PORTEE = PARTIE_ELEMENT_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Masse</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Masse</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int PROJECTILE__MASSE = PARTIE_ELEMENT_FEATURE_COUNT + 1;
 
   /**
-   * The feature id for the '<em><b>Vitesse</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Vitesse</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int PROJECTILE__VITESSE = PARTIE_ELEMENT_FEATURE_COUNT + 2;
 
   /**
-   * The feature id for the '<em><b>Case</b></em>' reference.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Case</b></em>' reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int PROJECTILE__CASE = PARTIE_ELEMENT_FEATURE_COUNT + 3;
 
   /**
-   * The feature id for the '<em><b>Cible</b></em>' reference.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Cible</b></em>' reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int PROJECTILE__CIBLE = PARTIE_ELEMENT_FEATURE_COUNT + 4;
 
   /**
-   * The feature id for the '<em><b>Degat</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Degat</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int PROJECTILE__DEGAT = PARTIE_ELEMENT_FEATURE_COUNT + 5;
 
   /**
-   * The number of structural features of the '<em>Projectile</em>' class.
-   * <!-- begin-user-doc -->
+	 * The number of structural features of the '<em>Projectile</em>' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int PROJECTILE_FEATURE_COUNT = PARTIE_ELEMENT_FEATURE_COUNT + 6;
 
   /**
-   * The meta object id for the '{@link xtext.towerDefense.impl.NatureTerrainImpl <em>Nature Terrain</em>}' class.
-   * <!-- begin-user-doc -->
+	 * The meta object id for the '{@link xtext.towerDefense.impl.NatureTerrainImpl <em>Nature Terrain</em>}' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see xtext.towerDefense.impl.NatureTerrainImpl
-   * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getNatureTerrain()
-   * @generated
-   */
+	 * @see xtext.towerDefense.impl.NatureTerrainImpl
+	 * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getNatureTerrain()
+	 * @generated
+	 */
   int NATURE_TERRAIN = 7;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int NATURE_TERRAIN__NAME = PARTIE_ELEMENT__NAME;
 
   /**
-   * The feature id for the '<em><b>Volume</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Volume</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int NATURE_TERRAIN__VOLUME = PARTIE_ELEMENT_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Type</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int NATURE_TERRAIN__TYPE = PARTIE_ELEMENT_FEATURE_COUNT + 1;
 
   /**
-   * The feature id for the '<em><b>Fatigue</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Fatigue</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int NATURE_TERRAIN__FATIGUE = PARTIE_ELEMENT_FEATURE_COUNT + 2;
 
   /**
-   * The number of structural features of the '<em>Nature Terrain</em>' class.
-   * <!-- begin-user-doc -->
+	 * The number of structural features of the '<em>Nature Terrain</em>' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int NATURE_TERRAIN_FEATURE_COUNT = PARTIE_ELEMENT_FEATURE_COUNT + 3;
 
   /**
-   * The meta object id for the '{@link xtext.towerDefense.impl.NiveauImpl <em>Niveau</em>}' class.
-   * <!-- begin-user-doc -->
+	 * The meta object id for the '{@link xtext.towerDefense.impl.NiveauImpl <em>Niveau</em>}' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see xtext.towerDefense.impl.NiveauImpl
-   * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getNiveau()
-   * @generated
-   */
+	 * @see xtext.towerDefense.impl.NiveauImpl
+	 * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getNiveau()
+	 * @generated
+	 */
   int NIVEAU = 8;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int NIVEAU__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Difficulte</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Difficulte</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int NIVEAU__DIFFICULTE = 1;
 
   /**
-   * The feature id for the '<em><b>Duree Pause</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Duree Pause</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int NIVEAU__DUREE_PAUSE = 2;
 
   /**
-   * The feature id for the '<em><b>Argent</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Argent</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int NIVEAU__ARGENT = 3;
 
   /**
-   * The feature id for the '<em><b>Mob Sortis Limite</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Mob Sortis Limite</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int NIVEAU__MOB_SORTIS_LIMITE = 4;
 
   /**
-   * The feature id for the '<em><b>Carte</b></em>' reference.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Carte</b></em>' reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int NIVEAU__CARTE = 5;
 
   /**
-   * The feature id for the '<em><b>Vagues</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Vagues</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int NIVEAU__VAGUES = 6;
 
   /**
-   * The number of structural features of the '<em>Niveau</em>' class.
-   * <!-- begin-user-doc -->
+	 * The number of structural features of the '<em>Niveau</em>' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int NIVEAU_FEATURE_COUNT = 7;
 
   /**
-   * The meta object id for the '{@link xtext.towerDefense.impl.CarteImpl <em>Carte</em>}' class.
-   * <!-- begin-user-doc -->
+	 * The meta object id for the '{@link xtext.towerDefense.impl.CarteImpl <em>Carte</em>}' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see xtext.towerDefense.impl.CarteImpl
-   * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getCarte()
-   * @generated
-   */
+	 * @see xtext.towerDefense.impl.CarteImpl
+	 * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getCarte()
+	 * @generated
+	 */
   int CARTE = 9;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int CARTE__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Nb Lignes</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Nb Lignes</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int CARTE__NB_LIGNES = 1;
 
   /**
-   * The feature id for the '<em><b>Nb Colonnes</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Nb Colonnes</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int CARTE__NB_COLONNES = 2;
 
   /**
-   * The feature id for the '<em><b>Cases</b></em>' reference list.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Cases</b></em>' reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int CARTE__CASES = 3;
 
   /**
-   * The number of structural features of the '<em>Carte</em>' class.
-   * <!-- begin-user-doc -->
+	 * The number of structural features of the '<em>Carte</em>' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int CARTE_FEATURE_COUNT = 4;
 
   /**
-   * The meta object id for the '{@link xtext.towerDefense.impl.CaseImpl <em>Case</em>}' class.
-   * <!-- begin-user-doc -->
+	 * The meta object id for the '{@link xtext.towerDefense.impl.CaseImpl <em>Case</em>}' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see xtext.towerDefense.impl.CaseImpl
-   * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getCase()
-   * @generated
-   */
+	 * @see xtext.towerDefense.impl.CaseImpl
+	 * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getCase()
+	 * @generated
+	 */
   int CASE = 10;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int CASE__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>I</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>I</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int CASE__I = 1;
 
   /**
-   * The feature id for the '<em><b>J</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>J</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int CASE__J = 2;
 
   /**
-   * The feature id for the '<em><b>Nature Du Terrain</b></em>' reference.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Nature Du Terrain</b></em>' reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int CASE__NATURE_DU_TERRAIN = 3;
 
   /**
-   * The number of structural features of the '<em>Case</em>' class.
-   * <!-- begin-user-doc -->
+	 * The number of structural features of the '<em>Case</em>' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int CASE_FEATURE_COUNT = 4;
 
   /**
-   * The meta object id for the '{@link xtext.towerDefense.impl.VagueImpl <em>Vague</em>}' class.
-   * <!-- begin-user-doc -->
+	 * The meta object id for the '{@link xtext.towerDefense.impl.VagueImpl <em>Vague</em>}' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see xtext.towerDefense.impl.VagueImpl
-   * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getVague()
-   * @generated
-   */
+	 * @see xtext.towerDefense.impl.VagueImpl
+	 * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getVague()
+	 * @generated
+	 */
   int VAGUE = 11;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int VAGUE__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Mobiles</b></em>' reference list.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Mobiles</b></em>' reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int VAGUE__MOBILES = 1;
 
   /**
-   * The feature id for the '<em><b>Obstacles</b></em>' reference list.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Obstacles</b></em>' reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int VAGUE__OBSTACLES = 2;
 
   /**
-   * The feature id for the '<em><b>Gain Victoire</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Gain Victoire</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int VAGUE__GAIN_VICTOIRE = 3;
 
   /**
-   * The number of structural features of the '<em>Vague</em>' class.
-   * <!-- begin-user-doc -->
+	 * The number of structural features of the '<em>Vague</em>' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int VAGUE_FEATURE_COUNT = 4;
 
   /**
-   * The meta object id for the '{@link xtext.towerDefense.TactiqueType <em>Tactique Type</em>}' enum.
-   * <!-- begin-user-doc -->
+	 * The meta object id for the '{@link xtext.towerDefense.TactiqueType <em>Tactique Type</em>}' enum.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see xtext.towerDefense.TactiqueType
-   * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getTactiqueType()
-   * @generated
-   */
+	 * @see xtext.towerDefense.TactiqueType
+	 * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getTactiqueType()
+	 * @generated
+	 */
   int TACTIQUE_TYPE = 12;
 
   /**
-   * The meta object id for the '{@link xtext.towerDefense.TYPE_TERRAIN <em>TYPE TERRAIN</em>}' enum.
-   * <!-- begin-user-doc -->
+	 * The meta object id for the '{@link xtext.towerDefense.TYPE_TERRAIN <em>TYPE TERRAIN</em>}' enum.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see xtext.towerDefense.TYPE_TERRAIN
-   * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getTYPE_TERRAIN()
-   * @generated
-   */
+	 * @see xtext.towerDefense.TYPE_TERRAIN
+	 * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getTYPE_TERRAIN()
+	 * @generated
+	 */
   int TYPE_TERRAIN = 13;
 
   /**
-   * The meta object id for the '{@link xtext.towerDefense.Difficulte <em>Difficulte</em>}' enum.
-   * <!-- begin-user-doc -->
+	 * The meta object id for the '{@link xtext.towerDefense.Difficulte <em>Difficulte</em>}' enum.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see xtext.towerDefense.Difficulte
-   * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getDifficulte()
-   * @generated
-   */
+	 * @see xtext.towerDefense.Difficulte
+	 * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getDifficulte()
+	 * @generated
+	 */
   int DIFFICULTE = 14;
 
 
   /**
-   * Returns the meta object for class '{@link xtext.towerDefense.Jeu <em>Jeu</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for class '{@link xtext.towerDefense.Jeu <em>Jeu</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Jeu</em>'.
-   * @see xtext.towerDefense.Jeu
-   * @generated
-   */
+	 * @return the meta object for class '<em>Jeu</em>'.
+	 * @see xtext.towerDefense.Jeu
+	 * @generated
+	 */
   EClass getJeu();
 
   /**
-   * Returns the meta object for the attribute '{@link xtext.towerDefense.Jeu#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the attribute '{@link xtext.towerDefense.Jeu#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see xtext.towerDefense.Jeu#getName()
-   * @see #getJeu()
-   * @generated
-   */
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see xtext.towerDefense.Jeu#getName()
+	 * @see #getJeu()
+	 * @generated
+	 */
   EAttribute getJeu_Name();
 
   /**
-   * Returns the meta object for the containment reference list '{@link xtext.towerDefense.Jeu#getParties <em>Parties</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the containment reference list '{@link xtext.towerDefense.Jeu#getParties <em>Parties</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Parties</em>'.
-   * @see xtext.towerDefense.Jeu#getParties()
-   * @see #getJeu()
-   * @generated
-   */
+	 * @return the meta object for the containment reference list '<em>Parties</em>'.
+	 * @see xtext.towerDefense.Jeu#getParties()
+	 * @see #getJeu()
+	 * @generated
+	 */
   EReference getJeu_Parties();
 
   /**
-   * Returns the meta object for class '{@link xtext.towerDefense.Partie <em>Partie</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for class '{@link xtext.towerDefense.Partie <em>Partie</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Partie</em>'.
-   * @see xtext.towerDefense.Partie
-   * @generated
-   */
+	 * @return the meta object for class '<em>Partie</em>'.
+	 * @see xtext.towerDefense.Partie
+	 * @generated
+	 */
   EClass getPartie();
 
   /**
-   * Returns the meta object for the attribute '{@link xtext.towerDefense.Partie#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the attribute '{@link xtext.towerDefense.Partie#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see xtext.towerDefense.Partie#getName()
-   * @see #getPartie()
-   * @generated
-   */
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see xtext.towerDefense.Partie#getName()
+	 * @see #getPartie()
+	 * @generated
+	 */
   EAttribute getPartie_Name();
 
   /**
-   * Returns the meta object for the containment reference list '{@link xtext.towerDefense.Partie#getCases <em>Cases</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the containment reference list '{@link xtext.towerDefense.Partie#getCases <em>Cases</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Cases</em>'.
-   * @see xtext.towerDefense.Partie#getCases()
-   * @see #getPartie()
-   * @generated
-   */
+	 * @return the meta object for the containment reference list '<em>Cases</em>'.
+	 * @see xtext.towerDefense.Partie#getCases()
+	 * @see #getPartie()
+	 * @generated
+	 */
   EReference getPartie_Cases();
 
   /**
-   * Returns the meta object for the containment reference list '{@link xtext.towerDefense.Partie#getCartes <em>Cartes</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the containment reference list '{@link xtext.towerDefense.Partie#getCartes <em>Cartes</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Cartes</em>'.
-   * @see xtext.towerDefense.Partie#getCartes()
-   * @see #getPartie()
-   * @generated
-   */
+	 * @return the meta object for the containment reference list '<em>Cartes</em>'.
+	 * @see xtext.towerDefense.Partie#getCartes()
+	 * @see #getPartie()
+	 * @generated
+	 */
   EReference getPartie_Cartes();
 
   /**
-   * Returns the meta object for the containment reference list '{@link xtext.towerDefense.Partie#getPartieElements <em>Partie Elements</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the containment reference list '{@link xtext.towerDefense.Partie#getPartieElements <em>Partie Elements</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Partie Elements</em>'.
-   * @see xtext.towerDefense.Partie#getPartieElements()
-   * @see #getPartie()
-   * @generated
-   */
+	 * @return the meta object for the containment reference list '<em>Partie Elements</em>'.
+	 * @see xtext.towerDefense.Partie#getPartieElements()
+	 * @see #getPartie()
+	 * @generated
+	 */
   EReference getPartie_PartieElements();
 
   /**
-   * Returns the meta object for the containment reference list '{@link xtext.towerDefense.Partie#getNiveaux <em>Niveaux</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the containment reference list '{@link xtext.towerDefense.Partie#getNiveaux <em>Niveaux</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Niveaux</em>'.
-   * @see xtext.towerDefense.Partie#getNiveaux()
-   * @see #getPartie()
-   * @generated
-   */
+	 * @return the meta object for the containment reference list '<em>Niveaux</em>'.
+	 * @see xtext.towerDefense.Partie#getNiveaux()
+	 * @see #getPartie()
+	 * @generated
+	 */
   EReference getPartie_Niveaux();
 
   /**
-   * Returns the meta object for class '{@link xtext.towerDefense.PartieElement <em>Partie Element</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for class '{@link xtext.towerDefense.PartieElement <em>Partie Element</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Partie Element</em>'.
-   * @see xtext.towerDefense.PartieElement
-   * @generated
-   */
+	 * @return the meta object for class '<em>Partie Element</em>'.
+	 * @see xtext.towerDefense.PartieElement
+	 * @generated
+	 */
   EClass getPartieElement();
 
   /**
-   * Returns the meta object for the attribute '{@link xtext.towerDefense.PartieElement#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the attribute '{@link xtext.towerDefense.PartieElement#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see xtext.towerDefense.PartieElement#getName()
-   * @see #getPartieElement()
-   * @generated
-   */
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see xtext.towerDefense.PartieElement#getName()
+	 * @see #getPartieElement()
+	 * @generated
+	 */
   EAttribute getPartieElement_Name();
 
   /**
-   * Returns the meta object for class '{@link xtext.towerDefense.Energie <em>Energie</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for class '{@link xtext.towerDefense.Energie <em>Energie</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Energie</em>'.
-   * @see xtext.towerDefense.Energie
-   * @generated
-   */
+	 * @return the meta object for class '<em>Energie</em>'.
+	 * @see xtext.towerDefense.Energie
+	 * @generated
+	 */
   EClass getEnergie();
 
   /**
-   * Returns the meta object for the attribute '{@link xtext.towerDefense.Energie#isInfini <em>Infini</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the attribute '{@link xtext.towerDefense.Energie#isInfini <em>Infini</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Infini</em>'.
-   * @see xtext.towerDefense.Energie#isInfini()
-   * @see #getEnergie()
-   * @generated
-   */
+	 * @return the meta object for the attribute '<em>Infini</em>'.
+	 * @see xtext.towerDefense.Energie#isInfini()
+	 * @see #getEnergie()
+	 * @generated
+	 */
   EAttribute getEnergie_Infini();
 
   /**
-   * Returns the meta object for the attribute '{@link xtext.towerDefense.Energie#getValeur <em>Valeur</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the attribute '{@link xtext.towerDefense.Energie#getValeur <em>Valeur</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Valeur</em>'.
-   * @see xtext.towerDefense.Energie#getValeur()
-   * @see #getEnergie()
-   * @generated
-   */
+	 * @return the meta object for the attribute '<em>Valeur</em>'.
+	 * @see xtext.towerDefense.Energie#getValeur()
+	 * @see #getEnergie()
+	 * @generated
+	 */
   EAttribute getEnergie_Valeur();
 
   /**
-   * Returns the meta object for class '{@link xtext.towerDefense.Obstacle <em>Obstacle</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for class '{@link xtext.towerDefense.Obstacle <em>Obstacle</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Obstacle</em>'.
-   * @see xtext.towerDefense.Obstacle
-   * @generated
-   */
+	 * @return the meta object for class '<em>Obstacle</em>'.
+	 * @see xtext.towerDefense.Obstacle
+	 * @generated
+	 */
   EClass getObstacle();
 
   /**
-   * Returns the meta object for the reference '{@link xtext.towerDefense.Obstacle#getCampement <em>Campement</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the reference '{@link xtext.towerDefense.Obstacle#getCampement <em>Campement</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Campement</em>'.
-   * @see xtext.towerDefense.Obstacle#getCampement()
-   * @see #getObstacle()
-   * @generated
-   */
+	 * @return the meta object for the reference '<em>Campement</em>'.
+	 * @see xtext.towerDefense.Obstacle#getCampement()
+	 * @see #getObstacle()
+	 * @generated
+	 */
   EReference getObstacle_Campement();
 
   /**
-   * Returns the meta object for the containment reference '{@link xtext.towerDefense.Obstacle#getQuantiteEnergieMax <em>Quantite Energie Max</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the containment reference '{@link xtext.towerDefense.Obstacle#getQuantiteEnergieMax <em>Quantite Energie Max</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Quantite Energie Max</em>'.
-   * @see xtext.towerDefense.Obstacle#getQuantiteEnergieMax()
-   * @see #getObstacle()
-   * @generated
-   */
+	 * @return the meta object for the containment reference '<em>Quantite Energie Max</em>'.
+	 * @see xtext.towerDefense.Obstacle#getQuantiteEnergieMax()
+	 * @see #getObstacle()
+	 * @generated
+	 */
   EReference getObstacle_QuantiteEnergieMax();
 
   /**
-   * Returns the meta object for the attribute '{@link xtext.towerDefense.Obstacle#getTactique <em>Tactique</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the attribute '{@link xtext.towerDefense.Obstacle#getTactique <em>Tactique</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Tactique</em>'.
-   * @see xtext.towerDefense.Obstacle#getTactique()
-   * @see #getObstacle()
-   * @generated
-   */
+	 * @return the meta object for the attribute '<em>Tactique</em>'.
+	 * @see xtext.towerDefense.Obstacle#getTactique()
+	 * @see #getObstacle()
+	 * @generated
+	 */
   EAttribute getObstacle_Tactique();
 
   /**
-   * Returns the meta object for class '{@link xtext.towerDefense.Mobile <em>Mobile</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for class '{@link xtext.towerDefense.Mobile <em>Mobile</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Mobile</em>'.
-   * @see xtext.towerDefense.Mobile
-   * @generated
-   */
+	 * @return the meta object for class '<em>Mobile</em>'.
+	 * @see xtext.towerDefense.Mobile
+	 * @generated
+	 */
   EClass getMobile();
 
   /**
-   * Returns the meta object for the attribute '{@link xtext.towerDefense.Mobile#getForce <em>Force</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the attribute '{@link xtext.towerDefense.Mobile#getForce <em>Force</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Force</em>'.
-   * @see xtext.towerDefense.Mobile#getForce()
-   * @see #getMobile()
-   * @generated
-   */
+	 * @return the meta object for the attribute '<em>Force</em>'.
+	 * @see xtext.towerDefense.Mobile#getForce()
+	 * @see #getMobile()
+	 * @generated
+	 */
   EAttribute getMobile_Force();
 
   /**
-   * Returns the meta object for the attribute '{@link xtext.towerDefense.Mobile#getVolume <em>Volume</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the attribute '{@link xtext.towerDefense.Mobile#getVolume <em>Volume</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Volume</em>'.
-   * @see xtext.towerDefense.Mobile#getVolume()
-   * @see #getMobile()
-   * @generated
-   */
+	 * @return the meta object for the attribute '<em>Volume</em>'.
+	 * @see xtext.towerDefense.Mobile#getVolume()
+	 * @see #getMobile()
+	 * @generated
+	 */
   EAttribute getMobile_Volume();
 
   /**
-   * Returns the meta object for the attribute '{@link xtext.towerDefense.Mobile#getNumVague <em>Num Vague</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the attribute '{@link xtext.towerDefense.Mobile#getNumVague <em>Num Vague</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Num Vague</em>'.
-   * @see xtext.towerDefense.Mobile#getNumVague()
-   * @see #getMobile()
-   * @generated
-   */
+	 * @return the meta object for the attribute '<em>Num Vague</em>'.
+	 * @see xtext.towerDefense.Mobile#getNumVague()
+	 * @see #getMobile()
+	 * @generated
+	 */
   EAttribute getMobile_NumVague();
 
   /**
-   * Returns the meta object for the reference '{@link xtext.towerDefense.Mobile#getCaseEntree <em>Case Entree</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the reference '{@link xtext.towerDefense.Mobile#getCaseEntree <em>Case Entree</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Case Entree</em>'.
-   * @see xtext.towerDefense.Mobile#getCaseEntree()
-   * @see #getMobile()
-   * @generated
-   */
+	 * @return the meta object for the reference '<em>Case Entree</em>'.
+	 * @see xtext.towerDefense.Mobile#getCaseEntree()
+	 * @see #getMobile()
+	 * @generated
+	 */
   EReference getMobile_CaseEntree();
 
   /**
-   * Returns the meta object for the reference '{@link xtext.towerDefense.Mobile#getCaseSortie <em>Case Sortie</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the reference '{@link xtext.towerDefense.Mobile#getCaseSortie <em>Case Sortie</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Case Sortie</em>'.
-   * @see xtext.towerDefense.Mobile#getCaseSortie()
-   * @see #getMobile()
-   * @generated
-   */
+	 * @return the meta object for the reference '<em>Case Sortie</em>'.
+	 * @see xtext.towerDefense.Mobile#getCaseSortie()
+	 * @see #getMobile()
+	 * @generated
+	 */
   EReference getMobile_CaseSortie();
 
   /**
-   * Returns the meta object for the containment reference '{@link xtext.towerDefense.Mobile#getQuantiteEnergieMax <em>Quantite Energie Max</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the containment reference '{@link xtext.towerDefense.Mobile#getQuantiteEnergieMax <em>Quantite Energie Max</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Quantite Energie Max</em>'.
-   * @see xtext.towerDefense.Mobile#getQuantiteEnergieMax()
-   * @see #getMobile()
-   * @generated
-   */
+	 * @return the meta object for the containment reference '<em>Quantite Energie Max</em>'.
+	 * @see xtext.towerDefense.Mobile#getQuantiteEnergieMax()
+	 * @see #getMobile()
+	 * @generated
+	 */
   EReference getMobile_QuantiteEnergieMax();
 
   /**
-   * Returns the meta object for the attribute '{@link xtext.towerDefense.Mobile#getTactique <em>Tactique</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the attribute '{@link xtext.towerDefense.Mobile#getTactique <em>Tactique</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Tactique</em>'.
-   * @see xtext.towerDefense.Mobile#getTactique()
-   * @see #getMobile()
-   * @generated
-   */
+	 * @return the meta object for the attribute '<em>Tactique</em>'.
+	 * @see xtext.towerDefense.Mobile#getTactique()
+	 * @see #getMobile()
+	 * @generated
+	 */
   EAttribute getMobile_Tactique();
 
   /**
-   * Returns the meta object for class '{@link xtext.towerDefense.Projectile <em>Projectile</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for class '{@link xtext.towerDefense.Projectile <em>Projectile</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Projectile</em>'.
-   * @see xtext.towerDefense.Projectile
-   * @generated
-   */
+	 * @return the meta object for class '<em>Projectile</em>'.
+	 * @see xtext.towerDefense.Projectile
+	 * @generated
+	 */
   EClass getProjectile();
 
   /**
-   * Returns the meta object for the attribute '{@link xtext.towerDefense.Projectile#getPortee <em>Portee</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the attribute '{@link xtext.towerDefense.Projectile#getPortee <em>Portee</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Portee</em>'.
-   * @see xtext.towerDefense.Projectile#getPortee()
-   * @see #getProjectile()
-   * @generated
-   */
+	 * @return the meta object for the attribute '<em>Portee</em>'.
+	 * @see xtext.towerDefense.Projectile#getPortee()
+	 * @see #getProjectile()
+	 * @generated
+	 */
   EAttribute getProjectile_Portee();
 
   /**
-   * Returns the meta object for the attribute '{@link xtext.towerDefense.Projectile#getMasse <em>Masse</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the attribute '{@link xtext.towerDefense.Projectile#getMasse <em>Masse</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Masse</em>'.
-   * @see xtext.towerDefense.Projectile#getMasse()
-   * @see #getProjectile()
-   * @generated
-   */
+	 * @return the meta object for the attribute '<em>Masse</em>'.
+	 * @see xtext.towerDefense.Projectile#getMasse()
+	 * @see #getProjectile()
+	 * @generated
+	 */
   EAttribute getProjectile_Masse();
 
   /**
-   * Returns the meta object for the attribute '{@link xtext.towerDefense.Projectile#getVitesse <em>Vitesse</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the attribute '{@link xtext.towerDefense.Projectile#getVitesse <em>Vitesse</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Vitesse</em>'.
-   * @see xtext.towerDefense.Projectile#getVitesse()
-   * @see #getProjectile()
-   * @generated
-   */
+	 * @return the meta object for the attribute '<em>Vitesse</em>'.
+	 * @see xtext.towerDefense.Projectile#getVitesse()
+	 * @see #getProjectile()
+	 * @generated
+	 */
   EAttribute getProjectile_Vitesse();
 
   /**
-   * Returns the meta object for the reference '{@link xtext.towerDefense.Projectile#getCase <em>Case</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the reference '{@link xtext.towerDefense.Projectile#getCase <em>Case</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Case</em>'.
-   * @see xtext.towerDefense.Projectile#getCase()
-   * @see #getProjectile()
-   * @generated
-   */
+	 * @return the meta object for the reference '<em>Case</em>'.
+	 * @see xtext.towerDefense.Projectile#getCase()
+	 * @see #getProjectile()
+	 * @generated
+	 */
   EReference getProjectile_Case();
 
   /**
-   * Returns the meta object for the reference '{@link xtext.towerDefense.Projectile#getCible <em>Cible</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the reference '{@link xtext.towerDefense.Projectile#getCible <em>Cible</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Cible</em>'.
-   * @see xtext.towerDefense.Projectile#getCible()
-   * @see #getProjectile()
-   * @generated
-   */
+	 * @return the meta object for the reference '<em>Cible</em>'.
+	 * @see xtext.towerDefense.Projectile#getCible()
+	 * @see #getProjectile()
+	 * @generated
+	 */
   EReference getProjectile_Cible();
 
   /**
-   * Returns the meta object for the containment reference '{@link xtext.towerDefense.Projectile#getDegat <em>Degat</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the containment reference '{@link xtext.towerDefense.Projectile#getDegat <em>Degat</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Degat</em>'.
-   * @see xtext.towerDefense.Projectile#getDegat()
-   * @see #getProjectile()
-   * @generated
-   */
+	 * @return the meta object for the containment reference '<em>Degat</em>'.
+	 * @see xtext.towerDefense.Projectile#getDegat()
+	 * @see #getProjectile()
+	 * @generated
+	 */
   EReference getProjectile_Degat();
 
   /**
-   * Returns the meta object for class '{@link xtext.towerDefense.NatureTerrain <em>Nature Terrain</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for class '{@link xtext.towerDefense.NatureTerrain <em>Nature Terrain</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Nature Terrain</em>'.
-   * @see xtext.towerDefense.NatureTerrain
-   * @generated
-   */
+	 * @return the meta object for class '<em>Nature Terrain</em>'.
+	 * @see xtext.towerDefense.NatureTerrain
+	 * @generated
+	 */
   EClass getNatureTerrain();
 
   /**
-   * Returns the meta object for the attribute '{@link xtext.towerDefense.NatureTerrain#getVolume <em>Volume</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the attribute '{@link xtext.towerDefense.NatureTerrain#getVolume <em>Volume</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Volume</em>'.
-   * @see xtext.towerDefense.NatureTerrain#getVolume()
-   * @see #getNatureTerrain()
-   * @generated
-   */
+	 * @return the meta object for the attribute '<em>Volume</em>'.
+	 * @see xtext.towerDefense.NatureTerrain#getVolume()
+	 * @see #getNatureTerrain()
+	 * @generated
+	 */
   EAttribute getNatureTerrain_Volume();
 
   /**
-   * Returns the meta object for the attribute '{@link xtext.towerDefense.NatureTerrain#getType <em>Type</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the attribute '{@link xtext.towerDefense.NatureTerrain#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Type</em>'.
-   * @see xtext.towerDefense.NatureTerrain#getType()
-   * @see #getNatureTerrain()
-   * @generated
-   */
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see xtext.towerDefense.NatureTerrain#getType()
+	 * @see #getNatureTerrain()
+	 * @generated
+	 */
   EAttribute getNatureTerrain_Type();
 
   /**
-   * Returns the meta object for the containment reference '{@link xtext.towerDefense.NatureTerrain#getFatigue <em>Fatigue</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the containment reference '{@link xtext.towerDefense.NatureTerrain#getFatigue <em>Fatigue</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Fatigue</em>'.
-   * @see xtext.towerDefense.NatureTerrain#getFatigue()
-   * @see #getNatureTerrain()
-   * @generated
-   */
+	 * @return the meta object for the containment reference '<em>Fatigue</em>'.
+	 * @see xtext.towerDefense.NatureTerrain#getFatigue()
+	 * @see #getNatureTerrain()
+	 * @generated
+	 */
   EReference getNatureTerrain_Fatigue();
 
   /**
-   * Returns the meta object for class '{@link xtext.towerDefense.Niveau <em>Niveau</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for class '{@link xtext.towerDefense.Niveau <em>Niveau</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Niveau</em>'.
-   * @see xtext.towerDefense.Niveau
-   * @generated
-   */
+	 * @return the meta object for class '<em>Niveau</em>'.
+	 * @see xtext.towerDefense.Niveau
+	 * @generated
+	 */
   EClass getNiveau();
 
   /**
-   * Returns the meta object for the attribute '{@link xtext.towerDefense.Niveau#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the attribute '{@link xtext.towerDefense.Niveau#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see xtext.towerDefense.Niveau#getName()
-   * @see #getNiveau()
-   * @generated
-   */
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see xtext.towerDefense.Niveau#getName()
+	 * @see #getNiveau()
+	 * @generated
+	 */
   EAttribute getNiveau_Name();
 
   /**
-   * Returns the meta object for the attribute '{@link xtext.towerDefense.Niveau#getDifficulte <em>Difficulte</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the attribute '{@link xtext.towerDefense.Niveau#getDifficulte <em>Difficulte</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Difficulte</em>'.
-   * @see xtext.towerDefense.Niveau#getDifficulte()
-   * @see #getNiveau()
-   * @generated
-   */
+	 * @return the meta object for the attribute '<em>Difficulte</em>'.
+	 * @see xtext.towerDefense.Niveau#getDifficulte()
+	 * @see #getNiveau()
+	 * @generated
+	 */
   EAttribute getNiveau_Difficulte();
 
   /**
-   * Returns the meta object for the attribute '{@link xtext.towerDefense.Niveau#getDureePause <em>Duree Pause</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the attribute '{@link xtext.towerDefense.Niveau#getDureePause <em>Duree Pause</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Duree Pause</em>'.
-   * @see xtext.towerDefense.Niveau#getDureePause()
-   * @see #getNiveau()
-   * @generated
-   */
+	 * @return the meta object for the attribute '<em>Duree Pause</em>'.
+	 * @see xtext.towerDefense.Niveau#getDureePause()
+	 * @see #getNiveau()
+	 * @generated
+	 */
   EAttribute getNiveau_DureePause();
 
   /**
-   * Returns the meta object for the attribute '{@link xtext.towerDefense.Niveau#getArgent <em>Argent</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the attribute '{@link xtext.towerDefense.Niveau#getArgent <em>Argent</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Argent</em>'.
-   * @see xtext.towerDefense.Niveau#getArgent()
-   * @see #getNiveau()
-   * @generated
-   */
+	 * @return the meta object for the attribute '<em>Argent</em>'.
+	 * @see xtext.towerDefense.Niveau#getArgent()
+	 * @see #getNiveau()
+	 * @generated
+	 */
   EAttribute getNiveau_Argent();
 
   /**
-   * Returns the meta object for the attribute '{@link xtext.towerDefense.Niveau#getMobSortisLimite <em>Mob Sortis Limite</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the attribute '{@link xtext.towerDefense.Niveau#getMobSortisLimite <em>Mob Sortis Limite</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Mob Sortis Limite</em>'.
-   * @see xtext.towerDefense.Niveau#getMobSortisLimite()
-   * @see #getNiveau()
-   * @generated
-   */
+	 * @return the meta object for the attribute '<em>Mob Sortis Limite</em>'.
+	 * @see xtext.towerDefense.Niveau#getMobSortisLimite()
+	 * @see #getNiveau()
+	 * @generated
+	 */
   EAttribute getNiveau_MobSortisLimite();
 
   /**
-   * Returns the meta object for the reference '{@link xtext.towerDefense.Niveau#getCarte <em>Carte</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the reference '{@link xtext.towerDefense.Niveau#getCarte <em>Carte</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Carte</em>'.
-   * @see xtext.towerDefense.Niveau#getCarte()
-   * @see #getNiveau()
-   * @generated
-   */
+	 * @return the meta object for the reference '<em>Carte</em>'.
+	 * @see xtext.towerDefense.Niveau#getCarte()
+	 * @see #getNiveau()
+	 * @generated
+	 */
   EReference getNiveau_Carte();
 
   /**
-   * Returns the meta object for the containment reference list '{@link xtext.towerDefense.Niveau#getVagues <em>Vagues</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the containment reference list '{@link xtext.towerDefense.Niveau#getVagues <em>Vagues</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Vagues</em>'.
-   * @see xtext.towerDefense.Niveau#getVagues()
-   * @see #getNiveau()
-   * @generated
-   */
+	 * @return the meta object for the containment reference list '<em>Vagues</em>'.
+	 * @see xtext.towerDefense.Niveau#getVagues()
+	 * @see #getNiveau()
+	 * @generated
+	 */
   EReference getNiveau_Vagues();
 
   /**
-   * Returns the meta object for class '{@link xtext.towerDefense.Carte <em>Carte</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for class '{@link xtext.towerDefense.Carte <em>Carte</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Carte</em>'.
-   * @see xtext.towerDefense.Carte
-   * @generated
-   */
+	 * @return the meta object for class '<em>Carte</em>'.
+	 * @see xtext.towerDefense.Carte
+	 * @generated
+	 */
   EClass getCarte();
 
   /**
-   * Returns the meta object for the attribute '{@link xtext.towerDefense.Carte#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the attribute '{@link xtext.towerDefense.Carte#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see xtext.towerDefense.Carte#getName()
-   * @see #getCarte()
-   * @generated
-   */
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see xtext.towerDefense.Carte#getName()
+	 * @see #getCarte()
+	 * @generated
+	 */
   EAttribute getCarte_Name();
 
   /**
-   * Returns the meta object for the attribute '{@link xtext.towerDefense.Carte#getNbLignes <em>Nb Lignes</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the attribute '{@link xtext.towerDefense.Carte#getNbLignes <em>Nb Lignes</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Nb Lignes</em>'.
-   * @see xtext.towerDefense.Carte#getNbLignes()
-   * @see #getCarte()
-   * @generated
-   */
+	 * @return the meta object for the attribute '<em>Nb Lignes</em>'.
+	 * @see xtext.towerDefense.Carte#getNbLignes()
+	 * @see #getCarte()
+	 * @generated
+	 */
   EAttribute getCarte_NbLignes();
 
   /**
-   * Returns the meta object for the attribute '{@link xtext.towerDefense.Carte#getNbColonnes <em>Nb Colonnes</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the attribute '{@link xtext.towerDefense.Carte#getNbColonnes <em>Nb Colonnes</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Nb Colonnes</em>'.
-   * @see xtext.towerDefense.Carte#getNbColonnes()
-   * @see #getCarte()
-   * @generated
-   */
+	 * @return the meta object for the attribute '<em>Nb Colonnes</em>'.
+	 * @see xtext.towerDefense.Carte#getNbColonnes()
+	 * @see #getCarte()
+	 * @generated
+	 */
   EAttribute getCarte_NbColonnes();
 
   /**
-   * Returns the meta object for the reference list '{@link xtext.towerDefense.Carte#getCases <em>Cases</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the reference list '{@link xtext.towerDefense.Carte#getCases <em>Cases</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference list '<em>Cases</em>'.
-   * @see xtext.towerDefense.Carte#getCases()
-   * @see #getCarte()
-   * @generated
-   */
+	 * @return the meta object for the reference list '<em>Cases</em>'.
+	 * @see xtext.towerDefense.Carte#getCases()
+	 * @see #getCarte()
+	 * @generated
+	 */
   EReference getCarte_Cases();
 
   /**
-   * Returns the meta object for class '{@link xtext.towerDefense.Case <em>Case</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for class '{@link xtext.towerDefense.Case <em>Case</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Case</em>'.
-   * @see xtext.towerDefense.Case
-   * @generated
-   */
+	 * @return the meta object for class '<em>Case</em>'.
+	 * @see xtext.towerDefense.Case
+	 * @generated
+	 */
   EClass getCase();
 
   /**
-   * Returns the meta object for the attribute '{@link xtext.towerDefense.Case#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the attribute '{@link xtext.towerDefense.Case#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see xtext.towerDefense.Case#getName()
-   * @see #getCase()
-   * @generated
-   */
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see xtext.towerDefense.Case#getName()
+	 * @see #getCase()
+	 * @generated
+	 */
   EAttribute getCase_Name();
 
   /**
-   * Returns the meta object for the attribute '{@link xtext.towerDefense.Case#getI <em>I</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the attribute '{@link xtext.towerDefense.Case#getI <em>I</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>I</em>'.
-   * @see xtext.towerDefense.Case#getI()
-   * @see #getCase()
-   * @generated
-   */
+	 * @return the meta object for the attribute '<em>I</em>'.
+	 * @see xtext.towerDefense.Case#getI()
+	 * @see #getCase()
+	 * @generated
+	 */
   EAttribute getCase_I();
 
   /**
-   * Returns the meta object for the attribute '{@link xtext.towerDefense.Case#getJ <em>J</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the attribute '{@link xtext.towerDefense.Case#getJ <em>J</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>J</em>'.
-   * @see xtext.towerDefense.Case#getJ()
-   * @see #getCase()
-   * @generated
-   */
+	 * @return the meta object for the attribute '<em>J</em>'.
+	 * @see xtext.towerDefense.Case#getJ()
+	 * @see #getCase()
+	 * @generated
+	 */
   EAttribute getCase_J();
 
   /**
-   * Returns the meta object for the reference '{@link xtext.towerDefense.Case#getNatureDuTerrain <em>Nature Du Terrain</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the reference '{@link xtext.towerDefense.Case#getNatureDuTerrain <em>Nature Du Terrain</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Nature Du Terrain</em>'.
-   * @see xtext.towerDefense.Case#getNatureDuTerrain()
-   * @see #getCase()
-   * @generated
-   */
+	 * @return the meta object for the reference '<em>Nature Du Terrain</em>'.
+	 * @see xtext.towerDefense.Case#getNatureDuTerrain()
+	 * @see #getCase()
+	 * @generated
+	 */
   EReference getCase_NatureDuTerrain();
 
   /**
-   * Returns the meta object for class '{@link xtext.towerDefense.Vague <em>Vague</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for class '{@link xtext.towerDefense.Vague <em>Vague</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Vague</em>'.
-   * @see xtext.towerDefense.Vague
-   * @generated
-   */
+	 * @return the meta object for class '<em>Vague</em>'.
+	 * @see xtext.towerDefense.Vague
+	 * @generated
+	 */
   EClass getVague();
 
   /**
-   * Returns the meta object for the attribute '{@link xtext.towerDefense.Vague#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the attribute '{@link xtext.towerDefense.Vague#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see xtext.towerDefense.Vague#getName()
-   * @see #getVague()
-   * @generated
-   */
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see xtext.towerDefense.Vague#getName()
+	 * @see #getVague()
+	 * @generated
+	 */
   EAttribute getVague_Name();
 
   /**
-   * Returns the meta object for the reference list '{@link xtext.towerDefense.Vague#getMobiles <em>Mobiles</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the reference list '{@link xtext.towerDefense.Vague#getMobiles <em>Mobiles</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference list '<em>Mobiles</em>'.
-   * @see xtext.towerDefense.Vague#getMobiles()
-   * @see #getVague()
-   * @generated
-   */
+	 * @return the meta object for the reference list '<em>Mobiles</em>'.
+	 * @see xtext.towerDefense.Vague#getMobiles()
+	 * @see #getVague()
+	 * @generated
+	 */
   EReference getVague_Mobiles();
 
   /**
-   * Returns the meta object for the reference list '{@link xtext.towerDefense.Vague#getObstacles <em>Obstacles</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the reference list '{@link xtext.towerDefense.Vague#getObstacles <em>Obstacles</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference list '<em>Obstacles</em>'.
-   * @see xtext.towerDefense.Vague#getObstacles()
-   * @see #getVague()
-   * @generated
-   */
+	 * @return the meta object for the reference list '<em>Obstacles</em>'.
+	 * @see xtext.towerDefense.Vague#getObstacles()
+	 * @see #getVague()
+	 * @generated
+	 */
   EReference getVague_Obstacles();
 
   /**
-   * Returns the meta object for the attribute '{@link xtext.towerDefense.Vague#getGainVictoire <em>Gain Victoire</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the attribute '{@link xtext.towerDefense.Vague#getGainVictoire <em>Gain Victoire</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Gain Victoire</em>'.
-   * @see xtext.towerDefense.Vague#getGainVictoire()
-   * @see #getVague()
-   * @generated
-   */
+	 * @return the meta object for the attribute '<em>Gain Victoire</em>'.
+	 * @see xtext.towerDefense.Vague#getGainVictoire()
+	 * @see #getVague()
+	 * @generated
+	 */
   EAttribute getVague_GainVictoire();
 
   /**
-   * Returns the meta object for enum '{@link xtext.towerDefense.TactiqueType <em>Tactique Type</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for enum '{@link xtext.towerDefense.TactiqueType <em>Tactique Type</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for enum '<em>Tactique Type</em>'.
-   * @see xtext.towerDefense.TactiqueType
-   * @generated
-   */
+	 * @return the meta object for enum '<em>Tactique Type</em>'.
+	 * @see xtext.towerDefense.TactiqueType
+	 * @generated
+	 */
   EEnum getTactiqueType();
 
   /**
-   * Returns the meta object for enum '{@link xtext.towerDefense.TYPE_TERRAIN <em>TYPE TERRAIN</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for enum '{@link xtext.towerDefense.TYPE_TERRAIN <em>TYPE TERRAIN</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for enum '<em>TYPE TERRAIN</em>'.
-   * @see xtext.towerDefense.TYPE_TERRAIN
-   * @generated
-   */
+	 * @return the meta object for enum '<em>TYPE TERRAIN</em>'.
+	 * @see xtext.towerDefense.TYPE_TERRAIN
+	 * @generated
+	 */
   EEnum getTYPE_TERRAIN();
 
   /**
-   * Returns the meta object for enum '{@link xtext.towerDefense.Difficulte <em>Difficulte</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for enum '{@link xtext.towerDefense.Difficulte <em>Difficulte</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for enum '<em>Difficulte</em>'.
-   * @see xtext.towerDefense.Difficulte
-   * @generated
-   */
+	 * @return the meta object for enum '<em>Difficulte</em>'.
+	 * @see xtext.towerDefense.Difficulte
+	 * @generated
+	 */
   EEnum getDifficulte();
 
   /**
-   * Returns the factory that creates the instances of the model.
-   * <!-- begin-user-doc -->
+	 * Returns the factory that creates the instances of the model.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the factory that creates the instances of the model.
-   * @generated
-   */
+	 * @return the factory that creates the instances of the model.
+	 * @generated
+	 */
   TowerDefenseFactory getTowerDefenseFactory();
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * Defines literals for the meta objects that represent
    * <ul>
    *   <li>each class,</li>
@@ -1482,542 +1482,542 @@ public interface TowerDefensePackage extends EPackage
    *   <li>and each data type</li>
    * </ul>
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   interface Literals
   {
     /**
-     * The meta object literal for the '{@link xtext.towerDefense.impl.JeuImpl <em>Jeu</em>}' class.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link xtext.towerDefense.impl.JeuImpl <em>Jeu</em>}' class.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see xtext.towerDefense.impl.JeuImpl
-     * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getJeu()
-     * @generated
-     */
+		 * @see xtext.towerDefense.impl.JeuImpl
+		 * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getJeu()
+		 * @generated
+		 */
     EClass JEU = eINSTANCE.getJeu();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EAttribute JEU__NAME = eINSTANCE.getJeu_Name();
 
     /**
-     * The meta object literal for the '<em><b>Parties</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Parties</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EReference JEU__PARTIES = eINSTANCE.getJeu_Parties();
 
     /**
-     * The meta object literal for the '{@link xtext.towerDefense.impl.PartieImpl <em>Partie</em>}' class.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link xtext.towerDefense.impl.PartieImpl <em>Partie</em>}' class.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see xtext.towerDefense.impl.PartieImpl
-     * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getPartie()
-     * @generated
-     */
+		 * @see xtext.towerDefense.impl.PartieImpl
+		 * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getPartie()
+		 * @generated
+		 */
     EClass PARTIE = eINSTANCE.getPartie();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EAttribute PARTIE__NAME = eINSTANCE.getPartie_Name();
 
     /**
-     * The meta object literal for the '<em><b>Cases</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Cases</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EReference PARTIE__CASES = eINSTANCE.getPartie_Cases();
 
     /**
-     * The meta object literal for the '<em><b>Cartes</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Cartes</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EReference PARTIE__CARTES = eINSTANCE.getPartie_Cartes();
 
     /**
-     * The meta object literal for the '<em><b>Partie Elements</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Partie Elements</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EReference PARTIE__PARTIE_ELEMENTS = eINSTANCE.getPartie_PartieElements();
 
     /**
-     * The meta object literal for the '<em><b>Niveaux</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Niveaux</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EReference PARTIE__NIVEAUX = eINSTANCE.getPartie_Niveaux();
 
     /**
-     * The meta object literal for the '{@link xtext.towerDefense.impl.PartieElementImpl <em>Partie Element</em>}' class.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link xtext.towerDefense.impl.PartieElementImpl <em>Partie Element</em>}' class.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see xtext.towerDefense.impl.PartieElementImpl
-     * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getPartieElement()
-     * @generated
-     */
+		 * @see xtext.towerDefense.impl.PartieElementImpl
+		 * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getPartieElement()
+		 * @generated
+		 */
     EClass PARTIE_ELEMENT = eINSTANCE.getPartieElement();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EAttribute PARTIE_ELEMENT__NAME = eINSTANCE.getPartieElement_Name();
 
     /**
-     * The meta object literal for the '{@link xtext.towerDefense.impl.EnergieImpl <em>Energie</em>}' class.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link xtext.towerDefense.impl.EnergieImpl <em>Energie</em>}' class.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see xtext.towerDefense.impl.EnergieImpl
-     * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getEnergie()
-     * @generated
-     */
+		 * @see xtext.towerDefense.impl.EnergieImpl
+		 * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getEnergie()
+		 * @generated
+		 */
     EClass ENERGIE = eINSTANCE.getEnergie();
 
     /**
-     * The meta object literal for the '<em><b>Infini</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Infini</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EAttribute ENERGIE__INFINI = eINSTANCE.getEnergie_Infini();
 
     /**
-     * The meta object literal for the '<em><b>Valeur</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Valeur</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EAttribute ENERGIE__VALEUR = eINSTANCE.getEnergie_Valeur();
 
     /**
-     * The meta object literal for the '{@link xtext.towerDefense.impl.ObstacleImpl <em>Obstacle</em>}' class.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link xtext.towerDefense.impl.ObstacleImpl <em>Obstacle</em>}' class.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see xtext.towerDefense.impl.ObstacleImpl
-     * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getObstacle()
-     * @generated
-     */
+		 * @see xtext.towerDefense.impl.ObstacleImpl
+		 * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getObstacle()
+		 * @generated
+		 */
     EClass OBSTACLE = eINSTANCE.getObstacle();
 
     /**
-     * The meta object literal for the '<em><b>Campement</b></em>' reference feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Campement</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EReference OBSTACLE__CAMPEMENT = eINSTANCE.getObstacle_Campement();
 
     /**
-     * The meta object literal for the '<em><b>Quantite Energie Max</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Quantite Energie Max</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EReference OBSTACLE__QUANTITE_ENERGIE_MAX = eINSTANCE.getObstacle_QuantiteEnergieMax();
 
     /**
-     * The meta object literal for the '<em><b>Tactique</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Tactique</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EAttribute OBSTACLE__TACTIQUE = eINSTANCE.getObstacle_Tactique();
 
     /**
-     * The meta object literal for the '{@link xtext.towerDefense.impl.MobileImpl <em>Mobile</em>}' class.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link xtext.towerDefense.impl.MobileImpl <em>Mobile</em>}' class.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see xtext.towerDefense.impl.MobileImpl
-     * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getMobile()
-     * @generated
-     */
+		 * @see xtext.towerDefense.impl.MobileImpl
+		 * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getMobile()
+		 * @generated
+		 */
     EClass MOBILE = eINSTANCE.getMobile();
 
     /**
-     * The meta object literal for the '<em><b>Force</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Force</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EAttribute MOBILE__FORCE = eINSTANCE.getMobile_Force();
 
     /**
-     * The meta object literal for the '<em><b>Volume</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Volume</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EAttribute MOBILE__VOLUME = eINSTANCE.getMobile_Volume();
 
     /**
-     * The meta object literal for the '<em><b>Num Vague</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Num Vague</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EAttribute MOBILE__NUM_VAGUE = eINSTANCE.getMobile_NumVague();
 
     /**
-     * The meta object literal for the '<em><b>Case Entree</b></em>' reference feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Case Entree</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EReference MOBILE__CASE_ENTREE = eINSTANCE.getMobile_CaseEntree();
 
     /**
-     * The meta object literal for the '<em><b>Case Sortie</b></em>' reference feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Case Sortie</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EReference MOBILE__CASE_SORTIE = eINSTANCE.getMobile_CaseSortie();
 
     /**
-     * The meta object literal for the '<em><b>Quantite Energie Max</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Quantite Energie Max</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EReference MOBILE__QUANTITE_ENERGIE_MAX = eINSTANCE.getMobile_QuantiteEnergieMax();
 
     /**
-     * The meta object literal for the '<em><b>Tactique</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Tactique</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EAttribute MOBILE__TACTIQUE = eINSTANCE.getMobile_Tactique();
 
     /**
-     * The meta object literal for the '{@link xtext.towerDefense.impl.ProjectileImpl <em>Projectile</em>}' class.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link xtext.towerDefense.impl.ProjectileImpl <em>Projectile</em>}' class.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see xtext.towerDefense.impl.ProjectileImpl
-     * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getProjectile()
-     * @generated
-     */
+		 * @see xtext.towerDefense.impl.ProjectileImpl
+		 * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getProjectile()
+		 * @generated
+		 */
     EClass PROJECTILE = eINSTANCE.getProjectile();
 
     /**
-     * The meta object literal for the '<em><b>Portee</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Portee</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EAttribute PROJECTILE__PORTEE = eINSTANCE.getProjectile_Portee();
 
     /**
-     * The meta object literal for the '<em><b>Masse</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Masse</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EAttribute PROJECTILE__MASSE = eINSTANCE.getProjectile_Masse();
 
     /**
-     * The meta object literal for the '<em><b>Vitesse</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Vitesse</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EAttribute PROJECTILE__VITESSE = eINSTANCE.getProjectile_Vitesse();
 
     /**
-     * The meta object literal for the '<em><b>Case</b></em>' reference feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Case</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EReference PROJECTILE__CASE = eINSTANCE.getProjectile_Case();
 
     /**
-     * The meta object literal for the '<em><b>Cible</b></em>' reference feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Cible</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EReference PROJECTILE__CIBLE = eINSTANCE.getProjectile_Cible();
 
     /**
-     * The meta object literal for the '<em><b>Degat</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Degat</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EReference PROJECTILE__DEGAT = eINSTANCE.getProjectile_Degat();
 
     /**
-     * The meta object literal for the '{@link xtext.towerDefense.impl.NatureTerrainImpl <em>Nature Terrain</em>}' class.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link xtext.towerDefense.impl.NatureTerrainImpl <em>Nature Terrain</em>}' class.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see xtext.towerDefense.impl.NatureTerrainImpl
-     * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getNatureTerrain()
-     * @generated
-     */
+		 * @see xtext.towerDefense.impl.NatureTerrainImpl
+		 * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getNatureTerrain()
+		 * @generated
+		 */
     EClass NATURE_TERRAIN = eINSTANCE.getNatureTerrain();
 
     /**
-     * The meta object literal for the '<em><b>Volume</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Volume</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EAttribute NATURE_TERRAIN__VOLUME = eINSTANCE.getNatureTerrain_Volume();
 
     /**
-     * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EAttribute NATURE_TERRAIN__TYPE = eINSTANCE.getNatureTerrain_Type();
 
     /**
-     * The meta object literal for the '<em><b>Fatigue</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Fatigue</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EReference NATURE_TERRAIN__FATIGUE = eINSTANCE.getNatureTerrain_Fatigue();
 
     /**
-     * The meta object literal for the '{@link xtext.towerDefense.impl.NiveauImpl <em>Niveau</em>}' class.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link xtext.towerDefense.impl.NiveauImpl <em>Niveau</em>}' class.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see xtext.towerDefense.impl.NiveauImpl
-     * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getNiveau()
-     * @generated
-     */
+		 * @see xtext.towerDefense.impl.NiveauImpl
+		 * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getNiveau()
+		 * @generated
+		 */
     EClass NIVEAU = eINSTANCE.getNiveau();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EAttribute NIVEAU__NAME = eINSTANCE.getNiveau_Name();
 
     /**
-     * The meta object literal for the '<em><b>Difficulte</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Difficulte</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EAttribute NIVEAU__DIFFICULTE = eINSTANCE.getNiveau_Difficulte();
 
     /**
-     * The meta object literal for the '<em><b>Duree Pause</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Duree Pause</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EAttribute NIVEAU__DUREE_PAUSE = eINSTANCE.getNiveau_DureePause();
 
     /**
-     * The meta object literal for the '<em><b>Argent</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Argent</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EAttribute NIVEAU__ARGENT = eINSTANCE.getNiveau_Argent();
 
     /**
-     * The meta object literal for the '<em><b>Mob Sortis Limite</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Mob Sortis Limite</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EAttribute NIVEAU__MOB_SORTIS_LIMITE = eINSTANCE.getNiveau_MobSortisLimite();
 
     /**
-     * The meta object literal for the '<em><b>Carte</b></em>' reference feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Carte</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EReference NIVEAU__CARTE = eINSTANCE.getNiveau_Carte();
 
     /**
-     * The meta object literal for the '<em><b>Vagues</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Vagues</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EReference NIVEAU__VAGUES = eINSTANCE.getNiveau_Vagues();
 
     /**
-     * The meta object literal for the '{@link xtext.towerDefense.impl.CarteImpl <em>Carte</em>}' class.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link xtext.towerDefense.impl.CarteImpl <em>Carte</em>}' class.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see xtext.towerDefense.impl.CarteImpl
-     * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getCarte()
-     * @generated
-     */
+		 * @see xtext.towerDefense.impl.CarteImpl
+		 * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getCarte()
+		 * @generated
+		 */
     EClass CARTE = eINSTANCE.getCarte();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EAttribute CARTE__NAME = eINSTANCE.getCarte_Name();
 
     /**
-     * The meta object literal for the '<em><b>Nb Lignes</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Nb Lignes</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EAttribute CARTE__NB_LIGNES = eINSTANCE.getCarte_NbLignes();
 
     /**
-     * The meta object literal for the '<em><b>Nb Colonnes</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Nb Colonnes</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EAttribute CARTE__NB_COLONNES = eINSTANCE.getCarte_NbColonnes();
 
     /**
-     * The meta object literal for the '<em><b>Cases</b></em>' reference list feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Cases</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EReference CARTE__CASES = eINSTANCE.getCarte_Cases();
 
     /**
-     * The meta object literal for the '{@link xtext.towerDefense.impl.CaseImpl <em>Case</em>}' class.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link xtext.towerDefense.impl.CaseImpl <em>Case</em>}' class.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see xtext.towerDefense.impl.CaseImpl
-     * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getCase()
-     * @generated
-     */
+		 * @see xtext.towerDefense.impl.CaseImpl
+		 * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getCase()
+		 * @generated
+		 */
     EClass CASE = eINSTANCE.getCase();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EAttribute CASE__NAME = eINSTANCE.getCase_Name();
 
     /**
-     * The meta object literal for the '<em><b>I</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>I</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EAttribute CASE__I = eINSTANCE.getCase_I();
 
     /**
-     * The meta object literal for the '<em><b>J</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>J</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EAttribute CASE__J = eINSTANCE.getCase_J();
 
     /**
-     * The meta object literal for the '<em><b>Nature Du Terrain</b></em>' reference feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Nature Du Terrain</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EReference CASE__NATURE_DU_TERRAIN = eINSTANCE.getCase_NatureDuTerrain();
 
     /**
-     * The meta object literal for the '{@link xtext.towerDefense.impl.VagueImpl <em>Vague</em>}' class.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link xtext.towerDefense.impl.VagueImpl <em>Vague</em>}' class.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see xtext.towerDefense.impl.VagueImpl
-     * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getVague()
-     * @generated
-     */
+		 * @see xtext.towerDefense.impl.VagueImpl
+		 * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getVague()
+		 * @generated
+		 */
     EClass VAGUE = eINSTANCE.getVague();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EAttribute VAGUE__NAME = eINSTANCE.getVague_Name();
 
     /**
-     * The meta object literal for the '<em><b>Mobiles</b></em>' reference list feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Mobiles</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EReference VAGUE__MOBILES = eINSTANCE.getVague_Mobiles();
 
     /**
-     * The meta object literal for the '<em><b>Obstacles</b></em>' reference list feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Obstacles</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EReference VAGUE__OBSTACLES = eINSTANCE.getVague_Obstacles();
 
     /**
-     * The meta object literal for the '<em><b>Gain Victoire</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Gain Victoire</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EAttribute VAGUE__GAIN_VICTOIRE = eINSTANCE.getVague_GainVictoire();
 
     /**
-     * The meta object literal for the '{@link xtext.towerDefense.TactiqueType <em>Tactique Type</em>}' enum.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link xtext.towerDefense.TactiqueType <em>Tactique Type</em>}' enum.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see xtext.towerDefense.TactiqueType
-     * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getTactiqueType()
-     * @generated
-     */
+		 * @see xtext.towerDefense.TactiqueType
+		 * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getTactiqueType()
+		 * @generated
+		 */
     EEnum TACTIQUE_TYPE = eINSTANCE.getTactiqueType();
 
     /**
-     * The meta object literal for the '{@link xtext.towerDefense.TYPE_TERRAIN <em>TYPE TERRAIN</em>}' enum.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link xtext.towerDefense.TYPE_TERRAIN <em>TYPE TERRAIN</em>}' enum.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see xtext.towerDefense.TYPE_TERRAIN
-     * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getTYPE_TERRAIN()
-     * @generated
-     */
+		 * @see xtext.towerDefense.TYPE_TERRAIN
+		 * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getTYPE_TERRAIN()
+		 * @generated
+		 */
     EEnum TYPE_TERRAIN = eINSTANCE.getTYPE_TERRAIN();
 
     /**
-     * The meta object literal for the '{@link xtext.towerDefense.Difficulte <em>Difficulte</em>}' enum.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link xtext.towerDefense.Difficulte <em>Difficulte</em>}' enum.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see xtext.towerDefense.Difficulte
-     * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getDifficulte()
-     * @generated
-     */
+		 * @see xtext.towerDefense.Difficulte
+		 * @see xtext.towerDefense.impl.TowerDefensePackageImpl#getDifficulte()
+		 * @generated
+		 */
     EEnum DIFFICULTE = eINSTANCE.getDifficulte();
 
   }

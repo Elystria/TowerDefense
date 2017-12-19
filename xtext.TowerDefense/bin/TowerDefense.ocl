@@ -1,0 +1,179 @@
+import '/plugin/xtext.TowerDefense/model/generated/TowerDefense.ecore'
+
+package towerDefense
+
+--TODO en java : E10 part2
+--Le volume d'une case entree doit etre superieur a celui de toute une vague
+
+--JEU--
+context Jeu
+inv NonNullName('Le nom d\'un jeu ne peut être null'):
+	name <> null
+	
+inv NonVide('Il doit y avoir au moins une partie'):
+	self.parties->size() > 0
+
+--PARTIE--	
+context Partie
+inv NonNullName('Le nom d\'une partie ne peut être null'):
+	name<>null
+
+inv NomsDifferentsPE('Les Elements d\'une partie doivent avoir un nom different'):
+	self.partieElements->forAll(p1, p2 | p1<>p2 implies p1.name <> p2.name)
+
+inv NomsDifferentsCase('Les Cases d\'une partie doivent avoir un nom different'):
+	self.cases->forAll(c1, c2 | c1<>c2 implies c1.name <> c2.name)
+	
+inv NomsDifferentsCarte('Les Cartes d\'une partie doivent avoir un nom different'):
+	self.cartes->forAll(ca1, ca2 | ca1<>ca2 implies ca1.name <> ca2.name)
+	
+inv NomsDifferentsNiveaux('Les Niveaux d\'une partie doivent avoir un nom different'):
+	self.cartes->forAll(n1, n2 | n1<>n2 implies n1.name <>n2.name)
+	
+--PARTIEELEMENT--
+context PartieElement
+inv NonNullName('Le nom ne peut pas être null'):
+	name<>null
+
+--ENERGIE--
+context Energie
+inv EnergiePositive('Une énergie ne peut pas être négative'):
+	valeur >= 0
+	
+--OBSTACLE--
+context Obstacle
+--TODO : a corriger, faux
+--inv EnergieFinie('Cette energie ne peut pas etre infinie'):
+--	self.quantiteEnergieMax.infini = null
+
+inv caseNonDeco('La case doit etre un campement'):
+	campement.natureDuTerrain.type = TYPE_TERRAIN::campement
+
+--MOBILE--
+context Mobile
+inv ForcePositive('la force doit etre positive'):
+	self.force >= 0
+
+inv VolumePositif('Le volume doit être strictement positif'):
+	self.volume > 0
+
+inv VaguePositive('Le numéro de Vague doit etre strictement positif'):
+	self.numVague > 0
+-- A faire en Java : vérifier que le numéro de Vague existe bien dans le niveau concerné
+
+inv CaseTypeEntree('La case doit etre une entree'):
+	self.caseEntree.natureDuTerrain.type = TYPE_TERRAIN::entree
+	
+inv CaseTypeSortie('La case doit etre une sortie'):
+	self.caseSortie.natureDuTerrain.type = TYPE_TERRAIN::sortie
+	
+--TODO : energieFinie
+
+--PROJECTILE--
+context Projectile
+inv PorteePositive('La portée doit etre strictement positive'):
+	portee > 0
+
+inv MassePositive('La masse doit etre positive'):
+	masse >= 0
+	
+inv VitessePositive('La vitesse doit etre strictement positive'):
+	vitesse > 0
+	
+inv DepartNonDeco ('Cette case est une decoration'):
+	case.natureDuTerrain.type = TYPE_TERRAIN::decoration
+
+inv CibleNonDeco('Cette case est une decoration'):
+	cible.natureDuTerrain.type = TYPE_TERRAIN::decoration
+	
+--TODO : Energie non infinie
+inv DegatNonNul('Les degats doivent etre strictement positifs'):
+	degat.valeur > 0
+	
+--NATURETERRAIN--
+context NatureTerrain
+inv VolumePositif('Le Volume doit etre positif'):
+	volume >= 0
+	
+--TODO : Energie non finie
+inv FatiguePositive('La fatigue doit etre positive'):
+	fatigue.valeur >= 0
+	
+--NIVEAU--
+context Niveau
+inv PausePositive('La durée d\'une pause doit etre strictement positive'):
+	dureePause > 0
+	
+inv GainPositif('L\'argent doit etre positif'):
+	argent >= 0
+	
+inv MobPositif('Le nombre de mobs qui sortent doit etre strictement positif'):
+	mobSortisLimite > 0
+	
+--Le nombre de mobs sortis limite doit etre inférieur au nombre total de mobiles
+--TODO : ne marche pas. Aussi probleme quand on ajoute une vague (modele)
+inv MobSortisInfMobTotal('La somme de tous les mobiles des vagues doit etre superieur au nombre limite de sorties autorisées'):
+	self.vagues.mobiles -> size() >= mobSortisLimite
+	
+--CARTE--
+context Carte
+inv NomNonNull('Il faut un nom pour la carte'):
+	name <> null
+	
+inv NomUnique('Le nom de la carte doit etre unique'):
+	Carte.allInstances() -> forAll(c1, c2 | c1<>c2 implies c1.name<>c2.name)
+	
+inv LiColPositives('Le nombre de ligne et de colonnes doit etre positif'):
+	nbColonnes > 0 and nbLignes > 0
+	
+inv CoordonneesCasesCoherentes('Les coordonnees d\'une case ne sont pas compatible avec la taille de la carte'):
+	self.cases->forAll(c | c.i <= nbLignes and c.j <= nbColonnes)
+	
+inv nbCasesCorrect('Il y a trop ou pas assez de case'):
+	self.cases->size() = nbColonnes*nbLignes
+	
+inv CasesCoordonneesDifferentes1('Deux cases d\'une meme carte ne peuvent pas avoir les memes coordonnees'):
+	self.cases->forAll(c1, c2 | c1 <> c2 and c1.i = c2.i implies c1.j <> c2.j)
+	
+inv CasesCoordonneesDifferentes2('Deux cases d\'une meme carte ne peuvent pas avoir les memes coordonnees'):
+	self.cases->forAll(c1, c2 | c1 <> c2 and c1.j = c2.j implies c1.i <> c2.i)
+
+inv CasesNonDoubles('Il ne peut pas y avoir deux fois la même case dans une carte'):
+	self.cases->isUnique(name)
+	
+inv AuMoinsUneEntree('Il doit y avoir au moins une entree sur la carte'):
+	self.cases->select( c | c.natureDuTerrain.type = TYPE_TERRAIN::entree)-> size() > 0
+	
+inv AuMoinsUneSortie('Il doit y avoir au moins une sortie sur la carte'):
+	self.cases->select( c | c.natureDuTerrain.type = TYPE_TERRAIN::sortie)-> size() > 0
+	
+inv AuMoinsUnCamp('Il doit y avoir au moins un emplacement pour obstacle'):
+	self.cases->select(c | c. natureDuTerrain.type = TYPE_TERRAIN::campement)-> size() > 0
+	
+--CASE--
+context Case
+inv NomNonNull('Le nom d\'une case ne peut être null'):
+	name<>null
+	
+inv NomUnique('Le nom d\'une case doit etre unique'):
+		Case.allInstances() -> forAll(c1, c2 | c1<>c2 implies c1.name<>c2.name)
+		
+inv CoordonnesValides('Les coordonnees doivent etre positives'):
+	i > 0 and j > 0
+	
+--VAGUE--
+context Vague
+inv NomNonNull('Le nom d\'une vague ne peut être null'):
+	name<>null
+	
+inv NomUnique('Le nom d\'une vague doit etre unique'):
+		Vague.allInstances() -> forAll(v1, v2 | v1<>v2 implies v1.name<>v2.name)
+
+inv NbMobilesPositif('Le nombre de mobiles doit être positif'):
+	self.mobiles -> size() > 0
+	
+inv GainPositif('Le gain doit etre positif'):
+	self.gainVictoire >= 0
+
+
+endpackage

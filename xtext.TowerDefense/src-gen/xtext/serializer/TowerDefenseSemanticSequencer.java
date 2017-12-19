@@ -232,7 +232,7 @@ public class TowerDefenseSemanticSequencer extends AbstractDelegatingSemanticSeq
 	 *         argent=INT 
 	 *         mobSortisLimite=INT 
 	 *         carte=[Carte|ID] 
-	 *         vagues+=Vague
+	 *         vagues+=Vague*
 	 *     )
 	 */
 	protected void sequence_Niveau(ISerializationContext context, Niveau semanticObject) {

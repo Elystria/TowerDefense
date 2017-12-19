@@ -2723,7 +2723,7 @@ rule__Niveau__Group__13__Impl
 :
 (
 	{ before(grammarAccess.getNiveauAccess().getVaguesAssignment_13()); }
-	(rule__Niveau__VaguesAssignment_13)
+	(rule__Niveau__VaguesAssignment_13)*
 	{ after(grammarAccess.getNiveauAccess().getVaguesAssignment_13()); }
 )
 ;

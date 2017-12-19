@@ -78,7 +78,7 @@ Niveau:
 	'Argent' argent=INT
 	'MobSortisMax' mobSortisLimite=INT
 	'Carte' carte=[Carte]
-	'Vague' vagues+=Vague
+	'Vague' vagues+=Vague*
 	'}'
 ;
 
