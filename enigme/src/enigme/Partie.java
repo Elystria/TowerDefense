@@ -48,36 +48,78 @@ public class Partie {
 
 	public void jouerProjectiles() {
 	    // pour tous les projectiles
-		for(Projectile p : projectiles) {
-			p.seDeplacer(cartes.get(0));
+		for(int i = 0; i < getProjectiles().size(); i++) {
+			Projectile p = getProjectiles().get(i);
+			p.seDeplacer(this);
 		}
 	}
 
 	public void jouerObstacles() {
 		// pour tous les Obstacles
 		Carte c = cartes.get(0);
-		Collection<Mobile> mobilesPourAttaque = new ArrayList<Mobile>();
-		System.out.println("On joue obstacle");
+		Collection<Mobile> mobilesPourAttaque;
 		for(Obstacle o : obstacles) {
-			System.out.println("On parcourt les obstacles");
-		    mobilesPourAttaque = c.mobilesAutour(1,o.getPosition());
-		    for (Mobile m : mobilesPourAttaque) {
-		    	System.out.println("On parcourt les mobiles");
-		    	o.attaquerAutre(m.getPosition(), c);
-		    
-		    }
-		    
+		    o.getPA().setValeur(o.getPV().getValeur());
+		    while(o.getPA().getValeur() > 0) {
+				o.attaquer(this);
+				o.getPA().setValeur(o.getPA().getValeur() - 1);
+			}
 		}
 	}
 
 	public void jouerMobiles() {
-		Collection<Mobile> mobilesAutours = new ArrayList<Mobile>();
+		// On fait jouer les mobiles
+		Collection<Mobile> mobilesAutours = new ArrayList<>();
 		Carte c = cartes.get(0);
 		// pour tous les mobiles
 		for(int i = 0; i < getMobiles().size(); i++) {
 			Mobile m = getMobiles().get(i);
-			m.seDeplacer(this);
+			if(m.isEnJeu()) {
+				m.getPA().setValeur(m.getPV().getValeur());
+				// On va faire du HIT & RUN !!
+				Boolean mustRun = true;
+				try {
+					while (m.getPA().getValeur() > 0) {
+						if (mustRun) {
+							if (m.seDeplacer(this)) {
+								mustRun = false;
+							} else if(m.attaquer(this)) {
+								m.getPA().setValeur(m.getPA().getValeur() - 1);
+							    mustRun = true;
+							} else {
+								break;
+							}
+						} else {
+							if (m.attaquer(this)) {
+								m.getPA().setValeur(m.getPA().getValeur() - 1);
+								mustRun = true;
+							} else if(m.seDeplacer(this)) {
+								mustRun = false;
+							} else {
+								break;
+							}
+						}
+					}
+				} catch (DisparuException e) {
+				}
+			}
 		}
+
+		// On fait apparaître les mobiles
+		// On les fait apparaître après le déplacement pour bien les voir au début
+		for(Mobile m : getMobiles()) {
+			if(!m.isEnJeu()) {
+			    if(m.bougerToCase(this, m.getEntree())) {
+			        m.setEnJeu(true);
+			        // On fait apparître les mobiles un à la fois
+			    	break;
+				}
+			}
+		}
+	}
+
+	public boolean estTerminee() {
+	    return getMobiles().size() == 0;
 	}
 
 	/************************************************
@@ -146,4 +188,5 @@ public class Partie {
 	public void setObstacles(List<Obstacle> obstacles) {
 		this.obstacles = obstacles;
 	}
+
 }

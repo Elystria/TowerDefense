@@ -45,7 +45,7 @@ public class Boot {
 		while(!Display.isCloseRequested()){
 
 			// Controleur
-            player.update();
+            //player.update();
 
 		    // Affichage !
 			grid.Draw();

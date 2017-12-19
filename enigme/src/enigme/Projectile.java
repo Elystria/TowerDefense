@@ -10,37 +10,108 @@ public class Projectile implements PartieElement {
 	private int masse;
 	private int vitesse;
 	private Case position;
-	private Case direction;
+	private PartieElement cible;
+	private boolean cibleMobile;
 	private Energie degat;
-	
-	public Projectile(String nom, int portee, int masse, int vitesse, Case position, Case direction, Energie degat) {
+
+	public Projectile(String nom, int portee, int masse, int vitesse, Case position, PartieElement cible, boolean cibleMobile, Energie degat) {
 		this.nom = nom;
 		this.portee = portee;
 		this.masse = masse;
 		this.vitesse = vitesse;
 		this.position = position;
-		this.direction = direction;
+		this.cible = cible;
 		this.degat = degat;
+		this.cibleMobile = cibleMobile;
 	}
 
 	/********* METHODES *********/
-	
-	public void seDeplacer(Carte carte) {
+
+	public void seDeplacer(Partie partie) {
+		Case dir = null;
+		if(cibleMobile) {
+			dir = ((Mobile) this.getCible()).getPosition();
+		} else {
+			dir = ((Obstacle) this.getCible()).getPosition();
+		}
+
+		// Pour chaque case de la vitesse
+		for(int i = 0; i < vitesse; i++) {
+			// On se déplace
+			avancer(partie.getCartes().get(0));
+
+			// Si on est sur un adversaire ou qu'on a atteint notre destination, on explose
+            if(dir.egale(getPosition())) {
+            	exploser(partie);
+            	return;
+			}
+			if(cibleMobile) {
+            	for(Mobile m : partie.getMobiles()) {
+            		if(m.isEnJeu() && m.getPosition().egale(getPosition())) {
+            			exploser(partie);
+            			return;
+					}
+				}
+			} else {
+				for(Obstacle o : partie.getObstacles()) {
+					if(o.getPosition().egale(getPosition())) {
+						exploser(partie);
+						return;
+					}
+				}
+			}
+		}
+	}
+
+	public void exploser(Partie partie) {
+		// On inflige les dégats
+		// On sait qu'un mobile ne peut pas être sur la même case qu'un obstacle
+		// Donc on se pose pas trop de questions
+		if(cibleMobile) {
+			for(int i = 0; i < partie.getMobiles().size(); i++) {
+				Mobile m = partie.getMobiles().get(i);
+				if(m.isEnJeu() && m.getPosition().egale(getPosition())) {
+					m.pertePV(degat, partie);
+				}
+			}
+		} else {
+			for(int i = 0; i < partie.getObstacles().size(); i++) {
+				Obstacle o = partie.getObstacles().get(i);
+				if(o.getPosition().egale(getPosition())) {
+					o.pertePV(degat, partie);
+				}
+			}
+		}
+
+		// On se supprime !
+		for(int i = 0; i < partie.getProjectiles().size(); i++) {
+			Projectile p = partie.getProjectiles().get(i);
+			if(p.getNom().equals(getNom())) {
+				partie.getProjectiles().remove(i);
+				break;
+			}
+		}
+	}
+
+	public void seDeplacerCarte(Partie partie) {
+		Carte carte = partie.getCartes().get(0);
+		Case dir;
+		if(cibleMobile) {
+			dir = ((Mobile) this.getCible()).getPosition();
+		} else {
+			dir = ((Obstacle) this.getCible()).getPosition();
+		}
 		Case pos = this.getPosition();
-		Case dir = this.getDirection();
 		if (pos.egale(dir)) {
 			/* Faire les dégats */
-			System.out.println("Je suis arrivé ( je suis un projectile)");
 			pos = this.getPosition();
-			Collection<PartieElement>contenu = carte.contenuCase(pos);
+			Collection<PartieElement> contenu = carte.contenuCase(pos);
 			if (contenu!=null) {
 				for (PartieElement elt : contenu) {
 				    if(elt instanceof Mobile) {
-						this.infligerDegats((Mobile) elt, carte);
-						System.out.println("j'ai fait mal à " + ((Mobile) elt).getNom());
+						this.infligerDegats((Mobile) elt, partie);
 					} else {
-						this.infligerDegats((Obstacle) elt, carte);
-						System.out.println("j'ai fait mal à " + ((Obstacle) elt).getNom());
+						this.infligerDegats((Obstacle) elt, partie);
 					}
 				}
 				/* Supprimer le projectile de la carte*/
@@ -63,9 +134,9 @@ public class Projectile implements PartieElement {
 				if (contenu!=null) {
 					for (PartieElement elt : contenu) {
 					    if(elt instanceof Mobile) {
-							this.infligerDegats((Mobile) elt, carte);
+							this.infligerDegats((Mobile) elt, partie);
 						} else {
-							this.infligerDegats((Obstacle) elt, carte);
+							this.infligerDegats((Obstacle) elt, partie);
 						}
 					}
 					/* Supprimer le projectile de la carte*/
@@ -76,25 +147,35 @@ public class Projectile implements PartieElement {
 	}
 
 	public void avancer(Carte carte) {
-		int iPos, iDir, jPos, jDir, pas;
-		int diffI, diffJ;
 		Case nouvPosition;
-		iPos = this.getPosition().getI();
-		iDir = this.getDirection().getI();
-		jPos = this.getPosition().getJ();
-		jDir = this.getDirection().getJ();
-		diffI = iDir-iPos;
-		diffJ = jDir-jPos;
-		nouvPosition = carte.getCase(iPos+diffI/Math.abs(diffI), jPos+diffJ/Math.abs(diffJ));
-		this.setPosition(nouvPosition);
+		Case caseCible;
+		if(cibleMobile) {
+			caseCible = ((Mobile) this.getCible()).getPosition();
+		} else {
+			caseCible = ((Obstacle) this.getCible()).getPosition();
+		}
+		int iPos = this.getPosition().getI();
+		int iDir = caseCible.getI();
+		int jPos = this.getPosition().getJ();
+		int jDir = caseCible.getJ();
+		int diffI = iDir - iPos;
+		int diffJ = jDir - jPos;
+		if(!(diffI == 0 && diffJ == 0)) {
+			if (Math.abs(diffI) > Math.abs(diffJ)) {
+				nouvPosition = carte.getCase(iPos + diffI / Math.abs(diffI), jPos);
+			} else {
+				nouvPosition = carte.getCase(iPos, jPos + diffJ / Math.abs(diffJ));
+			}
+			this.setPosition(nouvPosition);
+		}
 	}
 	
-	public void infligerDegats(Obstacle o, Carte carte) {
-		o.pertePV(this.degat, carte);
+	public void infligerDegats(Obstacle o, Partie partie) {
+		o.pertePV(this.degat, partie);
 	}
 
-	public void infligerDegats(Mobile m, Carte carte) {
-		m.pertePV(this.degat, carte);
+	public void infligerDegats(Mobile m, Partie partie) {
+		m.pertePV(this.degat, partie);
 	}
 
 	
@@ -130,18 +211,26 @@ public class Projectile implements PartieElement {
 	public void setPosition(Case position) {
 		this.position = position;
 	}
-	public Case getDirection() {
-		return direction;
-	}
-	public void setDirection(Case direction) {
-		this.direction = direction;
-	}
 	public Energie getDegat() {
 		return degat;
 	}
 	public void setDegat(Energie degat) {
 		this.degat = degat;
 	}
-	
-	
+
+	public PartieElement getCible() {
+		return cible;
+	}
+
+	public void setCible(PartieElement cible) {
+		this.cible = cible;
+	}
+
+	public boolean isCibleMobile() {
+		return cibleMobile;
+	}
+
+	public void setCibleMobile(boolean cibleMobile) {
+		this.cibleMobile = cibleMobile;
+	}
 }

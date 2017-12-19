@@ -46,9 +46,6 @@ public class EnigmeVue {
     /***************** METHODES ****************/
 
     public void afficher() {
-        // Controleur
-        player.update();
-
         // Affichage !
         grid.Draw();
         for(Mobile m : mobiles) {
@@ -70,12 +67,15 @@ public class EnigmeVue {
         for(enigme.Obstacle o : p.getObstacles()) {
             tours.add(new Tour(o.getPosition().getI(), o.getPosition().getJ(), tex));
         }
+
         // On récupère toutes les mobiles
         mobiles = new ArrayList<>();
         tex = LoadTexture("res/sprite_mechant.png", "PNG");
        for (enigme.Mobile m : p.getMobiles()){
-           Tile tile = new Tile(m.getEntree().getI() * 64, m.getEntree().getJ() * 64, 64,64,TileType.Entree);
-           mobiles.add(new data.Mobile(tex, tile, m.getPosition().getI() * 64, m.getPosition().getJ() * 64, 64, 64));
+           if(m.isEnJeu()) {
+               Tile tile = new Tile(m.getEntree().getI() * 64, m.getEntree().getJ() * 64, 64, 64, TileType.Entree);
+               mobiles.add(new data.Mobile(tex, tile, m.getPosition().getI() * 64, m.getPosition().getJ() * 64, 64, 64));
+           }
        }
 
 
@@ -83,4 +83,60 @@ public class EnigmeVue {
 
 
     /***************** GETS & SETS ****************/
+
+    public int getLargeur() {
+        return largeur;
+    }
+
+    public void setLargeur(int largeur) {
+        this.largeur = largeur;
+    }
+
+    public int getLongueur() {
+        return longueur;
+    }
+
+    public void setLongueur(int longueur) {
+        this.longueur = longueur;
+    }
+
+    public List<List<Jeu.TYPE_TERRAIN>> getMap() {
+        return map;
+    }
+
+    public void setMap(List<List<Jeu.TYPE_TERRAIN>> map) {
+        this.map = map;
+    }
+
+    public TileGrid getGrid() {
+        return grid;
+    }
+
+    public void setGrid(TileGrid grid) {
+        this.grid = grid;
+    }
+
+    public List<Tour> getTours() {
+        return tours;
+    }
+
+    public void setTours(List<Tour> tours) {
+        this.tours = tours;
+    }
+
+    public List<Mobile> getMobiles() {
+        return mobiles;
+    }
+
+    public void setMobiles(List<Mobile> mobiles) {
+        this.mobiles = mobiles;
+    }
+
+    public Player getPlayer() {
+        return player;
+    }
+
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
 }
