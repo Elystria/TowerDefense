@@ -12,7 +12,7 @@ public class Carte {
 	private int nbLignes;
 	private int nbColonnes;
 	private Collection<Case> cases;
-	private HashMap<Case, Mobile>  mobiles;
+	private HashMap<Case, Mobile> mobiles;
 	private HashMap<Case, Obstacle> obstacles;
 	private HashMap<Case, Collection<Projectile>> projectiles;
 	private ArrayList<Case> cheminMobiles;
@@ -101,12 +101,10 @@ public class Carte {
 	
 	
 
-	public Collection<Mobile> mobilesAutour(int portee, Case position ) {
-		Collection<Mobile> res = new ArrayList<Mobile>();
-		Mobile m;
+	public Collection<Mobile> mobilesAutour(int portee, Case position) {
+		Collection<Mobile> res = new ArrayList<>();
 		for (Case c : cases) {
 			if (c.getI() == position.getI() && c.getJ() == position.getJ() +1) {
-					
 				if (mobiles.containsKey(c)) {
 					res.add(mobiles.get(c));
 				}
@@ -115,8 +113,6 @@ public class Carte {
 				if (mobiles.containsKey(c)) {
 					res.add(mobiles.get(c));	
 				}
-			
-		
 			}
 		}
 		return res;
@@ -149,7 +145,6 @@ public class Carte {
 				return c;
 			}
 		}
-		System.out.println("Cette case n'existe pas !");
 		return null;
 	}
 
@@ -180,5 +175,27 @@ public class Carte {
 	
 	public void ajouterMobile(Mobile m) {
 		mobiles.put(m.getPosition(), m);
+	}
+
+	public List<Case> voisinesCase(Case c) {
+		List<Case> voisines = new ArrayList<>();
+		Case newCase;
+		newCase = getCase(c.getI() + 1, c.getJ());
+		if(newCase != null) {
+			voisines.add(newCase);
+		}
+		newCase = getCase(c.getI(), c.getJ() + 1);
+		if(newCase != null) {
+			voisines.add(newCase);
+		}
+		newCase = getCase(c.getI() - 1, c.getJ());
+		if(newCase != null) {
+			voisines.add(newCase);
+		}
+		newCase = getCase(c.getI(), c.getJ() - 1);
+		if(newCase != null) {
+			voisines.add(newCase);
+		}
+		return voisines;
 	}
 }
