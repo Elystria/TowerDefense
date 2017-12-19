@@ -1,3 +1,4 @@
+/*Démonstration des contraintes sur les niveaux*/
 Jeu exemple1 { 
 	Partie partie_unique {
 		
@@ -60,8 +61,8 @@ Jeu exemple1 {
 			Portee 1
 			Masse 1
 			Vitesse 1
-			Position c11
-			Direction c12
+			Position c33
+			Direction c32
 			Degat 1
 		}
 		
@@ -86,15 +87,20 @@ Jeu exemple1 {
 		
 		/* On définie l'unique niveau du jeu */
 		Niveau niv facile {
-			DureePauses 1
+			DureePauses 0
 			Argent 0
-			MobSortisMax 2
+			MobSortisMax 0
 			Carte carte1
 			Vague v1 { 
-					Mobiles m m m
+					Mobiles 
 					Obstacles o
 					Gain 3
 				  }
+			Vague v1 {
+					Mobiles m m m
+					Obstacles o
+					Gain 2
+			}
 		}
 		
 	}
