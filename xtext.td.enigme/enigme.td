@@ -1,6 +1,7 @@
 Jeu exemple1 { 
 	Partie partie_unique {
 		
+		 
 		/* On définie les cases qui vont être utilisées */
 		c11 1 1 montagne
 		c12 1 2 montagne
@@ -72,8 +73,6 @@ Jeu exemple1 {
 			In c21
 			Out c25
 			PVmax 1
-			PV 1
-			PA 1
 			Tactique procheFirst
 		}
 		
@@ -81,8 +80,6 @@ Jeu exemple1 {
 		Obstacle o {
 			Campement c33
 			PVmax 1
-			PV 1
-			PA 1
 			Tactique faibleFirst
 		}
 		
@@ -93,7 +90,7 @@ Jeu exemple1 {
 			Argent 0
 			MobSortisMax 2
 			Carte carte1
-			Vague { 
+			Vague v1 { 
 					Mobiles m m m
 					Obstacles o
 					Gain 3

@@ -27,8 +27,6 @@ import xtext.towerDefense.TowerDefensePackage;
  * <ul>
  *   <li>{@link xtext.towerDefense.impl.ObstacleImpl#getCampement <em>Campement</em>}</li>
  *   <li>{@link xtext.towerDefense.impl.ObstacleImpl#getQuantiteEnergieMax <em>Quantite Energie Max</em>}</li>
- *   <li>{@link xtext.towerDefense.impl.ObstacleImpl#getQuantiteEnergieCourant <em>Quantite Energie Courant</em>}</li>
- *   <li>{@link xtext.towerDefense.impl.ObstacleImpl#getPontsAction <em>Ponts Action</em>}</li>
  *   <li>{@link xtext.towerDefense.impl.ObstacleImpl#getTactique <em>Tactique</em>}</li>
  * </ul>
  *
@@ -55,26 +53,6 @@ public class ObstacleImpl extends PartieElementImpl implements Obstacle
    * @ordered
    */
   protected Energie quantiteEnergieMax;
-
-  /**
-   * The cached value of the '{@link #getQuantiteEnergieCourant() <em>Quantite Energie Courant</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getQuantiteEnergieCourant()
-   * @generated
-   * @ordered
-   */
-  protected Energie quantiteEnergieCourant;
-
-  /**
-   * The cached value of the '{@link #getPontsAction() <em>Ponts Action</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getPontsAction()
-   * @generated
-   * @ordered
-   */
-  protected Energie pontsAction;
 
   /**
    * The default value of the '{@link #getTactique() <em>Tactique</em>}' attribute.
@@ -213,102 +191,6 @@ public class ObstacleImpl extends PartieElementImpl implements Obstacle
    * <!-- end-user-doc -->
    * @generated
    */
-  public Energie getQuantiteEnergieCourant()
-  {
-    return quantiteEnergieCourant;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetQuantiteEnergieCourant(Energie newQuantiteEnergieCourant, NotificationChain msgs)
-  {
-    Energie oldQuantiteEnergieCourant = quantiteEnergieCourant;
-    quantiteEnergieCourant = newQuantiteEnergieCourant;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TowerDefensePackage.OBSTACLE__QUANTITE_ENERGIE_COURANT, oldQuantiteEnergieCourant, newQuantiteEnergieCourant);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setQuantiteEnergieCourant(Energie newQuantiteEnergieCourant)
-  {
-    if (newQuantiteEnergieCourant != quantiteEnergieCourant)
-    {
-      NotificationChain msgs = null;
-      if (quantiteEnergieCourant != null)
-        msgs = ((InternalEObject)quantiteEnergieCourant).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - TowerDefensePackage.OBSTACLE__QUANTITE_ENERGIE_COURANT, null, msgs);
-      if (newQuantiteEnergieCourant != null)
-        msgs = ((InternalEObject)newQuantiteEnergieCourant).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - TowerDefensePackage.OBSTACLE__QUANTITE_ENERGIE_COURANT, null, msgs);
-      msgs = basicSetQuantiteEnergieCourant(newQuantiteEnergieCourant, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.OBSTACLE__QUANTITE_ENERGIE_COURANT, newQuantiteEnergieCourant, newQuantiteEnergieCourant));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Energie getPontsAction()
-  {
-    return pontsAction;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetPontsAction(Energie newPontsAction, NotificationChain msgs)
-  {
-    Energie oldPontsAction = pontsAction;
-    pontsAction = newPontsAction;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TowerDefensePackage.OBSTACLE__PONTS_ACTION, oldPontsAction, newPontsAction);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setPontsAction(Energie newPontsAction)
-  {
-    if (newPontsAction != pontsAction)
-    {
-      NotificationChain msgs = null;
-      if (pontsAction != null)
-        msgs = ((InternalEObject)pontsAction).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - TowerDefensePackage.OBSTACLE__PONTS_ACTION, null, msgs);
-      if (newPontsAction != null)
-        msgs = ((InternalEObject)newPontsAction).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - TowerDefensePackage.OBSTACLE__PONTS_ACTION, null, msgs);
-      msgs = basicSetPontsAction(newPontsAction, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.OBSTACLE__PONTS_ACTION, newPontsAction, newPontsAction));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public TactiqueType getTactique()
   {
     return tactique;
@@ -339,10 +221,6 @@ public class ObstacleImpl extends PartieElementImpl implements Obstacle
     {
       case TowerDefensePackage.OBSTACLE__QUANTITE_ENERGIE_MAX:
         return basicSetQuantiteEnergieMax(null, msgs);
-      case TowerDefensePackage.OBSTACLE__QUANTITE_ENERGIE_COURANT:
-        return basicSetQuantiteEnergieCourant(null, msgs);
-      case TowerDefensePackage.OBSTACLE__PONTS_ACTION:
-        return basicSetPontsAction(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -362,10 +240,6 @@ public class ObstacleImpl extends PartieElementImpl implements Obstacle
         return basicGetCampement();
       case TowerDefensePackage.OBSTACLE__QUANTITE_ENERGIE_MAX:
         return getQuantiteEnergieMax();
-      case TowerDefensePackage.OBSTACLE__QUANTITE_ENERGIE_COURANT:
-        return getQuantiteEnergieCourant();
-      case TowerDefensePackage.OBSTACLE__PONTS_ACTION:
-        return getPontsAction();
       case TowerDefensePackage.OBSTACLE__TACTIQUE:
         return getTactique();
     }
@@ -387,12 +261,6 @@ public class ObstacleImpl extends PartieElementImpl implements Obstacle
         return;
       case TowerDefensePackage.OBSTACLE__QUANTITE_ENERGIE_MAX:
         setQuantiteEnergieMax((Energie)newValue);
-        return;
-      case TowerDefensePackage.OBSTACLE__QUANTITE_ENERGIE_COURANT:
-        setQuantiteEnergieCourant((Energie)newValue);
-        return;
-      case TowerDefensePackage.OBSTACLE__PONTS_ACTION:
-        setPontsAction((Energie)newValue);
         return;
       case TowerDefensePackage.OBSTACLE__TACTIQUE:
         setTactique((TactiqueType)newValue);
@@ -417,12 +285,6 @@ public class ObstacleImpl extends PartieElementImpl implements Obstacle
       case TowerDefensePackage.OBSTACLE__QUANTITE_ENERGIE_MAX:
         setQuantiteEnergieMax((Energie)null);
         return;
-      case TowerDefensePackage.OBSTACLE__QUANTITE_ENERGIE_COURANT:
-        setQuantiteEnergieCourant((Energie)null);
-        return;
-      case TowerDefensePackage.OBSTACLE__PONTS_ACTION:
-        setPontsAction((Energie)null);
-        return;
       case TowerDefensePackage.OBSTACLE__TACTIQUE:
         setTactique(TACTIQUE_EDEFAULT);
         return;
@@ -444,10 +306,6 @@ public class ObstacleImpl extends PartieElementImpl implements Obstacle
         return campement != null;
       case TowerDefensePackage.OBSTACLE__QUANTITE_ENERGIE_MAX:
         return quantiteEnergieMax != null;
-      case TowerDefensePackage.OBSTACLE__QUANTITE_ENERGIE_COURANT:
-        return quantiteEnergieCourant != null;
-      case TowerDefensePackage.OBSTACLE__PONTS_ACTION:
-        return pontsAction != null;
       case TowerDefensePackage.OBSTACLE__TACTIQUE:
         return tactique != TACTIQUE_EDEFAULT;
     }

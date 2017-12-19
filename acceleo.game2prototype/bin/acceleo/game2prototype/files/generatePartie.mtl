@@ -1,0 +1,145 @@
+[comment encoding = UTF-8 /]
+[module generatePartie('http://www.TowerDefense.xtext')]
+
+
+[template public generatePartie(aPartie : Partie)]
+
+[file (aPartie.name.concat('.java'), false, 'UTF-8')]
+
+package ceJeu;
+
+import data.ceJeuVue;
+
+public class [aPartie.name/] {
+
+public static void main (String['['/] [ ']'/]args) {
+
+	// On definie les natures de terrain de la carte
+	List<NatureTerrain> natures = new ArrayList<>();
+	[for (nt : NatureTerrain | aPartie.partieElements -> getNatureTerrains())]
+	NatureTerrain [nt.name/] = new NatureTerrain("[nt.name/]",[nt.volume/],   Jeu.TYPE_TERRAIN.[nt.type/], [if (nt.fatigue.infini)]new Energie(true,0)[else]new Energie([nt.fatigue.valeur/])[/if]);
+	natures.add([nt.name/]);
+	[/for]
+
+	// On definie les cases de la carte
+	List<Case> cases = new ArrayList<>();
+	[for (c : Case | aPartie.cases)]
+	Case [c.name/] = new Case("[c.name/]", [c.i/], [c.j/], [c.natureDuTerrain.name/]);  
+	cases.add([c.name/]);
+	[/for]
+
+	// On definie les mobiles
+	List<Mobile> mobiles = new ArrayList<>();
+	[for (m : Mobile | aPartie.partieElements -> getMobiles())]
+	Mobile [m.name/] = new Mobile("[m.name/]", [m.force/], [m.volume/], [m.numVague/], [m.caseEntree.name/], [m.caseSortie.name/], new Energie([if (m.quantiteEnergieMax.infini)]true,0[else][m.quantiteEnergieMax.valeur/][/if]),Jeu.TactiqueType.[m.tactique/]);
+	mobiles.add([m.name/]); 
+	[/for]
+
+	// On definie les obstacles
+	List<Obstacle> obstacles = new ArrayList<>();
+	[for (o : Obstacle | aPartie.partieElements -> getObstacles())]
+	Obstacle [o.name/] = new Obstacle("[o.name/]",[o.campement.name/], [if (o.quantiteEnergieMax.infini)]new Energie(true,0)[else]new Energie([o.quantiteEnergieMax.valeur/])[/if],Jeu.TactiqueType.[o.tactique/]);
+	obstacles.add([o.name/]); 
+	[/for]
+
+	// On definie les niveaux
+	List<Niveau> niveaux = new ArrayList<>();
+	List<Vague> vagues;
+	List<Carte> cartes;
+	[for (n : Niveau | aPartie.niveaux )]
+		// On definie les vagues du niveau
+		cartes = new ArrayList<>();
+		vagues = new ArrayList<>();
+		[for (v : Vague | n.vagues)]
+			Vague [v.name/] = new Vague(mobiles, obstacles, 3);
+			vagues.add([v.name/]);
+		[/for]
+
+		// On definie les cartes du niveau
+		Carte [n.carte.name/] = new Carte("[n.carte.name/]", [n.carte.nbLignes/], [n.carte.nbColonnes/], cases, chemin, obstacles, mobiles);
+		cartes.add([n.carte.name/]);
+		
+		// Enfin on definie le niveau
+		Niveau [n.name/] = new Niveau("[n.name/]", Jeu.Difficulte.[n.difficulte/],n.dureePause, n.argent, n.mobSortisLimite, [n.carte.name/] ,vagues);
+		niveaux.add([n.name/]);
+
+	
+	[/for]
+
+	List<PartieElement> pe = new ArrayList<>();
+        pe.addAll(mobiles);
+        pe.addAll(obstacles);
+	
+	Partie [aPartie.name/] = new Partie("[aPartie.name/]", natures, cases, cartes, pe, niveaux);
+	[aPartie.name/].setObstacles(obstacles);
+	[aPartie.name/].setMobiles(mobiles);
+
+	    // Initialiser l'affichage
+        EnigmeVue vue = new EnigmeVue([aPartie.name/]);
+
+        // Tant que la partie n'est pas finie
+        while(!Display.isCloseRequested()) {
+        //while(![aPartie.name/].estFinie()) {
+            // Calcul du nouveau modele
+            // On fait jouer les projectiles
+            [aPartie.name/].jouerProjectiles();
+            // On fait jouer les obstacles
+            [aPartie.name/].jouerObstacles();
+            // On fait jouer les mobiles
+            [aPartie.name/].jouerMobiles();
+
+            // Transferer le modèle à la vue
+            vue.update([aPartie.name/]);
+
+            // Affichage
+            vue.afficher();
+
+            // Petite pause pour qu'on ait le temps de voir ce qu'il se passe
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+        }
+
+    }
+
+}
+
+
+	
+
+
+[/file]
+
+
+[/template]
+
+[query public getNatureTerrains(elements : OrderedSet(PartieElement)) : OrderedSet(NatureTerrain) = 
+	elements->select( e | e.oclIsKindOf(NatureTerrain) )
+		->collect( e | e.oclAsType(NatureTerrain) )
+		->asOrderedSet()
+/]
+
+[query public getObstacles(elements : OrderedSet(PartieElement)) : OrderedSet(Obstacle) = 
+	elements->select( e | e.oclIsKindOf(Obstacle) )
+		->collect( e | e.oclAsType(Obstacle) )
+		->asOrderedSet()
+/]
+
+[query public getMobiles(elements : OrderedSet(PartieElement)) : OrderedSet(Mobile) = 
+	elements->select( e | e.oclIsKindOf(Mobile) )
+		->collect( e | e.oclAsType(Mobile) )
+		->asOrderedSet()
+/]
+
+[query public getProjectiles(elements : OrderedSet(PartieElement)) : OrderedSet(Projectile) = 
+	elements->select( e | e.oclIsKindOf(Projectile) )
+		->collect( e | e.oclAsType(Projectile) )
+		->asOrderedSet()
+/]
+
+
+
+	

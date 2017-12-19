@@ -21,16 +21,14 @@ PartieElement:
 	Obstacle | Mobile | Projectile | NatureTerrain
 ;
 
-Energie :
-	infini?='infini' | valeur=INT 
+Energie : 
+	infini?='infini' | valeur=INT
 ;
 
 Obstacle:
 	'Obstacle' name=ID '{'
 	'Campement' campement=[Case]
 	'PVmax' quantiteEnergieMax=Energie
-	'PV' quantiteEnergieCourant=Energie
-	'PA' pontsAction=Energie
 	'Tactique' tactique=TactiqueType
 	'}'
 ;
@@ -47,8 +45,6 @@ Mobile:
 	'In' caseEntree=[Case]
 	'Out' caseSortie=[Case]
 	'PVmax' quantiteEnergieMax=Energie
-	'PV' quantiteEnergieCourant=Energie
-	'PA' pointsAction=Energie
 	'Tactique' tactique=TactiqueType
 	'}'
 ;
@@ -82,7 +78,7 @@ Niveau:
 	'Argent' argent=INT
 	'MobSortisMax' mobSortisLimite=INT
 	'Carte' carte=[Carte]
-	'Vague' vagues+=Vague
+	vagues+=Vague*
 	'}'
 ;
 
@@ -106,6 +102,7 @@ Case :
 ;
 
 Vague : 
+	'Vague' name=ID // j'ai rajoute un nom aux vagues
 	'{'
 	'Mobiles' mobiles+=[Mobile]*
 	'Obstacles' obstacles+=[Obstacle]*

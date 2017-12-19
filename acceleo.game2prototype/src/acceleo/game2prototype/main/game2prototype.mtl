@@ -1,11 +1,25 @@
 [comment encoding = UTF-8 /]
 [module game2prototype('http://www.TowerDefense.xtext')]
-
+[import acceleo::game2prototype::files::generatePartie/]
 
 [template public game2prototype(aJeu : Jeu)]
 [comment @main/]
 [file (aJeu.name.concat('.java'), false, 'UTF-8')]
-public class
+package ceJeu;
+
+import data.ceJeuVue;
+
+public class [aJeu.name/] {
+
+	public static void main (String['['/] [ ']'/]args) {
+	
+		\\Initialisation du jeu
+
+		[for (p : Partie | aJeu.parties)]
+		[p.generatePartie()/]
+		[/for]
+		
+
 
 [/file]
 [/template]

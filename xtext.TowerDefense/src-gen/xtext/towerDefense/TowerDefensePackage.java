@@ -262,31 +262,13 @@ public interface TowerDefensePackage extends EPackage
   int OBSTACLE__QUANTITE_ENERGIE_MAX = PARTIE_ELEMENT_FEATURE_COUNT + 1;
 
   /**
-   * The feature id for the '<em><b>Quantite Energie Courant</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OBSTACLE__QUANTITE_ENERGIE_COURANT = PARTIE_ELEMENT_FEATURE_COUNT + 2;
-
-  /**
-   * The feature id for the '<em><b>Ponts Action</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OBSTACLE__PONTS_ACTION = PARTIE_ELEMENT_FEATURE_COUNT + 3;
-
-  /**
    * The feature id for the '<em><b>Tactique</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int OBSTACLE__TACTIQUE = PARTIE_ELEMENT_FEATURE_COUNT + 4;
+  int OBSTACLE__TACTIQUE = PARTIE_ELEMENT_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Obstacle</em>' class.
@@ -295,7 +277,7 @@ public interface TowerDefensePackage extends EPackage
    * @generated
    * @ordered
    */
-  int OBSTACLE_FEATURE_COUNT = PARTIE_ELEMENT_FEATURE_COUNT + 5;
+  int OBSTACLE_FEATURE_COUNT = PARTIE_ELEMENT_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link xtext.towerDefense.impl.MobileImpl <em>Mobile</em>}' class.
@@ -371,31 +353,13 @@ public interface TowerDefensePackage extends EPackage
   int MOBILE__QUANTITE_ENERGIE_MAX = PARTIE_ELEMENT_FEATURE_COUNT + 5;
 
   /**
-   * The feature id for the '<em><b>Quantite Energie Courant</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MOBILE__QUANTITE_ENERGIE_COURANT = PARTIE_ELEMENT_FEATURE_COUNT + 6;
-
-  /**
-   * The feature id for the '<em><b>Points Action</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MOBILE__POINTS_ACTION = PARTIE_ELEMENT_FEATURE_COUNT + 7;
-
-  /**
    * The feature id for the '<em><b>Tactique</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MOBILE__TACTIQUE = PARTIE_ELEMENT_FEATURE_COUNT + 8;
+  int MOBILE__TACTIQUE = PARTIE_ELEMENT_FEATURE_COUNT + 6;
 
   /**
    * The number of structural features of the '<em>Mobile</em>' class.
@@ -404,7 +368,7 @@ public interface TowerDefensePackage extends EPackage
    * @generated
    * @ordered
    */
-  int MOBILE_FEATURE_COUNT = PARTIE_ELEMENT_FEATURE_COUNT + 9;
+  int MOBILE_FEATURE_COUNT = PARTIE_ELEMENT_FEATURE_COUNT + 7;
 
   /**
    * The meta object id for the '{@link xtext.towerDefense.impl.ProjectileImpl <em>Projectile</em>}' class.
@@ -746,13 +710,22 @@ public interface TowerDefensePackage extends EPackage
   int VAGUE = 11;
 
   /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VAGUE__NAME = 0;
+
+  /**
    * The feature id for the '<em><b>Mobiles</b></em>' reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int VAGUE__MOBILES = 0;
+  int VAGUE__MOBILES = 1;
 
   /**
    * The feature id for the '<em><b>Obstacles</b></em>' reference list.
@@ -761,7 +734,7 @@ public interface TowerDefensePackage extends EPackage
    * @generated
    * @ordered
    */
-  int VAGUE__OBSTACLES = 1;
+  int VAGUE__OBSTACLES = 2;
 
   /**
    * The feature id for the '<em><b>Gain Victoire</b></em>' attribute.
@@ -770,7 +743,7 @@ public interface TowerDefensePackage extends EPackage
    * @generated
    * @ordered
    */
-  int VAGUE__GAIN_VICTOIRE = 2;
+  int VAGUE__GAIN_VICTOIRE = 3;
 
   /**
    * The number of structural features of the '<em>Vague</em>' class.
@@ -779,7 +752,7 @@ public interface TowerDefensePackage extends EPackage
    * @generated
    * @ordered
    */
-  int VAGUE_FEATURE_COUNT = 3;
+  int VAGUE_FEATURE_COUNT = 4;
 
   /**
    * The meta object id for the '{@link xtext.towerDefense.TactiqueType <em>Tactique Type</em>}' enum.
@@ -995,28 +968,6 @@ public interface TowerDefensePackage extends EPackage
   EReference getObstacle_QuantiteEnergieMax();
 
   /**
-   * Returns the meta object for the containment reference '{@link xtext.towerDefense.Obstacle#getQuantiteEnergieCourant <em>Quantite Energie Courant</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Quantite Energie Courant</em>'.
-   * @see xtext.towerDefense.Obstacle#getQuantiteEnergieCourant()
-   * @see #getObstacle()
-   * @generated
-   */
-  EReference getObstacle_QuantiteEnergieCourant();
-
-  /**
-   * Returns the meta object for the containment reference '{@link xtext.towerDefense.Obstacle#getPontsAction <em>Ponts Action</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Ponts Action</em>'.
-   * @see xtext.towerDefense.Obstacle#getPontsAction()
-   * @see #getObstacle()
-   * @generated
-   */
-  EReference getObstacle_PontsAction();
-
-  /**
    * Returns the meta object for the attribute '{@link xtext.towerDefense.Obstacle#getTactique <em>Tactique</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1102,28 +1053,6 @@ public interface TowerDefensePackage extends EPackage
    * @generated
    */
   EReference getMobile_QuantiteEnergieMax();
-
-  /**
-   * Returns the meta object for the containment reference '{@link xtext.towerDefense.Mobile#getQuantiteEnergieCourant <em>Quantite Energie Courant</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Quantite Energie Courant</em>'.
-   * @see xtext.towerDefense.Mobile#getQuantiteEnergieCourant()
-   * @see #getMobile()
-   * @generated
-   */
-  EReference getMobile_QuantiteEnergieCourant();
-
-  /**
-   * Returns the meta object for the containment reference '{@link xtext.towerDefense.Mobile#getPointsAction <em>Points Action</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Points Action</em>'.
-   * @see xtext.towerDefense.Mobile#getPointsAction()
-   * @see #getMobile()
-   * @generated
-   */
-  EReference getMobile_PointsAction();
 
   /**
    * Returns the meta object for the attribute '{@link xtext.towerDefense.Mobile#getTactique <em>Tactique</em>}'.
@@ -1461,6 +1390,17 @@ public interface TowerDefensePackage extends EPackage
   EClass getVague();
 
   /**
+   * Returns the meta object for the attribute '{@link xtext.towerDefense.Vague#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see xtext.towerDefense.Vague#getName()
+   * @see #getVague()
+   * @generated
+   */
+  EAttribute getVague_Name();
+
+  /**
    * Returns the meta object for the reference list '{@link xtext.towerDefense.Vague#getMobiles <em>Mobiles</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1693,22 +1633,6 @@ public interface TowerDefensePackage extends EPackage
     EReference OBSTACLE__QUANTITE_ENERGIE_MAX = eINSTANCE.getObstacle_QuantiteEnergieMax();
 
     /**
-     * The meta object literal for the '<em><b>Quantite Energie Courant</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference OBSTACLE__QUANTITE_ENERGIE_COURANT = eINSTANCE.getObstacle_QuantiteEnergieCourant();
-
-    /**
-     * The meta object literal for the '<em><b>Ponts Action</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference OBSTACLE__PONTS_ACTION = eINSTANCE.getObstacle_PontsAction();
-
-    /**
      * The meta object literal for the '<em><b>Tactique</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1773,22 +1697,6 @@ public interface TowerDefensePackage extends EPackage
      * @generated
      */
     EReference MOBILE__QUANTITE_ENERGIE_MAX = eINSTANCE.getMobile_QuantiteEnergieMax();
-
-    /**
-     * The meta object literal for the '<em><b>Quantite Energie Courant</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference MOBILE__QUANTITE_ENERGIE_COURANT = eINSTANCE.getMobile_QuantiteEnergieCourant();
-
-    /**
-     * The meta object literal for the '<em><b>Points Action</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference MOBILE__POINTS_ACTION = eINSTANCE.getMobile_PointsAction();
 
     /**
      * The meta object literal for the '<em><b>Tactique</b></em>' attribute feature.
@@ -2049,6 +1957,14 @@ public interface TowerDefensePackage extends EPackage
      * @generated
      */
     EClass VAGUE = eINSTANCE.getVague();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute VAGUE__NAME = eINSTANCE.getVague_Name();
 
     /**
      * The meta object literal for the '<em><b>Mobiles</b></em>' reference list feature.

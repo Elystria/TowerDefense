@@ -31,8 +31,6 @@ import xtext.towerDefense.TowerDefensePackage;
  *   <li>{@link xtext.towerDefense.impl.MobileImpl#getCaseEntree <em>Case Entree</em>}</li>
  *   <li>{@link xtext.towerDefense.impl.MobileImpl#getCaseSortie <em>Case Sortie</em>}</li>
  *   <li>{@link xtext.towerDefense.impl.MobileImpl#getQuantiteEnergieMax <em>Quantite Energie Max</em>}</li>
- *   <li>{@link xtext.towerDefense.impl.MobileImpl#getQuantiteEnergieCourant <em>Quantite Energie Courant</em>}</li>
- *   <li>{@link xtext.towerDefense.impl.MobileImpl#getPointsAction <em>Points Action</em>}</li>
  *   <li>{@link xtext.towerDefense.impl.MobileImpl#getTactique <em>Tactique</em>}</li>
  * </ul>
  *
@@ -129,26 +127,6 @@ public class MobileImpl extends PartieElementImpl implements Mobile
    * @ordered
    */
   protected Energie quantiteEnergieMax;
-
-  /**
-   * The cached value of the '{@link #getQuantiteEnergieCourant() <em>Quantite Energie Courant</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getQuantiteEnergieCourant()
-   * @generated
-   * @ordered
-   */
-  protected Energie quantiteEnergieCourant;
-
-  /**
-   * The cached value of the '{@link #getPointsAction() <em>Points Action</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getPointsAction()
-   * @generated
-   * @ordered
-   */
-  protected Energie pointsAction;
 
   /**
    * The default value of the '{@link #getTactique() <em>Tactique</em>}' attribute.
@@ -399,102 +377,6 @@ public class MobileImpl extends PartieElementImpl implements Mobile
    * <!-- end-user-doc -->
    * @generated
    */
-  public Energie getQuantiteEnergieCourant()
-  {
-    return quantiteEnergieCourant;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetQuantiteEnergieCourant(Energie newQuantiteEnergieCourant, NotificationChain msgs)
-  {
-    Energie oldQuantiteEnergieCourant = quantiteEnergieCourant;
-    quantiteEnergieCourant = newQuantiteEnergieCourant;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TowerDefensePackage.MOBILE__QUANTITE_ENERGIE_COURANT, oldQuantiteEnergieCourant, newQuantiteEnergieCourant);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setQuantiteEnergieCourant(Energie newQuantiteEnergieCourant)
-  {
-    if (newQuantiteEnergieCourant != quantiteEnergieCourant)
-    {
-      NotificationChain msgs = null;
-      if (quantiteEnergieCourant != null)
-        msgs = ((InternalEObject)quantiteEnergieCourant).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - TowerDefensePackage.MOBILE__QUANTITE_ENERGIE_COURANT, null, msgs);
-      if (newQuantiteEnergieCourant != null)
-        msgs = ((InternalEObject)newQuantiteEnergieCourant).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - TowerDefensePackage.MOBILE__QUANTITE_ENERGIE_COURANT, null, msgs);
-      msgs = basicSetQuantiteEnergieCourant(newQuantiteEnergieCourant, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.MOBILE__QUANTITE_ENERGIE_COURANT, newQuantiteEnergieCourant, newQuantiteEnergieCourant));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Energie getPointsAction()
-  {
-    return pointsAction;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetPointsAction(Energie newPointsAction, NotificationChain msgs)
-  {
-    Energie oldPointsAction = pointsAction;
-    pointsAction = newPointsAction;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TowerDefensePackage.MOBILE__POINTS_ACTION, oldPointsAction, newPointsAction);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setPointsAction(Energie newPointsAction)
-  {
-    if (newPointsAction != pointsAction)
-    {
-      NotificationChain msgs = null;
-      if (pointsAction != null)
-        msgs = ((InternalEObject)pointsAction).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - TowerDefensePackage.MOBILE__POINTS_ACTION, null, msgs);
-      if (newPointsAction != null)
-        msgs = ((InternalEObject)newPointsAction).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - TowerDefensePackage.MOBILE__POINTS_ACTION, null, msgs);
-      msgs = basicSetPointsAction(newPointsAction, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.MOBILE__POINTS_ACTION, newPointsAction, newPointsAction));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public TactiqueType getTactique()
   {
     return tactique;
@@ -525,10 +407,6 @@ public class MobileImpl extends PartieElementImpl implements Mobile
     {
       case TowerDefensePackage.MOBILE__QUANTITE_ENERGIE_MAX:
         return basicSetQuantiteEnergieMax(null, msgs);
-      case TowerDefensePackage.MOBILE__QUANTITE_ENERGIE_COURANT:
-        return basicSetQuantiteEnergieCourant(null, msgs);
-      case TowerDefensePackage.MOBILE__POINTS_ACTION:
-        return basicSetPointsAction(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -557,10 +435,6 @@ public class MobileImpl extends PartieElementImpl implements Mobile
         return basicGetCaseSortie();
       case TowerDefensePackage.MOBILE__QUANTITE_ENERGIE_MAX:
         return getQuantiteEnergieMax();
-      case TowerDefensePackage.MOBILE__QUANTITE_ENERGIE_COURANT:
-        return getQuantiteEnergieCourant();
-      case TowerDefensePackage.MOBILE__POINTS_ACTION:
-        return getPointsAction();
       case TowerDefensePackage.MOBILE__TACTIQUE:
         return getTactique();
     }
@@ -594,12 +468,6 @@ public class MobileImpl extends PartieElementImpl implements Mobile
         return;
       case TowerDefensePackage.MOBILE__QUANTITE_ENERGIE_MAX:
         setQuantiteEnergieMax((Energie)newValue);
-        return;
-      case TowerDefensePackage.MOBILE__QUANTITE_ENERGIE_COURANT:
-        setQuantiteEnergieCourant((Energie)newValue);
-        return;
-      case TowerDefensePackage.MOBILE__POINTS_ACTION:
-        setPointsAction((Energie)newValue);
         return;
       case TowerDefensePackage.MOBILE__TACTIQUE:
         setTactique((TactiqueType)newValue);
@@ -636,12 +504,6 @@ public class MobileImpl extends PartieElementImpl implements Mobile
       case TowerDefensePackage.MOBILE__QUANTITE_ENERGIE_MAX:
         setQuantiteEnergieMax((Energie)null);
         return;
-      case TowerDefensePackage.MOBILE__QUANTITE_ENERGIE_COURANT:
-        setQuantiteEnergieCourant((Energie)null);
-        return;
-      case TowerDefensePackage.MOBILE__POINTS_ACTION:
-        setPointsAction((Energie)null);
-        return;
       case TowerDefensePackage.MOBILE__TACTIQUE:
         setTactique(TACTIQUE_EDEFAULT);
         return;
@@ -671,10 +533,6 @@ public class MobileImpl extends PartieElementImpl implements Mobile
         return caseSortie != null;
       case TowerDefensePackage.MOBILE__QUANTITE_ENERGIE_MAX:
         return quantiteEnergieMax != null;
-      case TowerDefensePackage.MOBILE__QUANTITE_ENERGIE_COURANT:
-        return quantiteEnergieCourant != null;
-      case TowerDefensePackage.MOBILE__POINTS_ACTION:
-        return pointsAction != null;
       case TowerDefensePackage.MOBILE__TACTIQUE:
         return tactique != TACTIQUE_EDEFAULT;
     }

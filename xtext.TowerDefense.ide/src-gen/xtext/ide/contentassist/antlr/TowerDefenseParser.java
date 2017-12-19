@@ -58,9 +58,7 @@ public class TowerDefenseParser extends AbstractContentAssistParser {
 					put(grammarAccess.getObstacleAccess().getNameAssignment_1(), "rule__Obstacle__NameAssignment_1");
 					put(grammarAccess.getObstacleAccess().getCampementAssignment_4(), "rule__Obstacle__CampementAssignment_4");
 					put(grammarAccess.getObstacleAccess().getQuantiteEnergieMaxAssignment_6(), "rule__Obstacle__QuantiteEnergieMaxAssignment_6");
-					put(grammarAccess.getObstacleAccess().getQuantiteEnergieCourantAssignment_8(), "rule__Obstacle__QuantiteEnergieCourantAssignment_8");
-					put(grammarAccess.getObstacleAccess().getPontsActionAssignment_10(), "rule__Obstacle__PontsActionAssignment_10");
-					put(grammarAccess.getObstacleAccess().getTactiqueAssignment_12(), "rule__Obstacle__TactiqueAssignment_12");
+					put(grammarAccess.getObstacleAccess().getTactiqueAssignment_8(), "rule__Obstacle__TactiqueAssignment_8");
 					put(grammarAccess.getMobileAccess().getNameAssignment_1(), "rule__Mobile__NameAssignment_1");
 					put(grammarAccess.getMobileAccess().getForceAssignment_4(), "rule__Mobile__ForceAssignment_4");
 					put(grammarAccess.getMobileAccess().getVolumeAssignment_6(), "rule__Mobile__VolumeAssignment_6");
@@ -68,9 +66,7 @@ public class TowerDefenseParser extends AbstractContentAssistParser {
 					put(grammarAccess.getMobileAccess().getCaseEntreeAssignment_10(), "rule__Mobile__CaseEntreeAssignment_10");
 					put(grammarAccess.getMobileAccess().getCaseSortieAssignment_12(), "rule__Mobile__CaseSortieAssignment_12");
 					put(grammarAccess.getMobileAccess().getQuantiteEnergieMaxAssignment_14(), "rule__Mobile__QuantiteEnergieMaxAssignment_14");
-					put(grammarAccess.getMobileAccess().getQuantiteEnergieCourantAssignment_16(), "rule__Mobile__QuantiteEnergieCourantAssignment_16");
-					put(grammarAccess.getMobileAccess().getPointsActionAssignment_18(), "rule__Mobile__PointsActionAssignment_18");
-					put(grammarAccess.getMobileAccess().getTactiqueAssignment_20(), "rule__Mobile__TactiqueAssignment_20");
+					put(grammarAccess.getMobileAccess().getTactiqueAssignment_16(), "rule__Mobile__TactiqueAssignment_16");
 					put(grammarAccess.getProjectileAccess().getNameAssignment_1(), "rule__Projectile__NameAssignment_1");
 					put(grammarAccess.getProjectileAccess().getPorteeAssignment_4(), "rule__Projectile__PorteeAssignment_4");
 					put(grammarAccess.getProjectileAccess().getMasseAssignment_6(), "rule__Projectile__MasseAssignment_6");
@@ -88,7 +84,7 @@ public class TowerDefenseParser extends AbstractContentAssistParser {
 					put(grammarAccess.getNiveauAccess().getArgentAssignment_7(), "rule__Niveau__ArgentAssignment_7");
 					put(grammarAccess.getNiveauAccess().getMobSortisLimiteAssignment_9(), "rule__Niveau__MobSortisLimiteAssignment_9");
 					put(grammarAccess.getNiveauAccess().getCarteAssignment_11(), "rule__Niveau__CarteAssignment_11");
-					put(grammarAccess.getNiveauAccess().getVaguesAssignment_13(), "rule__Niveau__VaguesAssignment_13");
+					put(grammarAccess.getNiveauAccess().getVaguesAssignment_12(), "rule__Niveau__VaguesAssignment_12");
 					put(grammarAccess.getCarteAccess().getNameAssignment_1(), "rule__Carte__NameAssignment_1");
 					put(grammarAccess.getCarteAccess().getNbLignesAssignment_4(), "rule__Carte__NbLignesAssignment_4");
 					put(grammarAccess.getCarteAccess().getNbColonnesAssignment_6(), "rule__Carte__NbColonnesAssignment_6");
@@ -97,9 +93,10 @@ public class TowerDefenseParser extends AbstractContentAssistParser {
 					put(grammarAccess.getCaseAccess().getIAssignment_1(), "rule__Case__IAssignment_1");
 					put(grammarAccess.getCaseAccess().getJAssignment_2(), "rule__Case__JAssignment_2");
 					put(grammarAccess.getCaseAccess().getNatureDuTerrainAssignment_3(), "rule__Case__NatureDuTerrainAssignment_3");
-					put(grammarAccess.getVagueAccess().getMobilesAssignment_2(), "rule__Vague__MobilesAssignment_2");
-					put(grammarAccess.getVagueAccess().getObstaclesAssignment_4(), "rule__Vague__ObstaclesAssignment_4");
-					put(grammarAccess.getVagueAccess().getGainVictoireAssignment_6(), "rule__Vague__GainVictoireAssignment_6");
+					put(grammarAccess.getVagueAccess().getNameAssignment_1(), "rule__Vague__NameAssignment_1");
+					put(grammarAccess.getVagueAccess().getMobilesAssignment_4(), "rule__Vague__MobilesAssignment_4");
+					put(grammarAccess.getVagueAccess().getObstaclesAssignment_6(), "rule__Vague__ObstaclesAssignment_6");
+					put(grammarAccess.getVagueAccess().getGainVictoireAssignment_8(), "rule__Vague__GainVictoireAssignment_8");
 				}
 			};
 		}
