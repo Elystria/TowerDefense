@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="towerdefense" version="12.0.0.2017041100">
+  <ownedViewpoints name="towerDefenseViewpoint" modelFileExtension="td">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="JeuDiagram" domainClass="towerDefense::Jeu" enablePopupBars="true">
+      <metamodel href="http://www.TowerDefense#/"/>
+      <metamodel href="http://www.TowerDefense.xtext#/"/>
+      <defaultLayer name="Default">
+        <containerMappings name="Partie" domainClass="towerDefense::Partie">
+          <subNodeMappings name="Obstacle" semanticCandidatesExpression="feature:partieElements" domainClass="towerDefense::Obstacle">
+            <style xsi:type="style:LozengeNodeDescription" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+            </style>
+          </subNodeMappings>
+          <subContainerMappings name="Niveau" semanticCandidatesExpression="feature:eAllContents" domainClass="towerDefense::Niveau">
+            <subContainerMappings name="Vague" semanticCandidatesExpression="feature:eAllContents" domainClass="towerDefense::Vague">
+              <subNodeMappings name="Obstacle" semanticCandidatesExpression="feature:obstacles" domainClass="towerDefense::Obstacle">
+                <style xsi:type="style:LozengeNodeDescription" labelPosition="node" resizeKind="NSEW">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
+                </style>
+              </subNodeMappings>
+              <subNodeMappings name="Mobile" semanticCandidatesExpression="feature:mobiles" domainClass="towerDefense::Mobile">
+                <style xsi:type="style:LozengeNodeDescription" labelPosition="node" resizeKind="NSEW">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_red']"/>
+                </style>
+              </subNodeMappings>
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" roundedCorner="true">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
+              </style>
+            </subContainerMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+            </style>
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" backgroundStyle="GradientTopToBottom">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="Outils">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="PartieCreation" label="Partie" containerMappings="//@ownedViewpoints[name='towerDefenseViewpoint']/@ownedRepresentations[name='JeuDiagram']/@defaultLayer/@containerMappings[name='Partie']">
+            <variable name="towerDefense::Jeu"/>
+            <viewVariable name="JeuDiagram"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="container/">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="towerDefense::Partie" referenceName="parties"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="NiveauCreation" label="Niveau" containerMappings="//@ownedViewpoints[name='towerDefenseViewpoint']/@ownedRepresentations[name='JeuDiagram']/@defaultLayer/@containerMappings[name='Partie']/@subContainerMappings[name='Niveau']">
+            <variable name="towerDefense::Jeu"/>
+            <viewVariable name="JeuDiagram"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="container/">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="towerDefense::Niveau" referenceName="niveaux"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="VagueCreation" label="Vague" containerMappings="//@ownedViewpoints[name='towerDefenseViewpoint']/@ownedRepresentations[name='JeuDiagram']/@defaultLayer/@containerMappings[name='Partie']/@subContainerMappings[name='Niveau']/@subContainerMappings[name='Vague']">
+            <variable name="towerDefense::Jeu"/>
+            <viewVariable name="JeuDiagram"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="container/">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="towerDefense::Vague" referenceName="vagues"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="MobileCreation" label="Mobile" nodeMappings="//@ownedViewpoints[name='towerDefenseViewpoint']/@ownedRepresentations[name='JeuDiagram']/@defaultLayer/@containerMappings[name='Partie']/@subContainerMappings[name='Niveau']/@subContainerMappings[name='Vague']/@subNodeMappings[name='Mobile']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="towerDefense::Mobile" referenceName="mobiles"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="ObstacleCreation" label="Obstacle" nodeMappings="//@ownedViewpoints[name='towerDefenseViewpoint']/@ownedRepresentations[name='JeuDiagram']/@defaultLayer/@containerMappings[name='Partie']/@subContainerMappings[name='Niveau']/@subContainerMappings[name='Vague']/@subNodeMappings[name='Obstacle']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="container/">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="towerDefense::Obstacle" referenceName="obstacles"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="ObstacleBis" nodeMappings="//@ownedViewpoints[name='towerDefenseViewpoint']/@ownedRepresentations[name='JeuDiagram']/@defaultLayer/@containerMappings[name='Partie']/@subNodeMappings[name='Obstacle']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="container/">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="towerDefense::Obstacle" referenceName="partieElements"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="towerdefense.design.Services"/>
+  </ownedViewpoints>
+</description:Group>
