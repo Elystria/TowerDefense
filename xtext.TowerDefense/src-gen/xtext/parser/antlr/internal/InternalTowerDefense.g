@@ -1100,16 +1100,12 @@ ruleNiveau returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_12='Vague'
-		{
-			newLeafNode(otherlv_12, grammarAccess.getNiveauAccess().getVagueKeyword_12());
-		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getNiveauAccess().getVaguesVagueParserRuleCall_13_0());
+					newCompositeNode(grammarAccess.getNiveauAccess().getVaguesVagueParserRuleCall_12_0());
 				}
-				lv_vagues_13_0=ruleVague
+				lv_vagues_12_0=ruleVague
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getNiveauRule());
@@ -1117,15 +1113,15 @@ ruleNiveau returns [EObject current=null]
 					add(
 						$current,
 						"vagues",
-						lv_vagues_13_0,
+						lv_vagues_12_0,
 						"xtext.TowerDefense.Vague");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)*
-		otherlv_14='}'
+		otherlv_13='}'
 		{
-			newLeafNode(otherlv_14, grammarAccess.getNiveauAccess().getRightCurlyBracketKeyword_14());
+			newLeafNode(otherlv_13, grammarAccess.getNiveauAccess().getRightCurlyBracketKeyword_13());
 		}
 	)
 ;
@@ -1342,11 +1338,15 @@ ruleVague returns [EObject current=null]
 	leaveRule();
 }:
 	(
+		otherlv_0='Vague'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getVagueAccess().getVagueKeyword_0());
+		}
 		(
 			(
-				lv_name_0_0=RULE_ID
+				lv_name_1_0=RULE_ID
 				{
-					newLeafNode(lv_name_0_0, grammarAccess.getVagueAccess().getNameIDTerminalRuleCall_0_0());
+					newLeafNode(lv_name_1_0, grammarAccess.getVagueAccess().getNameIDTerminalRuleCall_1_0());
 				}
 				{
 					if ($current==null) {
@@ -1355,35 +1355,18 @@ ruleVague returns [EObject current=null]
 					setWithLastConsumed(
 						$current,
 						"name",
-						lv_name_0_0,
+						lv_name_1_0,
 						"org.eclipse.xtext.common.Terminals.ID");
 				}
 			)
 		)
-		otherlv_1='{'
+		otherlv_2='{'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getVagueAccess().getLeftCurlyBracketKeyword_1());
+			newLeafNode(otherlv_2, grammarAccess.getVagueAccess().getLeftCurlyBracketKeyword_2());
 		}
-		otherlv_2='Mobiles'
+		otherlv_3='Mobiles'
 		{
-			newLeafNode(otherlv_2, grammarAccess.getVagueAccess().getMobilesKeyword_2());
-		}
-		(
-			(
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getVagueRule());
-					}
-				}
-				otherlv_3=RULE_ID
-				{
-					newLeafNode(otherlv_3, grammarAccess.getVagueAccess().getMobilesMobileCrossReference_3_0());
-				}
-			)
-		)*
-		otherlv_4='Obstacles'
-		{
-			newLeafNode(otherlv_4, grammarAccess.getVagueAccess().getObstaclesKeyword_4());
+			newLeafNode(otherlv_3, grammarAccess.getVagueAccess().getMobilesKeyword_3());
 		}
 		(
 			(
@@ -1392,21 +1375,38 @@ ruleVague returns [EObject current=null]
 						$current = createModelElement(grammarAccess.getVagueRule());
 					}
 				}
-				otherlv_5=RULE_ID
+				otherlv_4=RULE_ID
 				{
-					newLeafNode(otherlv_5, grammarAccess.getVagueAccess().getObstaclesObstacleCrossReference_5_0());
+					newLeafNode(otherlv_4, grammarAccess.getVagueAccess().getMobilesMobileCrossReference_4_0());
 				}
 			)
 		)*
-		otherlv_6='Gain'
+		otherlv_5='Obstacles'
 		{
-			newLeafNode(otherlv_6, grammarAccess.getVagueAccess().getGainKeyword_6());
+			newLeafNode(otherlv_5, grammarAccess.getVagueAccess().getObstaclesKeyword_5());
 		}
 		(
 			(
-				lv_gainVictoire_7_0=RULE_INT
 				{
-					newLeafNode(lv_gainVictoire_7_0, grammarAccess.getVagueAccess().getGainVictoireINTTerminalRuleCall_7_0());
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVagueRule());
+					}
+				}
+				otherlv_6=RULE_ID
+				{
+					newLeafNode(otherlv_6, grammarAccess.getVagueAccess().getObstaclesObstacleCrossReference_6_0());
+				}
+			)
+		)*
+		otherlv_7='Gain'
+		{
+			newLeafNode(otherlv_7, grammarAccess.getVagueAccess().getGainKeyword_7());
+		}
+		(
+			(
+				lv_gainVictoire_8_0=RULE_INT
+				{
+					newLeafNode(lv_gainVictoire_8_0, grammarAccess.getVagueAccess().getGainVictoireINTTerminalRuleCall_8_0());
 				}
 				{
 					if ($current==null) {
@@ -1415,14 +1415,14 @@ ruleVague returns [EObject current=null]
 					setWithLastConsumed(
 						$current,
 						"gainVictoire",
-						lv_gainVictoire_7_0,
+						lv_gainVictoire_8_0,
 						"org.eclipse.xtext.common.Terminals.INT");
 				}
 			)
 		)
-		otherlv_8='}'
+		otherlv_9='}'
 		{
-			newLeafNode(otherlv_8, grammarAccess.getVagueAccess().getRightCurlyBracketKeyword_8());
+			newLeafNode(otherlv_9, grammarAccess.getVagueAccess().getRightCurlyBracketKeyword_9());
 		}
 	)
 ;

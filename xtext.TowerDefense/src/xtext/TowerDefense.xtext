@@ -78,7 +78,7 @@ Niveau:
 	'Argent' argent=INT
 	'MobSortisMax' mobSortisLimite=INT
 	'Carte' carte=[Carte]
-	'Vague' vagues+=Vague*
+	vagues+=Vague*
 	'}'
 ;
 
@@ -102,7 +102,7 @@ Case :
 ;
 
 Vague : 
-	name=ID // j'ai rajoute un nom aux vagues
+	'Vague' name=ID // j'ai rajoute un nom aux vagues
 	'{'
 	'Mobiles' mobiles+=[Mobile]*
 	'Obstacles' obstacles+=[Obstacle]*

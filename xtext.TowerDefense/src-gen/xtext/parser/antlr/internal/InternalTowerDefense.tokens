@@ -1,8 +1,8 @@
 'Argent'=39
 'Campement'=17
 'Carte'=41
-'Cases'=45
-'Colonnes'=44
+'Cases'=44
+'Colonnes'=43
 'Degat'=32
 'Direction'=31
 'DureePauses'=38
@@ -11,7 +11,7 @@
 'Gain'=48
 'In'=24
 'Jeu'=11
-'Lignes'=43
+'Lignes'=42
 'Masse'=28
 'MobSortisMax'=40
 'Mobile'=20
@@ -30,7 +30,7 @@
 'Tactique'=19
 'Type'=35
 'V'=22
-'Vague'=42
+'Vague'=45
 'Vitesse'=29
 'Volume'=34
 'camp'=55

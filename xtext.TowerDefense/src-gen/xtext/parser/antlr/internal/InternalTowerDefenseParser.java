@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalTowerDefenseParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Jeu'", "'{'", "'}'", "'Partie'", "'infini'", "'Obstacle'", "'Campement'", "'PVmax'", "'Tactique'", "'Mobile'", "'F'", "'V'", "'NumVague'", "'In'", "'Out'", "'Projectile'", "'Portee'", "'Masse'", "'Vitesse'", "'Position'", "'Direction'", "'Degat'", "'NatureTerrain'", "'Volume'", "'Type'", "'FatigueEntree'", "'Niveau'", "'DureePauses'", "'Argent'", "'MobSortisMax'", "'Carte'", "'Vague'", "'Lignes'", "'Colonnes'", "'Cases'", "'Mobiles'", "'Obstacles'", "'Gain'", "'procheFirst'", "'faibleFirst'", "'fortFirst'", "'entree'", "'sortie'", "'chemin'", "'camp'", "'deco'", "'facile'", "'moyen'", "'difficile'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Jeu'", "'{'", "'}'", "'Partie'", "'infini'", "'Obstacle'", "'Campement'", "'PVmax'", "'Tactique'", "'Mobile'", "'F'", "'V'", "'NumVague'", "'In'", "'Out'", "'Projectile'", "'Portee'", "'Masse'", "'Vitesse'", "'Position'", "'Direction'", "'Degat'", "'NatureTerrain'", "'Volume'", "'Type'", "'FatigueEntree'", "'Niveau'", "'DureePauses'", "'Argent'", "'MobSortisMax'", "'Carte'", "'Lignes'", "'Colonnes'", "'Cases'", "'Vague'", "'Mobiles'", "'Obstacles'", "'Gain'", "'procheFirst'", "'faibleFirst'", "'fortFirst'", "'entree'", "'sortie'", "'chemin'", "'camp'", "'deco'", "'facile'", "'moyen'", "'difficile'"
     };
     public static final int T__50=50;
     public static final int T__19=19;
@@ -2066,7 +2066,7 @@ public class InternalTowerDefenseParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNiveau"
-    // InternalTowerDefense.g:967:1: ruleNiveau returns [EObject current=null] : (otherlv_0= 'Niveau' ( (lv_name_1_0= RULE_ID ) ) ( (lv_difficulte_2_0= ruleDifficulte ) ) otherlv_3= '{' otherlv_4= 'DureePauses' ( (lv_dureePause_5_0= RULE_INT ) ) otherlv_6= 'Argent' ( (lv_argent_7_0= RULE_INT ) ) otherlv_8= 'MobSortisMax' ( (lv_mobSortisLimite_9_0= RULE_INT ) ) otherlv_10= 'Carte' ( (otherlv_11= RULE_ID ) ) otherlv_12= 'Vague' ( (lv_vagues_13_0= ruleVague ) )* otherlv_14= '}' ) ;
+    // InternalTowerDefense.g:967:1: ruleNiveau returns [EObject current=null] : (otherlv_0= 'Niveau' ( (lv_name_1_0= RULE_ID ) ) ( (lv_difficulte_2_0= ruleDifficulte ) ) otherlv_3= '{' otherlv_4= 'DureePauses' ( (lv_dureePause_5_0= RULE_INT ) ) otherlv_6= 'Argent' ( (lv_argent_7_0= RULE_INT ) ) otherlv_8= 'MobSortisMax' ( (lv_mobSortisLimite_9_0= RULE_INT ) ) otherlv_10= 'Carte' ( (otherlv_11= RULE_ID ) ) ( (lv_vagues_12_0= ruleVague ) )* otherlv_13= '}' ) ;
     public final EObject ruleNiveau() throws RecognitionException {
         EObject current = null;
 
@@ -2081,22 +2081,21 @@ public class InternalTowerDefenseParser extends AbstractInternalAntlrParser {
         Token lv_mobSortisLimite_9_0=null;
         Token otherlv_10=null;
         Token otherlv_11=null;
-        Token otherlv_12=null;
-        Token otherlv_14=null;
+        Token otherlv_13=null;
         Enumerator lv_difficulte_2_0 = null;
 
-        EObject lv_vagues_13_0 = null;
+        EObject lv_vagues_12_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalTowerDefense.g:973:2: ( (otherlv_0= 'Niveau' ( (lv_name_1_0= RULE_ID ) ) ( (lv_difficulte_2_0= ruleDifficulte ) ) otherlv_3= '{' otherlv_4= 'DureePauses' ( (lv_dureePause_5_0= RULE_INT ) ) otherlv_6= 'Argent' ( (lv_argent_7_0= RULE_INT ) ) otherlv_8= 'MobSortisMax' ( (lv_mobSortisLimite_9_0= RULE_INT ) ) otherlv_10= 'Carte' ( (otherlv_11= RULE_ID ) ) otherlv_12= 'Vague' ( (lv_vagues_13_0= ruleVague ) )* otherlv_14= '}' ) )
-            // InternalTowerDefense.g:974:2: (otherlv_0= 'Niveau' ( (lv_name_1_0= RULE_ID ) ) ( (lv_difficulte_2_0= ruleDifficulte ) ) otherlv_3= '{' otherlv_4= 'DureePauses' ( (lv_dureePause_5_0= RULE_INT ) ) otherlv_6= 'Argent' ( (lv_argent_7_0= RULE_INT ) ) otherlv_8= 'MobSortisMax' ( (lv_mobSortisLimite_9_0= RULE_INT ) ) otherlv_10= 'Carte' ( (otherlv_11= RULE_ID ) ) otherlv_12= 'Vague' ( (lv_vagues_13_0= ruleVague ) )* otherlv_14= '}' )
+            // InternalTowerDefense.g:973:2: ( (otherlv_0= 'Niveau' ( (lv_name_1_0= RULE_ID ) ) ( (lv_difficulte_2_0= ruleDifficulte ) ) otherlv_3= '{' otherlv_4= 'DureePauses' ( (lv_dureePause_5_0= RULE_INT ) ) otherlv_6= 'Argent' ( (lv_argent_7_0= RULE_INT ) ) otherlv_8= 'MobSortisMax' ( (lv_mobSortisLimite_9_0= RULE_INT ) ) otherlv_10= 'Carte' ( (otherlv_11= RULE_ID ) ) ( (lv_vagues_12_0= ruleVague ) )* otherlv_13= '}' ) )
+            // InternalTowerDefense.g:974:2: (otherlv_0= 'Niveau' ( (lv_name_1_0= RULE_ID ) ) ( (lv_difficulte_2_0= ruleDifficulte ) ) otherlv_3= '{' otherlv_4= 'DureePauses' ( (lv_dureePause_5_0= RULE_INT ) ) otherlv_6= 'Argent' ( (lv_argent_7_0= RULE_INT ) ) otherlv_8= 'MobSortisMax' ( (lv_mobSortisLimite_9_0= RULE_INT ) ) otherlv_10= 'Carte' ( (otherlv_11= RULE_ID ) ) ( (lv_vagues_12_0= ruleVague ) )* otherlv_13= '}' )
             {
-            // InternalTowerDefense.g:974:2: (otherlv_0= 'Niveau' ( (lv_name_1_0= RULE_ID ) ) ( (lv_difficulte_2_0= ruleDifficulte ) ) otherlv_3= '{' otherlv_4= 'DureePauses' ( (lv_dureePause_5_0= RULE_INT ) ) otherlv_6= 'Argent' ( (lv_argent_7_0= RULE_INT ) ) otherlv_8= 'MobSortisMax' ( (lv_mobSortisLimite_9_0= RULE_INT ) ) otherlv_10= 'Carte' ( (otherlv_11= RULE_ID ) ) otherlv_12= 'Vague' ( (lv_vagues_13_0= ruleVague ) )* otherlv_14= '}' )
-            // InternalTowerDefense.g:975:3: otherlv_0= 'Niveau' ( (lv_name_1_0= RULE_ID ) ) ( (lv_difficulte_2_0= ruleDifficulte ) ) otherlv_3= '{' otherlv_4= 'DureePauses' ( (lv_dureePause_5_0= RULE_INT ) ) otherlv_6= 'Argent' ( (lv_argent_7_0= RULE_INT ) ) otherlv_8= 'MobSortisMax' ( (lv_mobSortisLimite_9_0= RULE_INT ) ) otherlv_10= 'Carte' ( (otherlv_11= RULE_ID ) ) otherlv_12= 'Vague' ( (lv_vagues_13_0= ruleVague ) )* otherlv_14= '}'
+            // InternalTowerDefense.g:974:2: (otherlv_0= 'Niveau' ( (lv_name_1_0= RULE_ID ) ) ( (lv_difficulte_2_0= ruleDifficulte ) ) otherlv_3= '{' otherlv_4= 'DureePauses' ( (lv_dureePause_5_0= RULE_INT ) ) otherlv_6= 'Argent' ( (lv_argent_7_0= RULE_INT ) ) otherlv_8= 'MobSortisMax' ( (lv_mobSortisLimite_9_0= RULE_INT ) ) otherlv_10= 'Carte' ( (otherlv_11= RULE_ID ) ) ( (lv_vagues_12_0= ruleVague ) )* otherlv_13= '}' )
+            // InternalTowerDefense.g:975:3: otherlv_0= 'Niveau' ( (lv_name_1_0= RULE_ID ) ) ( (lv_difficulte_2_0= ruleDifficulte ) ) otherlv_3= '{' otherlv_4= 'DureePauses' ( (lv_dureePause_5_0= RULE_INT ) ) otherlv_6= 'Argent' ( (lv_argent_7_0= RULE_INT ) ) otherlv_8= 'MobSortisMax' ( (lv_mobSortisLimite_9_0= RULE_INT ) ) otherlv_10= 'Carte' ( (otherlv_11= RULE_ID ) ) ( (lv_vagues_12_0= ruleVague ) )* otherlv_13= '}'
             {
             otherlv_0=(Token)match(input,37,FOLLOW_3); 
 
@@ -2278,33 +2277,29 @@ public class InternalTowerDefenseParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_12=(Token)match(input,42,FOLLOW_38); 
-
-            			newLeafNode(otherlv_12, grammarAccess.getNiveauAccess().getVagueKeyword_12());
-            		
-            // InternalTowerDefense.g:1107:3: ( (lv_vagues_13_0= ruleVague ) )*
+            // InternalTowerDefense.g:1103:3: ( (lv_vagues_12_0= ruleVague ) )*
             loop8:
             do {
                 int alt8=2;
                 int LA8_0 = input.LA(1);
 
-                if ( (LA8_0==RULE_ID) ) {
+                if ( (LA8_0==45) ) {
                     alt8=1;
                 }
 
 
                 switch (alt8) {
             	case 1 :
-            	    // InternalTowerDefense.g:1108:4: (lv_vagues_13_0= ruleVague )
+            	    // InternalTowerDefense.g:1104:4: (lv_vagues_12_0= ruleVague )
             	    {
-            	    // InternalTowerDefense.g:1108:4: (lv_vagues_13_0= ruleVague )
-            	    // InternalTowerDefense.g:1109:5: lv_vagues_13_0= ruleVague
+            	    // InternalTowerDefense.g:1104:4: (lv_vagues_12_0= ruleVague )
+            	    // InternalTowerDefense.g:1105:5: lv_vagues_12_0= ruleVague
             	    {
 
-            	    					newCompositeNode(grammarAccess.getNiveauAccess().getVaguesVagueParserRuleCall_13_0());
+            	    					newCompositeNode(grammarAccess.getNiveauAccess().getVaguesVagueParserRuleCall_12_0());
             	    				
-            	    pushFollow(FOLLOW_38);
-            	    lv_vagues_13_0=ruleVague();
+            	    pushFollow(FOLLOW_37);
+            	    lv_vagues_12_0=ruleVague();
 
             	    state._fsp--;
 
@@ -2315,7 +2310,7 @@ public class InternalTowerDefenseParser extends AbstractInternalAntlrParser {
             	    					add(
             	    						current,
             	    						"vagues",
-            	    						lv_vagues_13_0,
+            	    						lv_vagues_12_0,
             	    						"xtext.TowerDefense.Vague");
             	    					afterParserOrEnumRuleCall();
             	    				
@@ -2331,9 +2326,9 @@ public class InternalTowerDefenseParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_14=(Token)match(input,13,FOLLOW_2); 
+            otherlv_13=(Token)match(input,13,FOLLOW_2); 
 
-            			newLeafNode(otherlv_14, grammarAccess.getNiveauAccess().getRightCurlyBracketKeyword_14());
+            			newLeafNode(otherlv_13, grammarAccess.getNiveauAccess().getRightCurlyBracketKeyword_13());
             		
 
             }
@@ -2358,7 +2353,7 @@ public class InternalTowerDefenseParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCarte"
-    // InternalTowerDefense.g:1134:1: entryRuleCarte returns [EObject current=null] : iv_ruleCarte= ruleCarte EOF ;
+    // InternalTowerDefense.g:1130:1: entryRuleCarte returns [EObject current=null] : iv_ruleCarte= ruleCarte EOF ;
     public final EObject entryRuleCarte() throws RecognitionException {
         EObject current = null;
 
@@ -2366,8 +2361,8 @@ public class InternalTowerDefenseParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalTowerDefense.g:1134:46: (iv_ruleCarte= ruleCarte EOF )
-            // InternalTowerDefense.g:1135:2: iv_ruleCarte= ruleCarte EOF
+            // InternalTowerDefense.g:1130:46: (iv_ruleCarte= ruleCarte EOF )
+            // InternalTowerDefense.g:1131:2: iv_ruleCarte= ruleCarte EOF
             {
              newCompositeNode(grammarAccess.getCarteRule()); 
             pushFollow(FOLLOW_1);
@@ -2394,7 +2389,7 @@ public class InternalTowerDefenseParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCarte"
-    // InternalTowerDefense.g:1141:1: ruleCarte returns [EObject current=null] : (otherlv_0= 'Carte' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Lignes' ( (lv_nbLignes_4_0= RULE_INT ) ) otherlv_5= 'Colonnes' ( (lv_nbColonnes_6_0= RULE_INT ) ) otherlv_7= 'Cases' ( (otherlv_8= RULE_ID ) )* otherlv_9= '}' ) ;
+    // InternalTowerDefense.g:1137:1: ruleCarte returns [EObject current=null] : (otherlv_0= 'Carte' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Lignes' ( (lv_nbLignes_4_0= RULE_INT ) ) otherlv_5= 'Colonnes' ( (lv_nbColonnes_6_0= RULE_INT ) ) otherlv_7= 'Cases' ( (otherlv_8= RULE_ID ) )* otherlv_9= '}' ) ;
     public final EObject ruleCarte() throws RecognitionException {
         EObject current = null;
 
@@ -2413,21 +2408,21 @@ public class InternalTowerDefenseParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalTowerDefense.g:1147:2: ( (otherlv_0= 'Carte' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Lignes' ( (lv_nbLignes_4_0= RULE_INT ) ) otherlv_5= 'Colonnes' ( (lv_nbColonnes_6_0= RULE_INT ) ) otherlv_7= 'Cases' ( (otherlv_8= RULE_ID ) )* otherlv_9= '}' ) )
-            // InternalTowerDefense.g:1148:2: (otherlv_0= 'Carte' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Lignes' ( (lv_nbLignes_4_0= RULE_INT ) ) otherlv_5= 'Colonnes' ( (lv_nbColonnes_6_0= RULE_INT ) ) otherlv_7= 'Cases' ( (otherlv_8= RULE_ID ) )* otherlv_9= '}' )
+            // InternalTowerDefense.g:1143:2: ( (otherlv_0= 'Carte' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Lignes' ( (lv_nbLignes_4_0= RULE_INT ) ) otherlv_5= 'Colonnes' ( (lv_nbColonnes_6_0= RULE_INT ) ) otherlv_7= 'Cases' ( (otherlv_8= RULE_ID ) )* otherlv_9= '}' ) )
+            // InternalTowerDefense.g:1144:2: (otherlv_0= 'Carte' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Lignes' ( (lv_nbLignes_4_0= RULE_INT ) ) otherlv_5= 'Colonnes' ( (lv_nbColonnes_6_0= RULE_INT ) ) otherlv_7= 'Cases' ( (otherlv_8= RULE_ID ) )* otherlv_9= '}' )
             {
-            // InternalTowerDefense.g:1148:2: (otherlv_0= 'Carte' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Lignes' ( (lv_nbLignes_4_0= RULE_INT ) ) otherlv_5= 'Colonnes' ( (lv_nbColonnes_6_0= RULE_INT ) ) otherlv_7= 'Cases' ( (otherlv_8= RULE_ID ) )* otherlv_9= '}' )
-            // InternalTowerDefense.g:1149:3: otherlv_0= 'Carte' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Lignes' ( (lv_nbLignes_4_0= RULE_INT ) ) otherlv_5= 'Colonnes' ( (lv_nbColonnes_6_0= RULE_INT ) ) otherlv_7= 'Cases' ( (otherlv_8= RULE_ID ) )* otherlv_9= '}'
+            // InternalTowerDefense.g:1144:2: (otherlv_0= 'Carte' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Lignes' ( (lv_nbLignes_4_0= RULE_INT ) ) otherlv_5= 'Colonnes' ( (lv_nbColonnes_6_0= RULE_INT ) ) otherlv_7= 'Cases' ( (otherlv_8= RULE_ID ) )* otherlv_9= '}' )
+            // InternalTowerDefense.g:1145:3: otherlv_0= 'Carte' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Lignes' ( (lv_nbLignes_4_0= RULE_INT ) ) otherlv_5= 'Colonnes' ( (lv_nbColonnes_6_0= RULE_INT ) ) otherlv_7= 'Cases' ( (otherlv_8= RULE_ID ) )* otherlv_9= '}'
             {
             otherlv_0=(Token)match(input,41,FOLLOW_3); 
 
             			newLeafNode(otherlv_0, grammarAccess.getCarteAccess().getCarteKeyword_0());
             		
-            // InternalTowerDefense.g:1153:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalTowerDefense.g:1154:4: (lv_name_1_0= RULE_ID )
+            // InternalTowerDefense.g:1149:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalTowerDefense.g:1150:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalTowerDefense.g:1154:4: (lv_name_1_0= RULE_ID )
-            // InternalTowerDefense.g:1155:5: lv_name_1_0= RULE_ID
+            // InternalTowerDefense.g:1150:4: (lv_name_1_0= RULE_ID )
+            // InternalTowerDefense.g:1151:5: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_4); 
 
@@ -2449,21 +2444,21 @@ public class InternalTowerDefenseParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,12,FOLLOW_39); 
+            otherlv_2=(Token)match(input,12,FOLLOW_38); 
 
             			newLeafNode(otherlv_2, grammarAccess.getCarteAccess().getLeftCurlyBracketKeyword_2());
             		
-            otherlv_3=(Token)match(input,43,FOLLOW_17); 
+            otherlv_3=(Token)match(input,42,FOLLOW_17); 
 
             			newLeafNode(otherlv_3, grammarAccess.getCarteAccess().getLignesKeyword_3());
             		
-            // InternalTowerDefense.g:1179:3: ( (lv_nbLignes_4_0= RULE_INT ) )
-            // InternalTowerDefense.g:1180:4: (lv_nbLignes_4_0= RULE_INT )
+            // InternalTowerDefense.g:1175:3: ( (lv_nbLignes_4_0= RULE_INT ) )
+            // InternalTowerDefense.g:1176:4: (lv_nbLignes_4_0= RULE_INT )
             {
-            // InternalTowerDefense.g:1180:4: (lv_nbLignes_4_0= RULE_INT )
-            // InternalTowerDefense.g:1181:5: lv_nbLignes_4_0= RULE_INT
+            // InternalTowerDefense.g:1176:4: (lv_nbLignes_4_0= RULE_INT )
+            // InternalTowerDefense.g:1177:5: lv_nbLignes_4_0= RULE_INT
             {
-            lv_nbLignes_4_0=(Token)match(input,RULE_INT,FOLLOW_40); 
+            lv_nbLignes_4_0=(Token)match(input,RULE_INT,FOLLOW_39); 
 
             					newLeafNode(lv_nbLignes_4_0, grammarAccess.getCarteAccess().getNbLignesINTTerminalRuleCall_4_0());
             				
@@ -2483,17 +2478,17 @@ public class InternalTowerDefenseParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,44,FOLLOW_17); 
+            otherlv_5=(Token)match(input,43,FOLLOW_17); 
 
             			newLeafNode(otherlv_5, grammarAccess.getCarteAccess().getColonnesKeyword_5());
             		
-            // InternalTowerDefense.g:1201:3: ( (lv_nbColonnes_6_0= RULE_INT ) )
-            // InternalTowerDefense.g:1202:4: (lv_nbColonnes_6_0= RULE_INT )
+            // InternalTowerDefense.g:1197:3: ( (lv_nbColonnes_6_0= RULE_INT ) )
+            // InternalTowerDefense.g:1198:4: (lv_nbColonnes_6_0= RULE_INT )
             {
-            // InternalTowerDefense.g:1202:4: (lv_nbColonnes_6_0= RULE_INT )
-            // InternalTowerDefense.g:1203:5: lv_nbColonnes_6_0= RULE_INT
+            // InternalTowerDefense.g:1198:4: (lv_nbColonnes_6_0= RULE_INT )
+            // InternalTowerDefense.g:1199:5: lv_nbColonnes_6_0= RULE_INT
             {
-            lv_nbColonnes_6_0=(Token)match(input,RULE_INT,FOLLOW_41); 
+            lv_nbColonnes_6_0=(Token)match(input,RULE_INT,FOLLOW_40); 
 
             					newLeafNode(lv_nbColonnes_6_0, grammarAccess.getCarteAccess().getNbColonnesINTTerminalRuleCall_6_0());
             				
@@ -2513,11 +2508,11 @@ public class InternalTowerDefenseParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_7=(Token)match(input,45,FOLLOW_38); 
+            otherlv_7=(Token)match(input,44,FOLLOW_41); 
 
             			newLeafNode(otherlv_7, grammarAccess.getCarteAccess().getCasesKeyword_7());
             		
-            // InternalTowerDefense.g:1223:3: ( (otherlv_8= RULE_ID ) )*
+            // InternalTowerDefense.g:1219:3: ( (otherlv_8= RULE_ID ) )*
             loop9:
             do {
                 int alt9=2;
@@ -2530,17 +2525,17 @@ public class InternalTowerDefenseParser extends AbstractInternalAntlrParser {
 
                 switch (alt9) {
             	case 1 :
-            	    // InternalTowerDefense.g:1224:4: (otherlv_8= RULE_ID )
+            	    // InternalTowerDefense.g:1220:4: (otherlv_8= RULE_ID )
             	    {
-            	    // InternalTowerDefense.g:1224:4: (otherlv_8= RULE_ID )
-            	    // InternalTowerDefense.g:1225:5: otherlv_8= RULE_ID
+            	    // InternalTowerDefense.g:1220:4: (otherlv_8= RULE_ID )
+            	    // InternalTowerDefense.g:1221:5: otherlv_8= RULE_ID
             	    {
 
             	    					if (current==null) {
             	    						current = createModelElement(grammarAccess.getCarteRule());
             	    					}
             	    				
-            	    otherlv_8=(Token)match(input,RULE_ID,FOLLOW_38); 
+            	    otherlv_8=(Token)match(input,RULE_ID,FOLLOW_41); 
 
             	    					newLeafNode(otherlv_8, grammarAccess.getCarteAccess().getCasesCaseCrossReference_8_0());
             	    				
@@ -2583,7 +2578,7 @@ public class InternalTowerDefenseParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCase"
-    // InternalTowerDefense.g:1244:1: entryRuleCase returns [EObject current=null] : iv_ruleCase= ruleCase EOF ;
+    // InternalTowerDefense.g:1240:1: entryRuleCase returns [EObject current=null] : iv_ruleCase= ruleCase EOF ;
     public final EObject entryRuleCase() throws RecognitionException {
         EObject current = null;
 
@@ -2591,8 +2586,8 @@ public class InternalTowerDefenseParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalTowerDefense.g:1244:45: (iv_ruleCase= ruleCase EOF )
-            // InternalTowerDefense.g:1245:2: iv_ruleCase= ruleCase EOF
+            // InternalTowerDefense.g:1240:45: (iv_ruleCase= ruleCase EOF )
+            // InternalTowerDefense.g:1241:2: iv_ruleCase= ruleCase EOF
             {
              newCompositeNode(grammarAccess.getCaseRule()); 
             pushFollow(FOLLOW_1);
@@ -2619,7 +2614,7 @@ public class InternalTowerDefenseParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCase"
-    // InternalTowerDefense.g:1251:1: ruleCase returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_i_1_0= RULE_INT ) ) ( (lv_j_2_0= RULE_INT ) ) ( (otherlv_3= RULE_ID ) ) ) ;
+    // InternalTowerDefense.g:1247:1: ruleCase returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_i_1_0= RULE_INT ) ) ( (lv_j_2_0= RULE_INT ) ) ( (otherlv_3= RULE_ID ) ) ) ;
     public final EObject ruleCase() throws RecognitionException {
         EObject current = null;
 
@@ -2632,17 +2627,17 @@ public class InternalTowerDefenseParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalTowerDefense.g:1257:2: ( ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_i_1_0= RULE_INT ) ) ( (lv_j_2_0= RULE_INT ) ) ( (otherlv_3= RULE_ID ) ) ) )
-            // InternalTowerDefense.g:1258:2: ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_i_1_0= RULE_INT ) ) ( (lv_j_2_0= RULE_INT ) ) ( (otherlv_3= RULE_ID ) ) )
+            // InternalTowerDefense.g:1253:2: ( ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_i_1_0= RULE_INT ) ) ( (lv_j_2_0= RULE_INT ) ) ( (otherlv_3= RULE_ID ) ) ) )
+            // InternalTowerDefense.g:1254:2: ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_i_1_0= RULE_INT ) ) ( (lv_j_2_0= RULE_INT ) ) ( (otherlv_3= RULE_ID ) ) )
             {
-            // InternalTowerDefense.g:1258:2: ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_i_1_0= RULE_INT ) ) ( (lv_j_2_0= RULE_INT ) ) ( (otherlv_3= RULE_ID ) ) )
-            // InternalTowerDefense.g:1259:3: ( (lv_name_0_0= RULE_ID ) ) ( (lv_i_1_0= RULE_INT ) ) ( (lv_j_2_0= RULE_INT ) ) ( (otherlv_3= RULE_ID ) )
+            // InternalTowerDefense.g:1254:2: ( ( (lv_name_0_0= RULE_ID ) ) ( (lv_i_1_0= RULE_INT ) ) ( (lv_j_2_0= RULE_INT ) ) ( (otherlv_3= RULE_ID ) ) )
+            // InternalTowerDefense.g:1255:3: ( (lv_name_0_0= RULE_ID ) ) ( (lv_i_1_0= RULE_INT ) ) ( (lv_j_2_0= RULE_INT ) ) ( (otherlv_3= RULE_ID ) )
             {
-            // InternalTowerDefense.g:1259:3: ( (lv_name_0_0= RULE_ID ) )
-            // InternalTowerDefense.g:1260:4: (lv_name_0_0= RULE_ID )
+            // InternalTowerDefense.g:1255:3: ( (lv_name_0_0= RULE_ID ) )
+            // InternalTowerDefense.g:1256:4: (lv_name_0_0= RULE_ID )
             {
-            // InternalTowerDefense.g:1260:4: (lv_name_0_0= RULE_ID )
-            // InternalTowerDefense.g:1261:5: lv_name_0_0= RULE_ID
+            // InternalTowerDefense.g:1256:4: (lv_name_0_0= RULE_ID )
+            // InternalTowerDefense.g:1257:5: lv_name_0_0= RULE_ID
             {
             lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_17); 
 
@@ -2664,11 +2659,11 @@ public class InternalTowerDefenseParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalTowerDefense.g:1277:3: ( (lv_i_1_0= RULE_INT ) )
-            // InternalTowerDefense.g:1278:4: (lv_i_1_0= RULE_INT )
+            // InternalTowerDefense.g:1273:3: ( (lv_i_1_0= RULE_INT ) )
+            // InternalTowerDefense.g:1274:4: (lv_i_1_0= RULE_INT )
             {
-            // InternalTowerDefense.g:1278:4: (lv_i_1_0= RULE_INT )
-            // InternalTowerDefense.g:1279:5: lv_i_1_0= RULE_INT
+            // InternalTowerDefense.g:1274:4: (lv_i_1_0= RULE_INT )
+            // InternalTowerDefense.g:1275:5: lv_i_1_0= RULE_INT
             {
             lv_i_1_0=(Token)match(input,RULE_INT,FOLLOW_17); 
 
@@ -2690,11 +2685,11 @@ public class InternalTowerDefenseParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalTowerDefense.g:1295:3: ( (lv_j_2_0= RULE_INT ) )
-            // InternalTowerDefense.g:1296:4: (lv_j_2_0= RULE_INT )
+            // InternalTowerDefense.g:1291:3: ( (lv_j_2_0= RULE_INT ) )
+            // InternalTowerDefense.g:1292:4: (lv_j_2_0= RULE_INT )
             {
-            // InternalTowerDefense.g:1296:4: (lv_j_2_0= RULE_INT )
-            // InternalTowerDefense.g:1297:5: lv_j_2_0= RULE_INT
+            // InternalTowerDefense.g:1292:4: (lv_j_2_0= RULE_INT )
+            // InternalTowerDefense.g:1293:5: lv_j_2_0= RULE_INT
             {
             lv_j_2_0=(Token)match(input,RULE_INT,FOLLOW_3); 
 
@@ -2716,11 +2711,11 @@ public class InternalTowerDefenseParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalTowerDefense.g:1313:3: ( (otherlv_3= RULE_ID ) )
-            // InternalTowerDefense.g:1314:4: (otherlv_3= RULE_ID )
+            // InternalTowerDefense.g:1309:3: ( (otherlv_3= RULE_ID ) )
+            // InternalTowerDefense.g:1310:4: (otherlv_3= RULE_ID )
             {
-            // InternalTowerDefense.g:1314:4: (otherlv_3= RULE_ID )
-            // InternalTowerDefense.g:1315:5: otherlv_3= RULE_ID
+            // InternalTowerDefense.g:1310:4: (otherlv_3= RULE_ID )
+            // InternalTowerDefense.g:1311:5: otherlv_3= RULE_ID
             {
 
             					if (current==null) {
@@ -2760,7 +2755,7 @@ public class InternalTowerDefenseParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVague"
-    // InternalTowerDefense.g:1330:1: entryRuleVague returns [EObject current=null] : iv_ruleVague= ruleVague EOF ;
+    // InternalTowerDefense.g:1326:1: entryRuleVague returns [EObject current=null] : iv_ruleVague= ruleVague EOF ;
     public final EObject entryRuleVague() throws RecognitionException {
         EObject current = null;
 
@@ -2768,8 +2763,8 @@ public class InternalTowerDefenseParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalTowerDefense.g:1330:46: (iv_ruleVague= ruleVague EOF )
-            // InternalTowerDefense.g:1331:2: iv_ruleVague= ruleVague EOF
+            // InternalTowerDefense.g:1326:46: (iv_ruleVague= ruleVague EOF )
+            // InternalTowerDefense.g:1327:2: iv_ruleVague= ruleVague EOF
             {
              newCompositeNode(grammarAccess.getVagueRule()); 
             pushFollow(FOLLOW_1);
@@ -2796,39 +2791,44 @@ public class InternalTowerDefenseParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVague"
-    // InternalTowerDefense.g:1337:1: ruleVague returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '{' otherlv_2= 'Mobiles' ( (otherlv_3= RULE_ID ) )* otherlv_4= 'Obstacles' ( (otherlv_5= RULE_ID ) )* otherlv_6= 'Gain' ( (lv_gainVictoire_7_0= RULE_INT ) ) otherlv_8= '}' ) ;
+    // InternalTowerDefense.g:1333:1: ruleVague returns [EObject current=null] : (otherlv_0= 'Vague' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Mobiles' ( (otherlv_4= RULE_ID ) )* otherlv_5= 'Obstacles' ( (otherlv_6= RULE_ID ) )* otherlv_7= 'Gain' ( (lv_gainVictoire_8_0= RULE_INT ) ) otherlv_9= '}' ) ;
     public final EObject ruleVague() throws RecognitionException {
         EObject current = null;
 
-        Token lv_name_0_0=null;
-        Token otherlv_1=null;
+        Token otherlv_0=null;
+        Token lv_name_1_0=null;
         Token otherlv_2=null;
         Token otherlv_3=null;
         Token otherlv_4=null;
         Token otherlv_5=null;
         Token otherlv_6=null;
-        Token lv_gainVictoire_7_0=null;
-        Token otherlv_8=null;
+        Token otherlv_7=null;
+        Token lv_gainVictoire_8_0=null;
+        Token otherlv_9=null;
 
 
         	enterRule();
 
         try {
-            // InternalTowerDefense.g:1343:2: ( ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '{' otherlv_2= 'Mobiles' ( (otherlv_3= RULE_ID ) )* otherlv_4= 'Obstacles' ( (otherlv_5= RULE_ID ) )* otherlv_6= 'Gain' ( (lv_gainVictoire_7_0= RULE_INT ) ) otherlv_8= '}' ) )
-            // InternalTowerDefense.g:1344:2: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '{' otherlv_2= 'Mobiles' ( (otherlv_3= RULE_ID ) )* otherlv_4= 'Obstacles' ( (otherlv_5= RULE_ID ) )* otherlv_6= 'Gain' ( (lv_gainVictoire_7_0= RULE_INT ) ) otherlv_8= '}' )
+            // InternalTowerDefense.g:1339:2: ( (otherlv_0= 'Vague' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Mobiles' ( (otherlv_4= RULE_ID ) )* otherlv_5= 'Obstacles' ( (otherlv_6= RULE_ID ) )* otherlv_7= 'Gain' ( (lv_gainVictoire_8_0= RULE_INT ) ) otherlv_9= '}' ) )
+            // InternalTowerDefense.g:1340:2: (otherlv_0= 'Vague' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Mobiles' ( (otherlv_4= RULE_ID ) )* otherlv_5= 'Obstacles' ( (otherlv_6= RULE_ID ) )* otherlv_7= 'Gain' ( (lv_gainVictoire_8_0= RULE_INT ) ) otherlv_9= '}' )
             {
-            // InternalTowerDefense.g:1344:2: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '{' otherlv_2= 'Mobiles' ( (otherlv_3= RULE_ID ) )* otherlv_4= 'Obstacles' ( (otherlv_5= RULE_ID ) )* otherlv_6= 'Gain' ( (lv_gainVictoire_7_0= RULE_INT ) ) otherlv_8= '}' )
-            // InternalTowerDefense.g:1345:3: ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '{' otherlv_2= 'Mobiles' ( (otherlv_3= RULE_ID ) )* otherlv_4= 'Obstacles' ( (otherlv_5= RULE_ID ) )* otherlv_6= 'Gain' ( (lv_gainVictoire_7_0= RULE_INT ) ) otherlv_8= '}'
+            // InternalTowerDefense.g:1340:2: (otherlv_0= 'Vague' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Mobiles' ( (otherlv_4= RULE_ID ) )* otherlv_5= 'Obstacles' ( (otherlv_6= RULE_ID ) )* otherlv_7= 'Gain' ( (lv_gainVictoire_8_0= RULE_INT ) ) otherlv_9= '}' )
+            // InternalTowerDefense.g:1341:3: otherlv_0= 'Vague' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'Mobiles' ( (otherlv_4= RULE_ID ) )* otherlv_5= 'Obstacles' ( (otherlv_6= RULE_ID ) )* otherlv_7= 'Gain' ( (lv_gainVictoire_8_0= RULE_INT ) ) otherlv_9= '}'
             {
-            // InternalTowerDefense.g:1345:3: ( (lv_name_0_0= RULE_ID ) )
-            // InternalTowerDefense.g:1346:4: (lv_name_0_0= RULE_ID )
-            {
-            // InternalTowerDefense.g:1346:4: (lv_name_0_0= RULE_ID )
-            // InternalTowerDefense.g:1347:5: lv_name_0_0= RULE_ID
-            {
-            lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_4); 
+            otherlv_0=(Token)match(input,45,FOLLOW_3); 
 
-            					newLeafNode(lv_name_0_0, grammarAccess.getVagueAccess().getNameIDTerminalRuleCall_0_0());
+            			newLeafNode(otherlv_0, grammarAccess.getVagueAccess().getVagueKeyword_0());
+            		
+            // InternalTowerDefense.g:1345:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalTowerDefense.g:1346:4: (lv_name_1_0= RULE_ID )
+            {
+            // InternalTowerDefense.g:1346:4: (lv_name_1_0= RULE_ID )
+            // InternalTowerDefense.g:1347:5: lv_name_1_0= RULE_ID
+            {
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_4); 
+
+            					newLeafNode(lv_name_1_0, grammarAccess.getVagueAccess().getNameIDTerminalRuleCall_1_0());
             				
 
             					if (current==null) {
@@ -2837,7 +2837,7 @@ public class InternalTowerDefenseParser extends AbstractInternalAntlrParser {
             					setWithLastConsumed(
             						current,
             						"name",
-            						lv_name_0_0,
+            						lv_name_1_0,
             						"org.eclipse.xtext.common.Terminals.ID");
             				
 
@@ -2846,15 +2846,15 @@ public class InternalTowerDefenseParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,12,FOLLOW_42); 
+            otherlv_2=(Token)match(input,12,FOLLOW_42); 
 
-            			newLeafNode(otherlv_1, grammarAccess.getVagueAccess().getLeftCurlyBracketKeyword_1());
+            			newLeafNode(otherlv_2, grammarAccess.getVagueAccess().getLeftCurlyBracketKeyword_2());
             		
-            otherlv_2=(Token)match(input,46,FOLLOW_43); 
+            otherlv_3=(Token)match(input,46,FOLLOW_43); 
 
-            			newLeafNode(otherlv_2, grammarAccess.getVagueAccess().getMobilesKeyword_2());
+            			newLeafNode(otherlv_3, grammarAccess.getVagueAccess().getMobilesKeyword_3());
             		
-            // InternalTowerDefense.g:1371:3: ( (otherlv_3= RULE_ID ) )*
+            // InternalTowerDefense.g:1371:3: ( (otherlv_4= RULE_ID ) )*
             loop10:
             do {
                 int alt10=2;
@@ -2867,19 +2867,19 @@ public class InternalTowerDefenseParser extends AbstractInternalAntlrParser {
 
                 switch (alt10) {
             	case 1 :
-            	    // InternalTowerDefense.g:1372:4: (otherlv_3= RULE_ID )
+            	    // InternalTowerDefense.g:1372:4: (otherlv_4= RULE_ID )
             	    {
-            	    // InternalTowerDefense.g:1372:4: (otherlv_3= RULE_ID )
-            	    // InternalTowerDefense.g:1373:5: otherlv_3= RULE_ID
+            	    // InternalTowerDefense.g:1372:4: (otherlv_4= RULE_ID )
+            	    // InternalTowerDefense.g:1373:5: otherlv_4= RULE_ID
             	    {
 
             	    					if (current==null) {
             	    						current = createModelElement(grammarAccess.getVagueRule());
             	    					}
             	    				
-            	    otherlv_3=(Token)match(input,RULE_ID,FOLLOW_43); 
+            	    otherlv_4=(Token)match(input,RULE_ID,FOLLOW_43); 
 
-            	    					newLeafNode(otherlv_3, grammarAccess.getVagueAccess().getMobilesMobileCrossReference_3_0());
+            	    					newLeafNode(otherlv_4, grammarAccess.getVagueAccess().getMobilesMobileCrossReference_4_0());
             	    				
 
             	    }
@@ -2893,11 +2893,11 @@ public class InternalTowerDefenseParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_4=(Token)match(input,47,FOLLOW_44); 
+            otherlv_5=(Token)match(input,47,FOLLOW_44); 
 
-            			newLeafNode(otherlv_4, grammarAccess.getVagueAccess().getObstaclesKeyword_4());
+            			newLeafNode(otherlv_5, grammarAccess.getVagueAccess().getObstaclesKeyword_5());
             		
-            // InternalTowerDefense.g:1388:3: ( (otherlv_5= RULE_ID ) )*
+            // InternalTowerDefense.g:1388:3: ( (otherlv_6= RULE_ID ) )*
             loop11:
             do {
                 int alt11=2;
@@ -2910,19 +2910,19 @@ public class InternalTowerDefenseParser extends AbstractInternalAntlrParser {
 
                 switch (alt11) {
             	case 1 :
-            	    // InternalTowerDefense.g:1389:4: (otherlv_5= RULE_ID )
+            	    // InternalTowerDefense.g:1389:4: (otherlv_6= RULE_ID )
             	    {
-            	    // InternalTowerDefense.g:1389:4: (otherlv_5= RULE_ID )
-            	    // InternalTowerDefense.g:1390:5: otherlv_5= RULE_ID
+            	    // InternalTowerDefense.g:1389:4: (otherlv_6= RULE_ID )
+            	    // InternalTowerDefense.g:1390:5: otherlv_6= RULE_ID
             	    {
 
             	    					if (current==null) {
             	    						current = createModelElement(grammarAccess.getVagueRule());
             	    					}
             	    				
-            	    otherlv_5=(Token)match(input,RULE_ID,FOLLOW_44); 
+            	    otherlv_6=(Token)match(input,RULE_ID,FOLLOW_44); 
 
-            	    					newLeafNode(otherlv_5, grammarAccess.getVagueAccess().getObstaclesObstacleCrossReference_5_0());
+            	    					newLeafNode(otherlv_6, grammarAccess.getVagueAccess().getObstaclesObstacleCrossReference_6_0());
             	    				
 
             	    }
@@ -2936,19 +2936,19 @@ public class InternalTowerDefenseParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_6=(Token)match(input,48,FOLLOW_17); 
+            otherlv_7=(Token)match(input,48,FOLLOW_17); 
 
-            			newLeafNode(otherlv_6, grammarAccess.getVagueAccess().getGainKeyword_6());
+            			newLeafNode(otherlv_7, grammarAccess.getVagueAccess().getGainKeyword_7());
             		
-            // InternalTowerDefense.g:1405:3: ( (lv_gainVictoire_7_0= RULE_INT ) )
-            // InternalTowerDefense.g:1406:4: (lv_gainVictoire_7_0= RULE_INT )
+            // InternalTowerDefense.g:1405:3: ( (lv_gainVictoire_8_0= RULE_INT ) )
+            // InternalTowerDefense.g:1406:4: (lv_gainVictoire_8_0= RULE_INT )
             {
-            // InternalTowerDefense.g:1406:4: (lv_gainVictoire_7_0= RULE_INT )
-            // InternalTowerDefense.g:1407:5: lv_gainVictoire_7_0= RULE_INT
+            // InternalTowerDefense.g:1406:4: (lv_gainVictoire_8_0= RULE_INT )
+            // InternalTowerDefense.g:1407:5: lv_gainVictoire_8_0= RULE_INT
             {
-            lv_gainVictoire_7_0=(Token)match(input,RULE_INT,FOLLOW_15); 
+            lv_gainVictoire_8_0=(Token)match(input,RULE_INT,FOLLOW_15); 
 
-            					newLeafNode(lv_gainVictoire_7_0, grammarAccess.getVagueAccess().getGainVictoireINTTerminalRuleCall_7_0());
+            					newLeafNode(lv_gainVictoire_8_0, grammarAccess.getVagueAccess().getGainVictoireINTTerminalRuleCall_8_0());
             				
 
             					if (current==null) {
@@ -2957,7 +2957,7 @@ public class InternalTowerDefenseParser extends AbstractInternalAntlrParser {
             					setWithLastConsumed(
             						current,
             						"gainVictoire",
-            						lv_gainVictoire_7_0,
+            						lv_gainVictoire_8_0,
             						"org.eclipse.xtext.common.Terminals.INT");
             				
 
@@ -2966,9 +2966,9 @@ public class InternalTowerDefenseParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_8=(Token)match(input,13,FOLLOW_2); 
+            otherlv_9=(Token)match(input,13,FOLLOW_2); 
 
-            			newLeafNode(otherlv_8, grammarAccess.getVagueAccess().getRightCurlyBracketKeyword_8());
+            			newLeafNode(otherlv_9, grammarAccess.getVagueAccess().getRightCurlyBracketKeyword_9());
             		
 
             }
@@ -3423,11 +3423,11 @@ public class InternalTowerDefenseParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0000008000000000L});
     public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x0000010000000000L});
     public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x0000040000000000L});
-    public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0000000000002010L});
+    public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x0000200000002000L});
+    public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0000040000000000L});
     public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0000080000000000L});
     public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0000100000000000L});
-    public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0000200000000000L});
+    public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0000000000002010L});
     public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0000400000000000L});
     public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0000800000000010L});
     public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x0001000000000010L});

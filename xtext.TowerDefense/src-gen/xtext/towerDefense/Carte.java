@@ -29,97 +29,97 @@ import org.eclipse.emf.ecore.EObject;
 public interface Carte extends EObject
 {
   /**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Name</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see xtext.towerDefense.TowerDefensePackage#getCarte_Name()
-	 * @model
-	 * @generated
-	 */
+   * @return the value of the '<em>Name</em>' attribute.
+   * @see #setName(String)
+   * @see xtext.towerDefense.TowerDefensePackage#getCarte_Name()
+   * @model
+   * @generated
+   */
   String getName();
 
   /**
-	 * Sets the value of the '{@link xtext.towerDefense.Carte#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link xtext.towerDefense.Carte#getName <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
+   * @param value the new value of the '<em>Name</em>' attribute.
+   * @see #getName()
+   * @generated
+   */
   void setName(String value);
 
   /**
-	 * Returns the value of the '<em><b>Nb Lignes</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Nb Lignes</b></em>' attribute.
+   * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Nb Lignes</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>Nb Lignes</em>' attribute.
-	 * @see #setNbLignes(int)
-	 * @see xtext.towerDefense.TowerDefensePackage#getCarte_NbLignes()
-	 * @model
-	 * @generated
-	 */
+   * @return the value of the '<em>Nb Lignes</em>' attribute.
+   * @see #setNbLignes(int)
+   * @see xtext.towerDefense.TowerDefensePackage#getCarte_NbLignes()
+   * @model
+   * @generated
+   */
   int getNbLignes();
 
   /**
-	 * Sets the value of the '{@link xtext.towerDefense.Carte#getNbLignes <em>Nb Lignes</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link xtext.towerDefense.Carte#getNbLignes <em>Nb Lignes</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Nb Lignes</em>' attribute.
-	 * @see #getNbLignes()
-	 * @generated
-	 */
+   * @param value the new value of the '<em>Nb Lignes</em>' attribute.
+   * @see #getNbLignes()
+   * @generated
+   */
   void setNbLignes(int value);
 
   /**
-	 * Returns the value of the '<em><b>Nb Colonnes</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Nb Colonnes</b></em>' attribute.
+   * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Nb Colonnes</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>Nb Colonnes</em>' attribute.
-	 * @see #setNbColonnes(int)
-	 * @see xtext.towerDefense.TowerDefensePackage#getCarte_NbColonnes()
-	 * @model
-	 * @generated
-	 */
+   * @return the value of the '<em>Nb Colonnes</em>' attribute.
+   * @see #setNbColonnes(int)
+   * @see xtext.towerDefense.TowerDefensePackage#getCarte_NbColonnes()
+   * @model
+   * @generated
+   */
   int getNbColonnes();
 
   /**
-	 * Sets the value of the '{@link xtext.towerDefense.Carte#getNbColonnes <em>Nb Colonnes</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link xtext.towerDefense.Carte#getNbColonnes <em>Nb Colonnes</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Nb Colonnes</em>' attribute.
-	 * @see #getNbColonnes()
-	 * @generated
-	 */
+   * @param value the new value of the '<em>Nb Colonnes</em>' attribute.
+   * @see #getNbColonnes()
+   * @generated
+   */
   void setNbColonnes(int value);
 
   /**
-	 * Returns the value of the '<em><b>Cases</b></em>' reference list.
-	 * The list contents are of type {@link xtext.towerDefense.Case}.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Cases</b></em>' reference list.
+   * The list contents are of type {@link xtext.towerDefense.Case}.
+   * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Cases</em>' reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>Cases</em>' reference list.
-	 * @see xtext.towerDefense.TowerDefensePackage#getCarte_Cases()
-	 * @model
-	 * @generated
-	 */
+   * @return the value of the '<em>Cases</em>' reference list.
+   * @see xtext.towerDefense.TowerDefensePackage#getCarte_Cases()
+   * @model
+   * @generated
+   */
   EList<Case> getCases();
 
 } // Carte

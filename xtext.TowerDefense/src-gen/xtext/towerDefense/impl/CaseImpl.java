@@ -34,318 +34,324 @@ import xtext.towerDefense.TowerDefensePackage;
 public class CaseImpl extends MinimalEObjectImpl.Container implements Case
 {
   /**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
   protected static final String NAME_EDEFAULT = null;
 
   /**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
   protected String name = NAME_EDEFAULT;
 
   /**
-	 * The default value of the '{@link #getI() <em>I</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * The default value of the '{@link #getI() <em>I</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getI()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getI()
+   * @generated
+   * @ordered
+   */
   protected static final int I_EDEFAULT = 0;
 
   /**
-	 * The cached value of the '{@link #getI() <em>I</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getI() <em>I</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getI()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getI()
+   * @generated
+   * @ordered
+   */
   protected int i = I_EDEFAULT;
 
   /**
-	 * The default value of the '{@link #getJ() <em>J</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * The default value of the '{@link #getJ() <em>J</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getJ()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getJ()
+   * @generated
+   * @ordered
+   */
   protected static final int J_EDEFAULT = 0;
 
   /**
-	 * The cached value of the '{@link #getJ() <em>J</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getJ() <em>J</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getJ()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getJ()
+   * @generated
+   * @ordered
+   */
   protected int j = J_EDEFAULT;
 
   /**
-	 * The cached value of the '{@link #getNatureDuTerrain() <em>Nature Du Terrain</em>}' reference.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getNatureDuTerrain() <em>Nature Du Terrain</em>}' reference.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getNatureDuTerrain()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getNatureDuTerrain()
+   * @generated
+   * @ordered
+   */
   protected NatureTerrain natureDuTerrain;
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   protected CaseImpl()
   {
-		super();
-	}
+    super();
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   protected EClass eStaticClass()
   {
-		return TowerDefensePackage.Literals.CASE;
-	}
+    return TowerDefensePackage.Literals.CASE;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public String getName()
   {
-		return name;
-	}
+    return name;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public void setName(String newName)
   {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.CASE__NAME, oldName, name));
-	}
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.CASE__NAME, oldName, name));
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public int getI()
   {
-		return i;
-	}
+    return i;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public void setI(int newI)
   {
-		int oldI = i;
-		i = newI;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.CASE__I, oldI, i));
-	}
+    int oldI = i;
+    i = newI;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.CASE__I, oldI, i));
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public int getJ()
   {
-		return j;
-	}
+    return j;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public void setJ(int newJ)
   {
-		int oldJ = j;
-		j = newJ;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.CASE__J, oldJ, j));
-	}
+    int oldJ = j;
+    j = newJ;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.CASE__J, oldJ, j));
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public NatureTerrain getNatureDuTerrain()
   {
-		if (natureDuTerrain != null && natureDuTerrain.eIsProxy()) {
-			InternalEObject oldNatureDuTerrain = (InternalEObject)natureDuTerrain;
-			natureDuTerrain = (NatureTerrain)eResolveProxy(oldNatureDuTerrain);
-			if (natureDuTerrain != oldNatureDuTerrain) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, TowerDefensePackage.CASE__NATURE_DU_TERRAIN, oldNatureDuTerrain, natureDuTerrain));
-			}
-		}
-		return natureDuTerrain;
-	}
+    if (natureDuTerrain != null && natureDuTerrain.eIsProxy())
+    {
+      InternalEObject oldNatureDuTerrain = (InternalEObject)natureDuTerrain;
+      natureDuTerrain = (NatureTerrain)eResolveProxy(oldNatureDuTerrain);
+      if (natureDuTerrain != oldNatureDuTerrain)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, TowerDefensePackage.CASE__NATURE_DU_TERRAIN, oldNatureDuTerrain, natureDuTerrain));
+      }
+    }
+    return natureDuTerrain;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public NatureTerrain basicGetNatureDuTerrain()
   {
-		return natureDuTerrain;
-	}
+    return natureDuTerrain;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public void setNatureDuTerrain(NatureTerrain newNatureDuTerrain)
   {
-		NatureTerrain oldNatureDuTerrain = natureDuTerrain;
-		natureDuTerrain = newNatureDuTerrain;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.CASE__NATURE_DU_TERRAIN, oldNatureDuTerrain, natureDuTerrain));
-	}
+    NatureTerrain oldNatureDuTerrain = natureDuTerrain;
+    natureDuTerrain = newNatureDuTerrain;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.CASE__NATURE_DU_TERRAIN, oldNatureDuTerrain, natureDuTerrain));
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
-		switch (featureID) {
-			case TowerDefensePackage.CASE__NAME:
-				return getName();
-			case TowerDefensePackage.CASE__I:
-				return getI();
-			case TowerDefensePackage.CASE__J:
-				return getJ();
-			case TowerDefensePackage.CASE__NATURE_DU_TERRAIN:
-				if (resolve) return getNatureDuTerrain();
-				return basicGetNatureDuTerrain();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    switch (featureID)
+    {
+      case TowerDefensePackage.CASE__NAME:
+        return getName();
+      case TowerDefensePackage.CASE__I:
+        return getI();
+      case TowerDefensePackage.CASE__J:
+        return getJ();
+      case TowerDefensePackage.CASE__NATURE_DU_TERRAIN:
+        if (resolve) return getNatureDuTerrain();
+        return basicGetNatureDuTerrain();
+    }
+    return super.eGet(featureID, resolve, coreType);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public void eSet(int featureID, Object newValue)
   {
-		switch (featureID) {
-			case TowerDefensePackage.CASE__NAME:
-				setName((String)newValue);
-				return;
-			case TowerDefensePackage.CASE__I:
-				setI((Integer)newValue);
-				return;
-			case TowerDefensePackage.CASE__J:
-				setJ((Integer)newValue);
-				return;
-			case TowerDefensePackage.CASE__NATURE_DU_TERRAIN:
-				setNatureDuTerrain((NatureTerrain)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    switch (featureID)
+    {
+      case TowerDefensePackage.CASE__NAME:
+        setName((String)newValue);
+        return;
+      case TowerDefensePackage.CASE__I:
+        setI((Integer)newValue);
+        return;
+      case TowerDefensePackage.CASE__J:
+        setJ((Integer)newValue);
+        return;
+      case TowerDefensePackage.CASE__NATURE_DU_TERRAIN:
+        setNatureDuTerrain((NatureTerrain)newValue);
+        return;
+    }
+    super.eSet(featureID, newValue);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public void eUnset(int featureID)
   {
-		switch (featureID) {
-			case TowerDefensePackage.CASE__NAME:
-				setName(NAME_EDEFAULT);
-				return;
-			case TowerDefensePackage.CASE__I:
-				setI(I_EDEFAULT);
-				return;
-			case TowerDefensePackage.CASE__J:
-				setJ(J_EDEFAULT);
-				return;
-			case TowerDefensePackage.CASE__NATURE_DU_TERRAIN:
-				setNatureDuTerrain((NatureTerrain)null);
-				return;
-		}
-		super.eUnset(featureID);
-	}
+    switch (featureID)
+    {
+      case TowerDefensePackage.CASE__NAME:
+        setName(NAME_EDEFAULT);
+        return;
+      case TowerDefensePackage.CASE__I:
+        setI(I_EDEFAULT);
+        return;
+      case TowerDefensePackage.CASE__J:
+        setJ(J_EDEFAULT);
+        return;
+      case TowerDefensePackage.CASE__NATURE_DU_TERRAIN:
+        setNatureDuTerrain((NatureTerrain)null);
+        return;
+    }
+    super.eUnset(featureID);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public boolean eIsSet(int featureID)
   {
-		switch (featureID) {
-			case TowerDefensePackage.CASE__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case TowerDefensePackage.CASE__I:
-				return i != I_EDEFAULT;
-			case TowerDefensePackage.CASE__J:
-				return j != J_EDEFAULT;
-			case TowerDefensePackage.CASE__NATURE_DU_TERRAIN:
-				return natureDuTerrain != null;
-		}
-		return super.eIsSet(featureID);
-	}
+    switch (featureID)
+    {
+      case TowerDefensePackage.CASE__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case TowerDefensePackage.CASE__I:
+        return i != I_EDEFAULT;
+      case TowerDefensePackage.CASE__J:
+        return j != J_EDEFAULT;
+      case TowerDefensePackage.CASE__NATURE_DU_TERRAIN:
+        return natureDuTerrain != null;
+    }
+    return super.eIsSet(featureID);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public String toString()
   {
-		if (eIsProxy()) return super.toString();
+    if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(", i: ");
-		result.append(i);
-		result.append(", j: ");
-		result.append(j);
-		result.append(')');
-		return result.toString();
-	}
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (name: ");
+    result.append(name);
+    result.append(", i: ");
+    result.append(i);
+    result.append(", j: ");
+    result.append(j);
+    result.append(')');
+    return result.toString();
+  }
 
 } //CaseImpl

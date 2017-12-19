@@ -84,7 +84,7 @@ public class TowerDefenseParser extends AbstractContentAssistParser {
 					put(grammarAccess.getNiveauAccess().getArgentAssignment_7(), "rule__Niveau__ArgentAssignment_7");
 					put(grammarAccess.getNiveauAccess().getMobSortisLimiteAssignment_9(), "rule__Niveau__MobSortisLimiteAssignment_9");
 					put(grammarAccess.getNiveauAccess().getCarteAssignment_11(), "rule__Niveau__CarteAssignment_11");
-					put(grammarAccess.getNiveauAccess().getVaguesAssignment_13(), "rule__Niveau__VaguesAssignment_13");
+					put(grammarAccess.getNiveauAccess().getVaguesAssignment_12(), "rule__Niveau__VaguesAssignment_12");
 					put(grammarAccess.getCarteAccess().getNameAssignment_1(), "rule__Carte__NameAssignment_1");
 					put(grammarAccess.getCarteAccess().getNbLignesAssignment_4(), "rule__Carte__NbLignesAssignment_4");
 					put(grammarAccess.getCarteAccess().getNbColonnesAssignment_6(), "rule__Carte__NbColonnesAssignment_6");
@@ -93,10 +93,10 @@ public class TowerDefenseParser extends AbstractContentAssistParser {
 					put(grammarAccess.getCaseAccess().getIAssignment_1(), "rule__Case__IAssignment_1");
 					put(grammarAccess.getCaseAccess().getJAssignment_2(), "rule__Case__JAssignment_2");
 					put(grammarAccess.getCaseAccess().getNatureDuTerrainAssignment_3(), "rule__Case__NatureDuTerrainAssignment_3");
-					put(grammarAccess.getVagueAccess().getNameAssignment_0(), "rule__Vague__NameAssignment_0");
-					put(grammarAccess.getVagueAccess().getMobilesAssignment_3(), "rule__Vague__MobilesAssignment_3");
-					put(grammarAccess.getVagueAccess().getObstaclesAssignment_5(), "rule__Vague__ObstaclesAssignment_5");
-					put(grammarAccess.getVagueAccess().getGainVictoireAssignment_7(), "rule__Vague__GainVictoireAssignment_7");
+					put(grammarAccess.getVagueAccess().getNameAssignment_1(), "rule__Vague__NameAssignment_1");
+					put(grammarAccess.getVagueAccess().getMobilesAssignment_4(), "rule__Vague__MobilesAssignment_4");
+					put(grammarAccess.getVagueAccess().getObstaclesAssignment_6(), "rule__Vague__ObstaclesAssignment_6");
+					put(grammarAccess.getVagueAccess().getGainVictoireAssignment_8(), "rule__Vague__GainVictoireAssignment_8");
 				}
 			};
 		}

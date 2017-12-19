@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalTowerDefenseParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'procheFirst'", "'faibleFirst'", "'fortFirst'", "'entree'", "'sortie'", "'chemin'", "'camp'", "'deco'", "'facile'", "'moyen'", "'difficile'", "'Jeu'", "'{'", "'}'", "'Partie'", "'Obstacle'", "'Campement'", "'PVmax'", "'Tactique'", "'Mobile'", "'F'", "'V'", "'NumVague'", "'In'", "'Out'", "'Projectile'", "'Portee'", "'Masse'", "'Vitesse'", "'Position'", "'Direction'", "'Degat'", "'NatureTerrain'", "'Volume'", "'Type'", "'FatigueEntree'", "'Niveau'", "'DureePauses'", "'Argent'", "'MobSortisMax'", "'Carte'", "'Vague'", "'Lignes'", "'Colonnes'", "'Cases'", "'Mobiles'", "'Obstacles'", "'Gain'", "'infini'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'procheFirst'", "'faibleFirst'", "'fortFirst'", "'entree'", "'sortie'", "'chemin'", "'camp'", "'deco'", "'facile'", "'moyen'", "'difficile'", "'Jeu'", "'{'", "'}'", "'Partie'", "'Obstacle'", "'Campement'", "'PVmax'", "'Tactique'", "'Mobile'", "'F'", "'V'", "'NumVague'", "'In'", "'Out'", "'Projectile'", "'Portee'", "'Masse'", "'Vitesse'", "'Position'", "'Direction'", "'Degat'", "'NatureTerrain'", "'Volume'", "'Type'", "'FatigueEntree'", "'Niveau'", "'DureePauses'", "'Argent'", "'MobSortisMax'", "'Carte'", "'Lignes'", "'Colonnes'", "'Cases'", "'Vague'", "'Mobiles'", "'Obstacles'", "'Gain'", "'infini'"
     };
     public static final int T__50=50;
     public static final int T__19=19;
@@ -8150,7 +8150,7 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
             // InternalTowerDefense.g:2684:1: ( rule__Niveau__Group__12__Impl rule__Niveau__Group__13 )
             // InternalTowerDefense.g:2685:2: rule__Niveau__Group__12__Impl rule__Niveau__Group__13
             {
-            pushFollow(FOLLOW_40);
+            pushFollow(FOLLOW_39);
             rule__Niveau__Group__12__Impl();
 
             state._fsp--;
@@ -8179,21 +8179,49 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Niveau__Group__12__Impl"
-    // InternalTowerDefense.g:2692:1: rule__Niveau__Group__12__Impl : ( 'Vague' ) ;
+    // InternalTowerDefense.g:2692:1: rule__Niveau__Group__12__Impl : ( ( rule__Niveau__VaguesAssignment_12 )* ) ;
     public final void rule__Niveau__Group__12__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTowerDefense.g:2696:1: ( ( 'Vague' ) )
-            // InternalTowerDefense.g:2697:1: ( 'Vague' )
+            // InternalTowerDefense.g:2696:1: ( ( ( rule__Niveau__VaguesAssignment_12 )* ) )
+            // InternalTowerDefense.g:2697:1: ( ( rule__Niveau__VaguesAssignment_12 )* )
             {
-            // InternalTowerDefense.g:2697:1: ( 'Vague' )
-            // InternalTowerDefense.g:2698:2: 'Vague'
+            // InternalTowerDefense.g:2697:1: ( ( rule__Niveau__VaguesAssignment_12 )* )
+            // InternalTowerDefense.g:2698:2: ( rule__Niveau__VaguesAssignment_12 )*
             {
-             before(grammarAccess.getNiveauAccess().getVagueKeyword_12()); 
-            match(input,52,FOLLOW_2); 
-             after(grammarAccess.getNiveauAccess().getVagueKeyword_12()); 
+             before(grammarAccess.getNiveauAccess().getVaguesAssignment_12()); 
+            // InternalTowerDefense.g:2699:2: ( rule__Niveau__VaguesAssignment_12 )*
+            loop11:
+            do {
+                int alt11=2;
+                int LA11_0 = input.LA(1);
+
+                if ( (LA11_0==55) ) {
+                    alt11=1;
+                }
+
+
+                switch (alt11) {
+            	case 1 :
+            	    // InternalTowerDefense.g:2699:3: rule__Niveau__VaguesAssignment_12
+            	    {
+            	    pushFollow(FOLLOW_40);
+            	    rule__Niveau__VaguesAssignment_12();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop11;
+                }
+            } while (true);
+
+             after(grammarAccess.getNiveauAccess().getVaguesAssignment_12()); 
 
             }
 
@@ -8216,22 +8244,17 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Niveau__Group__13"
-    // InternalTowerDefense.g:2707:1: rule__Niveau__Group__13 : rule__Niveau__Group__13__Impl rule__Niveau__Group__14 ;
+    // InternalTowerDefense.g:2707:1: rule__Niveau__Group__13 : rule__Niveau__Group__13__Impl ;
     public final void rule__Niveau__Group__13() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTowerDefense.g:2711:1: ( rule__Niveau__Group__13__Impl rule__Niveau__Group__14 )
-            // InternalTowerDefense.g:2712:2: rule__Niveau__Group__13__Impl rule__Niveau__Group__14
+            // InternalTowerDefense.g:2711:1: ( rule__Niveau__Group__13__Impl )
+            // InternalTowerDefense.g:2712:2: rule__Niveau__Group__13__Impl
             {
-            pushFollow(FOLLOW_40);
-            rule__Niveau__Group__13__Impl();
-
-            state._fsp--;
-
             pushFollow(FOLLOW_2);
-            rule__Niveau__Group__14();
+            rule__Niveau__Group__13__Impl();
 
             state._fsp--;
 
@@ -8254,49 +8277,21 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Niveau__Group__13__Impl"
-    // InternalTowerDefense.g:2719:1: rule__Niveau__Group__13__Impl : ( ( rule__Niveau__VaguesAssignment_13 )* ) ;
+    // InternalTowerDefense.g:2718:1: rule__Niveau__Group__13__Impl : ( '}' ) ;
     public final void rule__Niveau__Group__13__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTowerDefense.g:2723:1: ( ( ( rule__Niveau__VaguesAssignment_13 )* ) )
-            // InternalTowerDefense.g:2724:1: ( ( rule__Niveau__VaguesAssignment_13 )* )
+            // InternalTowerDefense.g:2722:1: ( ( '}' ) )
+            // InternalTowerDefense.g:2723:1: ( '}' )
             {
-            // InternalTowerDefense.g:2724:1: ( ( rule__Niveau__VaguesAssignment_13 )* )
-            // InternalTowerDefense.g:2725:2: ( rule__Niveau__VaguesAssignment_13 )*
+            // InternalTowerDefense.g:2723:1: ( '}' )
+            // InternalTowerDefense.g:2724:2: '}'
             {
-             before(grammarAccess.getNiveauAccess().getVaguesAssignment_13()); 
-            // InternalTowerDefense.g:2726:2: ( rule__Niveau__VaguesAssignment_13 )*
-            loop11:
-            do {
-                int alt11=2;
-                int LA11_0 = input.LA(1);
-
-                if ( (LA11_0==RULE_ID) ) {
-                    alt11=1;
-                }
-
-
-                switch (alt11) {
-            	case 1 :
-            	    // InternalTowerDefense.g:2726:3: rule__Niveau__VaguesAssignment_13
-            	    {
-            	    pushFollow(FOLLOW_8);
-            	    rule__Niveau__VaguesAssignment_13();
-
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop11;
-                }
-            } while (true);
-
-             after(grammarAccess.getNiveauAccess().getVaguesAssignment_13()); 
+             before(grammarAccess.getNiveauAccess().getRightCurlyBracketKeyword_13()); 
+            match(input,24,FOLLOW_2); 
+             after(grammarAccess.getNiveauAccess().getRightCurlyBracketKeyword_13()); 
 
             }
 
@@ -8318,85 +8313,15 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
     // $ANTLR end "rule__Niveau__Group__13__Impl"
 
 
-    // $ANTLR start "rule__Niveau__Group__14"
-    // InternalTowerDefense.g:2734:1: rule__Niveau__Group__14 : rule__Niveau__Group__14__Impl ;
-    public final void rule__Niveau__Group__14() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalTowerDefense.g:2738:1: ( rule__Niveau__Group__14__Impl )
-            // InternalTowerDefense.g:2739:2: rule__Niveau__Group__14__Impl
-            {
-            pushFollow(FOLLOW_2);
-            rule__Niveau__Group__14__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Niveau__Group__14"
-
-
-    // $ANTLR start "rule__Niveau__Group__14__Impl"
-    // InternalTowerDefense.g:2745:1: rule__Niveau__Group__14__Impl : ( '}' ) ;
-    public final void rule__Niveau__Group__14__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalTowerDefense.g:2749:1: ( ( '}' ) )
-            // InternalTowerDefense.g:2750:1: ( '}' )
-            {
-            // InternalTowerDefense.g:2750:1: ( '}' )
-            // InternalTowerDefense.g:2751:2: '}'
-            {
-             before(grammarAccess.getNiveauAccess().getRightCurlyBracketKeyword_14()); 
-            match(input,24,FOLLOW_2); 
-             after(grammarAccess.getNiveauAccess().getRightCurlyBracketKeyword_14()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Niveau__Group__14__Impl"
-
-
     // $ANTLR start "rule__Carte__Group__0"
-    // InternalTowerDefense.g:2761:1: rule__Carte__Group__0 : rule__Carte__Group__0__Impl rule__Carte__Group__1 ;
+    // InternalTowerDefense.g:2734:1: rule__Carte__Group__0 : rule__Carte__Group__0__Impl rule__Carte__Group__1 ;
     public final void rule__Carte__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTowerDefense.g:2765:1: ( rule__Carte__Group__0__Impl rule__Carte__Group__1 )
-            // InternalTowerDefense.g:2766:2: rule__Carte__Group__0__Impl rule__Carte__Group__1
+            // InternalTowerDefense.g:2738:1: ( rule__Carte__Group__0__Impl rule__Carte__Group__1 )
+            // InternalTowerDefense.g:2739:2: rule__Carte__Group__0__Impl rule__Carte__Group__1
             {
             pushFollow(FOLLOW_3);
             rule__Carte__Group__0__Impl();
@@ -8427,17 +8352,17 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Carte__Group__0__Impl"
-    // InternalTowerDefense.g:2773:1: rule__Carte__Group__0__Impl : ( 'Carte' ) ;
+    // InternalTowerDefense.g:2746:1: rule__Carte__Group__0__Impl : ( 'Carte' ) ;
     public final void rule__Carte__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTowerDefense.g:2777:1: ( ( 'Carte' ) )
-            // InternalTowerDefense.g:2778:1: ( 'Carte' )
+            // InternalTowerDefense.g:2750:1: ( ( 'Carte' ) )
+            // InternalTowerDefense.g:2751:1: ( 'Carte' )
             {
-            // InternalTowerDefense.g:2778:1: ( 'Carte' )
-            // InternalTowerDefense.g:2779:2: 'Carte'
+            // InternalTowerDefense.g:2751:1: ( 'Carte' )
+            // InternalTowerDefense.g:2752:2: 'Carte'
             {
              before(grammarAccess.getCarteAccess().getCarteKeyword_0()); 
             match(input,51,FOLLOW_2); 
@@ -8464,14 +8389,14 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Carte__Group__1"
-    // InternalTowerDefense.g:2788:1: rule__Carte__Group__1 : rule__Carte__Group__1__Impl rule__Carte__Group__2 ;
+    // InternalTowerDefense.g:2761:1: rule__Carte__Group__1 : rule__Carte__Group__1__Impl rule__Carte__Group__2 ;
     public final void rule__Carte__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTowerDefense.g:2792:1: ( rule__Carte__Group__1__Impl rule__Carte__Group__2 )
-            // InternalTowerDefense.g:2793:2: rule__Carte__Group__1__Impl rule__Carte__Group__2
+            // InternalTowerDefense.g:2765:1: ( rule__Carte__Group__1__Impl rule__Carte__Group__2 )
+            // InternalTowerDefense.g:2766:2: rule__Carte__Group__1__Impl rule__Carte__Group__2
             {
             pushFollow(FOLLOW_4);
             rule__Carte__Group__1__Impl();
@@ -8502,21 +8427,21 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Carte__Group__1__Impl"
-    // InternalTowerDefense.g:2800:1: rule__Carte__Group__1__Impl : ( ( rule__Carte__NameAssignment_1 ) ) ;
+    // InternalTowerDefense.g:2773:1: rule__Carte__Group__1__Impl : ( ( rule__Carte__NameAssignment_1 ) ) ;
     public final void rule__Carte__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTowerDefense.g:2804:1: ( ( ( rule__Carte__NameAssignment_1 ) ) )
-            // InternalTowerDefense.g:2805:1: ( ( rule__Carte__NameAssignment_1 ) )
+            // InternalTowerDefense.g:2777:1: ( ( ( rule__Carte__NameAssignment_1 ) ) )
+            // InternalTowerDefense.g:2778:1: ( ( rule__Carte__NameAssignment_1 ) )
             {
-            // InternalTowerDefense.g:2805:1: ( ( rule__Carte__NameAssignment_1 ) )
-            // InternalTowerDefense.g:2806:2: ( rule__Carte__NameAssignment_1 )
+            // InternalTowerDefense.g:2778:1: ( ( rule__Carte__NameAssignment_1 ) )
+            // InternalTowerDefense.g:2779:2: ( rule__Carte__NameAssignment_1 )
             {
              before(grammarAccess.getCarteAccess().getNameAssignment_1()); 
-            // InternalTowerDefense.g:2807:2: ( rule__Carte__NameAssignment_1 )
-            // InternalTowerDefense.g:2807:3: rule__Carte__NameAssignment_1
+            // InternalTowerDefense.g:2780:2: ( rule__Carte__NameAssignment_1 )
+            // InternalTowerDefense.g:2780:3: rule__Carte__NameAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__Carte__NameAssignment_1();
@@ -8549,14 +8474,14 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Carte__Group__2"
-    // InternalTowerDefense.g:2815:1: rule__Carte__Group__2 : rule__Carte__Group__2__Impl rule__Carte__Group__3 ;
+    // InternalTowerDefense.g:2788:1: rule__Carte__Group__2 : rule__Carte__Group__2__Impl rule__Carte__Group__3 ;
     public final void rule__Carte__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTowerDefense.g:2819:1: ( rule__Carte__Group__2__Impl rule__Carte__Group__3 )
-            // InternalTowerDefense.g:2820:2: rule__Carte__Group__2__Impl rule__Carte__Group__3
+            // InternalTowerDefense.g:2792:1: ( rule__Carte__Group__2__Impl rule__Carte__Group__3 )
+            // InternalTowerDefense.g:2793:2: rule__Carte__Group__2__Impl rule__Carte__Group__3
             {
             pushFollow(FOLLOW_41);
             rule__Carte__Group__2__Impl();
@@ -8587,17 +8512,17 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Carte__Group__2__Impl"
-    // InternalTowerDefense.g:2827:1: rule__Carte__Group__2__Impl : ( '{' ) ;
+    // InternalTowerDefense.g:2800:1: rule__Carte__Group__2__Impl : ( '{' ) ;
     public final void rule__Carte__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTowerDefense.g:2831:1: ( ( '{' ) )
-            // InternalTowerDefense.g:2832:1: ( '{' )
+            // InternalTowerDefense.g:2804:1: ( ( '{' ) )
+            // InternalTowerDefense.g:2805:1: ( '{' )
             {
-            // InternalTowerDefense.g:2832:1: ( '{' )
-            // InternalTowerDefense.g:2833:2: '{'
+            // InternalTowerDefense.g:2805:1: ( '{' )
+            // InternalTowerDefense.g:2806:2: '{'
             {
              before(grammarAccess.getCarteAccess().getLeftCurlyBracketKeyword_2()); 
             match(input,23,FOLLOW_2); 
@@ -8624,14 +8549,14 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Carte__Group__3"
-    // InternalTowerDefense.g:2842:1: rule__Carte__Group__3 : rule__Carte__Group__3__Impl rule__Carte__Group__4 ;
+    // InternalTowerDefense.g:2815:1: rule__Carte__Group__3 : rule__Carte__Group__3__Impl rule__Carte__Group__4 ;
     public final void rule__Carte__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTowerDefense.g:2846:1: ( rule__Carte__Group__3__Impl rule__Carte__Group__4 )
-            // InternalTowerDefense.g:2847:2: rule__Carte__Group__3__Impl rule__Carte__Group__4
+            // InternalTowerDefense.g:2819:1: ( rule__Carte__Group__3__Impl rule__Carte__Group__4 )
+            // InternalTowerDefense.g:2820:2: rule__Carte__Group__3__Impl rule__Carte__Group__4
             {
             pushFollow(FOLLOW_19);
             rule__Carte__Group__3__Impl();
@@ -8662,20 +8587,20 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Carte__Group__3__Impl"
-    // InternalTowerDefense.g:2854:1: rule__Carte__Group__3__Impl : ( 'Lignes' ) ;
+    // InternalTowerDefense.g:2827:1: rule__Carte__Group__3__Impl : ( 'Lignes' ) ;
     public final void rule__Carte__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTowerDefense.g:2858:1: ( ( 'Lignes' ) )
-            // InternalTowerDefense.g:2859:1: ( 'Lignes' )
+            // InternalTowerDefense.g:2831:1: ( ( 'Lignes' ) )
+            // InternalTowerDefense.g:2832:1: ( 'Lignes' )
             {
-            // InternalTowerDefense.g:2859:1: ( 'Lignes' )
-            // InternalTowerDefense.g:2860:2: 'Lignes'
+            // InternalTowerDefense.g:2832:1: ( 'Lignes' )
+            // InternalTowerDefense.g:2833:2: 'Lignes'
             {
              before(grammarAccess.getCarteAccess().getLignesKeyword_3()); 
-            match(input,53,FOLLOW_2); 
+            match(input,52,FOLLOW_2); 
              after(grammarAccess.getCarteAccess().getLignesKeyword_3()); 
 
             }
@@ -8699,14 +8624,14 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Carte__Group__4"
-    // InternalTowerDefense.g:2869:1: rule__Carte__Group__4 : rule__Carte__Group__4__Impl rule__Carte__Group__5 ;
+    // InternalTowerDefense.g:2842:1: rule__Carte__Group__4 : rule__Carte__Group__4__Impl rule__Carte__Group__5 ;
     public final void rule__Carte__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTowerDefense.g:2873:1: ( rule__Carte__Group__4__Impl rule__Carte__Group__5 )
-            // InternalTowerDefense.g:2874:2: rule__Carte__Group__4__Impl rule__Carte__Group__5
+            // InternalTowerDefense.g:2846:1: ( rule__Carte__Group__4__Impl rule__Carte__Group__5 )
+            // InternalTowerDefense.g:2847:2: rule__Carte__Group__4__Impl rule__Carte__Group__5
             {
             pushFollow(FOLLOW_42);
             rule__Carte__Group__4__Impl();
@@ -8737,21 +8662,21 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Carte__Group__4__Impl"
-    // InternalTowerDefense.g:2881:1: rule__Carte__Group__4__Impl : ( ( rule__Carte__NbLignesAssignment_4 ) ) ;
+    // InternalTowerDefense.g:2854:1: rule__Carte__Group__4__Impl : ( ( rule__Carte__NbLignesAssignment_4 ) ) ;
     public final void rule__Carte__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTowerDefense.g:2885:1: ( ( ( rule__Carte__NbLignesAssignment_4 ) ) )
-            // InternalTowerDefense.g:2886:1: ( ( rule__Carte__NbLignesAssignment_4 ) )
+            // InternalTowerDefense.g:2858:1: ( ( ( rule__Carte__NbLignesAssignment_4 ) ) )
+            // InternalTowerDefense.g:2859:1: ( ( rule__Carte__NbLignesAssignment_4 ) )
             {
-            // InternalTowerDefense.g:2886:1: ( ( rule__Carte__NbLignesAssignment_4 ) )
-            // InternalTowerDefense.g:2887:2: ( rule__Carte__NbLignesAssignment_4 )
+            // InternalTowerDefense.g:2859:1: ( ( rule__Carte__NbLignesAssignment_4 ) )
+            // InternalTowerDefense.g:2860:2: ( rule__Carte__NbLignesAssignment_4 )
             {
              before(grammarAccess.getCarteAccess().getNbLignesAssignment_4()); 
-            // InternalTowerDefense.g:2888:2: ( rule__Carte__NbLignesAssignment_4 )
-            // InternalTowerDefense.g:2888:3: rule__Carte__NbLignesAssignment_4
+            // InternalTowerDefense.g:2861:2: ( rule__Carte__NbLignesAssignment_4 )
+            // InternalTowerDefense.g:2861:3: rule__Carte__NbLignesAssignment_4
             {
             pushFollow(FOLLOW_2);
             rule__Carte__NbLignesAssignment_4();
@@ -8784,14 +8709,14 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Carte__Group__5"
-    // InternalTowerDefense.g:2896:1: rule__Carte__Group__5 : rule__Carte__Group__5__Impl rule__Carte__Group__6 ;
+    // InternalTowerDefense.g:2869:1: rule__Carte__Group__5 : rule__Carte__Group__5__Impl rule__Carte__Group__6 ;
     public final void rule__Carte__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTowerDefense.g:2900:1: ( rule__Carte__Group__5__Impl rule__Carte__Group__6 )
-            // InternalTowerDefense.g:2901:2: rule__Carte__Group__5__Impl rule__Carte__Group__6
+            // InternalTowerDefense.g:2873:1: ( rule__Carte__Group__5__Impl rule__Carte__Group__6 )
+            // InternalTowerDefense.g:2874:2: rule__Carte__Group__5__Impl rule__Carte__Group__6
             {
             pushFollow(FOLLOW_19);
             rule__Carte__Group__5__Impl();
@@ -8822,20 +8747,20 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Carte__Group__5__Impl"
-    // InternalTowerDefense.g:2908:1: rule__Carte__Group__5__Impl : ( 'Colonnes' ) ;
+    // InternalTowerDefense.g:2881:1: rule__Carte__Group__5__Impl : ( 'Colonnes' ) ;
     public final void rule__Carte__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTowerDefense.g:2912:1: ( ( 'Colonnes' ) )
-            // InternalTowerDefense.g:2913:1: ( 'Colonnes' )
+            // InternalTowerDefense.g:2885:1: ( ( 'Colonnes' ) )
+            // InternalTowerDefense.g:2886:1: ( 'Colonnes' )
             {
-            // InternalTowerDefense.g:2913:1: ( 'Colonnes' )
-            // InternalTowerDefense.g:2914:2: 'Colonnes'
+            // InternalTowerDefense.g:2886:1: ( 'Colonnes' )
+            // InternalTowerDefense.g:2887:2: 'Colonnes'
             {
              before(grammarAccess.getCarteAccess().getColonnesKeyword_5()); 
-            match(input,54,FOLLOW_2); 
+            match(input,53,FOLLOW_2); 
              after(grammarAccess.getCarteAccess().getColonnesKeyword_5()); 
 
             }
@@ -8859,14 +8784,14 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Carte__Group__6"
-    // InternalTowerDefense.g:2923:1: rule__Carte__Group__6 : rule__Carte__Group__6__Impl rule__Carte__Group__7 ;
+    // InternalTowerDefense.g:2896:1: rule__Carte__Group__6 : rule__Carte__Group__6__Impl rule__Carte__Group__7 ;
     public final void rule__Carte__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTowerDefense.g:2927:1: ( rule__Carte__Group__6__Impl rule__Carte__Group__7 )
-            // InternalTowerDefense.g:2928:2: rule__Carte__Group__6__Impl rule__Carte__Group__7
+            // InternalTowerDefense.g:2900:1: ( rule__Carte__Group__6__Impl rule__Carte__Group__7 )
+            // InternalTowerDefense.g:2901:2: rule__Carte__Group__6__Impl rule__Carte__Group__7
             {
             pushFollow(FOLLOW_43);
             rule__Carte__Group__6__Impl();
@@ -8897,21 +8822,21 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Carte__Group__6__Impl"
-    // InternalTowerDefense.g:2935:1: rule__Carte__Group__6__Impl : ( ( rule__Carte__NbColonnesAssignment_6 ) ) ;
+    // InternalTowerDefense.g:2908:1: rule__Carte__Group__6__Impl : ( ( rule__Carte__NbColonnesAssignment_6 ) ) ;
     public final void rule__Carte__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTowerDefense.g:2939:1: ( ( ( rule__Carte__NbColonnesAssignment_6 ) ) )
-            // InternalTowerDefense.g:2940:1: ( ( rule__Carte__NbColonnesAssignment_6 ) )
+            // InternalTowerDefense.g:2912:1: ( ( ( rule__Carte__NbColonnesAssignment_6 ) ) )
+            // InternalTowerDefense.g:2913:1: ( ( rule__Carte__NbColonnesAssignment_6 ) )
             {
-            // InternalTowerDefense.g:2940:1: ( ( rule__Carte__NbColonnesAssignment_6 ) )
-            // InternalTowerDefense.g:2941:2: ( rule__Carte__NbColonnesAssignment_6 )
+            // InternalTowerDefense.g:2913:1: ( ( rule__Carte__NbColonnesAssignment_6 ) )
+            // InternalTowerDefense.g:2914:2: ( rule__Carte__NbColonnesAssignment_6 )
             {
              before(grammarAccess.getCarteAccess().getNbColonnesAssignment_6()); 
-            // InternalTowerDefense.g:2942:2: ( rule__Carte__NbColonnesAssignment_6 )
-            // InternalTowerDefense.g:2942:3: rule__Carte__NbColonnesAssignment_6
+            // InternalTowerDefense.g:2915:2: ( rule__Carte__NbColonnesAssignment_6 )
+            // InternalTowerDefense.g:2915:3: rule__Carte__NbColonnesAssignment_6
             {
             pushFollow(FOLLOW_2);
             rule__Carte__NbColonnesAssignment_6();
@@ -8944,16 +8869,16 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Carte__Group__7"
-    // InternalTowerDefense.g:2950:1: rule__Carte__Group__7 : rule__Carte__Group__7__Impl rule__Carte__Group__8 ;
+    // InternalTowerDefense.g:2923:1: rule__Carte__Group__7 : rule__Carte__Group__7__Impl rule__Carte__Group__8 ;
     public final void rule__Carte__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTowerDefense.g:2954:1: ( rule__Carte__Group__7__Impl rule__Carte__Group__8 )
-            // InternalTowerDefense.g:2955:2: rule__Carte__Group__7__Impl rule__Carte__Group__8
+            // InternalTowerDefense.g:2927:1: ( rule__Carte__Group__7__Impl rule__Carte__Group__8 )
+            // InternalTowerDefense.g:2928:2: rule__Carte__Group__7__Impl rule__Carte__Group__8
             {
-            pushFollow(FOLLOW_40);
+            pushFollow(FOLLOW_44);
             rule__Carte__Group__7__Impl();
 
             state._fsp--;
@@ -8982,20 +8907,20 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Carte__Group__7__Impl"
-    // InternalTowerDefense.g:2962:1: rule__Carte__Group__7__Impl : ( 'Cases' ) ;
+    // InternalTowerDefense.g:2935:1: rule__Carte__Group__7__Impl : ( 'Cases' ) ;
     public final void rule__Carte__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTowerDefense.g:2966:1: ( ( 'Cases' ) )
-            // InternalTowerDefense.g:2967:1: ( 'Cases' )
+            // InternalTowerDefense.g:2939:1: ( ( 'Cases' ) )
+            // InternalTowerDefense.g:2940:1: ( 'Cases' )
             {
-            // InternalTowerDefense.g:2967:1: ( 'Cases' )
-            // InternalTowerDefense.g:2968:2: 'Cases'
+            // InternalTowerDefense.g:2940:1: ( 'Cases' )
+            // InternalTowerDefense.g:2941:2: 'Cases'
             {
              before(grammarAccess.getCarteAccess().getCasesKeyword_7()); 
-            match(input,55,FOLLOW_2); 
+            match(input,54,FOLLOW_2); 
              after(grammarAccess.getCarteAccess().getCasesKeyword_7()); 
 
             }
@@ -9019,16 +8944,16 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Carte__Group__8"
-    // InternalTowerDefense.g:2977:1: rule__Carte__Group__8 : rule__Carte__Group__8__Impl rule__Carte__Group__9 ;
+    // InternalTowerDefense.g:2950:1: rule__Carte__Group__8 : rule__Carte__Group__8__Impl rule__Carte__Group__9 ;
     public final void rule__Carte__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTowerDefense.g:2981:1: ( rule__Carte__Group__8__Impl rule__Carte__Group__9 )
-            // InternalTowerDefense.g:2982:2: rule__Carte__Group__8__Impl rule__Carte__Group__9
+            // InternalTowerDefense.g:2954:1: ( rule__Carte__Group__8__Impl rule__Carte__Group__9 )
+            // InternalTowerDefense.g:2955:2: rule__Carte__Group__8__Impl rule__Carte__Group__9
             {
-            pushFollow(FOLLOW_40);
+            pushFollow(FOLLOW_44);
             rule__Carte__Group__8__Impl();
 
             state._fsp--;
@@ -9057,20 +8982,20 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Carte__Group__8__Impl"
-    // InternalTowerDefense.g:2989:1: rule__Carte__Group__8__Impl : ( ( rule__Carte__CasesAssignment_8 )* ) ;
+    // InternalTowerDefense.g:2962:1: rule__Carte__Group__8__Impl : ( ( rule__Carte__CasesAssignment_8 )* ) ;
     public final void rule__Carte__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTowerDefense.g:2993:1: ( ( ( rule__Carte__CasesAssignment_8 )* ) )
-            // InternalTowerDefense.g:2994:1: ( ( rule__Carte__CasesAssignment_8 )* )
+            // InternalTowerDefense.g:2966:1: ( ( ( rule__Carte__CasesAssignment_8 )* ) )
+            // InternalTowerDefense.g:2967:1: ( ( rule__Carte__CasesAssignment_8 )* )
             {
-            // InternalTowerDefense.g:2994:1: ( ( rule__Carte__CasesAssignment_8 )* )
-            // InternalTowerDefense.g:2995:2: ( rule__Carte__CasesAssignment_8 )*
+            // InternalTowerDefense.g:2967:1: ( ( rule__Carte__CasesAssignment_8 )* )
+            // InternalTowerDefense.g:2968:2: ( rule__Carte__CasesAssignment_8 )*
             {
              before(grammarAccess.getCarteAccess().getCasesAssignment_8()); 
-            // InternalTowerDefense.g:2996:2: ( rule__Carte__CasesAssignment_8 )*
+            // InternalTowerDefense.g:2969:2: ( rule__Carte__CasesAssignment_8 )*
             loop12:
             do {
                 int alt12=2;
@@ -9083,7 +9008,7 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
 
                 switch (alt12) {
             	case 1 :
-            	    // InternalTowerDefense.g:2996:3: rule__Carte__CasesAssignment_8
+            	    // InternalTowerDefense.g:2969:3: rule__Carte__CasesAssignment_8
             	    {
             	    pushFollow(FOLLOW_8);
             	    rule__Carte__CasesAssignment_8();
@@ -9122,14 +9047,14 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Carte__Group__9"
-    // InternalTowerDefense.g:3004:1: rule__Carte__Group__9 : rule__Carte__Group__9__Impl ;
+    // InternalTowerDefense.g:2977:1: rule__Carte__Group__9 : rule__Carte__Group__9__Impl ;
     public final void rule__Carte__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTowerDefense.g:3008:1: ( rule__Carte__Group__9__Impl )
-            // InternalTowerDefense.g:3009:2: rule__Carte__Group__9__Impl
+            // InternalTowerDefense.g:2981:1: ( rule__Carte__Group__9__Impl )
+            // InternalTowerDefense.g:2982:2: rule__Carte__Group__9__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Carte__Group__9__Impl();
@@ -9155,17 +9080,17 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Carte__Group__9__Impl"
-    // InternalTowerDefense.g:3015:1: rule__Carte__Group__9__Impl : ( '}' ) ;
+    // InternalTowerDefense.g:2988:1: rule__Carte__Group__9__Impl : ( '}' ) ;
     public final void rule__Carte__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTowerDefense.g:3019:1: ( ( '}' ) )
-            // InternalTowerDefense.g:3020:1: ( '}' )
+            // InternalTowerDefense.g:2992:1: ( ( '}' ) )
+            // InternalTowerDefense.g:2993:1: ( '}' )
             {
-            // InternalTowerDefense.g:3020:1: ( '}' )
-            // InternalTowerDefense.g:3021:2: '}'
+            // InternalTowerDefense.g:2993:1: ( '}' )
+            // InternalTowerDefense.g:2994:2: '}'
             {
              before(grammarAccess.getCarteAccess().getRightCurlyBracketKeyword_9()); 
             match(input,24,FOLLOW_2); 
@@ -9192,14 +9117,14 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Case__Group__0"
-    // InternalTowerDefense.g:3031:1: rule__Case__Group__0 : rule__Case__Group__0__Impl rule__Case__Group__1 ;
+    // InternalTowerDefense.g:3004:1: rule__Case__Group__0 : rule__Case__Group__0__Impl rule__Case__Group__1 ;
     public final void rule__Case__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTowerDefense.g:3035:1: ( rule__Case__Group__0__Impl rule__Case__Group__1 )
-            // InternalTowerDefense.g:3036:2: rule__Case__Group__0__Impl rule__Case__Group__1
+            // InternalTowerDefense.g:3008:1: ( rule__Case__Group__0__Impl rule__Case__Group__1 )
+            // InternalTowerDefense.g:3009:2: rule__Case__Group__0__Impl rule__Case__Group__1
             {
             pushFollow(FOLLOW_19);
             rule__Case__Group__0__Impl();
@@ -9230,21 +9155,21 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Case__Group__0__Impl"
-    // InternalTowerDefense.g:3043:1: rule__Case__Group__0__Impl : ( ( rule__Case__NameAssignment_0 ) ) ;
+    // InternalTowerDefense.g:3016:1: rule__Case__Group__0__Impl : ( ( rule__Case__NameAssignment_0 ) ) ;
     public final void rule__Case__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTowerDefense.g:3047:1: ( ( ( rule__Case__NameAssignment_0 ) ) )
-            // InternalTowerDefense.g:3048:1: ( ( rule__Case__NameAssignment_0 ) )
+            // InternalTowerDefense.g:3020:1: ( ( ( rule__Case__NameAssignment_0 ) ) )
+            // InternalTowerDefense.g:3021:1: ( ( rule__Case__NameAssignment_0 ) )
             {
-            // InternalTowerDefense.g:3048:1: ( ( rule__Case__NameAssignment_0 ) )
-            // InternalTowerDefense.g:3049:2: ( rule__Case__NameAssignment_0 )
+            // InternalTowerDefense.g:3021:1: ( ( rule__Case__NameAssignment_0 ) )
+            // InternalTowerDefense.g:3022:2: ( rule__Case__NameAssignment_0 )
             {
              before(grammarAccess.getCaseAccess().getNameAssignment_0()); 
-            // InternalTowerDefense.g:3050:2: ( rule__Case__NameAssignment_0 )
-            // InternalTowerDefense.g:3050:3: rule__Case__NameAssignment_0
+            // InternalTowerDefense.g:3023:2: ( rule__Case__NameAssignment_0 )
+            // InternalTowerDefense.g:3023:3: rule__Case__NameAssignment_0
             {
             pushFollow(FOLLOW_2);
             rule__Case__NameAssignment_0();
@@ -9277,14 +9202,14 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Case__Group__1"
-    // InternalTowerDefense.g:3058:1: rule__Case__Group__1 : rule__Case__Group__1__Impl rule__Case__Group__2 ;
+    // InternalTowerDefense.g:3031:1: rule__Case__Group__1 : rule__Case__Group__1__Impl rule__Case__Group__2 ;
     public final void rule__Case__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTowerDefense.g:3062:1: ( rule__Case__Group__1__Impl rule__Case__Group__2 )
-            // InternalTowerDefense.g:3063:2: rule__Case__Group__1__Impl rule__Case__Group__2
+            // InternalTowerDefense.g:3035:1: ( rule__Case__Group__1__Impl rule__Case__Group__2 )
+            // InternalTowerDefense.g:3036:2: rule__Case__Group__1__Impl rule__Case__Group__2
             {
             pushFollow(FOLLOW_19);
             rule__Case__Group__1__Impl();
@@ -9315,21 +9240,21 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Case__Group__1__Impl"
-    // InternalTowerDefense.g:3070:1: rule__Case__Group__1__Impl : ( ( rule__Case__IAssignment_1 ) ) ;
+    // InternalTowerDefense.g:3043:1: rule__Case__Group__1__Impl : ( ( rule__Case__IAssignment_1 ) ) ;
     public final void rule__Case__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTowerDefense.g:3074:1: ( ( ( rule__Case__IAssignment_1 ) ) )
-            // InternalTowerDefense.g:3075:1: ( ( rule__Case__IAssignment_1 ) )
+            // InternalTowerDefense.g:3047:1: ( ( ( rule__Case__IAssignment_1 ) ) )
+            // InternalTowerDefense.g:3048:1: ( ( rule__Case__IAssignment_1 ) )
             {
-            // InternalTowerDefense.g:3075:1: ( ( rule__Case__IAssignment_1 ) )
-            // InternalTowerDefense.g:3076:2: ( rule__Case__IAssignment_1 )
+            // InternalTowerDefense.g:3048:1: ( ( rule__Case__IAssignment_1 ) )
+            // InternalTowerDefense.g:3049:2: ( rule__Case__IAssignment_1 )
             {
              before(grammarAccess.getCaseAccess().getIAssignment_1()); 
-            // InternalTowerDefense.g:3077:2: ( rule__Case__IAssignment_1 )
-            // InternalTowerDefense.g:3077:3: rule__Case__IAssignment_1
+            // InternalTowerDefense.g:3050:2: ( rule__Case__IAssignment_1 )
+            // InternalTowerDefense.g:3050:3: rule__Case__IAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__Case__IAssignment_1();
@@ -9362,14 +9287,14 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Case__Group__2"
-    // InternalTowerDefense.g:3085:1: rule__Case__Group__2 : rule__Case__Group__2__Impl rule__Case__Group__3 ;
+    // InternalTowerDefense.g:3058:1: rule__Case__Group__2 : rule__Case__Group__2__Impl rule__Case__Group__3 ;
     public final void rule__Case__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTowerDefense.g:3089:1: ( rule__Case__Group__2__Impl rule__Case__Group__3 )
-            // InternalTowerDefense.g:3090:2: rule__Case__Group__2__Impl rule__Case__Group__3
+            // InternalTowerDefense.g:3062:1: ( rule__Case__Group__2__Impl rule__Case__Group__3 )
+            // InternalTowerDefense.g:3063:2: rule__Case__Group__2__Impl rule__Case__Group__3
             {
             pushFollow(FOLLOW_3);
             rule__Case__Group__2__Impl();
@@ -9400,21 +9325,21 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Case__Group__2__Impl"
-    // InternalTowerDefense.g:3097:1: rule__Case__Group__2__Impl : ( ( rule__Case__JAssignment_2 ) ) ;
+    // InternalTowerDefense.g:3070:1: rule__Case__Group__2__Impl : ( ( rule__Case__JAssignment_2 ) ) ;
     public final void rule__Case__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTowerDefense.g:3101:1: ( ( ( rule__Case__JAssignment_2 ) ) )
-            // InternalTowerDefense.g:3102:1: ( ( rule__Case__JAssignment_2 ) )
+            // InternalTowerDefense.g:3074:1: ( ( ( rule__Case__JAssignment_2 ) ) )
+            // InternalTowerDefense.g:3075:1: ( ( rule__Case__JAssignment_2 ) )
             {
-            // InternalTowerDefense.g:3102:1: ( ( rule__Case__JAssignment_2 ) )
-            // InternalTowerDefense.g:3103:2: ( rule__Case__JAssignment_2 )
+            // InternalTowerDefense.g:3075:1: ( ( rule__Case__JAssignment_2 ) )
+            // InternalTowerDefense.g:3076:2: ( rule__Case__JAssignment_2 )
             {
              before(grammarAccess.getCaseAccess().getJAssignment_2()); 
-            // InternalTowerDefense.g:3104:2: ( rule__Case__JAssignment_2 )
-            // InternalTowerDefense.g:3104:3: rule__Case__JAssignment_2
+            // InternalTowerDefense.g:3077:2: ( rule__Case__JAssignment_2 )
+            // InternalTowerDefense.g:3077:3: rule__Case__JAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__Case__JAssignment_2();
@@ -9447,14 +9372,14 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Case__Group__3"
-    // InternalTowerDefense.g:3112:1: rule__Case__Group__3 : rule__Case__Group__3__Impl ;
+    // InternalTowerDefense.g:3085:1: rule__Case__Group__3 : rule__Case__Group__3__Impl ;
     public final void rule__Case__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTowerDefense.g:3116:1: ( rule__Case__Group__3__Impl )
-            // InternalTowerDefense.g:3117:2: rule__Case__Group__3__Impl
+            // InternalTowerDefense.g:3089:1: ( rule__Case__Group__3__Impl )
+            // InternalTowerDefense.g:3090:2: rule__Case__Group__3__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Case__Group__3__Impl();
@@ -9480,21 +9405,21 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Case__Group__3__Impl"
-    // InternalTowerDefense.g:3123:1: rule__Case__Group__3__Impl : ( ( rule__Case__NatureDuTerrainAssignment_3 ) ) ;
+    // InternalTowerDefense.g:3096:1: rule__Case__Group__3__Impl : ( ( rule__Case__NatureDuTerrainAssignment_3 ) ) ;
     public final void rule__Case__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTowerDefense.g:3127:1: ( ( ( rule__Case__NatureDuTerrainAssignment_3 ) ) )
-            // InternalTowerDefense.g:3128:1: ( ( rule__Case__NatureDuTerrainAssignment_3 ) )
+            // InternalTowerDefense.g:3100:1: ( ( ( rule__Case__NatureDuTerrainAssignment_3 ) ) )
+            // InternalTowerDefense.g:3101:1: ( ( rule__Case__NatureDuTerrainAssignment_3 ) )
             {
-            // InternalTowerDefense.g:3128:1: ( ( rule__Case__NatureDuTerrainAssignment_3 ) )
-            // InternalTowerDefense.g:3129:2: ( rule__Case__NatureDuTerrainAssignment_3 )
+            // InternalTowerDefense.g:3101:1: ( ( rule__Case__NatureDuTerrainAssignment_3 ) )
+            // InternalTowerDefense.g:3102:2: ( rule__Case__NatureDuTerrainAssignment_3 )
             {
              before(grammarAccess.getCaseAccess().getNatureDuTerrainAssignment_3()); 
-            // InternalTowerDefense.g:3130:2: ( rule__Case__NatureDuTerrainAssignment_3 )
-            // InternalTowerDefense.g:3130:3: rule__Case__NatureDuTerrainAssignment_3
+            // InternalTowerDefense.g:3103:2: ( rule__Case__NatureDuTerrainAssignment_3 )
+            // InternalTowerDefense.g:3103:3: rule__Case__NatureDuTerrainAssignment_3
             {
             pushFollow(FOLLOW_2);
             rule__Case__NatureDuTerrainAssignment_3();
@@ -9527,16 +9452,16 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Vague__Group__0"
-    // InternalTowerDefense.g:3139:1: rule__Vague__Group__0 : rule__Vague__Group__0__Impl rule__Vague__Group__1 ;
+    // InternalTowerDefense.g:3112:1: rule__Vague__Group__0 : rule__Vague__Group__0__Impl rule__Vague__Group__1 ;
     public final void rule__Vague__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTowerDefense.g:3143:1: ( rule__Vague__Group__0__Impl rule__Vague__Group__1 )
-            // InternalTowerDefense.g:3144:2: rule__Vague__Group__0__Impl rule__Vague__Group__1
+            // InternalTowerDefense.g:3116:1: ( rule__Vague__Group__0__Impl rule__Vague__Group__1 )
+            // InternalTowerDefense.g:3117:2: rule__Vague__Group__0__Impl rule__Vague__Group__1
             {
-            pushFollow(FOLLOW_4);
+            pushFollow(FOLLOW_3);
             rule__Vague__Group__0__Impl();
 
             state._fsp--;
@@ -9565,31 +9490,21 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Vague__Group__0__Impl"
-    // InternalTowerDefense.g:3151:1: rule__Vague__Group__0__Impl : ( ( rule__Vague__NameAssignment_0 ) ) ;
+    // InternalTowerDefense.g:3124:1: rule__Vague__Group__0__Impl : ( 'Vague' ) ;
     public final void rule__Vague__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTowerDefense.g:3155:1: ( ( ( rule__Vague__NameAssignment_0 ) ) )
-            // InternalTowerDefense.g:3156:1: ( ( rule__Vague__NameAssignment_0 ) )
+            // InternalTowerDefense.g:3128:1: ( ( 'Vague' ) )
+            // InternalTowerDefense.g:3129:1: ( 'Vague' )
             {
-            // InternalTowerDefense.g:3156:1: ( ( rule__Vague__NameAssignment_0 ) )
-            // InternalTowerDefense.g:3157:2: ( rule__Vague__NameAssignment_0 )
+            // InternalTowerDefense.g:3129:1: ( 'Vague' )
+            // InternalTowerDefense.g:3130:2: 'Vague'
             {
-             before(grammarAccess.getVagueAccess().getNameAssignment_0()); 
-            // InternalTowerDefense.g:3158:2: ( rule__Vague__NameAssignment_0 )
-            // InternalTowerDefense.g:3158:3: rule__Vague__NameAssignment_0
-            {
-            pushFollow(FOLLOW_2);
-            rule__Vague__NameAssignment_0();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getVagueAccess().getNameAssignment_0()); 
+             before(grammarAccess.getVagueAccess().getVagueKeyword_0()); 
+            match(input,55,FOLLOW_2); 
+             after(grammarAccess.getVagueAccess().getVagueKeyword_0()); 
 
             }
 
@@ -9612,16 +9527,16 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Vague__Group__1"
-    // InternalTowerDefense.g:3166:1: rule__Vague__Group__1 : rule__Vague__Group__1__Impl rule__Vague__Group__2 ;
+    // InternalTowerDefense.g:3139:1: rule__Vague__Group__1 : rule__Vague__Group__1__Impl rule__Vague__Group__2 ;
     public final void rule__Vague__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTowerDefense.g:3170:1: ( rule__Vague__Group__1__Impl rule__Vague__Group__2 )
-            // InternalTowerDefense.g:3171:2: rule__Vague__Group__1__Impl rule__Vague__Group__2
+            // InternalTowerDefense.g:3143:1: ( rule__Vague__Group__1__Impl rule__Vague__Group__2 )
+            // InternalTowerDefense.g:3144:2: rule__Vague__Group__1__Impl rule__Vague__Group__2
             {
-            pushFollow(FOLLOW_44);
+            pushFollow(FOLLOW_4);
             rule__Vague__Group__1__Impl();
 
             state._fsp--;
@@ -9650,21 +9565,31 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Vague__Group__1__Impl"
-    // InternalTowerDefense.g:3178:1: rule__Vague__Group__1__Impl : ( '{' ) ;
+    // InternalTowerDefense.g:3151:1: rule__Vague__Group__1__Impl : ( ( rule__Vague__NameAssignment_1 ) ) ;
     public final void rule__Vague__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTowerDefense.g:3182:1: ( ( '{' ) )
-            // InternalTowerDefense.g:3183:1: ( '{' )
+            // InternalTowerDefense.g:3155:1: ( ( ( rule__Vague__NameAssignment_1 ) ) )
+            // InternalTowerDefense.g:3156:1: ( ( rule__Vague__NameAssignment_1 ) )
             {
-            // InternalTowerDefense.g:3183:1: ( '{' )
-            // InternalTowerDefense.g:3184:2: '{'
+            // InternalTowerDefense.g:3156:1: ( ( rule__Vague__NameAssignment_1 ) )
+            // InternalTowerDefense.g:3157:2: ( rule__Vague__NameAssignment_1 )
             {
-             before(grammarAccess.getVagueAccess().getLeftCurlyBracketKeyword_1()); 
-            match(input,23,FOLLOW_2); 
-             after(grammarAccess.getVagueAccess().getLeftCurlyBracketKeyword_1()); 
+             before(grammarAccess.getVagueAccess().getNameAssignment_1()); 
+            // InternalTowerDefense.g:3158:2: ( rule__Vague__NameAssignment_1 )
+            // InternalTowerDefense.g:3158:3: rule__Vague__NameAssignment_1
+            {
+            pushFollow(FOLLOW_2);
+            rule__Vague__NameAssignment_1();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getVagueAccess().getNameAssignment_1()); 
 
             }
 
@@ -9687,14 +9612,14 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Vague__Group__2"
-    // InternalTowerDefense.g:3193:1: rule__Vague__Group__2 : rule__Vague__Group__2__Impl rule__Vague__Group__3 ;
+    // InternalTowerDefense.g:3166:1: rule__Vague__Group__2 : rule__Vague__Group__2__Impl rule__Vague__Group__3 ;
     public final void rule__Vague__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTowerDefense.g:3197:1: ( rule__Vague__Group__2__Impl rule__Vague__Group__3 )
-            // InternalTowerDefense.g:3198:2: rule__Vague__Group__2__Impl rule__Vague__Group__3
+            // InternalTowerDefense.g:3170:1: ( rule__Vague__Group__2__Impl rule__Vague__Group__3 )
+            // InternalTowerDefense.g:3171:2: rule__Vague__Group__2__Impl rule__Vague__Group__3
             {
             pushFollow(FOLLOW_45);
             rule__Vague__Group__2__Impl();
@@ -9725,21 +9650,21 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Vague__Group__2__Impl"
-    // InternalTowerDefense.g:3205:1: rule__Vague__Group__2__Impl : ( 'Mobiles' ) ;
+    // InternalTowerDefense.g:3178:1: rule__Vague__Group__2__Impl : ( '{' ) ;
     public final void rule__Vague__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTowerDefense.g:3209:1: ( ( 'Mobiles' ) )
-            // InternalTowerDefense.g:3210:1: ( 'Mobiles' )
+            // InternalTowerDefense.g:3182:1: ( ( '{' ) )
+            // InternalTowerDefense.g:3183:1: ( '{' )
             {
-            // InternalTowerDefense.g:3210:1: ( 'Mobiles' )
-            // InternalTowerDefense.g:3211:2: 'Mobiles'
+            // InternalTowerDefense.g:3183:1: ( '{' )
+            // InternalTowerDefense.g:3184:2: '{'
             {
-             before(grammarAccess.getVagueAccess().getMobilesKeyword_2()); 
-            match(input,56,FOLLOW_2); 
-             after(grammarAccess.getVagueAccess().getMobilesKeyword_2()); 
+             before(grammarAccess.getVagueAccess().getLeftCurlyBracketKeyword_2()); 
+            match(input,23,FOLLOW_2); 
+             after(grammarAccess.getVagueAccess().getLeftCurlyBracketKeyword_2()); 
 
             }
 
@@ -9762,16 +9687,16 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Vague__Group__3"
-    // InternalTowerDefense.g:3220:1: rule__Vague__Group__3 : rule__Vague__Group__3__Impl rule__Vague__Group__4 ;
+    // InternalTowerDefense.g:3193:1: rule__Vague__Group__3 : rule__Vague__Group__3__Impl rule__Vague__Group__4 ;
     public final void rule__Vague__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTowerDefense.g:3224:1: ( rule__Vague__Group__3__Impl rule__Vague__Group__4 )
-            // InternalTowerDefense.g:3225:2: rule__Vague__Group__3__Impl rule__Vague__Group__4
+            // InternalTowerDefense.g:3197:1: ( rule__Vague__Group__3__Impl rule__Vague__Group__4 )
+            // InternalTowerDefense.g:3198:2: rule__Vague__Group__3__Impl rule__Vague__Group__4
             {
-            pushFollow(FOLLOW_45);
+            pushFollow(FOLLOW_46);
             rule__Vague__Group__3__Impl();
 
             state._fsp--;
@@ -9800,49 +9725,21 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Vague__Group__3__Impl"
-    // InternalTowerDefense.g:3232:1: rule__Vague__Group__3__Impl : ( ( rule__Vague__MobilesAssignment_3 )* ) ;
+    // InternalTowerDefense.g:3205:1: rule__Vague__Group__3__Impl : ( 'Mobiles' ) ;
     public final void rule__Vague__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTowerDefense.g:3236:1: ( ( ( rule__Vague__MobilesAssignment_3 )* ) )
-            // InternalTowerDefense.g:3237:1: ( ( rule__Vague__MobilesAssignment_3 )* )
+            // InternalTowerDefense.g:3209:1: ( ( 'Mobiles' ) )
+            // InternalTowerDefense.g:3210:1: ( 'Mobiles' )
             {
-            // InternalTowerDefense.g:3237:1: ( ( rule__Vague__MobilesAssignment_3 )* )
-            // InternalTowerDefense.g:3238:2: ( rule__Vague__MobilesAssignment_3 )*
+            // InternalTowerDefense.g:3210:1: ( 'Mobiles' )
+            // InternalTowerDefense.g:3211:2: 'Mobiles'
             {
-             before(grammarAccess.getVagueAccess().getMobilesAssignment_3()); 
-            // InternalTowerDefense.g:3239:2: ( rule__Vague__MobilesAssignment_3 )*
-            loop13:
-            do {
-                int alt13=2;
-                int LA13_0 = input.LA(1);
-
-                if ( (LA13_0==RULE_ID) ) {
-                    alt13=1;
-                }
-
-
-                switch (alt13) {
-            	case 1 :
-            	    // InternalTowerDefense.g:3239:3: rule__Vague__MobilesAssignment_3
-            	    {
-            	    pushFollow(FOLLOW_8);
-            	    rule__Vague__MobilesAssignment_3();
-
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop13;
-                }
-            } while (true);
-
-             after(grammarAccess.getVagueAccess().getMobilesAssignment_3()); 
+             before(grammarAccess.getVagueAccess().getMobilesKeyword_3()); 
+            match(input,56,FOLLOW_2); 
+             after(grammarAccess.getVagueAccess().getMobilesKeyword_3()); 
 
             }
 
@@ -9865,14 +9762,14 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Vague__Group__4"
-    // InternalTowerDefense.g:3247:1: rule__Vague__Group__4 : rule__Vague__Group__4__Impl rule__Vague__Group__5 ;
+    // InternalTowerDefense.g:3220:1: rule__Vague__Group__4 : rule__Vague__Group__4__Impl rule__Vague__Group__5 ;
     public final void rule__Vague__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTowerDefense.g:3251:1: ( rule__Vague__Group__4__Impl rule__Vague__Group__5 )
-            // InternalTowerDefense.g:3252:2: rule__Vague__Group__4__Impl rule__Vague__Group__5
+            // InternalTowerDefense.g:3224:1: ( rule__Vague__Group__4__Impl rule__Vague__Group__5 )
+            // InternalTowerDefense.g:3225:2: rule__Vague__Group__4__Impl rule__Vague__Group__5
             {
             pushFollow(FOLLOW_46);
             rule__Vague__Group__4__Impl();
@@ -9903,21 +9800,49 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Vague__Group__4__Impl"
-    // InternalTowerDefense.g:3259:1: rule__Vague__Group__4__Impl : ( 'Obstacles' ) ;
+    // InternalTowerDefense.g:3232:1: rule__Vague__Group__4__Impl : ( ( rule__Vague__MobilesAssignment_4 )* ) ;
     public final void rule__Vague__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTowerDefense.g:3263:1: ( ( 'Obstacles' ) )
-            // InternalTowerDefense.g:3264:1: ( 'Obstacles' )
+            // InternalTowerDefense.g:3236:1: ( ( ( rule__Vague__MobilesAssignment_4 )* ) )
+            // InternalTowerDefense.g:3237:1: ( ( rule__Vague__MobilesAssignment_4 )* )
             {
-            // InternalTowerDefense.g:3264:1: ( 'Obstacles' )
-            // InternalTowerDefense.g:3265:2: 'Obstacles'
+            // InternalTowerDefense.g:3237:1: ( ( rule__Vague__MobilesAssignment_4 )* )
+            // InternalTowerDefense.g:3238:2: ( rule__Vague__MobilesAssignment_4 )*
             {
-             before(grammarAccess.getVagueAccess().getObstaclesKeyword_4()); 
-            match(input,57,FOLLOW_2); 
-             after(grammarAccess.getVagueAccess().getObstaclesKeyword_4()); 
+             before(grammarAccess.getVagueAccess().getMobilesAssignment_4()); 
+            // InternalTowerDefense.g:3239:2: ( rule__Vague__MobilesAssignment_4 )*
+            loop13:
+            do {
+                int alt13=2;
+                int LA13_0 = input.LA(1);
+
+                if ( (LA13_0==RULE_ID) ) {
+                    alt13=1;
+                }
+
+
+                switch (alt13) {
+            	case 1 :
+            	    // InternalTowerDefense.g:3239:3: rule__Vague__MobilesAssignment_4
+            	    {
+            	    pushFollow(FOLLOW_8);
+            	    rule__Vague__MobilesAssignment_4();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop13;
+                }
+            } while (true);
+
+             after(grammarAccess.getVagueAccess().getMobilesAssignment_4()); 
 
             }
 
@@ -9940,16 +9865,16 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Vague__Group__5"
-    // InternalTowerDefense.g:3274:1: rule__Vague__Group__5 : rule__Vague__Group__5__Impl rule__Vague__Group__6 ;
+    // InternalTowerDefense.g:3247:1: rule__Vague__Group__5 : rule__Vague__Group__5__Impl rule__Vague__Group__6 ;
     public final void rule__Vague__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTowerDefense.g:3278:1: ( rule__Vague__Group__5__Impl rule__Vague__Group__6 )
-            // InternalTowerDefense.g:3279:2: rule__Vague__Group__5__Impl rule__Vague__Group__6
+            // InternalTowerDefense.g:3251:1: ( rule__Vague__Group__5__Impl rule__Vague__Group__6 )
+            // InternalTowerDefense.g:3252:2: rule__Vague__Group__5__Impl rule__Vague__Group__6
             {
-            pushFollow(FOLLOW_46);
+            pushFollow(FOLLOW_47);
             rule__Vague__Group__5__Impl();
 
             state._fsp--;
@@ -9978,49 +9903,21 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Vague__Group__5__Impl"
-    // InternalTowerDefense.g:3286:1: rule__Vague__Group__5__Impl : ( ( rule__Vague__ObstaclesAssignment_5 )* ) ;
+    // InternalTowerDefense.g:3259:1: rule__Vague__Group__5__Impl : ( 'Obstacles' ) ;
     public final void rule__Vague__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTowerDefense.g:3290:1: ( ( ( rule__Vague__ObstaclesAssignment_5 )* ) )
-            // InternalTowerDefense.g:3291:1: ( ( rule__Vague__ObstaclesAssignment_5 )* )
+            // InternalTowerDefense.g:3263:1: ( ( 'Obstacles' ) )
+            // InternalTowerDefense.g:3264:1: ( 'Obstacles' )
             {
-            // InternalTowerDefense.g:3291:1: ( ( rule__Vague__ObstaclesAssignment_5 )* )
-            // InternalTowerDefense.g:3292:2: ( rule__Vague__ObstaclesAssignment_5 )*
+            // InternalTowerDefense.g:3264:1: ( 'Obstacles' )
+            // InternalTowerDefense.g:3265:2: 'Obstacles'
             {
-             before(grammarAccess.getVagueAccess().getObstaclesAssignment_5()); 
-            // InternalTowerDefense.g:3293:2: ( rule__Vague__ObstaclesAssignment_5 )*
-            loop14:
-            do {
-                int alt14=2;
-                int LA14_0 = input.LA(1);
-
-                if ( (LA14_0==RULE_ID) ) {
-                    alt14=1;
-                }
-
-
-                switch (alt14) {
-            	case 1 :
-            	    // InternalTowerDefense.g:3293:3: rule__Vague__ObstaclesAssignment_5
-            	    {
-            	    pushFollow(FOLLOW_8);
-            	    rule__Vague__ObstaclesAssignment_5();
-
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop14;
-                }
-            } while (true);
-
-             after(grammarAccess.getVagueAccess().getObstaclesAssignment_5()); 
+             before(grammarAccess.getVagueAccess().getObstaclesKeyword_5()); 
+            match(input,57,FOLLOW_2); 
+             after(grammarAccess.getVagueAccess().getObstaclesKeyword_5()); 
 
             }
 
@@ -10043,16 +9940,16 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Vague__Group__6"
-    // InternalTowerDefense.g:3301:1: rule__Vague__Group__6 : rule__Vague__Group__6__Impl rule__Vague__Group__7 ;
+    // InternalTowerDefense.g:3274:1: rule__Vague__Group__6 : rule__Vague__Group__6__Impl rule__Vague__Group__7 ;
     public final void rule__Vague__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTowerDefense.g:3305:1: ( rule__Vague__Group__6__Impl rule__Vague__Group__7 )
-            // InternalTowerDefense.g:3306:2: rule__Vague__Group__6__Impl rule__Vague__Group__7
+            // InternalTowerDefense.g:3278:1: ( rule__Vague__Group__6__Impl rule__Vague__Group__7 )
+            // InternalTowerDefense.g:3279:2: rule__Vague__Group__6__Impl rule__Vague__Group__7
             {
-            pushFollow(FOLLOW_19);
+            pushFollow(FOLLOW_47);
             rule__Vague__Group__6__Impl();
 
             state._fsp--;
@@ -10081,21 +9978,49 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Vague__Group__6__Impl"
-    // InternalTowerDefense.g:3313:1: rule__Vague__Group__6__Impl : ( 'Gain' ) ;
+    // InternalTowerDefense.g:3286:1: rule__Vague__Group__6__Impl : ( ( rule__Vague__ObstaclesAssignment_6 )* ) ;
     public final void rule__Vague__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTowerDefense.g:3317:1: ( ( 'Gain' ) )
-            // InternalTowerDefense.g:3318:1: ( 'Gain' )
+            // InternalTowerDefense.g:3290:1: ( ( ( rule__Vague__ObstaclesAssignment_6 )* ) )
+            // InternalTowerDefense.g:3291:1: ( ( rule__Vague__ObstaclesAssignment_6 )* )
             {
-            // InternalTowerDefense.g:3318:1: ( 'Gain' )
-            // InternalTowerDefense.g:3319:2: 'Gain'
+            // InternalTowerDefense.g:3291:1: ( ( rule__Vague__ObstaclesAssignment_6 )* )
+            // InternalTowerDefense.g:3292:2: ( rule__Vague__ObstaclesAssignment_6 )*
             {
-             before(grammarAccess.getVagueAccess().getGainKeyword_6()); 
-            match(input,58,FOLLOW_2); 
-             after(grammarAccess.getVagueAccess().getGainKeyword_6()); 
+             before(grammarAccess.getVagueAccess().getObstaclesAssignment_6()); 
+            // InternalTowerDefense.g:3293:2: ( rule__Vague__ObstaclesAssignment_6 )*
+            loop14:
+            do {
+                int alt14=2;
+                int LA14_0 = input.LA(1);
+
+                if ( (LA14_0==RULE_ID) ) {
+                    alt14=1;
+                }
+
+
+                switch (alt14) {
+            	case 1 :
+            	    // InternalTowerDefense.g:3293:3: rule__Vague__ObstaclesAssignment_6
+            	    {
+            	    pushFollow(FOLLOW_8);
+            	    rule__Vague__ObstaclesAssignment_6();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop14;
+                }
+            } while (true);
+
+             after(grammarAccess.getVagueAccess().getObstaclesAssignment_6()); 
 
             }
 
@@ -10118,16 +10043,16 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Vague__Group__7"
-    // InternalTowerDefense.g:3328:1: rule__Vague__Group__7 : rule__Vague__Group__7__Impl rule__Vague__Group__8 ;
+    // InternalTowerDefense.g:3301:1: rule__Vague__Group__7 : rule__Vague__Group__7__Impl rule__Vague__Group__8 ;
     public final void rule__Vague__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTowerDefense.g:3332:1: ( rule__Vague__Group__7__Impl rule__Vague__Group__8 )
-            // InternalTowerDefense.g:3333:2: rule__Vague__Group__7__Impl rule__Vague__Group__8
+            // InternalTowerDefense.g:3305:1: ( rule__Vague__Group__7__Impl rule__Vague__Group__8 )
+            // InternalTowerDefense.g:3306:2: rule__Vague__Group__7__Impl rule__Vague__Group__8
             {
-            pushFollow(FOLLOW_17);
+            pushFollow(FOLLOW_19);
             rule__Vague__Group__7__Impl();
 
             state._fsp--;
@@ -10156,31 +10081,21 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Vague__Group__7__Impl"
-    // InternalTowerDefense.g:3340:1: rule__Vague__Group__7__Impl : ( ( rule__Vague__GainVictoireAssignment_7 ) ) ;
+    // InternalTowerDefense.g:3313:1: rule__Vague__Group__7__Impl : ( 'Gain' ) ;
     public final void rule__Vague__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTowerDefense.g:3344:1: ( ( ( rule__Vague__GainVictoireAssignment_7 ) ) )
-            // InternalTowerDefense.g:3345:1: ( ( rule__Vague__GainVictoireAssignment_7 ) )
+            // InternalTowerDefense.g:3317:1: ( ( 'Gain' ) )
+            // InternalTowerDefense.g:3318:1: ( 'Gain' )
             {
-            // InternalTowerDefense.g:3345:1: ( ( rule__Vague__GainVictoireAssignment_7 ) )
-            // InternalTowerDefense.g:3346:2: ( rule__Vague__GainVictoireAssignment_7 )
+            // InternalTowerDefense.g:3318:1: ( 'Gain' )
+            // InternalTowerDefense.g:3319:2: 'Gain'
             {
-             before(grammarAccess.getVagueAccess().getGainVictoireAssignment_7()); 
-            // InternalTowerDefense.g:3347:2: ( rule__Vague__GainVictoireAssignment_7 )
-            // InternalTowerDefense.g:3347:3: rule__Vague__GainVictoireAssignment_7
-            {
-            pushFollow(FOLLOW_2);
-            rule__Vague__GainVictoireAssignment_7();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getVagueAccess().getGainVictoireAssignment_7()); 
+             before(grammarAccess.getVagueAccess().getGainKeyword_7()); 
+            match(input,58,FOLLOW_2); 
+             after(grammarAccess.getVagueAccess().getGainKeyword_7()); 
 
             }
 
@@ -10203,17 +10118,22 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Vague__Group__8"
-    // InternalTowerDefense.g:3355:1: rule__Vague__Group__8 : rule__Vague__Group__8__Impl ;
+    // InternalTowerDefense.g:3328:1: rule__Vague__Group__8 : rule__Vague__Group__8__Impl rule__Vague__Group__9 ;
     public final void rule__Vague__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTowerDefense.g:3359:1: ( rule__Vague__Group__8__Impl )
-            // InternalTowerDefense.g:3360:2: rule__Vague__Group__8__Impl
+            // InternalTowerDefense.g:3332:1: ( rule__Vague__Group__8__Impl rule__Vague__Group__9 )
+            // InternalTowerDefense.g:3333:2: rule__Vague__Group__8__Impl rule__Vague__Group__9
             {
-            pushFollow(FOLLOW_2);
+            pushFollow(FOLLOW_17);
             rule__Vague__Group__8__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__Vague__Group__9();
 
             state._fsp--;
 
@@ -10236,21 +10156,31 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Vague__Group__8__Impl"
-    // InternalTowerDefense.g:3366:1: rule__Vague__Group__8__Impl : ( '}' ) ;
+    // InternalTowerDefense.g:3340:1: rule__Vague__Group__8__Impl : ( ( rule__Vague__GainVictoireAssignment_8 ) ) ;
     public final void rule__Vague__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTowerDefense.g:3370:1: ( ( '}' ) )
-            // InternalTowerDefense.g:3371:1: ( '}' )
+            // InternalTowerDefense.g:3344:1: ( ( ( rule__Vague__GainVictoireAssignment_8 ) ) )
+            // InternalTowerDefense.g:3345:1: ( ( rule__Vague__GainVictoireAssignment_8 ) )
             {
-            // InternalTowerDefense.g:3371:1: ( '}' )
-            // InternalTowerDefense.g:3372:2: '}'
+            // InternalTowerDefense.g:3345:1: ( ( rule__Vague__GainVictoireAssignment_8 ) )
+            // InternalTowerDefense.g:3346:2: ( rule__Vague__GainVictoireAssignment_8 )
             {
-             before(grammarAccess.getVagueAccess().getRightCurlyBracketKeyword_8()); 
-            match(input,24,FOLLOW_2); 
-             after(grammarAccess.getVagueAccess().getRightCurlyBracketKeyword_8()); 
+             before(grammarAccess.getVagueAccess().getGainVictoireAssignment_8()); 
+            // InternalTowerDefense.g:3347:2: ( rule__Vague__GainVictoireAssignment_8 )
+            // InternalTowerDefense.g:3347:3: rule__Vague__GainVictoireAssignment_8
+            {
+            pushFollow(FOLLOW_2);
+            rule__Vague__GainVictoireAssignment_8();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getVagueAccess().getGainVictoireAssignment_8()); 
 
             }
 
@@ -10270,6 +10200,76 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
         return ;
     }
     // $ANTLR end "rule__Vague__Group__8__Impl"
+
+
+    // $ANTLR start "rule__Vague__Group__9"
+    // InternalTowerDefense.g:3355:1: rule__Vague__Group__9 : rule__Vague__Group__9__Impl ;
+    public final void rule__Vague__Group__9() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalTowerDefense.g:3359:1: ( rule__Vague__Group__9__Impl )
+            // InternalTowerDefense.g:3360:2: rule__Vague__Group__9__Impl
+            {
+            pushFollow(FOLLOW_2);
+            rule__Vague__Group__9__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Vague__Group__9"
+
+
+    // $ANTLR start "rule__Vague__Group__9__Impl"
+    // InternalTowerDefense.g:3366:1: rule__Vague__Group__9__Impl : ( '}' ) ;
+    public final void rule__Vague__Group__9__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalTowerDefense.g:3370:1: ( ( '}' ) )
+            // InternalTowerDefense.g:3371:1: ( '}' )
+            {
+            // InternalTowerDefense.g:3371:1: ( '}' )
+            // InternalTowerDefense.g:3372:2: '}'
+            {
+             before(grammarAccess.getVagueAccess().getRightCurlyBracketKeyword_9()); 
+            match(input,24,FOLLOW_2); 
+             after(grammarAccess.getVagueAccess().getRightCurlyBracketKeyword_9()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Vague__Group__9__Impl"
 
 
     // $ANTLR start "rule__Jeu__NameAssignment_1"
@@ -11786,9 +11786,9 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
     // $ANTLR end "rule__Niveau__CarteAssignment_11"
 
 
-    // $ANTLR start "rule__Niveau__VaguesAssignment_13"
-    // InternalTowerDefense.g:3980:1: rule__Niveau__VaguesAssignment_13 : ( ruleVague ) ;
-    public final void rule__Niveau__VaguesAssignment_13() throws RecognitionException {
+    // $ANTLR start "rule__Niveau__VaguesAssignment_12"
+    // InternalTowerDefense.g:3980:1: rule__Niveau__VaguesAssignment_12 : ( ruleVague ) ;
+    public final void rule__Niveau__VaguesAssignment_12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -11799,13 +11799,13 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
             // InternalTowerDefense.g:3985:2: ( ruleVague )
             // InternalTowerDefense.g:3986:3: ruleVague
             {
-             before(grammarAccess.getNiveauAccess().getVaguesVagueParserRuleCall_13_0()); 
+             before(grammarAccess.getNiveauAccess().getVaguesVagueParserRuleCall_12_0()); 
             pushFollow(FOLLOW_2);
             ruleVague();
 
             state._fsp--;
 
-             after(grammarAccess.getNiveauAccess().getVaguesVagueParserRuleCall_13_0()); 
+             after(grammarAccess.getNiveauAccess().getVaguesVagueParserRuleCall_12_0()); 
 
             }
 
@@ -11824,7 +11824,7 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
         }
         return ;
     }
-    // $ANTLR end "rule__Niveau__VaguesAssignment_13"
+    // $ANTLR end "rule__Niveau__VaguesAssignment_12"
 
 
     // $ANTLR start "rule__Carte__NameAssignment_1"
@@ -12139,9 +12139,9 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
     // $ANTLR end "rule__Case__NatureDuTerrainAssignment_3"
 
 
-    // $ANTLR start "rule__Vague__NameAssignment_0"
-    // InternalTowerDefense.g:4123:1: rule__Vague__NameAssignment_0 : ( RULE_ID ) ;
-    public final void rule__Vague__NameAssignment_0() throws RecognitionException {
+    // $ANTLR start "rule__Vague__NameAssignment_1"
+    // InternalTowerDefense.g:4123:1: rule__Vague__NameAssignment_1 : ( RULE_ID ) ;
+    public final void rule__Vague__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -12152,9 +12152,9 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
             // InternalTowerDefense.g:4128:2: ( RULE_ID )
             // InternalTowerDefense.g:4129:3: RULE_ID
             {
-             before(grammarAccess.getVagueAccess().getNameIDTerminalRuleCall_0_0()); 
+             before(grammarAccess.getVagueAccess().getNameIDTerminalRuleCall_1_0()); 
             match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getVagueAccess().getNameIDTerminalRuleCall_0_0()); 
+             after(grammarAccess.getVagueAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
 
@@ -12173,12 +12173,12 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
         }
         return ;
     }
-    // $ANTLR end "rule__Vague__NameAssignment_0"
+    // $ANTLR end "rule__Vague__NameAssignment_1"
 
 
-    // $ANTLR start "rule__Vague__MobilesAssignment_3"
-    // InternalTowerDefense.g:4138:1: rule__Vague__MobilesAssignment_3 : ( ( RULE_ID ) ) ;
-    public final void rule__Vague__MobilesAssignment_3() throws RecognitionException {
+    // $ANTLR start "rule__Vague__MobilesAssignment_4"
+    // InternalTowerDefense.g:4138:1: rule__Vague__MobilesAssignment_4 : ( ( RULE_ID ) ) ;
+    public final void rule__Vague__MobilesAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -12189,17 +12189,17 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
             // InternalTowerDefense.g:4143:2: ( ( RULE_ID ) )
             // InternalTowerDefense.g:4144:3: ( RULE_ID )
             {
-             before(grammarAccess.getVagueAccess().getMobilesMobileCrossReference_3_0()); 
+             before(grammarAccess.getVagueAccess().getMobilesMobileCrossReference_4_0()); 
             // InternalTowerDefense.g:4145:3: ( RULE_ID )
             // InternalTowerDefense.g:4146:4: RULE_ID
             {
-             before(grammarAccess.getVagueAccess().getMobilesMobileIDTerminalRuleCall_3_0_1()); 
+             before(grammarAccess.getVagueAccess().getMobilesMobileIDTerminalRuleCall_4_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getVagueAccess().getMobilesMobileIDTerminalRuleCall_3_0_1()); 
+             after(grammarAccess.getVagueAccess().getMobilesMobileIDTerminalRuleCall_4_0_1()); 
 
             }
 
-             after(grammarAccess.getVagueAccess().getMobilesMobileCrossReference_3_0()); 
+             after(grammarAccess.getVagueAccess().getMobilesMobileCrossReference_4_0()); 
 
             }
 
@@ -12218,12 +12218,12 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
         }
         return ;
     }
-    // $ANTLR end "rule__Vague__MobilesAssignment_3"
+    // $ANTLR end "rule__Vague__MobilesAssignment_4"
 
 
-    // $ANTLR start "rule__Vague__ObstaclesAssignment_5"
-    // InternalTowerDefense.g:4157:1: rule__Vague__ObstaclesAssignment_5 : ( ( RULE_ID ) ) ;
-    public final void rule__Vague__ObstaclesAssignment_5() throws RecognitionException {
+    // $ANTLR start "rule__Vague__ObstaclesAssignment_6"
+    // InternalTowerDefense.g:4157:1: rule__Vague__ObstaclesAssignment_6 : ( ( RULE_ID ) ) ;
+    public final void rule__Vague__ObstaclesAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -12234,17 +12234,17 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
             // InternalTowerDefense.g:4162:2: ( ( RULE_ID ) )
             // InternalTowerDefense.g:4163:3: ( RULE_ID )
             {
-             before(grammarAccess.getVagueAccess().getObstaclesObstacleCrossReference_5_0()); 
+             before(grammarAccess.getVagueAccess().getObstaclesObstacleCrossReference_6_0()); 
             // InternalTowerDefense.g:4164:3: ( RULE_ID )
             // InternalTowerDefense.g:4165:4: RULE_ID
             {
-             before(grammarAccess.getVagueAccess().getObstaclesObstacleIDTerminalRuleCall_5_0_1()); 
+             before(grammarAccess.getVagueAccess().getObstaclesObstacleIDTerminalRuleCall_6_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getVagueAccess().getObstaclesObstacleIDTerminalRuleCall_5_0_1()); 
+             after(grammarAccess.getVagueAccess().getObstaclesObstacleIDTerminalRuleCall_6_0_1()); 
 
             }
 
-             after(grammarAccess.getVagueAccess().getObstaclesObstacleCrossReference_5_0()); 
+             after(grammarAccess.getVagueAccess().getObstaclesObstacleCrossReference_6_0()); 
 
             }
 
@@ -12263,12 +12263,12 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
         }
         return ;
     }
-    // $ANTLR end "rule__Vague__ObstaclesAssignment_5"
+    // $ANTLR end "rule__Vague__ObstaclesAssignment_6"
 
 
-    // $ANTLR start "rule__Vague__GainVictoireAssignment_7"
-    // InternalTowerDefense.g:4176:1: rule__Vague__GainVictoireAssignment_7 : ( RULE_INT ) ;
-    public final void rule__Vague__GainVictoireAssignment_7() throws RecognitionException {
+    // $ANTLR start "rule__Vague__GainVictoireAssignment_8"
+    // InternalTowerDefense.g:4176:1: rule__Vague__GainVictoireAssignment_8 : ( RULE_INT ) ;
+    public final void rule__Vague__GainVictoireAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -12279,9 +12279,9 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
             // InternalTowerDefense.g:4181:2: ( RULE_INT )
             // InternalTowerDefense.g:4182:3: RULE_INT
             {
-             before(grammarAccess.getVagueAccess().getGainVictoireINTTerminalRuleCall_7_0()); 
+             before(grammarAccess.getVagueAccess().getGainVictoireINTTerminalRuleCall_8_0()); 
             match(input,RULE_INT,FOLLOW_2); 
-             after(grammarAccess.getVagueAccess().getGainVictoireINTTerminalRuleCall_7_0()); 
+             after(grammarAccess.getVagueAccess().getGainVictoireINTTerminalRuleCall_8_0()); 
 
             }
 
@@ -12300,7 +12300,7 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
         }
         return ;
     }
-    // $ANTLR end "rule__Vague__GainVictoireAssignment_7"
+    // $ANTLR end "rule__Vague__GainVictoireAssignment_8"
 
     // Delegated rules
 
@@ -12345,13 +12345,14 @@ public class InternalTowerDefenseParser extends AbstractInternalContentAssistPar
     public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x0002000000000000L});
     public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x0004000000000000L});
     public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0008000000000000L});
-    public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0010000000000000L});
-    public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0000000001000010L});
-    public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0020000000000000L});
-    public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0040000000000000L});
-    public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0080000000000000L});
-    public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x0100000000000000L});
-    public static final BitSet FOLLOW_45 = new BitSet(new long[]{0x0200000000000010L});
-    public static final BitSet FOLLOW_46 = new BitSet(new long[]{0x0400000000000010L});
+    public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0080000001000000L});
+    public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0080000000000002L});
+    public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0010000000000000L});
+    public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0020000000000000L});
+    public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0040000000000000L});
+    public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x0000000001000010L});
+    public static final BitSet FOLLOW_45 = new BitSet(new long[]{0x0100000000000000L});
+    public static final BitSet FOLLOW_46 = new BitSet(new long[]{0x0200000000000010L});
+    public static final BitSet FOLLOW_47 = new BitSet(new long[]{0x0400000000000010L});
 
 }

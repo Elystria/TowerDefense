@@ -30,201 +30,205 @@ import xtext.towerDefense.TowerDefensePackage;
 public class EnergieImpl extends MinimalEObjectImpl.Container implements Energie
 {
   /**
-	 * The default value of the '{@link #isInfini() <em>Infini</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * The default value of the '{@link #isInfini() <em>Infini</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #isInfini()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #isInfini()
+   * @generated
+   * @ordered
+   */
   protected static final boolean INFINI_EDEFAULT = false;
 
   /**
-	 * The cached value of the '{@link #isInfini() <em>Infini</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #isInfini() <em>Infini</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #isInfini()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #isInfini()
+   * @generated
+   * @ordered
+   */
   protected boolean infini = INFINI_EDEFAULT;
 
   /**
-	 * The default value of the '{@link #getValeur() <em>Valeur</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * The default value of the '{@link #getValeur() <em>Valeur</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getValeur()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getValeur()
+   * @generated
+   * @ordered
+   */
   protected static final int VALEUR_EDEFAULT = 0;
 
   /**
-	 * The cached value of the '{@link #getValeur() <em>Valeur</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getValeur() <em>Valeur</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getValeur()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getValeur()
+   * @generated
+   * @ordered
+   */
   protected int valeur = VALEUR_EDEFAULT;
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   protected EnergieImpl()
   {
-		super();
-	}
+    super();
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   protected EClass eStaticClass()
   {
-		return TowerDefensePackage.Literals.ENERGIE;
-	}
+    return TowerDefensePackage.Literals.ENERGIE;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public boolean isInfini()
   {
-		return infini;
-	}
+    return infini;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public void setInfini(boolean newInfini)
   {
-		boolean oldInfini = infini;
-		infini = newInfini;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.ENERGIE__INFINI, oldInfini, infini));
-	}
+    boolean oldInfini = infini;
+    infini = newInfini;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.ENERGIE__INFINI, oldInfini, infini));
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public int getValeur()
   {
-		return valeur;
-	}
+    return valeur;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public void setValeur(int newValeur)
   {
-		int oldValeur = valeur;
-		valeur = newValeur;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.ENERGIE__VALEUR, oldValeur, valeur));
-	}
+    int oldValeur = valeur;
+    valeur = newValeur;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.ENERGIE__VALEUR, oldValeur, valeur));
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
-		switch (featureID) {
-			case TowerDefensePackage.ENERGIE__INFINI:
-				return isInfini();
-			case TowerDefensePackage.ENERGIE__VALEUR:
-				return getValeur();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    switch (featureID)
+    {
+      case TowerDefensePackage.ENERGIE__INFINI:
+        return isInfini();
+      case TowerDefensePackage.ENERGIE__VALEUR:
+        return getValeur();
+    }
+    return super.eGet(featureID, resolve, coreType);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public void eSet(int featureID, Object newValue)
   {
-		switch (featureID) {
-			case TowerDefensePackage.ENERGIE__INFINI:
-				setInfini((Boolean)newValue);
-				return;
-			case TowerDefensePackage.ENERGIE__VALEUR:
-				setValeur((Integer)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    switch (featureID)
+    {
+      case TowerDefensePackage.ENERGIE__INFINI:
+        setInfini((Boolean)newValue);
+        return;
+      case TowerDefensePackage.ENERGIE__VALEUR:
+        setValeur((Integer)newValue);
+        return;
+    }
+    super.eSet(featureID, newValue);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public void eUnset(int featureID)
   {
-		switch (featureID) {
-			case TowerDefensePackage.ENERGIE__INFINI:
-				setInfini(INFINI_EDEFAULT);
-				return;
-			case TowerDefensePackage.ENERGIE__VALEUR:
-				setValeur(VALEUR_EDEFAULT);
-				return;
-		}
-		super.eUnset(featureID);
-	}
+    switch (featureID)
+    {
+      case TowerDefensePackage.ENERGIE__INFINI:
+        setInfini(INFINI_EDEFAULT);
+        return;
+      case TowerDefensePackage.ENERGIE__VALEUR:
+        setValeur(VALEUR_EDEFAULT);
+        return;
+    }
+    super.eUnset(featureID);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public boolean eIsSet(int featureID)
   {
-		switch (featureID) {
-			case TowerDefensePackage.ENERGIE__INFINI:
-				return infini != INFINI_EDEFAULT;
-			case TowerDefensePackage.ENERGIE__VALEUR:
-				return valeur != VALEUR_EDEFAULT;
-		}
-		return super.eIsSet(featureID);
-	}
+    switch (featureID)
+    {
+      case TowerDefensePackage.ENERGIE__INFINI:
+        return infini != INFINI_EDEFAULT;
+      case TowerDefensePackage.ENERGIE__VALEUR:
+        return valeur != VALEUR_EDEFAULT;
+    }
+    return super.eIsSet(featureID);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public String toString()
   {
-		if (eIsProxy()) return super.toString();
+    if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (infini: ");
-		result.append(infini);
-		result.append(", valeur: ");
-		result.append(valeur);
-		result.append(')');
-		return result.toString();
-	}
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (infini: ");
+    result.append(infini);
+    result.append(", valeur: ");
+    result.append(valeur);
+    result.append(')');
+    return result.toString();
+  }
 
 } //EnergieImpl

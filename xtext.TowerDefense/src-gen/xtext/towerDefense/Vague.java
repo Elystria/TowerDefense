@@ -29,87 +29,87 @@ import org.eclipse.emf.ecore.EObject;
 public interface Vague extends EObject
 {
   /**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Name</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see xtext.towerDefense.TowerDefensePackage#getVague_Name()
-	 * @model
-	 * @generated
-	 */
+   * @return the value of the '<em>Name</em>' attribute.
+   * @see #setName(String)
+   * @see xtext.towerDefense.TowerDefensePackage#getVague_Name()
+   * @model
+   * @generated
+   */
   String getName();
 
   /**
-	 * Sets the value of the '{@link xtext.towerDefense.Vague#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link xtext.towerDefense.Vague#getName <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
+   * @param value the new value of the '<em>Name</em>' attribute.
+   * @see #getName()
+   * @generated
+   */
   void setName(String value);
 
   /**
-	 * Returns the value of the '<em><b>Mobiles</b></em>' reference list.
-	 * The list contents are of type {@link xtext.towerDefense.Mobile}.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Mobiles</b></em>' reference list.
+   * The list contents are of type {@link xtext.towerDefense.Mobile}.
+   * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Mobiles</em>' reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>Mobiles</em>' reference list.
-	 * @see xtext.towerDefense.TowerDefensePackage#getVague_Mobiles()
-	 * @model
-	 * @generated
-	 */
+   * @return the value of the '<em>Mobiles</em>' reference list.
+   * @see xtext.towerDefense.TowerDefensePackage#getVague_Mobiles()
+   * @model
+   * @generated
+   */
   EList<Mobile> getMobiles();
 
   /**
-	 * Returns the value of the '<em><b>Obstacles</b></em>' reference list.
-	 * The list contents are of type {@link xtext.towerDefense.Obstacle}.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Obstacles</b></em>' reference list.
+   * The list contents are of type {@link xtext.towerDefense.Obstacle}.
+   * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Obstacles</em>' reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>Obstacles</em>' reference list.
-	 * @see xtext.towerDefense.TowerDefensePackage#getVague_Obstacles()
-	 * @model
-	 * @generated
-	 */
+   * @return the value of the '<em>Obstacles</em>' reference list.
+   * @see xtext.towerDefense.TowerDefensePackage#getVague_Obstacles()
+   * @model
+   * @generated
+   */
   EList<Obstacle> getObstacles();
 
   /**
-	 * Returns the value of the '<em><b>Gain Victoire</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Gain Victoire</b></em>' attribute.
+   * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Gain Victoire</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>Gain Victoire</em>' attribute.
-	 * @see #setGainVictoire(int)
-	 * @see xtext.towerDefense.TowerDefensePackage#getVague_GainVictoire()
-	 * @model
-	 * @generated
-	 */
+   * @return the value of the '<em>Gain Victoire</em>' attribute.
+   * @see #setGainVictoire(int)
+   * @see xtext.towerDefense.TowerDefensePackage#getVague_GainVictoire()
+   * @model
+   * @generated
+   */
   int getGainVictoire();
 
   /**
-	 * Sets the value of the '{@link xtext.towerDefense.Vague#getGainVictoire <em>Gain Victoire</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link xtext.towerDefense.Vague#getGainVictoire <em>Gain Victoire</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Gain Victoire</em>' attribute.
-	 * @see #getGainVictoire()
-	 * @generated
-	 */
+   * @param value the new value of the '<em>Gain Victoire</em>' attribute.
+   * @see #getGainVictoire()
+   * @generated
+   */
   void setGainVictoire(int value);
 
 } // Vague
