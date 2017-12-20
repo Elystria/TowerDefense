@@ -39,296 +39,291 @@ import xtext.towerDefense.TowerDefensePackage;
 public class CarteImpl extends MinimalEObjectImpl.Container implements Carte
 {
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
   protected static final String NAME_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getNbLignes() <em>Nb Lignes</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The default value of the '{@link #getNbLignes() <em>Nb Lignes</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNbLignes()
-   * @generated
-   * @ordered
-   */
+	 * @see #getNbLignes()
+	 * @generated
+	 * @ordered
+	 */
   protected static final int NB_LIGNES_EDEFAULT = 0;
 
   /**
-   * The cached value of the '{@link #getNbLignes() <em>Nb Lignes</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getNbLignes() <em>Nb Lignes</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNbLignes()
-   * @generated
-   * @ordered
-   */
+	 * @see #getNbLignes()
+	 * @generated
+	 * @ordered
+	 */
   protected int nbLignes = NB_LIGNES_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getNbColonnes() <em>Nb Colonnes</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The default value of the '{@link #getNbColonnes() <em>Nb Colonnes</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNbColonnes()
-   * @generated
-   * @ordered
-   */
+	 * @see #getNbColonnes()
+	 * @generated
+	 * @ordered
+	 */
   protected static final int NB_COLONNES_EDEFAULT = 0;
 
   /**
-   * The cached value of the '{@link #getNbColonnes() <em>Nb Colonnes</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getNbColonnes() <em>Nb Colonnes</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNbColonnes()
-   * @generated
-   * @ordered
-   */
+	 * @see #getNbColonnes()
+	 * @generated
+	 * @ordered
+	 */
   protected int nbColonnes = NB_COLONNES_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getCases() <em>Cases</em>}' reference list.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getCases() <em>Cases</em>}' reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getCases()
-   * @generated
-   * @ordered
-   */
+	 * @see #getCases()
+	 * @generated
+	 * @ordered
+	 */
   protected EList<Case> cases;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected CarteImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return TowerDefensePackage.Literals.CARTE;
-  }
+		return TowerDefensePackage.Literals.CARTE;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public String getName()
   {
-    return name;
-  }
+		return name;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public void setName(String newName)
   {
-    String oldName = name;
-    name = newName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.CARTE__NAME, oldName, name));
-  }
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.CARTE__NAME, oldName, name));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public int getNbLignes()
   {
-    return nbLignes;
-  }
+		return nbLignes;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public void setNbLignes(int newNbLignes)
   {
-    int oldNbLignes = nbLignes;
-    nbLignes = newNbLignes;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.CARTE__NB_LIGNES, oldNbLignes, nbLignes));
-  }
+		int oldNbLignes = nbLignes;
+		nbLignes = newNbLignes;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.CARTE__NB_LIGNES, oldNbLignes, nbLignes));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public int getNbColonnes()
   {
-    return nbColonnes;
-  }
+		return nbColonnes;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public void setNbColonnes(int newNbColonnes)
   {
-    int oldNbColonnes = nbColonnes;
-    nbColonnes = newNbColonnes;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.CARTE__NB_COLONNES, oldNbColonnes, nbColonnes));
-  }
+		int oldNbColonnes = nbColonnes;
+		nbColonnes = newNbColonnes;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.CARTE__NB_COLONNES, oldNbColonnes, nbColonnes));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public EList<Case> getCases()
   {
-    if (cases == null)
-    {
-      cases = new EObjectResolvingEList<Case>(Case.class, this, TowerDefensePackage.CARTE__CASES);
-    }
-    return cases;
-  }
+		if (cases == null) {
+			cases = new EObjectResolvingEList<Case>(Case.class, this, TowerDefensePackage.CARTE__CASES);
+		}
+		return cases;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
-    switch (featureID)
-    {
-      case TowerDefensePackage.CARTE__NAME:
-        return getName();
-      case TowerDefensePackage.CARTE__NB_LIGNES:
-        return getNbLignes();
-      case TowerDefensePackage.CARTE__NB_COLONNES:
-        return getNbColonnes();
-      case TowerDefensePackage.CARTE__CASES:
-        return getCases();
-    }
-    return super.eGet(featureID, resolve, coreType);
-  }
+		switch (featureID) {
+			case TowerDefensePackage.CARTE__NAME:
+				return getName();
+			case TowerDefensePackage.CARTE__NB_LIGNES:
+				return getNbLignes();
+			case TowerDefensePackage.CARTE__NB_COLONNES:
+				return getNbColonnes();
+			case TowerDefensePackage.CARTE__CASES:
+				return getCases();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
-    switch (featureID)
-    {
-      case TowerDefensePackage.CARTE__NAME:
-        setName((String)newValue);
-        return;
-      case TowerDefensePackage.CARTE__NB_LIGNES:
-        setNbLignes((Integer)newValue);
-        return;
-      case TowerDefensePackage.CARTE__NB_COLONNES:
-        setNbColonnes((Integer)newValue);
-        return;
-      case TowerDefensePackage.CARTE__CASES:
-        getCases().clear();
-        getCases().addAll((Collection<? extends Case>)newValue);
-        return;
-    }
-    super.eSet(featureID, newValue);
-  }
+		switch (featureID) {
+			case TowerDefensePackage.CARTE__NAME:
+				setName((String)newValue);
+				return;
+			case TowerDefensePackage.CARTE__NB_LIGNES:
+				setNbLignes((Integer)newValue);
+				return;
+			case TowerDefensePackage.CARTE__NB_COLONNES:
+				setNbColonnes((Integer)newValue);
+				return;
+			case TowerDefensePackage.CARTE__CASES:
+				getCases().clear();
+				getCases().addAll((Collection<? extends Case>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void eUnset(int featureID)
   {
-    switch (featureID)
-    {
-      case TowerDefensePackage.CARTE__NAME:
-        setName(NAME_EDEFAULT);
-        return;
-      case TowerDefensePackage.CARTE__NB_LIGNES:
-        setNbLignes(NB_LIGNES_EDEFAULT);
-        return;
-      case TowerDefensePackage.CARTE__NB_COLONNES:
-        setNbColonnes(NB_COLONNES_EDEFAULT);
-        return;
-      case TowerDefensePackage.CARTE__CASES:
-        getCases().clear();
-        return;
-    }
-    super.eUnset(featureID);
-  }
+		switch (featureID) {
+			case TowerDefensePackage.CARTE__NAME:
+				setName(NAME_EDEFAULT);
+				return;
+			case TowerDefensePackage.CARTE__NB_LIGNES:
+				setNbLignes(NB_LIGNES_EDEFAULT);
+				return;
+			case TowerDefensePackage.CARTE__NB_COLONNES:
+				setNbColonnes(NB_COLONNES_EDEFAULT);
+				return;
+			case TowerDefensePackage.CARTE__CASES:
+				getCases().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public boolean eIsSet(int featureID)
   {
-    switch (featureID)
-    {
-      case TowerDefensePackage.CARTE__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case TowerDefensePackage.CARTE__NB_LIGNES:
-        return nbLignes != NB_LIGNES_EDEFAULT;
-      case TowerDefensePackage.CARTE__NB_COLONNES:
-        return nbColonnes != NB_COLONNES_EDEFAULT;
-      case TowerDefensePackage.CARTE__CASES:
-        return cases != null && !cases.isEmpty();
-    }
-    return super.eIsSet(featureID);
-  }
+		switch (featureID) {
+			case TowerDefensePackage.CARTE__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case TowerDefensePackage.CARTE__NB_LIGNES:
+				return nbLignes != NB_LIGNES_EDEFAULT;
+			case TowerDefensePackage.CARTE__NB_COLONNES:
+				return nbColonnes != NB_COLONNES_EDEFAULT;
+			case TowerDefensePackage.CARTE__CASES:
+				return cases != null && !cases.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public String toString()
   {
-    if (eIsProxy()) return super.toString();
+		if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(", nbLignes: ");
-    result.append(nbLignes);
-    result.append(", nbColonnes: ");
-    result.append(nbColonnes);
-    result.append(')');
-    return result.toString();
-  }
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(", nbLignes: ");
+		result.append(nbLignes);
+		result.append(", nbColonnes: ");
+		result.append(nbColonnes);
+		result.append(')');
+		return result.toString();
+	}
 
 } //CarteImpl

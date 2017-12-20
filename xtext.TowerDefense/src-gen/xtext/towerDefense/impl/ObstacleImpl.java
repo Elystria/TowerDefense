@@ -34,278 +34,270 @@ import xtext.towerDefense.TowerDefensePackage;
 public class ObstacleImpl extends PartieElementImpl implements Obstacle
 {
   /**
-   * The cached value of the '{@link #getCampement() <em>Campement</em>}' reference.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getCampement() <em>Campement</em>}' reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getCampement()
-   * @generated
-   * @ordered
-   */
+	 * @see #getCampement()
+	 * @generated
+	 * @ordered
+	 */
   protected Case campement;
 
   /**
-   * The cached value of the '{@link #getQuantiteEnergieMax() <em>Quantite Energie Max</em>}' reference.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getQuantiteEnergieMax() <em>Quantite Energie Max</em>}' reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getQuantiteEnergieMax()
-   * @generated
-   * @ordered
-   */
+	 * @see #getQuantiteEnergieMax()
+	 * @generated
+	 * @ordered
+	 */
   protected Energie quantiteEnergieMax;
 
   /**
-   * The default value of the '{@link #getTactique() <em>Tactique</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The default value of the '{@link #getTactique() <em>Tactique</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTactique()
-   * @generated
-   * @ordered
-   */
+	 * @see #getTactique()
+	 * @generated
+	 * @ordered
+	 */
   protected static final TactiqueType TACTIQUE_EDEFAULT = TactiqueType.PROCHE;
 
   /**
-   * The cached value of the '{@link #getTactique() <em>Tactique</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getTactique() <em>Tactique</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTactique()
-   * @generated
-   * @ordered
-   */
+	 * @see #getTactique()
+	 * @generated
+	 * @ordered
+	 */
   protected TactiqueType tactique = TACTIQUE_EDEFAULT;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected ObstacleImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return TowerDefensePackage.Literals.OBSTACLE;
-  }
+		return TowerDefensePackage.Literals.OBSTACLE;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Case getCampement()
   {
-    if (campement != null && campement.eIsProxy())
-    {
-      InternalEObject oldCampement = (InternalEObject)campement;
-      campement = (Case)eResolveProxy(oldCampement);
-      if (campement != oldCampement)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, TowerDefensePackage.OBSTACLE__CAMPEMENT, oldCampement, campement));
-      }
-    }
-    return campement;
-  }
+		if (campement != null && campement.eIsProxy()) {
+			InternalEObject oldCampement = (InternalEObject)campement;
+			campement = (Case)eResolveProxy(oldCampement);
+			if (campement != oldCampement) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, TowerDefensePackage.OBSTACLE__CAMPEMENT, oldCampement, campement));
+			}
+		}
+		return campement;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Case basicGetCampement()
   {
-    return campement;
-  }
+		return campement;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public void setCampement(Case newCampement)
   {
-    Case oldCampement = campement;
-    campement = newCampement;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.OBSTACLE__CAMPEMENT, oldCampement, campement));
-  }
+		Case oldCampement = campement;
+		campement = newCampement;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.OBSTACLE__CAMPEMENT, oldCampement, campement));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Energie getQuantiteEnergieMax()
   {
-    if (quantiteEnergieMax != null && quantiteEnergieMax.eIsProxy())
-    {
-      InternalEObject oldQuantiteEnergieMax = (InternalEObject)quantiteEnergieMax;
-      quantiteEnergieMax = (Energie)eResolveProxy(oldQuantiteEnergieMax);
-      if (quantiteEnergieMax != oldQuantiteEnergieMax)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, TowerDefensePackage.OBSTACLE__QUANTITE_ENERGIE_MAX, oldQuantiteEnergieMax, quantiteEnergieMax));
-      }
-    }
-    return quantiteEnergieMax;
-  }
+		if (quantiteEnergieMax != null && quantiteEnergieMax.eIsProxy()) {
+			InternalEObject oldQuantiteEnergieMax = (InternalEObject)quantiteEnergieMax;
+			quantiteEnergieMax = (Energie)eResolveProxy(oldQuantiteEnergieMax);
+			if (quantiteEnergieMax != oldQuantiteEnergieMax) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, TowerDefensePackage.OBSTACLE__QUANTITE_ENERGIE_MAX, oldQuantiteEnergieMax, quantiteEnergieMax));
+			}
+		}
+		return quantiteEnergieMax;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Energie basicGetQuantiteEnergieMax()
   {
-    return quantiteEnergieMax;
-  }
+		return quantiteEnergieMax;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public void setQuantiteEnergieMax(Energie newQuantiteEnergieMax)
   {
-    Energie oldQuantiteEnergieMax = quantiteEnergieMax;
-    quantiteEnergieMax = newQuantiteEnergieMax;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.OBSTACLE__QUANTITE_ENERGIE_MAX, oldQuantiteEnergieMax, quantiteEnergieMax));
-  }
+		Energie oldQuantiteEnergieMax = quantiteEnergieMax;
+		quantiteEnergieMax = newQuantiteEnergieMax;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.OBSTACLE__QUANTITE_ENERGIE_MAX, oldQuantiteEnergieMax, quantiteEnergieMax));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public TactiqueType getTactique()
   {
-    return tactique;
-  }
+		return tactique;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public void setTactique(TactiqueType newTactique)
   {
-    TactiqueType oldTactique = tactique;
-    tactique = newTactique == null ? TACTIQUE_EDEFAULT : newTactique;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.OBSTACLE__TACTIQUE, oldTactique, tactique));
-  }
+		TactiqueType oldTactique = tactique;
+		tactique = newTactique == null ? TACTIQUE_EDEFAULT : newTactique;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.OBSTACLE__TACTIQUE, oldTactique, tactique));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
-    switch (featureID)
-    {
-      case TowerDefensePackage.OBSTACLE__CAMPEMENT:
-        if (resolve) return getCampement();
-        return basicGetCampement();
-      case TowerDefensePackage.OBSTACLE__QUANTITE_ENERGIE_MAX:
-        if (resolve) return getQuantiteEnergieMax();
-        return basicGetQuantiteEnergieMax();
-      case TowerDefensePackage.OBSTACLE__TACTIQUE:
-        return getTactique();
-    }
-    return super.eGet(featureID, resolve, coreType);
-  }
+		switch (featureID) {
+			case TowerDefensePackage.OBSTACLE__CAMPEMENT:
+				if (resolve) return getCampement();
+				return basicGetCampement();
+			case TowerDefensePackage.OBSTACLE__QUANTITE_ENERGIE_MAX:
+				if (resolve) return getQuantiteEnergieMax();
+				return basicGetQuantiteEnergieMax();
+			case TowerDefensePackage.OBSTACLE__TACTIQUE:
+				return getTactique();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void eSet(int featureID, Object newValue)
   {
-    switch (featureID)
-    {
-      case TowerDefensePackage.OBSTACLE__CAMPEMENT:
-        setCampement((Case)newValue);
-        return;
-      case TowerDefensePackage.OBSTACLE__QUANTITE_ENERGIE_MAX:
-        setQuantiteEnergieMax((Energie)newValue);
-        return;
-      case TowerDefensePackage.OBSTACLE__TACTIQUE:
-        setTactique((TactiqueType)newValue);
-        return;
-    }
-    super.eSet(featureID, newValue);
-  }
+		switch (featureID) {
+			case TowerDefensePackage.OBSTACLE__CAMPEMENT:
+				setCampement((Case)newValue);
+				return;
+			case TowerDefensePackage.OBSTACLE__QUANTITE_ENERGIE_MAX:
+				setQuantiteEnergieMax((Energie)newValue);
+				return;
+			case TowerDefensePackage.OBSTACLE__TACTIQUE:
+				setTactique((TactiqueType)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void eUnset(int featureID)
   {
-    switch (featureID)
-    {
-      case TowerDefensePackage.OBSTACLE__CAMPEMENT:
-        setCampement((Case)null);
-        return;
-      case TowerDefensePackage.OBSTACLE__QUANTITE_ENERGIE_MAX:
-        setQuantiteEnergieMax((Energie)null);
-        return;
-      case TowerDefensePackage.OBSTACLE__TACTIQUE:
-        setTactique(TACTIQUE_EDEFAULT);
-        return;
-    }
-    super.eUnset(featureID);
-  }
+		switch (featureID) {
+			case TowerDefensePackage.OBSTACLE__CAMPEMENT:
+				setCampement((Case)null);
+				return;
+			case TowerDefensePackage.OBSTACLE__QUANTITE_ENERGIE_MAX:
+				setQuantiteEnergieMax((Energie)null);
+				return;
+			case TowerDefensePackage.OBSTACLE__TACTIQUE:
+				setTactique(TACTIQUE_EDEFAULT);
+				return;
+		}
+		super.eUnset(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public boolean eIsSet(int featureID)
   {
-    switch (featureID)
-    {
-      case TowerDefensePackage.OBSTACLE__CAMPEMENT:
-        return campement != null;
-      case TowerDefensePackage.OBSTACLE__QUANTITE_ENERGIE_MAX:
-        return quantiteEnergieMax != null;
-      case TowerDefensePackage.OBSTACLE__TACTIQUE:
-        return tactique != TACTIQUE_EDEFAULT;
-    }
-    return super.eIsSet(featureID);
-  }
+		switch (featureID) {
+			case TowerDefensePackage.OBSTACLE__CAMPEMENT:
+				return campement != null;
+			case TowerDefensePackage.OBSTACLE__QUANTITE_ENERGIE_MAX:
+				return quantiteEnergieMax != null;
+			case TowerDefensePackage.OBSTACLE__TACTIQUE:
+				return tactique != TACTIQUE_EDEFAULT;
+		}
+		return super.eIsSet(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public String toString()
   {
-    if (eIsProxy()) return super.toString();
+		if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (tactique: ");
-    result.append(tactique);
-    result.append(')');
-    return result.toString();
-  }
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (tactique: ");
+		result.append(tactique);
+		result.append(')');
+		return result.toString();
+	}
 
 } //ObstacleImpl

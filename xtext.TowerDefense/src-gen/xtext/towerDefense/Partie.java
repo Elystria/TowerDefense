@@ -31,109 +31,109 @@ import org.eclipse.emf.ecore.EObject;
 public interface Partie extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Name</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Name</em>' attribute.
-   * @see #setName(String)
-   * @see xtext.towerDefense.TowerDefensePackage#getPartie_Name()
-   * @model
-   * @generated
-   */
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see xtext.towerDefense.TowerDefensePackage#getPartie_Name()
+	 * @model
+	 * @generated
+	 */
   String getName();
 
   /**
-   * Sets the value of the '{@link xtext.towerDefense.Partie#getName <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * Sets the value of the '{@link xtext.towerDefense.Partie#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name</em>' attribute.
-   * @see #getName()
-   * @generated
-   */
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
   void setName(String value);
 
   /**
-   * Returns the value of the '<em><b>Cases</b></em>' containment reference list.
-   * The list contents are of type {@link xtext.towerDefense.Case}.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Cases</b></em>' containment reference list.
+	 * The list contents are of type {@link xtext.towerDefense.Case}.
+	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Cases</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Cases</em>' containment reference list.
-   * @see xtext.towerDefense.TowerDefensePackage#getPartie_Cases()
-   * @model containment="true"
-   * @generated
-   */
+	 * @return the value of the '<em>Cases</em>' containment reference list.
+	 * @see xtext.towerDefense.TowerDefensePackage#getPartie_Cases()
+	 * @model containment="true"
+	 * @generated
+	 */
   EList<Case> getCases();
 
   /**
-   * Returns the value of the '<em><b>Cartes</b></em>' containment reference list.
-   * The list contents are of type {@link xtext.towerDefense.Carte}.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Cartes</b></em>' containment reference list.
+	 * The list contents are of type {@link xtext.towerDefense.Carte}.
+	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Cartes</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Cartes</em>' containment reference list.
-   * @see xtext.towerDefense.TowerDefensePackage#getPartie_Cartes()
-   * @model containment="true"
-   * @generated
-   */
+	 * @return the value of the '<em>Cartes</em>' containment reference list.
+	 * @see xtext.towerDefense.TowerDefensePackage#getPartie_Cartes()
+	 * @model containment="true"
+	 * @generated
+	 */
   EList<Carte> getCartes();
 
   /**
-   * Returns the value of the '<em><b>Energies</b></em>' containment reference list.
-   * The list contents are of type {@link xtext.towerDefense.Energie}.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Energies</b></em>' containment reference list.
+	 * The list contents are of type {@link xtext.towerDefense.Energie}.
+	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Energies</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Energies</em>' containment reference list.
-   * @see xtext.towerDefense.TowerDefensePackage#getPartie_Energies()
-   * @model containment="true"
-   * @generated
-   */
+	 * @return the value of the '<em>Energies</em>' containment reference list.
+	 * @see xtext.towerDefense.TowerDefensePackage#getPartie_Energies()
+	 * @model containment="true"
+	 * @generated
+	 */
   EList<Energie> getEnergies();
 
   /**
-   * Returns the value of the '<em><b>Partie Elements</b></em>' containment reference list.
-   * The list contents are of type {@link xtext.towerDefense.PartieElement}.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Partie Elements</b></em>' containment reference list.
+	 * The list contents are of type {@link xtext.towerDefense.PartieElement}.
+	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Partie Elements</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Partie Elements</em>' containment reference list.
-   * @see xtext.towerDefense.TowerDefensePackage#getPartie_PartieElements()
-   * @model containment="true"
-   * @generated
-   */
+	 * @return the value of the '<em>Partie Elements</em>' containment reference list.
+	 * @see xtext.towerDefense.TowerDefensePackage#getPartie_PartieElements()
+	 * @model containment="true"
+	 * @generated
+	 */
   EList<PartieElement> getPartieElements();
 
   /**
-   * Returns the value of the '<em><b>Niveaux</b></em>' containment reference list.
-   * The list contents are of type {@link xtext.towerDefense.Niveau}.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Niveaux</b></em>' containment reference list.
+	 * The list contents are of type {@link xtext.towerDefense.Niveau}.
+	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Niveaux</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Niveaux</em>' containment reference list.
-   * @see xtext.towerDefense.TowerDefensePackage#getPartie_Niveaux()
-   * @model containment="true"
-   * @generated
-   */
+	 * @return the value of the '<em>Niveaux</em>' containment reference list.
+	 * @see xtext.towerDefense.TowerDefensePackage#getPartie_Niveaux()
+	 * @model containment="true"
+	 * @generated
+	 */
   EList<Niveau> getNiveaux();
 
 } // Partie

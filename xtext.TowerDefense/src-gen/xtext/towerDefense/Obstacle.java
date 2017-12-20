@@ -25,84 +25,84 @@ package xtext.towerDefense;
 public interface Obstacle extends PartieElement
 {
   /**
-   * Returns the value of the '<em><b>Campement</b></em>' reference.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Campement</b></em>' reference.
+	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Campement</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Campement</em>' reference.
-   * @see #setCampement(Case)
-   * @see xtext.towerDefense.TowerDefensePackage#getObstacle_Campement()
-   * @model
-   * @generated
-   */
+	 * @return the value of the '<em>Campement</em>' reference.
+	 * @see #setCampement(Case)
+	 * @see xtext.towerDefense.TowerDefensePackage#getObstacle_Campement()
+	 * @model
+	 * @generated
+	 */
   Case getCampement();
 
   /**
-   * Sets the value of the '{@link xtext.towerDefense.Obstacle#getCampement <em>Campement</em>}' reference.
-   * <!-- begin-user-doc -->
+	 * Sets the value of the '{@link xtext.towerDefense.Obstacle#getCampement <em>Campement</em>}' reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Campement</em>' reference.
-   * @see #getCampement()
-   * @generated
-   */
+	 * @param value the new value of the '<em>Campement</em>' reference.
+	 * @see #getCampement()
+	 * @generated
+	 */
   void setCampement(Case value);
 
   /**
-   * Returns the value of the '<em><b>Quantite Energie Max</b></em>' reference.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Quantite Energie Max</b></em>' reference.
+	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Quantite Energie Max</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Quantite Energie Max</em>' reference.
-   * @see #setQuantiteEnergieMax(Energie)
-   * @see xtext.towerDefense.TowerDefensePackage#getObstacle_QuantiteEnergieMax()
-   * @model
-   * @generated
-   */
+	 * @return the value of the '<em>Quantite Energie Max</em>' reference.
+	 * @see #setQuantiteEnergieMax(Energie)
+	 * @see xtext.towerDefense.TowerDefensePackage#getObstacle_QuantiteEnergieMax()
+	 * @model
+	 * @generated
+	 */
   Energie getQuantiteEnergieMax();
 
   /**
-   * Sets the value of the '{@link xtext.towerDefense.Obstacle#getQuantiteEnergieMax <em>Quantite Energie Max</em>}' reference.
-   * <!-- begin-user-doc -->
+	 * Sets the value of the '{@link xtext.towerDefense.Obstacle#getQuantiteEnergieMax <em>Quantite Energie Max</em>}' reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Quantite Energie Max</em>' reference.
-   * @see #getQuantiteEnergieMax()
-   * @generated
-   */
+	 * @param value the new value of the '<em>Quantite Energie Max</em>' reference.
+	 * @see #getQuantiteEnergieMax()
+	 * @generated
+	 */
   void setQuantiteEnergieMax(Energie value);
 
   /**
-   * Returns the value of the '<em><b>Tactique</b></em>' attribute.
-   * The literals are from the enumeration {@link xtext.towerDefense.TactiqueType}.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Tactique</b></em>' attribute.
+	 * The literals are from the enumeration {@link xtext.towerDefense.TactiqueType}.
+	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Tactique</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Tactique</em>' attribute.
-   * @see xtext.towerDefense.TactiqueType
-   * @see #setTactique(TactiqueType)
-   * @see xtext.towerDefense.TowerDefensePackage#getObstacle_Tactique()
-   * @model
-   * @generated
-   */
+	 * @return the value of the '<em>Tactique</em>' attribute.
+	 * @see xtext.towerDefense.TactiqueType
+	 * @see #setTactique(TactiqueType)
+	 * @see xtext.towerDefense.TowerDefensePackage#getObstacle_Tactique()
+	 * @model
+	 * @generated
+	 */
   TactiqueType getTactique();
 
   /**
-   * Sets the value of the '{@link xtext.towerDefense.Obstacle#getTactique <em>Tactique</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * Sets the value of the '{@link xtext.towerDefense.Obstacle#getTactique <em>Tactique</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Tactique</em>' attribute.
-   * @see xtext.towerDefense.TactiqueType
-   * @see #getTactique()
-   * @generated
-   */
+	 * @param value the new value of the '<em>Tactique</em>' attribute.
+	 * @see xtext.towerDefense.TactiqueType
+	 * @see #getTactique()
+	 * @generated
+	 */
   void setTactique(TactiqueType value);
 
 } // Obstacle

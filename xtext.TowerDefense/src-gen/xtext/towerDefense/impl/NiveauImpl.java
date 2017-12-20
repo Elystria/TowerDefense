@@ -47,486 +47,478 @@ import xtext.towerDefense.Vague;
 public class NiveauImpl extends MinimalEObjectImpl.Container implements Niveau
 {
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
   protected static final String NAME_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getDifficulte() <em>Difficulte</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The default value of the '{@link #getDifficulte() <em>Difficulte</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getDifficulte()
-   * @generated
-   * @ordered
-   */
+	 * @see #getDifficulte()
+	 * @generated
+	 * @ordered
+	 */
   protected static final Difficulte DIFFICULTE_EDEFAULT = Difficulte.FACILE;
 
   /**
-   * The cached value of the '{@link #getDifficulte() <em>Difficulte</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getDifficulte() <em>Difficulte</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getDifficulte()
-   * @generated
-   * @ordered
-   */
+	 * @see #getDifficulte()
+	 * @generated
+	 * @ordered
+	 */
   protected Difficulte difficulte = DIFFICULTE_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getDureePause() <em>Duree Pause</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The default value of the '{@link #getDureePause() <em>Duree Pause</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getDureePause()
-   * @generated
-   * @ordered
-   */
+	 * @see #getDureePause()
+	 * @generated
+	 * @ordered
+	 */
   protected static final int DUREE_PAUSE_EDEFAULT = 0;
 
   /**
-   * The cached value of the '{@link #getDureePause() <em>Duree Pause</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getDureePause() <em>Duree Pause</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getDureePause()
-   * @generated
-   * @ordered
-   */
+	 * @see #getDureePause()
+	 * @generated
+	 * @ordered
+	 */
   protected int dureePause = DUREE_PAUSE_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getArgent() <em>Argent</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The default value of the '{@link #getArgent() <em>Argent</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getArgent()
-   * @generated
-   * @ordered
-   */
+	 * @see #getArgent()
+	 * @generated
+	 * @ordered
+	 */
   protected static final int ARGENT_EDEFAULT = 0;
 
   /**
-   * The cached value of the '{@link #getArgent() <em>Argent</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getArgent() <em>Argent</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getArgent()
-   * @generated
-   * @ordered
-   */
+	 * @see #getArgent()
+	 * @generated
+	 * @ordered
+	 */
   protected int argent = ARGENT_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getMobSortisLimite() <em>Mob Sortis Limite</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The default value of the '{@link #getMobSortisLimite() <em>Mob Sortis Limite</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getMobSortisLimite()
-   * @generated
-   * @ordered
-   */
+	 * @see #getMobSortisLimite()
+	 * @generated
+	 * @ordered
+	 */
   protected static final int MOB_SORTIS_LIMITE_EDEFAULT = 0;
 
   /**
-   * The cached value of the '{@link #getMobSortisLimite() <em>Mob Sortis Limite</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getMobSortisLimite() <em>Mob Sortis Limite</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getMobSortisLimite()
-   * @generated
-   * @ordered
-   */
+	 * @see #getMobSortisLimite()
+	 * @generated
+	 * @ordered
+	 */
   protected int mobSortisLimite = MOB_SORTIS_LIMITE_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getCarte() <em>Carte</em>}' reference.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getCarte() <em>Carte</em>}' reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getCarte()
-   * @generated
-   * @ordered
-   */
+	 * @see #getCarte()
+	 * @generated
+	 * @ordered
+	 */
   protected Carte carte;
 
   /**
-   * The cached value of the '{@link #getVagues() <em>Vagues</em>}' containment reference list.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getVagues() <em>Vagues</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getVagues()
-   * @generated
-   * @ordered
-   */
+	 * @see #getVagues()
+	 * @generated
+	 * @ordered
+	 */
   protected EList<Vague> vagues;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected NiveauImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return TowerDefensePackage.Literals.NIVEAU;
-  }
+		return TowerDefensePackage.Literals.NIVEAU;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public String getName()
   {
-    return name;
-  }
+		return name;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public void setName(String newName)
   {
-    String oldName = name;
-    name = newName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.NIVEAU__NAME, oldName, name));
-  }
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.NIVEAU__NAME, oldName, name));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Difficulte getDifficulte()
   {
-    return difficulte;
-  }
+		return difficulte;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public void setDifficulte(Difficulte newDifficulte)
   {
-    Difficulte oldDifficulte = difficulte;
-    difficulte = newDifficulte == null ? DIFFICULTE_EDEFAULT : newDifficulte;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.NIVEAU__DIFFICULTE, oldDifficulte, difficulte));
-  }
+		Difficulte oldDifficulte = difficulte;
+		difficulte = newDifficulte == null ? DIFFICULTE_EDEFAULT : newDifficulte;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.NIVEAU__DIFFICULTE, oldDifficulte, difficulte));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public int getDureePause()
   {
-    return dureePause;
-  }
+		return dureePause;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public void setDureePause(int newDureePause)
   {
-    int oldDureePause = dureePause;
-    dureePause = newDureePause;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.NIVEAU__DUREE_PAUSE, oldDureePause, dureePause));
-  }
+		int oldDureePause = dureePause;
+		dureePause = newDureePause;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.NIVEAU__DUREE_PAUSE, oldDureePause, dureePause));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public int getArgent()
   {
-    return argent;
-  }
+		return argent;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public void setArgent(int newArgent)
   {
-    int oldArgent = argent;
-    argent = newArgent;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.NIVEAU__ARGENT, oldArgent, argent));
-  }
+		int oldArgent = argent;
+		argent = newArgent;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.NIVEAU__ARGENT, oldArgent, argent));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public int getMobSortisLimite()
   {
-    return mobSortisLimite;
-  }
+		return mobSortisLimite;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public void setMobSortisLimite(int newMobSortisLimite)
   {
-    int oldMobSortisLimite = mobSortisLimite;
-    mobSortisLimite = newMobSortisLimite;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.NIVEAU__MOB_SORTIS_LIMITE, oldMobSortisLimite, mobSortisLimite));
-  }
+		int oldMobSortisLimite = mobSortisLimite;
+		mobSortisLimite = newMobSortisLimite;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.NIVEAU__MOB_SORTIS_LIMITE, oldMobSortisLimite, mobSortisLimite));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Carte getCarte()
   {
-    if (carte != null && carte.eIsProxy())
-    {
-      InternalEObject oldCarte = (InternalEObject)carte;
-      carte = (Carte)eResolveProxy(oldCarte);
-      if (carte != oldCarte)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, TowerDefensePackage.NIVEAU__CARTE, oldCarte, carte));
-      }
-    }
-    return carte;
-  }
+		if (carte != null && carte.eIsProxy()) {
+			InternalEObject oldCarte = (InternalEObject)carte;
+			carte = (Carte)eResolveProxy(oldCarte);
+			if (carte != oldCarte) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, TowerDefensePackage.NIVEAU__CARTE, oldCarte, carte));
+			}
+		}
+		return carte;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Carte basicGetCarte()
   {
-    return carte;
-  }
+		return carte;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public void setCarte(Carte newCarte)
   {
-    Carte oldCarte = carte;
-    carte = newCarte;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.NIVEAU__CARTE, oldCarte, carte));
-  }
+		Carte oldCarte = carte;
+		carte = newCarte;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.NIVEAU__CARTE, oldCarte, carte));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public EList<Vague> getVagues()
   {
-    if (vagues == null)
-    {
-      vagues = new EObjectContainmentEList<Vague>(Vague.class, this, TowerDefensePackage.NIVEAU__VAGUES);
-    }
-    return vagues;
-  }
+		if (vagues == null) {
+			vagues = new EObjectContainmentEList<Vague>(Vague.class, this, TowerDefensePackage.NIVEAU__VAGUES);
+		}
+		return vagues;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
-    switch (featureID)
-    {
-      case TowerDefensePackage.NIVEAU__VAGUES:
-        return ((InternalEList<?>)getVagues()).basicRemove(otherEnd, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
-  }
+		switch (featureID) {
+			case TowerDefensePackage.NIVEAU__VAGUES:
+				return ((InternalEList<?>)getVagues()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
-    switch (featureID)
-    {
-      case TowerDefensePackage.NIVEAU__NAME:
-        return getName();
-      case TowerDefensePackage.NIVEAU__DIFFICULTE:
-        return getDifficulte();
-      case TowerDefensePackage.NIVEAU__DUREE_PAUSE:
-        return getDureePause();
-      case TowerDefensePackage.NIVEAU__ARGENT:
-        return getArgent();
-      case TowerDefensePackage.NIVEAU__MOB_SORTIS_LIMITE:
-        return getMobSortisLimite();
-      case TowerDefensePackage.NIVEAU__CARTE:
-        if (resolve) return getCarte();
-        return basicGetCarte();
-      case TowerDefensePackage.NIVEAU__VAGUES:
-        return getVagues();
-    }
-    return super.eGet(featureID, resolve, coreType);
-  }
+		switch (featureID) {
+			case TowerDefensePackage.NIVEAU__NAME:
+				return getName();
+			case TowerDefensePackage.NIVEAU__DIFFICULTE:
+				return getDifficulte();
+			case TowerDefensePackage.NIVEAU__DUREE_PAUSE:
+				return getDureePause();
+			case TowerDefensePackage.NIVEAU__ARGENT:
+				return getArgent();
+			case TowerDefensePackage.NIVEAU__MOB_SORTIS_LIMITE:
+				return getMobSortisLimite();
+			case TowerDefensePackage.NIVEAU__CARTE:
+				if (resolve) return getCarte();
+				return basicGetCarte();
+			case TowerDefensePackage.NIVEAU__VAGUES:
+				return getVagues();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
-    switch (featureID)
-    {
-      case TowerDefensePackage.NIVEAU__NAME:
-        setName((String)newValue);
-        return;
-      case TowerDefensePackage.NIVEAU__DIFFICULTE:
-        setDifficulte((Difficulte)newValue);
-        return;
-      case TowerDefensePackage.NIVEAU__DUREE_PAUSE:
-        setDureePause((Integer)newValue);
-        return;
-      case TowerDefensePackage.NIVEAU__ARGENT:
-        setArgent((Integer)newValue);
-        return;
-      case TowerDefensePackage.NIVEAU__MOB_SORTIS_LIMITE:
-        setMobSortisLimite((Integer)newValue);
-        return;
-      case TowerDefensePackage.NIVEAU__CARTE:
-        setCarte((Carte)newValue);
-        return;
-      case TowerDefensePackage.NIVEAU__VAGUES:
-        getVagues().clear();
-        getVagues().addAll((Collection<? extends Vague>)newValue);
-        return;
-    }
-    super.eSet(featureID, newValue);
-  }
+		switch (featureID) {
+			case TowerDefensePackage.NIVEAU__NAME:
+				setName((String)newValue);
+				return;
+			case TowerDefensePackage.NIVEAU__DIFFICULTE:
+				setDifficulte((Difficulte)newValue);
+				return;
+			case TowerDefensePackage.NIVEAU__DUREE_PAUSE:
+				setDureePause((Integer)newValue);
+				return;
+			case TowerDefensePackage.NIVEAU__ARGENT:
+				setArgent((Integer)newValue);
+				return;
+			case TowerDefensePackage.NIVEAU__MOB_SORTIS_LIMITE:
+				setMobSortisLimite((Integer)newValue);
+				return;
+			case TowerDefensePackage.NIVEAU__CARTE:
+				setCarte((Carte)newValue);
+				return;
+			case TowerDefensePackage.NIVEAU__VAGUES:
+				getVagues().clear();
+				getVagues().addAll((Collection<? extends Vague>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void eUnset(int featureID)
   {
-    switch (featureID)
-    {
-      case TowerDefensePackage.NIVEAU__NAME:
-        setName(NAME_EDEFAULT);
-        return;
-      case TowerDefensePackage.NIVEAU__DIFFICULTE:
-        setDifficulte(DIFFICULTE_EDEFAULT);
-        return;
-      case TowerDefensePackage.NIVEAU__DUREE_PAUSE:
-        setDureePause(DUREE_PAUSE_EDEFAULT);
-        return;
-      case TowerDefensePackage.NIVEAU__ARGENT:
-        setArgent(ARGENT_EDEFAULT);
-        return;
-      case TowerDefensePackage.NIVEAU__MOB_SORTIS_LIMITE:
-        setMobSortisLimite(MOB_SORTIS_LIMITE_EDEFAULT);
-        return;
-      case TowerDefensePackage.NIVEAU__CARTE:
-        setCarte((Carte)null);
-        return;
-      case TowerDefensePackage.NIVEAU__VAGUES:
-        getVagues().clear();
-        return;
-    }
-    super.eUnset(featureID);
-  }
+		switch (featureID) {
+			case TowerDefensePackage.NIVEAU__NAME:
+				setName(NAME_EDEFAULT);
+				return;
+			case TowerDefensePackage.NIVEAU__DIFFICULTE:
+				setDifficulte(DIFFICULTE_EDEFAULT);
+				return;
+			case TowerDefensePackage.NIVEAU__DUREE_PAUSE:
+				setDureePause(DUREE_PAUSE_EDEFAULT);
+				return;
+			case TowerDefensePackage.NIVEAU__ARGENT:
+				setArgent(ARGENT_EDEFAULT);
+				return;
+			case TowerDefensePackage.NIVEAU__MOB_SORTIS_LIMITE:
+				setMobSortisLimite(MOB_SORTIS_LIMITE_EDEFAULT);
+				return;
+			case TowerDefensePackage.NIVEAU__CARTE:
+				setCarte((Carte)null);
+				return;
+			case TowerDefensePackage.NIVEAU__VAGUES:
+				getVagues().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public boolean eIsSet(int featureID)
   {
-    switch (featureID)
-    {
-      case TowerDefensePackage.NIVEAU__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case TowerDefensePackage.NIVEAU__DIFFICULTE:
-        return difficulte != DIFFICULTE_EDEFAULT;
-      case TowerDefensePackage.NIVEAU__DUREE_PAUSE:
-        return dureePause != DUREE_PAUSE_EDEFAULT;
-      case TowerDefensePackage.NIVEAU__ARGENT:
-        return argent != ARGENT_EDEFAULT;
-      case TowerDefensePackage.NIVEAU__MOB_SORTIS_LIMITE:
-        return mobSortisLimite != MOB_SORTIS_LIMITE_EDEFAULT;
-      case TowerDefensePackage.NIVEAU__CARTE:
-        return carte != null;
-      case TowerDefensePackage.NIVEAU__VAGUES:
-        return vagues != null && !vagues.isEmpty();
-    }
-    return super.eIsSet(featureID);
-  }
+		switch (featureID) {
+			case TowerDefensePackage.NIVEAU__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case TowerDefensePackage.NIVEAU__DIFFICULTE:
+				return difficulte != DIFFICULTE_EDEFAULT;
+			case TowerDefensePackage.NIVEAU__DUREE_PAUSE:
+				return dureePause != DUREE_PAUSE_EDEFAULT;
+			case TowerDefensePackage.NIVEAU__ARGENT:
+				return argent != ARGENT_EDEFAULT;
+			case TowerDefensePackage.NIVEAU__MOB_SORTIS_LIMITE:
+				return mobSortisLimite != MOB_SORTIS_LIMITE_EDEFAULT;
+			case TowerDefensePackage.NIVEAU__CARTE:
+				return carte != null;
+			case TowerDefensePackage.NIVEAU__VAGUES:
+				return vagues != null && !vagues.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public String toString()
   {
-    if (eIsProxy()) return super.toString();
+		if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(", difficulte: ");
-    result.append(difficulte);
-    result.append(", dureePause: ");
-    result.append(dureePause);
-    result.append(", argent: ");
-    result.append(argent);
-    result.append(", mobSortisLimite: ");
-    result.append(mobSortisLimite);
-    result.append(')');
-    return result.toString();
-  }
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(", difficulte: ");
+		result.append(difficulte);
+		result.append(", dureePause: ");
+		result.append(dureePause);
+		result.append(", argent: ");
+		result.append(argent);
+		result.append(", mobSortisLimite: ");
+		result.append(mobSortisLimite);
+		result.append(')');
+		return result.toString();
+	}
 
 } //NiveauImpl

@@ -33,269 +33,263 @@ import xtext.towerDefense.TowerDefensePackage;
 public class NatureTerrainImpl extends PartieElementImpl implements NatureTerrain
 {
   /**
-   * The default value of the '{@link #getVolume() <em>Volume</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The default value of the '{@link #getVolume() <em>Volume</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getVolume()
-   * @generated
-   * @ordered
-   */
+	 * @see #getVolume()
+	 * @generated
+	 * @ordered
+	 */
   protected static final int VOLUME_EDEFAULT = 0;
 
   /**
-   * The cached value of the '{@link #getVolume() <em>Volume</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getVolume() <em>Volume</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getVolume()
-   * @generated
-   * @ordered
-   */
+	 * @see #getVolume()
+	 * @generated
+	 * @ordered
+	 */
   protected int volume = VOLUME_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getType() <em>Type</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getType()
-   * @generated
-   * @ordered
-   */
+	 * @see #getType()
+	 * @generated
+	 * @ordered
+	 */
   protected static final TYPE_TERRAIN TYPE_EDEFAULT = TYPE_TERRAIN.ENTREE;
 
   /**
-   * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getType()
-   * @generated
-   * @ordered
-   */
+	 * @see #getType()
+	 * @generated
+	 * @ordered
+	 */
   protected TYPE_TERRAIN type = TYPE_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getFatigue() <em>Fatigue</em>}' reference.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getFatigue() <em>Fatigue</em>}' reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getFatigue()
-   * @generated
-   * @ordered
-   */
+	 * @see #getFatigue()
+	 * @generated
+	 * @ordered
+	 */
   protected Energie fatigue;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected NatureTerrainImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return TowerDefensePackage.Literals.NATURE_TERRAIN;
-  }
+		return TowerDefensePackage.Literals.NATURE_TERRAIN;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public int getVolume()
   {
-    return volume;
-  }
+		return volume;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public void setVolume(int newVolume)
   {
-    int oldVolume = volume;
-    volume = newVolume;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.NATURE_TERRAIN__VOLUME, oldVolume, volume));
-  }
+		int oldVolume = volume;
+		volume = newVolume;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.NATURE_TERRAIN__VOLUME, oldVolume, volume));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public TYPE_TERRAIN getType()
   {
-    return type;
-  }
+		return type;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public void setType(TYPE_TERRAIN newType)
   {
-    TYPE_TERRAIN oldType = type;
-    type = newType == null ? TYPE_EDEFAULT : newType;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.NATURE_TERRAIN__TYPE, oldType, type));
-  }
+		TYPE_TERRAIN oldType = type;
+		type = newType == null ? TYPE_EDEFAULT : newType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.NATURE_TERRAIN__TYPE, oldType, type));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Energie getFatigue()
   {
-    if (fatigue != null && fatigue.eIsProxy())
-    {
-      InternalEObject oldFatigue = (InternalEObject)fatigue;
-      fatigue = (Energie)eResolveProxy(oldFatigue);
-      if (fatigue != oldFatigue)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, TowerDefensePackage.NATURE_TERRAIN__FATIGUE, oldFatigue, fatigue));
-      }
-    }
-    return fatigue;
-  }
+		if (fatigue != null && fatigue.eIsProxy()) {
+			InternalEObject oldFatigue = (InternalEObject)fatigue;
+			fatigue = (Energie)eResolveProxy(oldFatigue);
+			if (fatigue != oldFatigue) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, TowerDefensePackage.NATURE_TERRAIN__FATIGUE, oldFatigue, fatigue));
+			}
+		}
+		return fatigue;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Energie basicGetFatigue()
   {
-    return fatigue;
-  }
+		return fatigue;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public void setFatigue(Energie newFatigue)
   {
-    Energie oldFatigue = fatigue;
-    fatigue = newFatigue;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.NATURE_TERRAIN__FATIGUE, oldFatigue, fatigue));
-  }
+		Energie oldFatigue = fatigue;
+		fatigue = newFatigue;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.NATURE_TERRAIN__FATIGUE, oldFatigue, fatigue));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
-    switch (featureID)
-    {
-      case TowerDefensePackage.NATURE_TERRAIN__VOLUME:
-        return getVolume();
-      case TowerDefensePackage.NATURE_TERRAIN__TYPE:
-        return getType();
-      case TowerDefensePackage.NATURE_TERRAIN__FATIGUE:
-        if (resolve) return getFatigue();
-        return basicGetFatigue();
-    }
-    return super.eGet(featureID, resolve, coreType);
-  }
+		switch (featureID) {
+			case TowerDefensePackage.NATURE_TERRAIN__VOLUME:
+				return getVolume();
+			case TowerDefensePackage.NATURE_TERRAIN__TYPE:
+				return getType();
+			case TowerDefensePackage.NATURE_TERRAIN__FATIGUE:
+				if (resolve) return getFatigue();
+				return basicGetFatigue();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void eSet(int featureID, Object newValue)
   {
-    switch (featureID)
-    {
-      case TowerDefensePackage.NATURE_TERRAIN__VOLUME:
-        setVolume((Integer)newValue);
-        return;
-      case TowerDefensePackage.NATURE_TERRAIN__TYPE:
-        setType((TYPE_TERRAIN)newValue);
-        return;
-      case TowerDefensePackage.NATURE_TERRAIN__FATIGUE:
-        setFatigue((Energie)newValue);
-        return;
-    }
-    super.eSet(featureID, newValue);
-  }
+		switch (featureID) {
+			case TowerDefensePackage.NATURE_TERRAIN__VOLUME:
+				setVolume((Integer)newValue);
+				return;
+			case TowerDefensePackage.NATURE_TERRAIN__TYPE:
+				setType((TYPE_TERRAIN)newValue);
+				return;
+			case TowerDefensePackage.NATURE_TERRAIN__FATIGUE:
+				setFatigue((Energie)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void eUnset(int featureID)
   {
-    switch (featureID)
-    {
-      case TowerDefensePackage.NATURE_TERRAIN__VOLUME:
-        setVolume(VOLUME_EDEFAULT);
-        return;
-      case TowerDefensePackage.NATURE_TERRAIN__TYPE:
-        setType(TYPE_EDEFAULT);
-        return;
-      case TowerDefensePackage.NATURE_TERRAIN__FATIGUE:
-        setFatigue((Energie)null);
-        return;
-    }
-    super.eUnset(featureID);
-  }
+		switch (featureID) {
+			case TowerDefensePackage.NATURE_TERRAIN__VOLUME:
+				setVolume(VOLUME_EDEFAULT);
+				return;
+			case TowerDefensePackage.NATURE_TERRAIN__TYPE:
+				setType(TYPE_EDEFAULT);
+				return;
+			case TowerDefensePackage.NATURE_TERRAIN__FATIGUE:
+				setFatigue((Energie)null);
+				return;
+		}
+		super.eUnset(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public boolean eIsSet(int featureID)
   {
-    switch (featureID)
-    {
-      case TowerDefensePackage.NATURE_TERRAIN__VOLUME:
-        return volume != VOLUME_EDEFAULT;
-      case TowerDefensePackage.NATURE_TERRAIN__TYPE:
-        return type != TYPE_EDEFAULT;
-      case TowerDefensePackage.NATURE_TERRAIN__FATIGUE:
-        return fatigue != null;
-    }
-    return super.eIsSet(featureID);
-  }
+		switch (featureID) {
+			case TowerDefensePackage.NATURE_TERRAIN__VOLUME:
+				return volume != VOLUME_EDEFAULT;
+			case TowerDefensePackage.NATURE_TERRAIN__TYPE:
+				return type != TYPE_EDEFAULT;
+			case TowerDefensePackage.NATURE_TERRAIN__FATIGUE:
+				return fatigue != null;
+		}
+		return super.eIsSet(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public String toString()
   {
-    if (eIsProxy()) return super.toString();
+		if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (volume: ");
-    result.append(volume);
-    result.append(", type: ");
-    result.append(type);
-    result.append(')');
-    return result.toString();
-  }
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (volume: ");
+		result.append(volume);
+		result.append(", type: ");
+		result.append(type);
+		result.append(')');
+		return result.toString();
+	}
 
 } //NatureTerrainImpl
