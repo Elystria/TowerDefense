@@ -1,7 +1,5 @@
 package enigme;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
+import java.util.*;
 
 public class Partie {
 
@@ -16,6 +14,8 @@ public class Partie {
 	private List<Projectile> projectiles;
 	private List<Mobile> mobiles;
 	private List<Obstacle> obstacles;
+	private int argent;
+	private int mobilesSorti;
 
 	/************************************************
      * CONSTRUCTEUR
@@ -41,6 +41,8 @@ public class Partie {
 				obstacles.add((Obstacle) pe);
 			}
 		}
+		this.argent = 0;
+		this.mobilesSorti = 0;
 	}
 	/************************************************
      * METHODES
@@ -122,6 +124,58 @@ public class Partie {
 	    return getMobiles().size() == 0;
 	}
 
+	public void validerChemins() {
+		boolean toutEstValide = true;
+	    for(Mobile m : getMobiles()) {
+	        Case debut = m.getEntree();
+	        Case sortie = m.getSortie();
+
+			Queue<Case> file = new ArrayDeque<>();
+			List<Case> casesVisitees = new ArrayList<>();
+			casesVisitees.add(debut);
+
+			Case caseCourante = debut;
+			// Tant qu'on a pas trouvé la sortie
+			boolean fileVide = false;
+			while(caseCourante != sortie && !fileVide) {
+				// On récupère toutes les cartes voisines
+				List<Case> voisines = getCartes().get(0).voisinesCase(caseCourante);
+
+				// Si ces cases ont déjà été visités OU qu'elles ne sont pas accessibles
+				int i = 0;
+				while(i < voisines.size()) {
+					if(voisines.get(i).getNature().getFatigueEntree().isInfini()
+							|| casesVisitees.contains(voisines.get(i))) {
+						// On les enlèves des voisines
+						voisines.remove(i);
+					} else {
+						i ++;
+					}
+				}
+
+				// On marque toutes ces cases
+                casesVisitees.addAll(voisines);
+
+				// On les rajoutes dans la file
+				file.addAll(voisines);
+
+				// On passe à la case suivante
+				caseCourante = file.poll();
+				if(caseCourante == null) {
+					fileVide = true;
+				}
+			}
+			if(!casesVisitees.contains(sortie)) {
+				System.out.println("Certains chemins ne sont pas satisfaisables !");
+				toutEstValide = false;
+				break;
+			}
+		}
+		if(toutEstValide) {
+	    	System.out.println("Tous les chemins sont satisfaisables !");
+		}
+	}
+
 	/************************************************
      * GETS & SETS
 	 ************************************************/
@@ -189,4 +243,19 @@ public class Partie {
 		this.obstacles = obstacles;
 	}
 
+	public int getArgent() {
+		return argent;
+	}
+
+	public void setArgent(int argent) {
+		this.argent = argent;
+	}
+
+	public int getMobilesSorti() {
+		return mobilesSorti;
+	}
+
+	public void setMobilesSorti(int mobilesSorti) {
+		this.mobilesSorti = mobilesSorti;
+	}
 }

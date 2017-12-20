@@ -1,7 +1,9 @@
+/*Démonstration des contraintes sur les obstacles, projectiles, mobiles */
 Jeu exemple1 { 
 	Partie partie_unique {
 		
-		/* On définit les cases qui vont être utilisées */
+		 
+		/* On définie les cases qui vont être utilisées */
 		c11 1 1 montagne
 		c12 1 2 montagne
 		c13 1 3 montagne
@@ -17,15 +19,15 @@ Jeu exemple1 {
 		c33 3 3 garage
 		c34 3 4 garage
 		c35 3 5 garage
-		
-		/* On définit la carte */
+				
+		/* On définie la carte */
 		Carte carte1 {
 			Lignes 3
 			Colonnes 5
 			Cases c11 c12 c13 c14 c15 c21 c22 c23 c24 c25 c31 c32 c33 c34 c35
 		}
 		
-		/* On définit les natures de terrain qui vont être utilisées */
+		/* On définie les natures de terrain qui vont être utilisées */
 		NatureTerrain route_entree {
 			Volume 1
 			Type entree
@@ -51,36 +53,61 @@ Jeu exemple1 {
 			Type camp
 			FatigueEntree 0
 		}
+	
 		
 		/* On définit les projectiles */
 		Projectile p {
-			Portee 1
+			Portee 0
 			Masse 1
-			Vitesse 1
-			Position c21
-			Direction c31
+			Vitesse 0
+			Position c13
+			Direction c12
 			Degat 1
 		}
 		
-		/* On définit les mobiles */
+		Projectile p1 {
+			Portee 1
+			Masse 1
+			Vitesse 2
+			Position c31
+			Direction c23
+			Degat infini
+		}
+		
+		/* On définit les mobiles -> ce mobile est tres mal defini */
 		Mobile m {
 			F 1
-			V  1
-			NumVague 1 //inutile
-			In c21
-			Out c25
-			PVmax 1
-
+			V  0
+			NumVague 0 //inutile
+			In c22
+			Out c23
+			PVmax 0
 			Tactique procheFirst
 		}
 		
-		/* On définit les obstacles */
-		Obstacle o {
-			Campement c33
-			PVmax 1
+		Mobile m1 {
+			F 1
+			V  1
+			NumVague 1
+			In c21
+			Out c25
+			PVmax infini
+			Tactique procheFirst
+		}
+		
+		/* On définit les obstacles -> il est sur une case deco */
+		Obstacle o1 {
+			Campement c11
+			PVmax 0
 			Tactique faibleFirst
 		}
 		
+		/* On définit les obstacles -> il a une énergie infinie */
+		Obstacle o2 {
+			Campement c31
+			PVmax infini
+			Tactique faibleFirst
+		}
 		
 		/* On définit l'unique niveau du jeu */
 		Niveau niv facile {
@@ -88,9 +115,9 @@ Jeu exemple1 {
 			Argent 0
 			MobSortisMax 2
 			Carte carte1
-			Vague V1 { 
+			Vague v1 { 
 					Mobiles m m m
-					Obstacles o
+					Obstacles o1
 					Gain 3
 				  }
 		}

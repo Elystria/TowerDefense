@@ -1,7 +1,9 @@
+/*Démonstration des contraintes sur les niveaux*/
 Jeu exemple1 { 
 	Partie partie_unique {
 		
-		/* On définit les cases qui vont être utilisées */
+		 
+		/* On définie les cases qui vont être utilisées */
 		c11 1 1 montagne
 		c12 1 2 montagne
 		c13 1 3 montagne
@@ -18,14 +20,15 @@ Jeu exemple1 {
 		c34 3 4 garage
 		c35 3 5 garage
 		
-		/* On définit la carte */
+		
+		/* On définie la carte */
 		Carte carte1 {
 			Lignes 3
 			Colonnes 5
 			Cases c11 c12 c13 c14 c15 c21 c22 c23 c24 c25 c31 c32 c33 c34 c35
 		}
 		
-		/* On définit les natures de terrain qui vont être utilisées */
+		/* On définie les natures de terrain qui vont être utilisées */
 		NatureTerrain route_entree {
 			Volume 1
 			Type entree
@@ -51,18 +54,19 @@ Jeu exemple1 {
 			Type camp
 			FatigueEntree 0
 		}
+	
 		
-		/* On définit les projectiles */
+		/* On définie les projectiles */
 		Projectile p {
 			Portee 1
 			Masse 1
 			Vitesse 1
-			Position c21
-			Direction c31
+			Position c33
+			Direction c32
 			Degat 1
 		}
 		
-		/* On définit les mobiles */
+		/* On définie les mobiles */
 		Mobile m {
 			F 1
 			V  1
@@ -70,11 +74,10 @@ Jeu exemple1 {
 			In c21
 			Out c25
 			PVmax 1
-
 			Tactique procheFirst
 		}
 		
-		/* On définit les obstacles */
+		/* On définie les obstacles */
 		Obstacle o {
 			Campement c33
 			PVmax 1
@@ -82,17 +85,40 @@ Jeu exemple1 {
 		}
 		
 		
-		/* On définit l'unique niveau du jeu */
+		/* On définie l'unique niveau du jeu */
 		Niveau niv facile {
-			DureePauses 1
+			DureePauses 0
 			Argent 0
 			MobSortisMax 2
 			Carte carte1
-			Vague V1 { 
-					Mobiles m m m
-					Obstacles o
+			Vague v1 { 
+					Mobiles 
+					Obstacles 
 					Gain 3
 				  }
+			Vague v1 {
+					Mobiles m m m
+					Obstacles o
+					Gain 2
+			}
+		}
+		
+		/* On définit un autre niveau du jeu */
+		Niveau niv2 difficile {
+			DureePauses 3
+			Argent 3
+			MobSortisMax 7
+			Carte carte1
+			Vague v1 { 
+					Mobiles m m m
+					Obstacles 
+					Gain 3
+				  }
+			Vague v2 {
+					Mobiles m m m
+					Obstacles o
+					Gain 2
+			}
 		}
 		
 	}

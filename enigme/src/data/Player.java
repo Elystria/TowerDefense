@@ -37,12 +37,19 @@ public class Player {
 
 			if(grid.map[xTile][n - yTile - 1].getType().isBuildable()){
 			    if(!ilYaDejaUneTour && !grid.map[xTile][n - yTile - 1].isBuilded()) {
-					creerTour(xTile, n - yTile - 1, vue, partie);
-					grid.map[xTile][n - yTile - 1].setBuilded(true);
+			    	if(partie.getArgent() > 0) {
+						creerTour(xTile, n - yTile - 1, vue, partie);
+						grid.map[xTile][n - yTile - 1].setBuilded(true);
+						partie.setArgent(partie.getArgent() - 1);
+					} else {
+			    		System.out.println("Vous n'avez plus assez d'energie pour construire !");
+					}
 				} else {
 			    	supprimerTour(xTile, n - yTile - 1, vue, partie);
 					grid.map[xTile][n - yTile - 1].setBuilded(false);
+					partie.setArgent(partie.getArgent() + 1);
 				}
+				System.out.println("Il vous reste " + partie.getArgent() + "pièces.");
 			}
 		}
 		if(!Mouse.isButtonDown(0)) {
