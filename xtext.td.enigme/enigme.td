@@ -70,7 +70,7 @@ Jeu exemple1 {
 		Mobile m {
 			F 1
 			V  1
-			NumVague 1 //inutile
+			NumVague 1 //inutile --> plus maintenant
 			In c21
 			Out c25
 			PVmax 1
