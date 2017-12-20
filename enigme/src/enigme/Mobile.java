@@ -224,7 +224,7 @@ public class Mobile implements PartieElement {
 		int x = getPosition().getI() + 1;
 		int y = getPosition().getJ();
 		//Case caseDroite = partie.getCartes().get(0).getCase(x, y);
-        List<Case> chemin = cheminSorti(partie);
+        List<Case> chemin = cheminSorti(partie, getPosition());
 		Case nextCase = chemin.get(chemin.size() - 1);
 		// Si on assez d'énergie
 		if(PA.getValeur() >= nextCase.getNature().getFatigueEntree().getValeur()) {
@@ -234,12 +234,12 @@ public class Mobile implements PartieElement {
 		}
 	}
 
-	public List<Case> cheminSorti(Partie partie) {
+	public List<Case> cheminSorti(Partie partie, Case depart) {
 		Queue<Case> file = new ArrayDeque<>();
 		HashMap<Case, Case> casesVisitees = new HashMap<>(); // la clé est la case visité, la valeur est la case précédant cette case
-		casesVisitees.put(getPosition(), getPosition());
+		casesVisitees.put(depart, depart);
 
-		Case caseCourante = getPosition();
+		Case caseCourante = depart;
 		// Tant qu'on a pas trouvé la sortie
 		while(caseCourante != getSortie()) {
 			// On récupère toutes les cartes voisines
@@ -273,7 +273,7 @@ public class Mobile implements PartieElement {
 		List<Case> chemin = new ArrayList<>();
 		chemin.add(getSortie());
 		caseCourante = getSortie();
-		while(casesVisitees.get(caseCourante) != getPosition()) {
+		while(casesVisitees.get(caseCourante) != depart) {
 			caseCourante = casesVisitees.get(caseCourante);
 			chemin.add(caseCourante);
 		}

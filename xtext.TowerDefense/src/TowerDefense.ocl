@@ -2,8 +2,6 @@ import '/plugin/xtext.TowerDefense/model/generated/TowerDefense.ecore'
 
 package towerDefense
 
---TODO en java : E10 part2
-
 --JEU--
 context Jeu
 inv NonNullName('Le nom d\'un jeu ne peut être null'):
@@ -46,6 +44,9 @@ inv caseCampement('La case doit etre un campement'):
 	
 inv EnergiePositive('Les PVMax doivent etre positifs'):
 	self.quantiteEnergieMax.valeur > 0
+
+inv EnergieFinie('L\'energie ne peut etre infinie pour un obstacle'):
+	self.quantiteEnergieMax.infini = false
 	
 --MOBILE--
 context Mobile
@@ -57,7 +58,6 @@ inv VolumePositif('Le volume doit être strictement positif'):
 
 inv VaguePositive('Le numéro de Vague doit etre strictement positif'):
 	self.numVague > 0
--- Pas de contrainte supplémentaires sur le numVague
 
 inv CaseTypeEntree('La case doit etre une entree'):
 	self.caseEntree.natureDuTerrain.type = TYPE_TERRAIN::entree
@@ -67,6 +67,9 @@ inv CaseTypeSortie('La case doit etre une sortie'):
 	
 inv EnergiePositive('Les PVMax doivent etre positifs'):
 	self.quantiteEnergieMax.valeur > 0
+	
+inv EnergieFinie('L\'energie ne peut etre infinie pour un mobile'):
+	self.quantiteEnergieMax.infini = false
 
 --PROJECTILE--
 context Projectile
@@ -88,6 +91,9 @@ inv CibleNonDeco('Cette case est une decoration'):
 inv DegatNonNul('Les degats doivent etre strictement positifs'):
 	degat.valeur > 0
 	
+inv EnergieFinie('Les degats infliges par un projectile doivent etre finis'):
+	degat.infini = false
+	
 --NATURETERRAIN--
 context NatureTerrain
 inv VolumePositif('Le Volume doit etre positif'):
@@ -107,7 +113,6 @@ inv GainPositif('L\'argent doit etre positif'):
 inv MobPositif('Le nombre de mobs qui sortent doit etre strictement positif'):
 	mobSortisLimite > 0
 	
---Le nombre de mobs sortis limite doit etre inférieur au nombre total de mobiles
 inv MobSortisInfMobTotal('La somme de tous les mobiles des vagues doit etre superieur au nombre limite de sorties autorisées'):
 	self.vagues.mobiles -> size() >= mobSortisLimite
 	

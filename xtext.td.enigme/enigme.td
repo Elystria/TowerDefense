@@ -61,8 +61,8 @@ Jeu exemple1 {
 			Portee 1
 			Masse 1
 			Vitesse 1
-			Position c11
-			Direction c12
+			Position c21
+			Direction c31
 			Degat 1
 		}
 		

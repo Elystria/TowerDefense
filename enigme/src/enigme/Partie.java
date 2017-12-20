@@ -1,5 +1,9 @@
 package enigme;
+import java.awt.*;
 import java.util.*;
+import java.util.List;
+
+import static enigme.Jeu.TYPE_TERRAIN.*;
 
 public class Partie {
 
@@ -173,6 +177,153 @@ public class Partie {
 		}
 		if(toutEstValide) {
 	    	System.out.println("Tous les chemins sont satisfaisables !");
+		}
+	}
+
+	public void verificationSolution() {
+		Niveau lvl = getNiveaux().get(0);
+
+	    // Pour chaque vague
+		int vagueNum = 0;
+		for(Vague v : lvl.getVagues()) {
+		    System.out.println("Vague : " + (vagueNum + 1));
+			// On récupère le prototype de la tour
+			Obstacle tour = null;
+			if(v.getObstacles().size() == 0) {
+				tour = this.getObstacles().get(0);
+			} else {
+				tour = v.getObstacles().get(0);
+			}
+
+		    // On regarde combien on pourra avoir de tours
+			int nbTour = v.getObstacles().size(); // les tours offertes par la vague
+			if(vagueNum > 0) {
+				nbTour += lvl.getArgent(); // plus celles qu'on peut construire, vrai si c'est pas la première vague
+			}
+			// on majore le nombre de tours par le nombre de cases disponibles
+			int nbGarages = 0;
+			for(Case c : lvl.getCarte().getCases()) {
+				if(c.getNature().getType() == campement) {
+				    // On vérifie que la tour pourraît tirer sur les mobiles
+					boolean aCible = false;
+					int portee = tour.getProjectilePrototype().getPortee();
+					for(int i = -portee ; i < portee ; i++) {
+						for(int j = -portee ; j < portee ; j++) {
+							if(!(i == 0 && j == 0)) {
+								Case cible = lvl.getCarte().getCase(c.getI() + i, c.getJ() + j);
+								if(cible != null) {
+								    if(cible.getNature().getType() == chemin
+									|| cible.getNature().getType() == entree
+									|| cible.getNature().getType() == sortie) {
+										aCible = true;
+									}
+								}
+							}
+						}
+					}
+					if(aCible) {
+						nbGarages++;
+					}
+				}
+			}
+			if (nbTour > nbGarages) {
+				nbTour = nbGarages;
+			}
+
+			// On compte le nombre de pv de toutes les tours cumulées
+			int pvTours = 0;
+			int nbToursComptes = 0;
+			for(Obstacle o : this.getObstacles()) {
+				pvTours += o.getPV().getValeur(); // la tour pourrait être endommagé !
+				nbToursComptes ++;
+			}
+			pvTours += tour.getPVmax().getValeur() * (nbTour - nbToursComptes);
+
+
+			// Et maintenant on va faire pareil pour les mobiles
+            int nbMobiles = v.getMobiles().size();
+
+            // On récupère le prototype du mobile
+			Mobile mobile = null;
+			if(nbMobiles > 0) {
+				mobile = v.getMobiles().get(0);
+			}
+
+			// On récupère le nombre de pv de tous les mobiles cumulés
+			int pvMobiles = 0;
+			pvMobiles += nbMobiles * mobile.getPVmax().getValeur();
+
+
+			// On va maintenant s'intéresser aux DPS maximum de toutes les tours
+            int dpsTour = 0;
+            int degat = tour.getProjectilePrototype().getDegat().getValeur();
+            int nbAttaque = tour.getPA().getValeur();
+            dpsTour += degat * nbAttaque * this.getObstacles().size();
+            dpsTour += degat * nbAttaque * (nbTour - this.getObstacles().size());
+
+			// On va maintenant s'intéresser aux DPS maximum de tous les mobiles
+            int dpsMobile = 0;
+			degat = mobile.getProjectilePrototype().getDegat().getValeur();
+			nbAttaque = mobile.getPA().getValeur() / 2;
+			dpsMobile += nbMobiles * degat * nbAttaque;
+
+
+			// On va maintenant calculer le score de combat des tours et des mobiles
+            int scoreCombatTour = 0;
+            scoreCombatTour = pvTours * dpsTour;
+			int scoreCombatMobile = 0;
+			scoreCombatMobile = pvMobiles * dpsMobile;
+
+
+			boolean forceSuffisante;
+			if(scoreCombatTour > scoreCombatMobile) {
+				forceSuffisante = true;
+				System.out.println("Les mobiles ne pourront pas gagner en détruisant toutes les tours si vous jouez au mieux !");
+			} else {
+				forceSuffisante = false;
+				System.out.println("Il est possible que les mobiles gagnent en détruisant toutes les tours même si vous jouez au mieux !");
+			}
+
+
+			// On veut s'assurer que les projectiles ont une vitesse suffisante par rapport aux mobiles !
+			boolean vitesseSuffisante;
+			if(tour.getProjectilePrototype().getVitesse() < mobile.getPA().getValeur()) {
+				vitesseSuffisante = false;
+				System.out.println("Les projectiles ne sont pas assez rapides pour rattraper les mobiles !");
+			} else {
+				vitesseSuffisante = true;
+				System.out.println("Les projectiles sont assez rapides pour rattraper les mobiles.");
+			}
+
+			// On va maintenant vouloir s'assurer que les tours pourront tuer les ennemies à temps !
+			// On veut calculer le temps que mettent les mobiles à atteindre la sortie
+			int longueurTrajetMin = v.getMobiles().get(0).cheminSorti(this, mobile.getEntree()).size();
+			for(Mobile m : v.getMobiles()) {
+				List<Case> chemin = m.cheminSorti(this, m.getEntree());
+				if(chemin.size() < longueurTrajetMin) {
+					longueurTrajetMin = chemin.size();
+				}
+			}
+			int tempsTrajetMin = (int) Math.ceil(longueurTrajetMin / mobile.getPA().getValeur());
+
+			// On vérifie si on peut tuer le mobile pendant ce temps imparti
+			boolean degatSuffisants;
+			if(tempsTrajetMin * tour.getProjectilePrototype().getDegat().getValeur() >= mobile.getPVmax().getValeur()) {
+				degatSuffisants = true;
+				System.out.println("On aura toujours le temps de tuer même le mobile le plus rapide !");
+			} else {
+				degatSuffisants = false;
+				System.out.println("Il est possible qu'un mobile soit tellement rapide qu'on ne puisse pas lui tirer assez dessus !");
+			}
+
+			if(degatSuffisants && vitesseSuffisante && forceSuffisante) {
+				System.out.println("Nous acceptons ce jeu !");
+			} else {
+				System.out.println("Ce jeu est extrèmement difficile, voire insoluble, nous vous le déconseillons !");
+			}
+
+			// On passe à la vague suivante
+			vagueNum ++;
 		}
 	}
 
