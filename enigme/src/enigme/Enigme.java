@@ -114,6 +114,7 @@ public class Enigme {
         EnigmeVue vue = new EnigmeVue(partie);
 
         partie.validerChemins();
+        partie.verificationSolution();
 
         // Tant que la partie n'est pas finie
         // Pour chaque vague
