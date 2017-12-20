@@ -25,31 +25,34 @@ Jeu exemple1 {
 			Cases c11 c12 c13 c14 c15 c21 c22 c23 c24 c25 c31 c32 c33 c34 c35
 		}
 		
+		e0 0
+		e1 1
+		
 		/* On définit les natures de terrain qui vont être utilisées */
 		NatureTerrain route_entree {
 			Volume 1
 			Type entree
-			FatigueEntree 1
+			FatigueEntree e1
 		}
 		NatureTerrain route_sortie {
 			Volume 1
 			Type sortie
-			FatigueEntree 1
+			FatigueEntree e1
 		}
 		NatureTerrain montagne {
 			Volume 0
 			Type deco
-			FatigueEntree 0
+			FatigueEntree e0
 		}
 		NatureTerrain route {
 			Volume 1
 			Type chemin
-			FatigueEntree 1
+			FatigueEntree e1
 		}
 		NatureTerrain garage {
 			Volume 0
 			Type camp
-			FatigueEntree 0
+			FatigueEntree e0
 		}
 		
 		/* On définit les projectiles */
@@ -59,7 +62,7 @@ Jeu exemple1 {
 			Vitesse 1
 			Position c21
 			Direction c31
-			Degat 1
+			Degat e1
 		}
 		
 		/* On définit les mobiles */
@@ -69,7 +72,7 @@ Jeu exemple1 {
 			NumVague 1 //inutile
 			In c21
 			Out c25
-			PVmax 1
+			PVmax e1
 
 			Tactique procheFirst
 		}
@@ -77,7 +80,7 @@ Jeu exemple1 {
 		/* On définit les obstacles */
 		Obstacle o {
 			Campement c33
-			PVmax 1
+			PVmax e1
 			Tactique faibleFirst
 		}
 		
