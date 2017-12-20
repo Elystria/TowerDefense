@@ -1,8 +1,7 @@
 Jeu exemple1 { 
 	Partie partie_unique {
 		
-		 
-		/* On définie les cases qui vont être utilisées */
+		/* On définit les cases qui vont être utilisées */
 		c11 1 1 montagne
 		c12 1 2 montagne
 		c13 1 3 montagne
@@ -19,15 +18,14 @@ Jeu exemple1 {
 		c34 3 4 garage
 		c35 3 5 garage
 		
-		
-		/* On définie la carte */
+		/* On définit la carte */
 		Carte carte1 {
 			Lignes 3
 			Colonnes 5
 			Cases c11 c12 c13 c14 c15 c21 c22 c23 c24 c25 c31 c32 c33 c34 c35
 		}
 		
-		/* On définie les natures de terrain qui vont être utilisées */
+		/* On définit les natures de terrain qui vont être utilisées */
 		NatureTerrain route_entree {
 			Volume 1
 			Type entree
@@ -53,9 +51,8 @@ Jeu exemple1 {
 			Type camp
 			FatigueEntree 0
 		}
-	
 		
-		/* On définie les projectiles */
+		/* On définit les projectiles */
 		Projectile p {
 			Portee 1
 			Masse 1
@@ -65,7 +62,7 @@ Jeu exemple1 {
 			Degat 1
 		}
 		
-		/* On définie les mobiles */
+		/* On définit les mobiles */
 		Mobile m {
 			F 1
 			V  1
@@ -73,10 +70,11 @@ Jeu exemple1 {
 			In c21
 			Out c25
 			PVmax 1
+
 			Tactique procheFirst
 		}
 		
-		/* On définie les obstacles */
+		/* On définit les obstacles */
 		Obstacle o {
 			Campement c33
 			PVmax 1
@@ -84,13 +82,13 @@ Jeu exemple1 {
 		}
 		
 		
-		/* On définie l'unique niveau du jeu */
+		/* On définit l'unique niveau du jeu */
 		Niveau niv facile {
 			DureePauses 1
 			Argent 0
 			MobSortisMax 2
 			Carte carte1
-			Vague v1 { 
+			Vague V1 { 
 					Mobiles m m m
 					Obstacles o
 					Gain 3
