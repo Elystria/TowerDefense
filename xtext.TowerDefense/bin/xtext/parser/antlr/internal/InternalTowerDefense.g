@@ -212,9 +212,28 @@ rulePartie returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getPartieAccess().getPartieElementsPartieElementParserRuleCall_5_0());
+					newCompositeNode(grammarAccess.getPartieAccess().getEnergiesEnergieParserRuleCall_5_0());
 				}
-				lv_partieElements_5_0=rulePartieElement
+				lv_energies_5_0=ruleEnergie
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getPartieRule());
+					}
+					add(
+						$current,
+						"energies",
+						lv_energies_5_0,
+						"xtext.TowerDefense.Energie");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)*
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getPartieAccess().getPartieElementsPartieElementParserRuleCall_6_0());
+				}
+				lv_partieElements_6_0=rulePartieElement
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getPartieRule());
@@ -222,7 +241,7 @@ rulePartie returns [EObject current=null]
 					add(
 						$current,
 						"partieElements",
-						lv_partieElements_5_0,
+						lv_partieElements_6_0,
 						"xtext.TowerDefense.PartieElement");
 					afterParserOrEnumRuleCall();
 				}
@@ -231,9 +250,9 @@ rulePartie returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getPartieAccess().getNiveauxNiveauParserRuleCall_6_0());
+					newCompositeNode(grammarAccess.getPartieAccess().getNiveauxNiveauParserRuleCall_7_0());
 				}
-				lv_niveaux_6_0=ruleNiveau
+				lv_niveaux_7_0=ruleNiveau
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getPartieRule());
@@ -241,15 +260,15 @@ rulePartie returns [EObject current=null]
 					add(
 						$current,
 						"niveaux",
-						lv_niveaux_6_0,
+						lv_niveaux_7_0,
 						"xtext.TowerDefense.Niveau");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)*
-		otherlv_7='}'
+		otherlv_8='}'
 		{
-			newLeafNode(otherlv_7, grammarAccess.getPartieAccess().getRightCurlyBracketKeyword_7());
+			newLeafNode(otherlv_8, grammarAccess.getPartieAccess().getRightCurlyBracketKeyword_8());
 		}
 	)
 ;
@@ -326,19 +345,22 @@ ruleEnergie returns [EObject current=null]
 	(
 		(
 			(
-				lv_infini_0_0='infini'
+				lv_name_0_0=RULE_ID
 				{
-					newLeafNode(lv_infini_0_0, grammarAccess.getEnergieAccess().getInfiniInfiniKeyword_0_0());
+					newLeafNode(lv_name_0_0, grammarAccess.getEnergieAccess().getNameIDTerminalRuleCall_0_0());
 				}
 				{
 					if ($current==null) {
 						$current = createModelElement(grammarAccess.getEnergieRule());
 					}
-					setWithLastConsumed($current, "infini", true, "infini");
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_0_0,
+						"org.eclipse.xtext.common.Terminals.ID");
 				}
 			)
 		)
-		    |
 		(
 			(
 				lv_valeur_1_0=RULE_INT
@@ -426,19 +448,13 @@ ruleObstacle returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getObstacleAccess().getQuantiteEnergieMaxEnergieParserRuleCall_6_0());
-				}
-				lv_quantiteEnergieMax_6_0=ruleEnergie
-				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getObstacleRule());
+						$current = createModelElement(grammarAccess.getObstacleRule());
 					}
-					set(
-						$current,
-						"quantiteEnergieMax",
-						lv_quantiteEnergieMax_6_0,
-						"xtext.TowerDefense.Energie");
-					afterParserOrEnumRuleCall();
+				}
+				otherlv_6=RULE_ID
+				{
+					newLeafNode(otherlv_6, grammarAccess.getObstacleAccess().getQuantiteEnergieMaxEnergieCrossReference_6_0());
 				}
 			)
 		)
@@ -621,19 +637,13 @@ ruleMobile returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getMobileAccess().getQuantiteEnergieMaxEnergieParserRuleCall_14_0());
-				}
-				lv_quantiteEnergieMax_14_0=ruleEnergie
-				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getMobileRule());
+						$current = createModelElement(grammarAccess.getMobileRule());
 					}
-					set(
-						$current,
-						"quantiteEnergieMax",
-						lv_quantiteEnergieMax_14_0,
-						"xtext.TowerDefense.Energie");
-					afterParserOrEnumRuleCall();
+				}
+				otherlv_14=RULE_ID
+				{
+					newLeafNode(otherlv_14, grammarAccess.getMobileAccess().getQuantiteEnergieMaxEnergieCrossReference_14_0());
 				}
 			)
 		)
@@ -816,19 +826,13 @@ ruleProjectile returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getProjectileAccess().getDegatEnergieParserRuleCall_14_0());
-				}
-				lv_degat_14_0=ruleEnergie
-				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getProjectileRule());
+						$current = createModelElement(grammarAccess.getProjectileRule());
 					}
-					set(
-						$current,
-						"degat",
-						lv_degat_14_0,
-						"xtext.TowerDefense.Energie");
-					afterParserOrEnumRuleCall();
+				}
+				otherlv_14=RULE_ID
+				{
+					newLeafNode(otherlv_14, grammarAccess.getProjectileAccess().getDegatEnergieCrossReference_14_0());
 				}
 			)
 		)
@@ -933,19 +937,13 @@ ruleNatureTerrain returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getNatureTerrainAccess().getFatigueEnergieParserRuleCall_8_0());
-				}
-				lv_fatigue_8_0=ruleEnergie
-				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getNatureTerrainRule());
+						$current = createModelElement(grammarAccess.getNatureTerrainRule());
 					}
-					set(
-						$current,
-						"fatigue",
-						lv_fatigue_8_0,
-						"xtext.TowerDefense.Energie");
-					afterParserOrEnumRuleCall();
+				}
+				otherlv_8=RULE_ID
+				{
+					newLeafNode(otherlv_8, grammarAccess.getNatureTerrainAccess().getFatigueEnergieCrossReference_8_0());
 				}
 			)
 		)

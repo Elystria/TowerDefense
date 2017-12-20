@@ -32,12 +32,12 @@ public class TowerDefenseParser extends AbstractContentAssistParser {
 				private static final long serialVersionUID = 1L;
 				{
 					put(grammarAccess.getPartieElementAccess().getAlternatives(), "rule__PartieElement__Alternatives");
-					put(grammarAccess.getEnergieAccess().getAlternatives(), "rule__Energie__Alternatives");
 					put(grammarAccess.getTactiqueTypeAccess().getAlternatives(), "rule__TactiqueType__Alternatives");
 					put(grammarAccess.getTYPE_TERRAINAccess().getAlternatives(), "rule__TYPE_TERRAIN__Alternatives");
 					put(grammarAccess.getDifficulteAccess().getAlternatives(), "rule__Difficulte__Alternatives");
 					put(grammarAccess.getJeuAccess().getGroup(), "rule__Jeu__Group__0");
 					put(grammarAccess.getPartieAccess().getGroup(), "rule__Partie__Group__0");
+					put(grammarAccess.getEnergieAccess().getGroup(), "rule__Energie__Group__0");
 					put(grammarAccess.getObstacleAccess().getGroup(), "rule__Obstacle__Group__0");
 					put(grammarAccess.getMobileAccess().getGroup(), "rule__Mobile__Group__0");
 					put(grammarAccess.getProjectileAccess().getGroup(), "rule__Projectile__Group__0");
@@ -51,9 +51,10 @@ public class TowerDefenseParser extends AbstractContentAssistParser {
 					put(grammarAccess.getPartieAccess().getNameAssignment_1(), "rule__Partie__NameAssignment_1");
 					put(grammarAccess.getPartieAccess().getCasesAssignment_3(), "rule__Partie__CasesAssignment_3");
 					put(grammarAccess.getPartieAccess().getCartesAssignment_4(), "rule__Partie__CartesAssignment_4");
-					put(grammarAccess.getPartieAccess().getPartieElementsAssignment_5(), "rule__Partie__PartieElementsAssignment_5");
-					put(grammarAccess.getPartieAccess().getNiveauxAssignment_6(), "rule__Partie__NiveauxAssignment_6");
-					put(grammarAccess.getEnergieAccess().getInfiniAssignment_0(), "rule__Energie__InfiniAssignment_0");
+					put(grammarAccess.getPartieAccess().getEnergiesAssignment_5(), "rule__Partie__EnergiesAssignment_5");
+					put(grammarAccess.getPartieAccess().getPartieElementsAssignment_6(), "rule__Partie__PartieElementsAssignment_6");
+					put(grammarAccess.getPartieAccess().getNiveauxAssignment_7(), "rule__Partie__NiveauxAssignment_7");
+					put(grammarAccess.getEnergieAccess().getNameAssignment_0(), "rule__Energie__NameAssignment_0");
 					put(grammarAccess.getEnergieAccess().getValeurAssignment_1(), "rule__Energie__ValeurAssignment_1");
 					put(grammarAccess.getObstacleAccess().getNameAssignment_1(), "rule__Obstacle__NameAssignment_1");
 					put(grammarAccess.getObstacleAccess().getCampementAssignment_4(), "rule__Obstacle__CampementAssignment_4");

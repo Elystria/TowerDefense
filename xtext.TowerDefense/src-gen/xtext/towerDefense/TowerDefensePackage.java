@@ -133,13 +133,22 @@ public interface TowerDefensePackage extends EPackage
   int PARTIE__CARTES = 2;
 
   /**
+   * The feature id for the '<em><b>Energies</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARTIE__ENERGIES = 3;
+
+  /**
    * The feature id for the '<em><b>Partie Elements</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PARTIE__PARTIE_ELEMENTS = 3;
+  int PARTIE__PARTIE_ELEMENTS = 4;
 
   /**
    * The feature id for the '<em><b>Niveaux</b></em>' containment reference list.
@@ -148,7 +157,7 @@ public interface TowerDefensePackage extends EPackage
    * @generated
    * @ordered
    */
-  int PARTIE__NIVEAUX = 4;
+  int PARTIE__NIVEAUX = 5;
 
   /**
    * The number of structural features of the '<em>Partie</em>' class.
@@ -157,7 +166,7 @@ public interface TowerDefensePackage extends EPackage
    * @generated
    * @ordered
    */
-  int PARTIE_FEATURE_COUNT = 5;
+  int PARTIE_FEATURE_COUNT = 6;
 
   /**
    * The meta object id for the '{@link xtext.towerDefense.impl.PartieElementImpl <em>Partie Element</em>}' class.
@@ -198,13 +207,13 @@ public interface TowerDefensePackage extends EPackage
   int ENERGIE = 3;
 
   /**
-   * The feature id for the '<em><b>Infini</b></em>' attribute.
+   * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ENERGIE__INFINI = 0;
+  int ENERGIE__NAME = 0;
 
   /**
    * The feature id for the '<em><b>Valeur</b></em>' attribute.
@@ -253,7 +262,7 @@ public interface TowerDefensePackage extends EPackage
   int OBSTACLE__CAMPEMENT = PARTIE_ELEMENT_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Quantite Energie Max</b></em>' containment reference.
+   * The feature id for the '<em><b>Quantite Energie Max</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -344,7 +353,7 @@ public interface TowerDefensePackage extends EPackage
   int MOBILE__CASE_SORTIE = PARTIE_ELEMENT_FEATURE_COUNT + 4;
 
   /**
-   * The feature id for the '<em><b>Quantite Energie Max</b></em>' containment reference.
+   * The feature id for the '<em><b>Quantite Energie Max</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -435,7 +444,7 @@ public interface TowerDefensePackage extends EPackage
   int PROJECTILE__CIBLE = PARTIE_ELEMENT_FEATURE_COUNT + 4;
 
   /**
-   * The feature id for the '<em><b>Degat</b></em>' containment reference.
+   * The feature id for the '<em><b>Degat</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -490,7 +499,7 @@ public interface TowerDefensePackage extends EPackage
   int NATURE_TERRAIN__TYPE = PARTIE_ELEMENT_FEATURE_COUNT + 1;
 
   /**
-   * The feature id for the '<em><b>Fatigue</b></em>' containment reference.
+   * The feature id for the '<em><b>Fatigue</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -861,6 +870,17 @@ public interface TowerDefensePackage extends EPackage
   EReference getPartie_Cartes();
 
   /**
+   * Returns the meta object for the containment reference list '{@link xtext.towerDefense.Partie#getEnergies <em>Energies</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Energies</em>'.
+   * @see xtext.towerDefense.Partie#getEnergies()
+   * @see #getPartie()
+   * @generated
+   */
+  EReference getPartie_Energies();
+
+  /**
    * Returns the meta object for the containment reference list '{@link xtext.towerDefense.Partie#getPartieElements <em>Partie Elements</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -914,15 +934,15 @@ public interface TowerDefensePackage extends EPackage
   EClass getEnergie();
 
   /**
-   * Returns the meta object for the attribute '{@link xtext.towerDefense.Energie#isInfini <em>Infini</em>}'.
+   * Returns the meta object for the attribute '{@link xtext.towerDefense.Energie#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Infini</em>'.
-   * @see xtext.towerDefense.Energie#isInfini()
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see xtext.towerDefense.Energie#getName()
    * @see #getEnergie()
    * @generated
    */
-  EAttribute getEnergie_Infini();
+  EAttribute getEnergie_Name();
 
   /**
    * Returns the meta object for the attribute '{@link xtext.towerDefense.Energie#getValeur <em>Valeur</em>}'.
@@ -957,10 +977,10 @@ public interface TowerDefensePackage extends EPackage
   EReference getObstacle_Campement();
 
   /**
-   * Returns the meta object for the containment reference '{@link xtext.towerDefense.Obstacle#getQuantiteEnergieMax <em>Quantite Energie Max</em>}'.
+   * Returns the meta object for the reference '{@link xtext.towerDefense.Obstacle#getQuantiteEnergieMax <em>Quantite Energie Max</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Quantite Energie Max</em>'.
+   * @return the meta object for the reference '<em>Quantite Energie Max</em>'.
    * @see xtext.towerDefense.Obstacle#getQuantiteEnergieMax()
    * @see #getObstacle()
    * @generated
@@ -1044,10 +1064,10 @@ public interface TowerDefensePackage extends EPackage
   EReference getMobile_CaseSortie();
 
   /**
-   * Returns the meta object for the containment reference '{@link xtext.towerDefense.Mobile#getQuantiteEnergieMax <em>Quantite Energie Max</em>}'.
+   * Returns the meta object for the reference '{@link xtext.towerDefense.Mobile#getQuantiteEnergieMax <em>Quantite Energie Max</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Quantite Energie Max</em>'.
+   * @return the meta object for the reference '<em>Quantite Energie Max</em>'.
    * @see xtext.towerDefense.Mobile#getQuantiteEnergieMax()
    * @see #getMobile()
    * @generated
@@ -1131,10 +1151,10 @@ public interface TowerDefensePackage extends EPackage
   EReference getProjectile_Cible();
 
   /**
-   * Returns the meta object for the containment reference '{@link xtext.towerDefense.Projectile#getDegat <em>Degat</em>}'.
+   * Returns the meta object for the reference '{@link xtext.towerDefense.Projectile#getDegat <em>Degat</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Degat</em>'.
+   * @return the meta object for the reference '<em>Degat</em>'.
    * @see xtext.towerDefense.Projectile#getDegat()
    * @see #getProjectile()
    * @generated
@@ -1174,10 +1194,10 @@ public interface TowerDefensePackage extends EPackage
   EAttribute getNatureTerrain_Type();
 
   /**
-   * Returns the meta object for the containment reference '{@link xtext.towerDefense.NatureTerrain#getFatigue <em>Fatigue</em>}'.
+   * Returns the meta object for the reference '{@link xtext.towerDefense.NatureTerrain#getFatigue <em>Fatigue</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Fatigue</em>'.
+   * @return the meta object for the reference '<em>Fatigue</em>'.
    * @see xtext.towerDefense.NatureTerrain#getFatigue()
    * @see #getNatureTerrain()
    * @generated
@@ -1547,6 +1567,14 @@ public interface TowerDefensePackage extends EPackage
     EReference PARTIE__CARTES = eINSTANCE.getPartie_Cartes();
 
     /**
+     * The meta object literal for the '<em><b>Energies</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PARTIE__ENERGIES = eINSTANCE.getPartie_Energies();
+
+    /**
      * The meta object literal for the '<em><b>Partie Elements</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1591,12 +1619,12 @@ public interface TowerDefensePackage extends EPackage
     EClass ENERGIE = eINSTANCE.getEnergie();
 
     /**
-     * The meta object literal for the '<em><b>Infini</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute ENERGIE__INFINI = eINSTANCE.getEnergie_Infini();
+    EAttribute ENERGIE__NAME = eINSTANCE.getEnergie_Name();
 
     /**
      * The meta object literal for the '<em><b>Valeur</b></em>' attribute feature.
@@ -1625,7 +1653,7 @@ public interface TowerDefensePackage extends EPackage
     EReference OBSTACLE__CAMPEMENT = eINSTANCE.getObstacle_Campement();
 
     /**
-     * The meta object literal for the '<em><b>Quantite Energie Max</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Quantite Energie Max</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -1691,7 +1719,7 @@ public interface TowerDefensePackage extends EPackage
     EReference MOBILE__CASE_SORTIE = eINSTANCE.getMobile_CaseSortie();
 
     /**
-     * The meta object literal for the '<em><b>Quantite Energie Max</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Quantite Energie Max</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -1757,7 +1785,7 @@ public interface TowerDefensePackage extends EPackage
     EReference PROJECTILE__CIBLE = eINSTANCE.getProjectile_Cible();
 
     /**
-     * The meta object literal for the '<em><b>Degat</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Degat</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -1791,7 +1819,7 @@ public interface TowerDefensePackage extends EPackage
     EAttribute NATURE_TERRAIN__TYPE = eINSTANCE.getNatureTerrain_Type();
 
     /**
-     * The meta object literal for the '<em><b>Fatigue</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Fatigue</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated

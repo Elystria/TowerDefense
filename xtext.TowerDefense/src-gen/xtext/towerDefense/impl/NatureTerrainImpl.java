@@ -4,7 +4,6 @@
 package xtext.towerDefense.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -74,7 +73,7 @@ public class NatureTerrainImpl extends PartieElementImpl implements NatureTerrai
   protected TYPE_TERRAIN type = TYPE_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getFatigue() <em>Fatigue</em>}' containment reference.
+   * The cached value of the '{@link #getFatigue() <em>Fatigue</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getFatigue()
@@ -157,6 +156,16 @@ public class NatureTerrainImpl extends PartieElementImpl implements NatureTerrai
    */
   public Energie getFatigue()
   {
+    if (fatigue != null && fatigue.eIsProxy())
+    {
+      InternalEObject oldFatigue = (InternalEObject)fatigue;
+      fatigue = (Energie)eResolveProxy(oldFatigue);
+      if (fatigue != oldFatigue)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, TowerDefensePackage.NATURE_TERRAIN__FATIGUE, oldFatigue, fatigue));
+      }
+    }
     return fatigue;
   }
 
@@ -165,16 +174,9 @@ public class NatureTerrainImpl extends PartieElementImpl implements NatureTerrai
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetFatigue(Energie newFatigue, NotificationChain msgs)
+  public Energie basicGetFatigue()
   {
-    Energie oldFatigue = fatigue;
-    fatigue = newFatigue;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TowerDefensePackage.NATURE_TERRAIN__FATIGUE, oldFatigue, newFatigue);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
+    return fatigue;
   }
 
   /**
@@ -184,34 +186,10 @@ public class NatureTerrainImpl extends PartieElementImpl implements NatureTerrai
    */
   public void setFatigue(Energie newFatigue)
   {
-    if (newFatigue != fatigue)
-    {
-      NotificationChain msgs = null;
-      if (fatigue != null)
-        msgs = ((InternalEObject)fatigue).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - TowerDefensePackage.NATURE_TERRAIN__FATIGUE, null, msgs);
-      if (newFatigue != null)
-        msgs = ((InternalEObject)newFatigue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - TowerDefensePackage.NATURE_TERRAIN__FATIGUE, null, msgs);
-      msgs = basicSetFatigue(newFatigue, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.NATURE_TERRAIN__FATIGUE, newFatigue, newFatigue));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-  {
-    switch (featureID)
-    {
-      case TowerDefensePackage.NATURE_TERRAIN__FATIGUE:
-        return basicSetFatigue(null, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
+    Energie oldFatigue = fatigue;
+    fatigue = newFatigue;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.NATURE_TERRAIN__FATIGUE, oldFatigue, fatigue));
   }
 
   /**
@@ -229,7 +207,8 @@ public class NatureTerrainImpl extends PartieElementImpl implements NatureTerrai
       case TowerDefensePackage.NATURE_TERRAIN__TYPE:
         return getType();
       case TowerDefensePackage.NATURE_TERRAIN__FATIGUE:
-        return getFatigue();
+        if (resolve) return getFatigue();
+        return basicGetFatigue();
     }
     return super.eGet(featureID, resolve, coreType);
   }

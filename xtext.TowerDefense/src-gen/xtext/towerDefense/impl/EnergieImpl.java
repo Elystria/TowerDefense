@@ -21,7 +21,7 @@ import xtext.towerDefense.TowerDefensePackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link xtext.towerDefense.impl.EnergieImpl#isInfini <em>Infini</em>}</li>
+ *   <li>{@link xtext.towerDefense.impl.EnergieImpl#getName <em>Name</em>}</li>
  *   <li>{@link xtext.towerDefense.impl.EnergieImpl#getValeur <em>Valeur</em>}</li>
  * </ul>
  *
@@ -30,24 +30,24 @@ import xtext.towerDefense.TowerDefensePackage;
 public class EnergieImpl extends MinimalEObjectImpl.Container implements Energie
 {
   /**
-   * The default value of the '{@link #isInfini() <em>Infini</em>}' attribute.
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #isInfini()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected static final boolean INFINI_EDEFAULT = false;
+  protected static final String NAME_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #isInfini() <em>Infini</em>}' attribute.
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #isInfini()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected boolean infini = INFINI_EDEFAULT;
+  protected String name = NAME_EDEFAULT;
 
   /**
    * The default value of the '{@link #getValeur() <em>Valeur</em>}' attribute.
@@ -95,9 +95,9 @@ public class EnergieImpl extends MinimalEObjectImpl.Container implements Energie
    * <!-- end-user-doc -->
    * @generated
    */
-  public boolean isInfini()
+  public String getName()
   {
-    return infini;
+    return name;
   }
 
   /**
@@ -105,12 +105,12 @@ public class EnergieImpl extends MinimalEObjectImpl.Container implements Energie
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setInfini(boolean newInfini)
+  public void setName(String newName)
   {
-    boolean oldInfini = infini;
-    infini = newInfini;
+    String oldName = name;
+    name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.ENERGIE__INFINI, oldInfini, infini));
+      eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.ENERGIE__NAME, oldName, name));
   }
 
   /**
@@ -146,8 +146,8 @@ public class EnergieImpl extends MinimalEObjectImpl.Container implements Energie
   {
     switch (featureID)
     {
-      case TowerDefensePackage.ENERGIE__INFINI:
-        return isInfini();
+      case TowerDefensePackage.ENERGIE__NAME:
+        return getName();
       case TowerDefensePackage.ENERGIE__VALEUR:
         return getValeur();
     }
@@ -164,8 +164,8 @@ public class EnergieImpl extends MinimalEObjectImpl.Container implements Energie
   {
     switch (featureID)
     {
-      case TowerDefensePackage.ENERGIE__INFINI:
-        setInfini((Boolean)newValue);
+      case TowerDefensePackage.ENERGIE__NAME:
+        setName((String)newValue);
         return;
       case TowerDefensePackage.ENERGIE__VALEUR:
         setValeur((Integer)newValue);
@@ -184,8 +184,8 @@ public class EnergieImpl extends MinimalEObjectImpl.Container implements Energie
   {
     switch (featureID)
     {
-      case TowerDefensePackage.ENERGIE__INFINI:
-        setInfini(INFINI_EDEFAULT);
+      case TowerDefensePackage.ENERGIE__NAME:
+        setName(NAME_EDEFAULT);
         return;
       case TowerDefensePackage.ENERGIE__VALEUR:
         setValeur(VALEUR_EDEFAULT);
@@ -204,8 +204,8 @@ public class EnergieImpl extends MinimalEObjectImpl.Container implements Energie
   {
     switch (featureID)
     {
-      case TowerDefensePackage.ENERGIE__INFINI:
-        return infini != INFINI_EDEFAULT;
+      case TowerDefensePackage.ENERGIE__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case TowerDefensePackage.ENERGIE__VALEUR:
         return valeur != VALEUR_EDEFAULT;
     }
@@ -223,8 +223,8 @@ public class EnergieImpl extends MinimalEObjectImpl.Container implements Energie
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (infini: ");
-    result.append(infini);
+    result.append(" (name: ");
+    result.append(name);
     result.append(", valeur: ");
     result.append(valeur);
     result.append(')');

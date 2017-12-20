@@ -1,6 +1,7 @@
 grammar xtext.TowerDefense with org.eclipse.xtext.common.Terminals
 
 generate towerDefense "http://www.TowerDefense.xtext"
+
 //les projectiles ne sont pas rattachés a d autres éléments :(
 Jeu:
 	'Jeu' name=ID '{'
@@ -12,6 +13,7 @@ Partie:
 		//natures+=NatureTerrain*
 		cases+=Case*
 		cartes+=Carte*
+		energies+=Energie*
 		partieElements+=PartieElement*
 		niveaux+=Niveau*
 	'}'
@@ -22,13 +24,14 @@ PartieElement:
 ;
 
 Energie : 
-	infini?='infini' | valeur=INT
+	name=ID
+	valeur=INT
 ;
 
 Obstacle:
 	'Obstacle' name=ID '{'
 	'Campement' campement=[Case]
-	'PVmax' quantiteEnergieMax=Energie
+	'PVmax' quantiteEnergieMax=[Energie]
 	'Tactique' tactique=TactiqueType
 	'}'
 ;
@@ -44,7 +47,7 @@ Mobile:
 	'NumVague' numVague=INT
 	'In' caseEntree=[Case]
 	'Out' caseSortie=[Case]
-	'PVmax' quantiteEnergieMax=Energie
+	'PVmax' quantiteEnergieMax=[Energie]
 	'Tactique' tactique=TactiqueType
 	'}'
 ;
@@ -56,7 +59,7 @@ Projectile:
 	'Vitesse' vitesse=INT
 	'Position' case=[Case]
 	'Direction' cible=[Case]
-	'Degat' degat=Energie
+	'Degat' degat=[Energie]
 	'}'	
 ;
 
@@ -64,7 +67,7 @@ NatureTerrain:
 	'NatureTerrain' name=ID '{'
 	'Volume' volume=INT
 	'Type' type=TYPE_TERRAIN
-	'FatigueEntree' fatigue=Energie
+	'FatigueEntree' fatigue=[Energie]
 	'}'
 ;
 
@@ -110,4 +113,5 @@ Vague :
 	'}'
 ;
 
+	
 	

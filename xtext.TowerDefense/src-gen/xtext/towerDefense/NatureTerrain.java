@@ -80,26 +80,26 @@ public interface NatureTerrain extends PartieElement
   void setType(TYPE_TERRAIN value);
 
   /**
-   * Returns the value of the '<em><b>Fatigue</b></em>' containment reference.
+   * Returns the value of the '<em><b>Fatigue</b></em>' reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Fatigue</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Fatigue</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Fatigue</em>' containment reference.
+   * @return the value of the '<em>Fatigue</em>' reference.
    * @see #setFatigue(Energie)
    * @see xtext.towerDefense.TowerDefensePackage#getNatureTerrain_Fatigue()
-   * @model containment="true"
+   * @model
    * @generated
    */
   Energie getFatigue();
 
   /**
-   * Sets the value of the '{@link xtext.towerDefense.NatureTerrain#getFatigue <em>Fatigue</em>}' containment reference.
+   * Sets the value of the '{@link xtext.towerDefense.NatureTerrain#getFatigue <em>Fatigue</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Fatigue</em>' containment reference.
+   * @param value the new value of the '<em>Fatigue</em>' reference.
    * @see #getFatigue()
    * @generated
    */

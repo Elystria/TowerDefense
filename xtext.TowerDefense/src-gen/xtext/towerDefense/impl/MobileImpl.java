@@ -4,7 +4,6 @@
 package xtext.towerDefense.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -119,7 +118,7 @@ public class MobileImpl extends PartieElementImpl implements Mobile
   protected Case caseSortie;
 
   /**
-   * The cached value of the '{@link #getQuantiteEnergieMax() <em>Quantite Energie Max</em>}' containment reference.
+   * The cached value of the '{@link #getQuantiteEnergieMax() <em>Quantite Energie Max</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getQuantiteEnergieMax()
@@ -331,6 +330,16 @@ public class MobileImpl extends PartieElementImpl implements Mobile
    */
   public Energie getQuantiteEnergieMax()
   {
+    if (quantiteEnergieMax != null && quantiteEnergieMax.eIsProxy())
+    {
+      InternalEObject oldQuantiteEnergieMax = (InternalEObject)quantiteEnergieMax;
+      quantiteEnergieMax = (Energie)eResolveProxy(oldQuantiteEnergieMax);
+      if (quantiteEnergieMax != oldQuantiteEnergieMax)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, TowerDefensePackage.MOBILE__QUANTITE_ENERGIE_MAX, oldQuantiteEnergieMax, quantiteEnergieMax));
+      }
+    }
     return quantiteEnergieMax;
   }
 
@@ -339,16 +348,9 @@ public class MobileImpl extends PartieElementImpl implements Mobile
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetQuantiteEnergieMax(Energie newQuantiteEnergieMax, NotificationChain msgs)
+  public Energie basicGetQuantiteEnergieMax()
   {
-    Energie oldQuantiteEnergieMax = quantiteEnergieMax;
-    quantiteEnergieMax = newQuantiteEnergieMax;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TowerDefensePackage.MOBILE__QUANTITE_ENERGIE_MAX, oldQuantiteEnergieMax, newQuantiteEnergieMax);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
+    return quantiteEnergieMax;
   }
 
   /**
@@ -358,18 +360,10 @@ public class MobileImpl extends PartieElementImpl implements Mobile
    */
   public void setQuantiteEnergieMax(Energie newQuantiteEnergieMax)
   {
-    if (newQuantiteEnergieMax != quantiteEnergieMax)
-    {
-      NotificationChain msgs = null;
-      if (quantiteEnergieMax != null)
-        msgs = ((InternalEObject)quantiteEnergieMax).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - TowerDefensePackage.MOBILE__QUANTITE_ENERGIE_MAX, null, msgs);
-      if (newQuantiteEnergieMax != null)
-        msgs = ((InternalEObject)newQuantiteEnergieMax).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - TowerDefensePackage.MOBILE__QUANTITE_ENERGIE_MAX, null, msgs);
-      msgs = basicSetQuantiteEnergieMax(newQuantiteEnergieMax, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.MOBILE__QUANTITE_ENERGIE_MAX, newQuantiteEnergieMax, newQuantiteEnergieMax));
+    Energie oldQuantiteEnergieMax = quantiteEnergieMax;
+    quantiteEnergieMax = newQuantiteEnergieMax;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.MOBILE__QUANTITE_ENERGIE_MAX, oldQuantiteEnergieMax, quantiteEnergieMax));
   }
 
   /**
@@ -401,22 +395,6 @@ public class MobileImpl extends PartieElementImpl implements Mobile
    * @generated
    */
   @Override
-  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-  {
-    switch (featureID)
-    {
-      case TowerDefensePackage.MOBILE__QUANTITE_ENERGIE_MAX:
-        return basicSetQuantiteEnergieMax(null, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
     switch (featureID)
@@ -434,7 +412,8 @@ public class MobileImpl extends PartieElementImpl implements Mobile
         if (resolve) return getCaseSortie();
         return basicGetCaseSortie();
       case TowerDefensePackage.MOBILE__QUANTITE_ENERGIE_MAX:
-        return getQuantiteEnergieMax();
+        if (resolve) return getQuantiteEnergieMax();
+        return basicGetQuantiteEnergieMax();
       case TowerDefensePackage.MOBILE__TACTIQUE:
         return getTactique();
     }

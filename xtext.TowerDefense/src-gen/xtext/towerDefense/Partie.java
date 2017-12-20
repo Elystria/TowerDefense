@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link xtext.towerDefense.Partie#getName <em>Name</em>}</li>
  *   <li>{@link xtext.towerDefense.Partie#getCases <em>Cases</em>}</li>
  *   <li>{@link xtext.towerDefense.Partie#getCartes <em>Cartes</em>}</li>
+ *   <li>{@link xtext.towerDefense.Partie#getEnergies <em>Energies</em>}</li>
  *   <li>{@link xtext.towerDefense.Partie#getPartieElements <em>Partie Elements</em>}</li>
  *   <li>{@link xtext.towerDefense.Partie#getNiveaux <em>Niveaux</em>}</li>
  * </ul>
@@ -86,6 +87,22 @@ public interface Partie extends EObject
    * @generated
    */
   EList<Carte> getCartes();
+
+  /**
+   * Returns the value of the '<em><b>Energies</b></em>' containment reference list.
+   * The list contents are of type {@link xtext.towerDefense.Energie}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Energies</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Energies</em>' containment reference list.
+   * @see xtext.towerDefense.TowerDefensePackage#getPartie_Energies()
+   * @model containment="true"
+   * @generated
+   */
+  EList<Energie> getEnergies();
 
   /**
    * Returns the value of the '<em><b>Partie Elements</b></em>' containment reference list.

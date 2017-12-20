@@ -51,26 +51,26 @@ public interface Obstacle extends PartieElement
   void setCampement(Case value);
 
   /**
-   * Returns the value of the '<em><b>Quantite Energie Max</b></em>' containment reference.
+   * Returns the value of the '<em><b>Quantite Energie Max</b></em>' reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Quantite Energie Max</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Quantite Energie Max</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Quantite Energie Max</em>' containment reference.
+   * @return the value of the '<em>Quantite Energie Max</em>' reference.
    * @see #setQuantiteEnergieMax(Energie)
    * @see xtext.towerDefense.TowerDefensePackage#getObstacle_QuantiteEnergieMax()
-   * @model containment="true"
+   * @model
    * @generated
    */
   Energie getQuantiteEnergieMax();
 
   /**
-   * Sets the value of the '{@link xtext.towerDefense.Obstacle#getQuantiteEnergieMax <em>Quantite Energie Max</em>}' containment reference.
+   * Sets the value of the '{@link xtext.towerDefense.Obstacle#getQuantiteEnergieMax <em>Quantite Energie Max</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Quantite Energie Max</em>' containment reference.
+   * @param value the new value of the '<em>Quantite Energie Max</em>' reference.
    * @see #getQuantiteEnergieMax()
    * @generated
    */

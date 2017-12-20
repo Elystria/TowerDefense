@@ -279,7 +279,7 @@ public class TowerDefensePackageImpl extends EPackageImpl implements TowerDefens
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getPartie_PartieElements()
+  public EReference getPartie_Energies()
   {
     return (EReference)partieEClass.getEStructuralFeatures().get(3);
   }
@@ -289,9 +289,19 @@ public class TowerDefensePackageImpl extends EPackageImpl implements TowerDefens
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getPartie_Niveaux()
+  public EReference getPartie_PartieElements()
   {
     return (EReference)partieEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getPartie_Niveaux()
+  {
+    return (EReference)partieEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -329,7 +339,7 @@ public class TowerDefensePackageImpl extends EPackageImpl implements TowerDefens
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getEnergie_Infini()
+  public EAttribute getEnergie_Name()
   {
     return (EAttribute)energieEClass.getEStructuralFeatures().get(0);
   }
@@ -872,6 +882,7 @@ public class TowerDefensePackageImpl extends EPackageImpl implements TowerDefens
     createEAttribute(partieEClass, PARTIE__NAME);
     createEReference(partieEClass, PARTIE__CASES);
     createEReference(partieEClass, PARTIE__CARTES);
+    createEReference(partieEClass, PARTIE__ENERGIES);
     createEReference(partieEClass, PARTIE__PARTIE_ELEMENTS);
     createEReference(partieEClass, PARTIE__NIVEAUX);
 
@@ -879,7 +890,7 @@ public class TowerDefensePackageImpl extends EPackageImpl implements TowerDefens
     createEAttribute(partieElementEClass, PARTIE_ELEMENT__NAME);
 
     energieEClass = createEClass(ENERGIE);
-    createEAttribute(energieEClass, ENERGIE__INFINI);
+    createEAttribute(energieEClass, ENERGIE__NAME);
     createEAttribute(energieEClass, ENERGIE__VALEUR);
 
     obstacleEClass = createEClass(OBSTACLE);
@@ -985,6 +996,7 @@ public class TowerDefensePackageImpl extends EPackageImpl implements TowerDefens
     initEAttribute(getPartie_Name(), ecorePackage.getEString(), "name", null, 0, 1, Partie.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getPartie_Cases(), this.getCase(), null, "cases", null, 0, -1, Partie.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getPartie_Cartes(), this.getCarte(), null, "cartes", null, 0, -1, Partie.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getPartie_Energies(), this.getEnergie(), null, "energies", null, 0, -1, Partie.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getPartie_PartieElements(), this.getPartieElement(), null, "partieElements", null, 0, -1, Partie.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getPartie_Niveaux(), this.getNiveau(), null, "niveaux", null, 0, -1, Partie.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -992,12 +1004,12 @@ public class TowerDefensePackageImpl extends EPackageImpl implements TowerDefens
     initEAttribute(getPartieElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, PartieElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(energieEClass, Energie.class, "Energie", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getEnergie_Infini(), ecorePackage.getEBoolean(), "infini", null, 0, 1, Energie.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getEnergie_Name(), ecorePackage.getEString(), "name", null, 0, 1, Energie.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getEnergie_Valeur(), ecorePackage.getEInt(), "valeur", null, 0, 1, Energie.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(obstacleEClass, Obstacle.class, "Obstacle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getObstacle_Campement(), this.getCase(), null, "campement", null, 0, 1, Obstacle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getObstacle_QuantiteEnergieMax(), this.getEnergie(), null, "quantiteEnergieMax", null, 0, 1, Obstacle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getObstacle_QuantiteEnergieMax(), this.getEnergie(), null, "quantiteEnergieMax", null, 0, 1, Obstacle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getObstacle_Tactique(), this.getTactiqueType(), "tactique", null, 0, 1, Obstacle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(mobileEClass, Mobile.class, "Mobile", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1006,7 +1018,7 @@ public class TowerDefensePackageImpl extends EPackageImpl implements TowerDefens
     initEAttribute(getMobile_NumVague(), ecorePackage.getEInt(), "numVague", null, 0, 1, Mobile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getMobile_CaseEntree(), this.getCase(), null, "caseEntree", null, 0, 1, Mobile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getMobile_CaseSortie(), this.getCase(), null, "caseSortie", null, 0, 1, Mobile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getMobile_QuantiteEnergieMax(), this.getEnergie(), null, "quantiteEnergieMax", null, 0, 1, Mobile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMobile_QuantiteEnergieMax(), this.getEnergie(), null, "quantiteEnergieMax", null, 0, 1, Mobile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getMobile_Tactique(), this.getTactiqueType(), "tactique", null, 0, 1, Mobile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(projectileEClass, Projectile.class, "Projectile", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1015,12 +1027,12 @@ public class TowerDefensePackageImpl extends EPackageImpl implements TowerDefens
     initEAttribute(getProjectile_Vitesse(), ecorePackage.getEInt(), "vitesse", null, 0, 1, Projectile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getProjectile_Case(), this.getCase(), null, "case", null, 0, 1, Projectile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getProjectile_Cible(), this.getCase(), null, "cible", null, 0, 1, Projectile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getProjectile_Degat(), this.getEnergie(), null, "degat", null, 0, 1, Projectile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getProjectile_Degat(), this.getEnergie(), null, "degat", null, 0, 1, Projectile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(natureTerrainEClass, NatureTerrain.class, "NatureTerrain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getNatureTerrain_Volume(), ecorePackage.getEInt(), "volume", null, 0, 1, NatureTerrain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getNatureTerrain_Type(), this.getTYPE_TERRAIN(), "type", null, 0, 1, NatureTerrain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getNatureTerrain_Fatigue(), this.getEnergie(), null, "fatigue", null, 0, 1, NatureTerrain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getNatureTerrain_Fatigue(), this.getEnergie(), null, "fatigue", null, 0, 1, NatureTerrain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(niveauEClass, Niveau.class, "Niveau", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getNiveau_Name(), ecorePackage.getEString(), "name", null, 0, 1, Niveau.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

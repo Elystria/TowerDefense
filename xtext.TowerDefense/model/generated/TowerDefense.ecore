@@ -12,6 +12,8 @@
         eType="#//Case" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="cartes" upperBound="-1"
         eType="#//Carte" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="energies" upperBound="-1"
+        eType="#//Energie" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="partieElements" upperBound="-1"
         eType="#//PartieElement" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="niveaux" upperBound="-1"
@@ -21,13 +23,12 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Energie">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="infini" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="valeur" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Obstacle" eSuperTypes="#//PartieElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="campement" eType="#//Case"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="quantiteEnergieMax" eType="#//Energie"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="quantiteEnergieMax" eType="#//Energie"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tactique" eType="#//TactiqueType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="TactiqueType">
@@ -41,8 +42,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="numVague" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="caseEntree" eType="#//Case"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="caseSortie" eType="#//Case"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="quantiteEnergieMax" eType="#//Energie"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="quantiteEnergieMax" eType="#//Energie"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tactique" eType="#//TactiqueType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Projectile" eSuperTypes="#//PartieElement">
@@ -51,14 +51,12 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="vitesse" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="case" eType="#//Case"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="cible" eType="#//Case"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="degat" eType="#//Energie"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="degat" eType="#//Energie"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NatureTerrain" eSuperTypes="#//PartieElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="volume" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//TYPE_TERRAIN"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="fatigue" eType="#//Energie"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fatigue" eType="#//Energie"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="TYPE_TERRAIN">
     <eLiterals name="entree" literal="entree"/>

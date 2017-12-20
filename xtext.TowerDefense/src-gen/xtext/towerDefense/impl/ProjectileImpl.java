@@ -4,7 +4,6 @@
 package xtext.towerDefense.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -117,7 +116,7 @@ public class ProjectileImpl extends PartieElementImpl implements Projectile
   protected Case cible;
 
   /**
-   * The cached value of the '{@link #getDegat() <em>Degat</em>}' containment reference.
+   * The cached value of the '{@link #getDegat() <em>Degat</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getDegat()
@@ -309,6 +308,16 @@ public class ProjectileImpl extends PartieElementImpl implements Projectile
    */
   public Energie getDegat()
   {
+    if (degat != null && degat.eIsProxy())
+    {
+      InternalEObject oldDegat = (InternalEObject)degat;
+      degat = (Energie)eResolveProxy(oldDegat);
+      if (degat != oldDegat)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, TowerDefensePackage.PROJECTILE__DEGAT, oldDegat, degat));
+      }
+    }
     return degat;
   }
 
@@ -317,16 +326,9 @@ public class ProjectileImpl extends PartieElementImpl implements Projectile
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetDegat(Energie newDegat, NotificationChain msgs)
+  public Energie basicGetDegat()
   {
-    Energie oldDegat = degat;
-    degat = newDegat;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TowerDefensePackage.PROJECTILE__DEGAT, oldDegat, newDegat);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
+    return degat;
   }
 
   /**
@@ -336,34 +338,10 @@ public class ProjectileImpl extends PartieElementImpl implements Projectile
    */
   public void setDegat(Energie newDegat)
   {
-    if (newDegat != degat)
-    {
-      NotificationChain msgs = null;
-      if (degat != null)
-        msgs = ((InternalEObject)degat).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - TowerDefensePackage.PROJECTILE__DEGAT, null, msgs);
-      if (newDegat != null)
-        msgs = ((InternalEObject)newDegat).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - TowerDefensePackage.PROJECTILE__DEGAT, null, msgs);
-      msgs = basicSetDegat(newDegat, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.PROJECTILE__DEGAT, newDegat, newDegat));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-  {
-    switch (featureID)
-    {
-      case TowerDefensePackage.PROJECTILE__DEGAT:
-        return basicSetDegat(null, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
+    Energie oldDegat = degat;
+    degat = newDegat;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.PROJECTILE__DEGAT, oldDegat, degat));
   }
 
   /**
@@ -389,7 +367,8 @@ public class ProjectileImpl extends PartieElementImpl implements Projectile
         if (resolve) return getCible();
         return basicGetCible();
       case TowerDefensePackage.PROJECTILE__DEGAT:
-        return getDegat();
+        if (resolve) return getDegat();
+        return basicGetDegat();
     }
     return super.eGet(featureID, resolve, coreType);
   }

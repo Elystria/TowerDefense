@@ -158,26 +158,26 @@ public interface Projectile extends PartieElement
   void setCible(Case value);
 
   /**
-   * Returns the value of the '<em><b>Degat</b></em>' containment reference.
+   * Returns the value of the '<em><b>Degat</b></em>' reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Degat</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Degat</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Degat</em>' containment reference.
+   * @return the value of the '<em>Degat</em>' reference.
    * @see #setDegat(Energie)
    * @see xtext.towerDefense.TowerDefensePackage#getProjectile_Degat()
-   * @model containment="true"
+   * @model
    * @generated
    */
   Energie getDegat();
 
   /**
-   * Sets the value of the '{@link xtext.towerDefense.Projectile#getDegat <em>Degat</em>}' containment reference.
+   * Sets the value of the '{@link xtext.towerDefense.Projectile#getDegat <em>Degat</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Degat</em>' containment reference.
+   * @param value the new value of the '<em>Degat</em>' reference.
    * @see #getDegat()
    * @generated
    */

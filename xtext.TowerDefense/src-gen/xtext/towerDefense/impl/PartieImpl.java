@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import xtext.towerDefense.Carte;
 import xtext.towerDefense.Case;
+import xtext.towerDefense.Energie;
 import xtext.towerDefense.Niveau;
 import xtext.towerDefense.Partie;
 import xtext.towerDefense.PartieElement;
@@ -37,6 +38,7 @@ import xtext.towerDefense.TowerDefensePackage;
  *   <li>{@link xtext.towerDefense.impl.PartieImpl#getName <em>Name</em>}</li>
  *   <li>{@link xtext.towerDefense.impl.PartieImpl#getCases <em>Cases</em>}</li>
  *   <li>{@link xtext.towerDefense.impl.PartieImpl#getCartes <em>Cartes</em>}</li>
+ *   <li>{@link xtext.towerDefense.impl.PartieImpl#getEnergies <em>Energies</em>}</li>
  *   <li>{@link xtext.towerDefense.impl.PartieImpl#getPartieElements <em>Partie Elements</em>}</li>
  *   <li>{@link xtext.towerDefense.impl.PartieImpl#getNiveaux <em>Niveaux</em>}</li>
  * </ul>
@@ -84,6 +86,16 @@ public class PartieImpl extends MinimalEObjectImpl.Container implements Partie
    * @ordered
    */
   protected EList<Carte> cartes;
+
+  /**
+   * The cached value of the '{@link #getEnergies() <em>Energies</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getEnergies()
+   * @generated
+   * @ordered
+   */
+  protected EList<Energie> energies;
 
   /**
    * The cached value of the '{@link #getPartieElements() <em>Partie Elements</em>}' containment reference list.
@@ -182,6 +194,20 @@ public class PartieImpl extends MinimalEObjectImpl.Container implements Partie
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<Energie> getEnergies()
+  {
+    if (energies == null)
+    {
+      energies = new EObjectContainmentEList<Energie>(Energie.class, this, TowerDefensePackage.PARTIE__ENERGIES);
+    }
+    return energies;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<PartieElement> getPartieElements()
   {
     if (partieElements == null)
@@ -219,6 +245,8 @@ public class PartieImpl extends MinimalEObjectImpl.Container implements Partie
         return ((InternalEList<?>)getCases()).basicRemove(otherEnd, msgs);
       case TowerDefensePackage.PARTIE__CARTES:
         return ((InternalEList<?>)getCartes()).basicRemove(otherEnd, msgs);
+      case TowerDefensePackage.PARTIE__ENERGIES:
+        return ((InternalEList<?>)getEnergies()).basicRemove(otherEnd, msgs);
       case TowerDefensePackage.PARTIE__PARTIE_ELEMENTS:
         return ((InternalEList<?>)getPartieElements()).basicRemove(otherEnd, msgs);
       case TowerDefensePackage.PARTIE__NIVEAUX:
@@ -243,6 +271,8 @@ public class PartieImpl extends MinimalEObjectImpl.Container implements Partie
         return getCases();
       case TowerDefensePackage.PARTIE__CARTES:
         return getCartes();
+      case TowerDefensePackage.PARTIE__ENERGIES:
+        return getEnergies();
       case TowerDefensePackage.PARTIE__PARTIE_ELEMENTS:
         return getPartieElements();
       case TowerDefensePackage.PARTIE__NIVEAUX:
@@ -272,6 +302,10 @@ public class PartieImpl extends MinimalEObjectImpl.Container implements Partie
       case TowerDefensePackage.PARTIE__CARTES:
         getCartes().clear();
         getCartes().addAll((Collection<? extends Carte>)newValue);
+        return;
+      case TowerDefensePackage.PARTIE__ENERGIES:
+        getEnergies().clear();
+        getEnergies().addAll((Collection<? extends Energie>)newValue);
         return;
       case TowerDefensePackage.PARTIE__PARTIE_ELEMENTS:
         getPartieElements().clear();
@@ -304,6 +338,9 @@ public class PartieImpl extends MinimalEObjectImpl.Container implements Partie
       case TowerDefensePackage.PARTIE__CARTES:
         getCartes().clear();
         return;
+      case TowerDefensePackage.PARTIE__ENERGIES:
+        getEnergies().clear();
+        return;
       case TowerDefensePackage.PARTIE__PARTIE_ELEMENTS:
         getPartieElements().clear();
         return;
@@ -330,6 +367,8 @@ public class PartieImpl extends MinimalEObjectImpl.Container implements Partie
         return cases != null && !cases.isEmpty();
       case TowerDefensePackage.PARTIE__CARTES:
         return cartes != null && !cartes.isEmpty();
+      case TowerDefensePackage.PARTIE__ENERGIES:
+        return energies != null && !energies.isEmpty();
       case TowerDefensePackage.PARTIE__PARTIE_ELEMENTS:
         return partieElements != null && !partieElements.isEmpty();
       case TowerDefensePackage.PARTIE__NIVEAUX:

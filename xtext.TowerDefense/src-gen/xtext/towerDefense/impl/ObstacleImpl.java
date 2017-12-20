@@ -4,7 +4,6 @@
 package xtext.towerDefense.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -45,7 +44,7 @@ public class ObstacleImpl extends PartieElementImpl implements Obstacle
   protected Case campement;
 
   /**
-   * The cached value of the '{@link #getQuantiteEnergieMax() <em>Quantite Energie Max</em>}' containment reference.
+   * The cached value of the '{@link #getQuantiteEnergieMax() <em>Quantite Energie Max</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getQuantiteEnergieMax()
@@ -145,6 +144,16 @@ public class ObstacleImpl extends PartieElementImpl implements Obstacle
    */
   public Energie getQuantiteEnergieMax()
   {
+    if (quantiteEnergieMax != null && quantiteEnergieMax.eIsProxy())
+    {
+      InternalEObject oldQuantiteEnergieMax = (InternalEObject)quantiteEnergieMax;
+      quantiteEnergieMax = (Energie)eResolveProxy(oldQuantiteEnergieMax);
+      if (quantiteEnergieMax != oldQuantiteEnergieMax)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, TowerDefensePackage.OBSTACLE__QUANTITE_ENERGIE_MAX, oldQuantiteEnergieMax, quantiteEnergieMax));
+      }
+    }
     return quantiteEnergieMax;
   }
 
@@ -153,16 +162,9 @@ public class ObstacleImpl extends PartieElementImpl implements Obstacle
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetQuantiteEnergieMax(Energie newQuantiteEnergieMax, NotificationChain msgs)
+  public Energie basicGetQuantiteEnergieMax()
   {
-    Energie oldQuantiteEnergieMax = quantiteEnergieMax;
-    quantiteEnergieMax = newQuantiteEnergieMax;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TowerDefensePackage.OBSTACLE__QUANTITE_ENERGIE_MAX, oldQuantiteEnergieMax, newQuantiteEnergieMax);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
+    return quantiteEnergieMax;
   }
 
   /**
@@ -172,18 +174,10 @@ public class ObstacleImpl extends PartieElementImpl implements Obstacle
    */
   public void setQuantiteEnergieMax(Energie newQuantiteEnergieMax)
   {
-    if (newQuantiteEnergieMax != quantiteEnergieMax)
-    {
-      NotificationChain msgs = null;
-      if (quantiteEnergieMax != null)
-        msgs = ((InternalEObject)quantiteEnergieMax).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - TowerDefensePackage.OBSTACLE__QUANTITE_ENERGIE_MAX, null, msgs);
-      if (newQuantiteEnergieMax != null)
-        msgs = ((InternalEObject)newQuantiteEnergieMax).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - TowerDefensePackage.OBSTACLE__QUANTITE_ENERGIE_MAX, null, msgs);
-      msgs = basicSetQuantiteEnergieMax(newQuantiteEnergieMax, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.OBSTACLE__QUANTITE_ENERGIE_MAX, newQuantiteEnergieMax, newQuantiteEnergieMax));
+    Energie oldQuantiteEnergieMax = quantiteEnergieMax;
+    quantiteEnergieMax = newQuantiteEnergieMax;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.OBSTACLE__QUANTITE_ENERGIE_MAX, oldQuantiteEnergieMax, quantiteEnergieMax));
   }
 
   /**
@@ -215,22 +209,6 @@ public class ObstacleImpl extends PartieElementImpl implements Obstacle
    * @generated
    */
   @Override
-  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-  {
-    switch (featureID)
-    {
-      case TowerDefensePackage.OBSTACLE__QUANTITE_ENERGIE_MAX:
-        return basicSetQuantiteEnergieMax(null, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
     switch (featureID)
@@ -239,7 +217,8 @@ public class ObstacleImpl extends PartieElementImpl implements Obstacle
         if (resolve) return getCampement();
         return basicGetCampement();
       case TowerDefensePackage.OBSTACLE__QUANTITE_ENERGIE_MAX:
-        return getQuantiteEnergieMax();
+        if (resolve) return getQuantiteEnergieMax();
+        return basicGetQuantiteEnergieMax();
       case TowerDefensePackage.OBSTACLE__TACTIQUE:
         return getTactique();
     }
