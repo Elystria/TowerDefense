@@ -99,6 +99,9 @@ inv VolumePositif('Le Volume doit etre positif'):
 inv FatiguePositive('La fatigue doit etre positive'):
 	fatigue.valeur >= 0
 	
+inv Deco('Les decos ont une energie infinie'):
+	if self.type = TYPE_TERRAIN::decoration or self.type = TYPE_TERRAIN::campement then fatigue.infini = true else fatigue.infini = false endif
+	
 --NIVEAU--
 context Niveau
 inv PausePositive('La durée d\'une pause doit etre strictement positive'):
