@@ -79,27 +79,24 @@ public class TowerDefenseGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cCasesCaseParserRuleCall_3_0 = (RuleCall)cCasesAssignment_3.eContents().get(0);
 		private final Assignment cCartesAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cCartesCarteParserRuleCall_4_0 = (RuleCall)cCartesAssignment_4.eContents().get(0);
-		private final Assignment cEnergiesAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cEnergiesEnergieParserRuleCall_5_0 = (RuleCall)cEnergiesAssignment_5.eContents().get(0);
-		private final Assignment cPartieElementsAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cPartieElementsPartieElementParserRuleCall_6_0 = (RuleCall)cPartieElementsAssignment_6.eContents().get(0);
-		private final Assignment cNiveauxAssignment_7 = (Assignment)cGroup.eContents().get(7);
-		private final RuleCall cNiveauxNiveauParserRuleCall_7_0 = (RuleCall)cNiveauxAssignment_7.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		private final Assignment cPartieElementsAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cPartieElementsPartieElementParserRuleCall_5_0 = (RuleCall)cPartieElementsAssignment_5.eContents().get(0);
+		private final Assignment cNiveauxAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cNiveauxNiveauParserRuleCall_6_0 = (RuleCall)cNiveauxAssignment_6.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
 		//Partie:
 		//	'Partie' name=ID '{'
 		//	//natures+=NatureTerrain*
 		//	cases+=Case*
 		//	cartes+=Carte*
-		//	energies+=Energie*
 		//	partieElements+=PartieElement*
 		//	niveaux+=Niveau*
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'Partie' name=ID '{' //natures+=NatureTerrain*
-		//cases+=Case* cartes+=Carte* energies+=Energie* partieElements+=PartieElement* niveaux+=Niveau* '}'
+		//cases+=Case* cartes+=Carte* partieElements+=PartieElement* niveaux+=Niveau* '}'
 		public Group getGroup() { return cGroup; }
 		
 		//'Partie'
@@ -127,26 +124,20 @@ public class TowerDefenseGrammarAccess extends AbstractGrammarElementFinder {
 		//Carte
 		public RuleCall getCartesCarteParserRuleCall_4_0() { return cCartesCarteParserRuleCall_4_0; }
 		
-		//energies+=Energie*
-		public Assignment getEnergiesAssignment_5() { return cEnergiesAssignment_5; }
-		
-		//Energie
-		public RuleCall getEnergiesEnergieParserRuleCall_5_0() { return cEnergiesEnergieParserRuleCall_5_0; }
-		
 		//partieElements+=PartieElement*
-		public Assignment getPartieElementsAssignment_6() { return cPartieElementsAssignment_6; }
+		public Assignment getPartieElementsAssignment_5() { return cPartieElementsAssignment_5; }
 		
 		//PartieElement
-		public RuleCall getPartieElementsPartieElementParserRuleCall_6_0() { return cPartieElementsPartieElementParserRuleCall_6_0; }
+		public RuleCall getPartieElementsPartieElementParserRuleCall_5_0() { return cPartieElementsPartieElementParserRuleCall_5_0; }
 		
 		//niveaux+=Niveau*
-		public Assignment getNiveauxAssignment_7() { return cNiveauxAssignment_7; }
+		public Assignment getNiveauxAssignment_6() { return cNiveauxAssignment_6; }
 		
 		//Niveau
-		public RuleCall getNiveauxNiveauParserRuleCall_7_0() { return cNiveauxNiveauParserRuleCall_7_0; }
+		public RuleCall getNiveauxNiveauParserRuleCall_6_0() { return cNiveauxNiveauParserRuleCall_6_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
+		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
 	}
 	public class PartieElementElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "xtext.TowerDefense.PartieElement");
@@ -177,25 +168,24 @@ public class TowerDefenseGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	public class EnergieElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "xtext.TowerDefense.Energie");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cNameIDTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
-		private final Assignment cValeurAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final Assignment cInfiniAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
+		private final Keyword cInfiniInfiniKeyword_0_0 = (Keyword)cInfiniAssignment_0.eContents().get(0);
+		private final Assignment cValeurAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
 		private final RuleCall cValeurINTTerminalRuleCall_1_0 = (RuleCall)cValeurAssignment_1.eContents().get(0);
 		
 		//Energie:
-		//	name=ID
-		//	valeur=INT;
+		//	infini?='infini' | valeur=INT;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//name=ID valeur=INT
-		public Group getGroup() { return cGroup; }
+		//infini?='infini' | valeur=INT
+		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//name=ID
-		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+		//infini?='infini'
+		public Assignment getInfiniAssignment_0() { return cInfiniAssignment_0; }
 		
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_0_0() { return cNameIDTerminalRuleCall_0_0; }
+		//'infini'
+		public Keyword getInfiniInfiniKeyword_0_0() { return cInfiniInfiniKeyword_0_0; }
 		
 		//valeur=INT
 		public Assignment getValeurAssignment_1() { return cValeurAssignment_1; }
@@ -216,8 +206,7 @@ public class TowerDefenseGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cCampementCaseIDTerminalRuleCall_4_0_1 = (RuleCall)cCampementCaseCrossReference_4_0.eContents().get(1);
 		private final Keyword cPVmaxKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		private final Assignment cQuantiteEnergieMaxAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final CrossReference cQuantiteEnergieMaxEnergieCrossReference_6_0 = (CrossReference)cQuantiteEnergieMaxAssignment_6.eContents().get(0);
-		private final RuleCall cQuantiteEnergieMaxEnergieIDTerminalRuleCall_6_0_1 = (RuleCall)cQuantiteEnergieMaxEnergieCrossReference_6_0.eContents().get(1);
+		private final RuleCall cQuantiteEnergieMaxEnergieParserRuleCall_6_0 = (RuleCall)cQuantiteEnergieMaxAssignment_6.eContents().get(0);
 		private final Keyword cTactiqueKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		private final Assignment cTactiqueAssignment_8 = (Assignment)cGroup.eContents().get(8);
 		private final RuleCall cTactiqueTactiqueTypeEnumRuleCall_8_0 = (RuleCall)cTactiqueAssignment_8.eContents().get(0);
@@ -226,13 +215,13 @@ public class TowerDefenseGrammarAccess extends AbstractGrammarElementFinder {
 		//Obstacle:
 		//	'Obstacle' name=ID '{'
 		//	'Campement' campement=[Case]
-		//	'PVmax' quantiteEnergieMax=[Energie]
+		//	'PVmax' quantiteEnergieMax=Energie
 		//	'Tactique' tactique=TactiqueType
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'Obstacle' name=ID '{' 'Campement' campement=[Case] 'PVmax' quantiteEnergieMax=[Energie] 'Tactique'
-		//tactique=TactiqueType '}'
+		//'Obstacle' name=ID '{' 'Campement' campement=[Case] 'PVmax' quantiteEnergieMax=Energie 'Tactique' tactique=TactiqueType
+		//'}'
 		public Group getGroup() { return cGroup; }
 		
 		//'Obstacle'
@@ -262,14 +251,11 @@ public class TowerDefenseGrammarAccess extends AbstractGrammarElementFinder {
 		//'PVmax'
 		public Keyword getPVmaxKeyword_5() { return cPVmaxKeyword_5; }
 		
-		//quantiteEnergieMax=[Energie]
+		//quantiteEnergieMax=Energie
 		public Assignment getQuantiteEnergieMaxAssignment_6() { return cQuantiteEnergieMaxAssignment_6; }
 		
-		//[Energie]
-		public CrossReference getQuantiteEnergieMaxEnergieCrossReference_6_0() { return cQuantiteEnergieMaxEnergieCrossReference_6_0; }
-		
-		//ID
-		public RuleCall getQuantiteEnergieMaxEnergieIDTerminalRuleCall_6_0_1() { return cQuantiteEnergieMaxEnergieIDTerminalRuleCall_6_0_1; }
+		//Energie
+		public RuleCall getQuantiteEnergieMaxEnergieParserRuleCall_6_0() { return cQuantiteEnergieMaxEnergieParserRuleCall_6_0; }
 		
 		//'Tactique'
 		public Keyword getTactiqueKeyword_7() { return cTactiqueKeyword_7; }
@@ -309,8 +295,7 @@ public class TowerDefenseGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cCaseSortieCaseIDTerminalRuleCall_12_0_1 = (RuleCall)cCaseSortieCaseCrossReference_12_0.eContents().get(1);
 		private final Keyword cPVmaxKeyword_13 = (Keyword)cGroup.eContents().get(13);
 		private final Assignment cQuantiteEnergieMaxAssignment_14 = (Assignment)cGroup.eContents().get(14);
-		private final CrossReference cQuantiteEnergieMaxEnergieCrossReference_14_0 = (CrossReference)cQuantiteEnergieMaxAssignment_14.eContents().get(0);
-		private final RuleCall cQuantiteEnergieMaxEnergieIDTerminalRuleCall_14_0_1 = (RuleCall)cQuantiteEnergieMaxEnergieCrossReference_14_0.eContents().get(1);
+		private final RuleCall cQuantiteEnergieMaxEnergieParserRuleCall_14_0 = (RuleCall)cQuantiteEnergieMaxAssignment_14.eContents().get(0);
 		private final Keyword cTactiqueKeyword_15 = (Keyword)cGroup.eContents().get(15);
 		private final Assignment cTactiqueAssignment_16 = (Assignment)cGroup.eContents().get(16);
 		private final RuleCall cTactiqueTactiqueTypeEnumRuleCall_16_0 = (RuleCall)cTactiqueAssignment_16.eContents().get(0);
@@ -323,13 +308,13 @@ public class TowerDefenseGrammarAccess extends AbstractGrammarElementFinder {
 		//	'NumVague' numVague=INT
 		//	'In' caseEntree=[Case]
 		//	'Out' caseSortie=[Case]
-		//	'PVmax' quantiteEnergieMax=[Energie]
+		//	'PVmax' quantiteEnergieMax=Energie
 		//	'Tactique' tactique=TactiqueType
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'Mobile' name=ID '{' 'F' force=INT 'V' volume=INT 'NumVague' numVague=INT 'In' caseEntree=[Case] 'Out' caseSortie=[Case]
-		//'PVmax' quantiteEnergieMax=[Energie] 'Tactique' tactique=TactiqueType '}'
+		//'PVmax' quantiteEnergieMax=Energie 'Tactique' tactique=TactiqueType '}'
 		public Group getGroup() { return cGroup; }
 		
 		//'Mobile'
@@ -398,14 +383,11 @@ public class TowerDefenseGrammarAccess extends AbstractGrammarElementFinder {
 		//'PVmax'
 		public Keyword getPVmaxKeyword_13() { return cPVmaxKeyword_13; }
 		
-		//quantiteEnergieMax=[Energie]
+		//quantiteEnergieMax=Energie
 		public Assignment getQuantiteEnergieMaxAssignment_14() { return cQuantiteEnergieMaxAssignment_14; }
 		
-		//[Energie]
-		public CrossReference getQuantiteEnergieMaxEnergieCrossReference_14_0() { return cQuantiteEnergieMaxEnergieCrossReference_14_0; }
-		
-		//ID
-		public RuleCall getQuantiteEnergieMaxEnergieIDTerminalRuleCall_14_0_1() { return cQuantiteEnergieMaxEnergieIDTerminalRuleCall_14_0_1; }
+		//Energie
+		public RuleCall getQuantiteEnergieMaxEnergieParserRuleCall_14_0() { return cQuantiteEnergieMaxEnergieParserRuleCall_14_0; }
 		
 		//'Tactique'
 		public Keyword getTactiqueKeyword_15() { return cTactiqueKeyword_15; }
@@ -445,8 +427,7 @@ public class TowerDefenseGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cCibleCaseIDTerminalRuleCall_12_0_1 = (RuleCall)cCibleCaseCrossReference_12_0.eContents().get(1);
 		private final Keyword cDegatKeyword_13 = (Keyword)cGroup.eContents().get(13);
 		private final Assignment cDegatAssignment_14 = (Assignment)cGroup.eContents().get(14);
-		private final CrossReference cDegatEnergieCrossReference_14_0 = (CrossReference)cDegatAssignment_14.eContents().get(0);
-		private final RuleCall cDegatEnergieIDTerminalRuleCall_14_0_1 = (RuleCall)cDegatEnergieCrossReference_14_0.eContents().get(1);
+		private final RuleCall cDegatEnergieParserRuleCall_14_0 = (RuleCall)cDegatAssignment_14.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_15 = (Keyword)cGroup.eContents().get(15);
 		
 		//Projectile:
@@ -456,12 +437,12 @@ public class TowerDefenseGrammarAccess extends AbstractGrammarElementFinder {
 		//	'Vitesse' vitesse=INT
 		//	'Position' case=[Case]
 		//	'Direction' cible=[Case]
-		//	'Degat' degat=[Energie]
+		//	'Degat' degat=Energie
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'Projectile' name=ID '{' 'Portee' portee=INT 'Masse' masse=INT 'Vitesse' vitesse=INT 'Position' case=[Case] 'Direction'
-		//cible=[Case] 'Degat' degat=[Energie] '}'
+		//cible=[Case] 'Degat' degat=Energie '}'
 		public Group getGroup() { return cGroup; }
 		
 		//'Projectile'
@@ -530,14 +511,11 @@ public class TowerDefenseGrammarAccess extends AbstractGrammarElementFinder {
 		//'Degat'
 		public Keyword getDegatKeyword_13() { return cDegatKeyword_13; }
 		
-		//degat=[Energie]
+		//degat=Energie
 		public Assignment getDegatAssignment_14() { return cDegatAssignment_14; }
 		
-		//[Energie]
-		public CrossReference getDegatEnergieCrossReference_14_0() { return cDegatEnergieCrossReference_14_0; }
-		
-		//ID
-		public RuleCall getDegatEnergieIDTerminalRuleCall_14_0_1() { return cDegatEnergieIDTerminalRuleCall_14_0_1; }
+		//Energie
+		public RuleCall getDegatEnergieParserRuleCall_14_0() { return cDegatEnergieParserRuleCall_14_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_15() { return cRightCurlyBracketKeyword_15; }
@@ -557,19 +535,18 @@ public class TowerDefenseGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cTypeTYPE_TERRAINEnumRuleCall_6_0 = (RuleCall)cTypeAssignment_6.eContents().get(0);
 		private final Keyword cFatigueEntreeKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		private final Assignment cFatigueAssignment_8 = (Assignment)cGroup.eContents().get(8);
-		private final CrossReference cFatigueEnergieCrossReference_8_0 = (CrossReference)cFatigueAssignment_8.eContents().get(0);
-		private final RuleCall cFatigueEnergieIDTerminalRuleCall_8_0_1 = (RuleCall)cFatigueEnergieCrossReference_8_0.eContents().get(1);
+		private final RuleCall cFatigueEnergieParserRuleCall_8_0 = (RuleCall)cFatigueAssignment_8.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		
 		//NatureTerrain:
 		//	'NatureTerrain' name=ID '{'
 		//	'Volume' volume=INT
 		//	'Type' type=TYPE_TERRAIN
-		//	'FatigueEntree' fatigue=[Energie]
+		//	'FatigueEntree' fatigue=Energie
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'NatureTerrain' name=ID '{' 'Volume' volume=INT 'Type' type=TYPE_TERRAIN 'FatigueEntree' fatigue=[Energie] '}'
+		//'NatureTerrain' name=ID '{' 'Volume' volume=INT 'Type' type=TYPE_TERRAIN 'FatigueEntree' fatigue=Energie '}'
 		public Group getGroup() { return cGroup; }
 		
 		//'NatureTerrain'
@@ -605,14 +582,11 @@ public class TowerDefenseGrammarAccess extends AbstractGrammarElementFinder {
 		//'FatigueEntree'
 		public Keyword getFatigueEntreeKeyword_7() { return cFatigueEntreeKeyword_7; }
 		
-		//fatigue=[Energie]
+		//fatigue=Energie
 		public Assignment getFatigueAssignment_8() { return cFatigueAssignment_8; }
 		
-		//[Energie]
-		public CrossReference getFatigueEnergieCrossReference_8_0() { return cFatigueEnergieCrossReference_8_0; }
-		
-		//ID
-		public RuleCall getFatigueEnergieIDTerminalRuleCall_8_0_1() { return cFatigueEnergieIDTerminalRuleCall_8_0_1; }
+		//Energie
+		public RuleCall getFatigueEnergieParserRuleCall_8_0() { return cFatigueEnergieParserRuleCall_8_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_9() { return cRightCurlyBracketKeyword_9; }
@@ -1139,7 +1113,6 @@ public class TowerDefenseGrammarAccess extends AbstractGrammarElementFinder {
 	//	//natures+=NatureTerrain*
 	//	cases+=Case*
 	//	cartes+=Carte*
-	//	energies+=Energie*
 	//	partieElements+=PartieElement*
 	//	niveaux+=Niveau*
 	//	'}';
@@ -1162,8 +1135,7 @@ public class TowerDefenseGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Energie:
-	//	name=ID
-	//	valeur=INT;
+	//	infini?='infini' | valeur=INT;
 	public EnergieElements getEnergieAccess() {
 		return pEnergie;
 	}
@@ -1175,7 +1147,7 @@ public class TowerDefenseGrammarAccess extends AbstractGrammarElementFinder {
 	//Obstacle:
 	//	'Obstacle' name=ID '{'
 	//	'Campement' campement=[Case]
-	//	'PVmax' quantiteEnergieMax=[Energie]
+	//	'PVmax' quantiteEnergieMax=Energie
 	//	'Tactique' tactique=TactiqueType
 	//	'}';
 	public ObstacleElements getObstacleAccess() {
@@ -1203,7 +1175,7 @@ public class TowerDefenseGrammarAccess extends AbstractGrammarElementFinder {
 	//	'NumVague' numVague=INT
 	//	'In' caseEntree=[Case]
 	//	'Out' caseSortie=[Case]
-	//	'PVmax' quantiteEnergieMax=[Energie]
+	//	'PVmax' quantiteEnergieMax=Energie
 	//	'Tactique' tactique=TactiqueType
 	//	'}';
 	public MobileElements getMobileAccess() {
@@ -1221,7 +1193,7 @@ public class TowerDefenseGrammarAccess extends AbstractGrammarElementFinder {
 	//	'Vitesse' vitesse=INT
 	//	'Position' case=[Case]
 	//	'Direction' cible=[Case]
-	//	'Degat' degat=[Energie]
+	//	'Degat' degat=Energie
 	//	'}';
 	public ProjectileElements getProjectileAccess() {
 		return pProjectile;
@@ -1235,7 +1207,7 @@ public class TowerDefenseGrammarAccess extends AbstractGrammarElementFinder {
 	//	'NatureTerrain' name=ID '{'
 	//	'Volume' volume=INT
 	//	'Type' type=TYPE_TERRAIN
-	//	'FatigueEntree' fatigue=[Energie]
+	//	'FatigueEntree' fatigue=Energie
 	//	'}';
 	public NatureTerrainElements getNatureTerrainAccess() {
 		return pNatureTerrain;

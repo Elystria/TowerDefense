@@ -40,270 +40,276 @@ import xtext.towerDefense.Vague;
 public class VagueImpl extends MinimalEObjectImpl.Container implements Vague
 {
   /**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
   protected static final String NAME_EDEFAULT = null;
 
   /**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
   protected String name = NAME_EDEFAULT;
 
   /**
-	 * The cached value of the '{@link #getMobiles() <em>Mobiles</em>}' reference list.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getMobiles() <em>Mobiles</em>}' reference list.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getMobiles()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getMobiles()
+   * @generated
+   * @ordered
+   */
   protected EList<Mobile> mobiles;
 
   /**
-	 * The cached value of the '{@link #getObstacles() <em>Obstacles</em>}' reference list.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getObstacles() <em>Obstacles</em>}' reference list.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getObstacles()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getObstacles()
+   * @generated
+   * @ordered
+   */
   protected EList<Obstacle> obstacles;
 
   /**
-	 * The default value of the '{@link #getGainVictoire() <em>Gain Victoire</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * The default value of the '{@link #getGainVictoire() <em>Gain Victoire</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getGainVictoire()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getGainVictoire()
+   * @generated
+   * @ordered
+   */
   protected static final int GAIN_VICTOIRE_EDEFAULT = 0;
 
   /**
-	 * The cached value of the '{@link #getGainVictoire() <em>Gain Victoire</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getGainVictoire() <em>Gain Victoire</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see #getGainVictoire()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getGainVictoire()
+   * @generated
+   * @ordered
+   */
   protected int gainVictoire = GAIN_VICTOIRE_EDEFAULT;
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   protected VagueImpl()
   {
-		super();
-	}
+    super();
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   protected EClass eStaticClass()
   {
-		return TowerDefensePackage.Literals.VAGUE;
-	}
+    return TowerDefensePackage.Literals.VAGUE;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public String getName()
   {
-		return name;
-	}
+    return name;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public void setName(String newName)
   {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.VAGUE__NAME, oldName, name));
-	}
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.VAGUE__NAME, oldName, name));
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public EList<Mobile> getMobiles()
   {
-		if (mobiles == null) {
-			mobiles = new EObjectResolvingEList<Mobile>(Mobile.class, this, TowerDefensePackage.VAGUE__MOBILES);
-		}
-		return mobiles;
-	}
+    if (mobiles == null)
+    {
+      mobiles = new EObjectResolvingEList<Mobile>(Mobile.class, this, TowerDefensePackage.VAGUE__MOBILES);
+    }
+    return mobiles;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public EList<Obstacle> getObstacles()
   {
-		if (obstacles == null) {
-			obstacles = new EObjectResolvingEList<Obstacle>(Obstacle.class, this, TowerDefensePackage.VAGUE__OBSTACLES);
-		}
-		return obstacles;
-	}
+    if (obstacles == null)
+    {
+      obstacles = new EObjectResolvingEList<Obstacle>(Obstacle.class, this, TowerDefensePackage.VAGUE__OBSTACLES);
+    }
+    return obstacles;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public int getGainVictoire()
   {
-		return gainVictoire;
-	}
+    return gainVictoire;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public void setGainVictoire(int newGainVictoire)
   {
-		int oldGainVictoire = gainVictoire;
-		gainVictoire = newGainVictoire;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.VAGUE__GAIN_VICTOIRE, oldGainVictoire, gainVictoire));
-	}
+    int oldGainVictoire = gainVictoire;
+    gainVictoire = newGainVictoire;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, TowerDefensePackage.VAGUE__GAIN_VICTOIRE, oldGainVictoire, gainVictoire));
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
-		switch (featureID) {
-			case TowerDefensePackage.VAGUE__NAME:
-				return getName();
-			case TowerDefensePackage.VAGUE__MOBILES:
-				return getMobiles();
-			case TowerDefensePackage.VAGUE__OBSTACLES:
-				return getObstacles();
-			case TowerDefensePackage.VAGUE__GAIN_VICTOIRE:
-				return getGainVictoire();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    switch (featureID)
+    {
+      case TowerDefensePackage.VAGUE__NAME:
+        return getName();
+      case TowerDefensePackage.VAGUE__MOBILES:
+        return getMobiles();
+      case TowerDefensePackage.VAGUE__OBSTACLES:
+        return getObstacles();
+      case TowerDefensePackage.VAGUE__GAIN_VICTOIRE:
+        return getGainVictoire();
+    }
+    return super.eGet(featureID, resolve, coreType);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
-		switch (featureID) {
-			case TowerDefensePackage.VAGUE__NAME:
-				setName((String)newValue);
-				return;
-			case TowerDefensePackage.VAGUE__MOBILES:
-				getMobiles().clear();
-				getMobiles().addAll((Collection<? extends Mobile>)newValue);
-				return;
-			case TowerDefensePackage.VAGUE__OBSTACLES:
-				getObstacles().clear();
-				getObstacles().addAll((Collection<? extends Obstacle>)newValue);
-				return;
-			case TowerDefensePackage.VAGUE__GAIN_VICTOIRE:
-				setGainVictoire((Integer)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    switch (featureID)
+    {
+      case TowerDefensePackage.VAGUE__NAME:
+        setName((String)newValue);
+        return;
+      case TowerDefensePackage.VAGUE__MOBILES:
+        getMobiles().clear();
+        getMobiles().addAll((Collection<? extends Mobile>)newValue);
+        return;
+      case TowerDefensePackage.VAGUE__OBSTACLES:
+        getObstacles().clear();
+        getObstacles().addAll((Collection<? extends Obstacle>)newValue);
+        return;
+      case TowerDefensePackage.VAGUE__GAIN_VICTOIRE:
+        setGainVictoire((Integer)newValue);
+        return;
+    }
+    super.eSet(featureID, newValue);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public void eUnset(int featureID)
   {
-		switch (featureID) {
-			case TowerDefensePackage.VAGUE__NAME:
-				setName(NAME_EDEFAULT);
-				return;
-			case TowerDefensePackage.VAGUE__MOBILES:
-				getMobiles().clear();
-				return;
-			case TowerDefensePackage.VAGUE__OBSTACLES:
-				getObstacles().clear();
-				return;
-			case TowerDefensePackage.VAGUE__GAIN_VICTOIRE:
-				setGainVictoire(GAIN_VICTOIRE_EDEFAULT);
-				return;
-		}
-		super.eUnset(featureID);
-	}
+    switch (featureID)
+    {
+      case TowerDefensePackage.VAGUE__NAME:
+        setName(NAME_EDEFAULT);
+        return;
+      case TowerDefensePackage.VAGUE__MOBILES:
+        getMobiles().clear();
+        return;
+      case TowerDefensePackage.VAGUE__OBSTACLES:
+        getObstacles().clear();
+        return;
+      case TowerDefensePackage.VAGUE__GAIN_VICTOIRE:
+        setGainVictoire(GAIN_VICTOIRE_EDEFAULT);
+        return;
+    }
+    super.eUnset(featureID);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public boolean eIsSet(int featureID)
   {
-		switch (featureID) {
-			case TowerDefensePackage.VAGUE__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case TowerDefensePackage.VAGUE__MOBILES:
-				return mobiles != null && !mobiles.isEmpty();
-			case TowerDefensePackage.VAGUE__OBSTACLES:
-				return obstacles != null && !obstacles.isEmpty();
-			case TowerDefensePackage.VAGUE__GAIN_VICTOIRE:
-				return gainVictoire != GAIN_VICTOIRE_EDEFAULT;
-		}
-		return super.eIsSet(featureID);
-	}
+    switch (featureID)
+    {
+      case TowerDefensePackage.VAGUE__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case TowerDefensePackage.VAGUE__MOBILES:
+        return mobiles != null && !mobiles.isEmpty();
+      case TowerDefensePackage.VAGUE__OBSTACLES:
+        return obstacles != null && !obstacles.isEmpty();
+      case TowerDefensePackage.VAGUE__GAIN_VICTOIRE:
+        return gainVictoire != GAIN_VICTOIRE_EDEFAULT;
+    }
+    return super.eIsSet(featureID);
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public String toString()
   {
-		if (eIsProxy()) return super.toString();
+    if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(", gainVictoire: ");
-		result.append(gainVictoire);
-		result.append(')');
-		return result.toString();
-	}
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (name: ");
+    result.append(name);
+    result.append(", gainVictoire: ");
+    result.append(gainVictoire);
+    result.append(')');
+    return result.toString();
+  }
 
 } //VagueImpl

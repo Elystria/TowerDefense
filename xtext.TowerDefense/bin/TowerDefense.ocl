@@ -31,11 +31,6 @@ inv NomsDifferentsNiveaux('Les Niveaux d\'une partie doivent avoir un nom differ
 context PartieElement
 inv NonNullName('Le nom ne peut pas être null'):
 	name<>null
-
---ENERGIE--
-context Energie
-inv EnergiePositive('Une énergie ne peut pas être négative'):
-	valeur >= 0
 	
 --OBSTACLE--
 context Obstacle
@@ -44,8 +39,8 @@ inv caseCampement('La case doit etre un campement'):
 	
 inv EnergiePositive('Les PVMax doivent etre positifs'):
 	self.quantiteEnergieMax.valeur > 0
-
-inv EnergieFinie('L\'energie ne peut etre infinie pour un obstacle'):
+	
+inv Energiefinie('Les PV des obstacles doivent etre finis'):
 	self.quantiteEnergieMax.infini = false
 	
 --MOBILE--
@@ -67,9 +62,10 @@ inv CaseTypeSortie('La case doit etre une sortie'):
 	
 inv EnergiePositive('Les PVMax doivent etre positifs'):
 	self.quantiteEnergieMax.valeur > 0
-	
-inv EnergieFinie('L\'energie ne peut etre infinie pour un mobile'):
+
+inv Energiefinie('Les PV des obstacles doivent etre finis'):
 	self.quantiteEnergieMax.infini = false
+	
 
 --PROJECTILE--
 context Projectile
@@ -91,9 +87,10 @@ inv CibleNonDeco('Cette case est une decoration'):
 inv DegatNonNul('Les degats doivent etre strictement positifs'):
 	degat.valeur > 0
 	
-inv EnergieFinie('Les degats infliges par un projectile doivent etre finis'):
-	degat.infini = false
-	
+inv DegatsFinis('Les degats des projectiles doivent etre finis'):
+	self.degat.infini = false
+	 
+	 	
 --NATURETERRAIN--
 context NatureTerrain
 inv VolumePositif('Le Volume doit etre positif'):
@@ -101,6 +98,9 @@ inv VolumePositif('Le Volume doit etre positif'):
 	
 inv FatiguePositive('La fatigue doit etre positive'):
 	fatigue.valeur >= 0
+	
+inv Deco('Les decos ont une energie infinie'):
+	if self.type = TYPE_TERRAIN::decoration or self.type = TYPE_TERRAIN::campement then fatigue.infini = true else fatigue.infini = false endif
 	
 --NIVEAU--
 context Niveau

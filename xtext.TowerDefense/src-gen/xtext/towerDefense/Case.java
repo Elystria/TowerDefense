@@ -27,107 +27,107 @@ import org.eclipse.emf.ecore.EObject;
 public interface Case extends EObject
 {
   /**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Name</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see xtext.towerDefense.TowerDefensePackage#getCase_Name()
-	 * @model
-	 * @generated
-	 */
+   * @return the value of the '<em>Name</em>' attribute.
+   * @see #setName(String)
+   * @see xtext.towerDefense.TowerDefensePackage#getCase_Name()
+   * @model
+   * @generated
+   */
   String getName();
 
   /**
-	 * Sets the value of the '{@link xtext.towerDefense.Case#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link xtext.towerDefense.Case#getName <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
+   * @param value the new value of the '<em>Name</em>' attribute.
+   * @see #getName()
+   * @generated
+   */
   void setName(String value);
 
   /**
-	 * Returns the value of the '<em><b>I</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>I</b></em>' attribute.
+   * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>I</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>I</em>' attribute.
-	 * @see #setI(int)
-	 * @see xtext.towerDefense.TowerDefensePackage#getCase_I()
-	 * @model
-	 * @generated
-	 */
+   * @return the value of the '<em>I</em>' attribute.
+   * @see #setI(int)
+   * @see xtext.towerDefense.TowerDefensePackage#getCase_I()
+   * @model
+   * @generated
+   */
   int getI();
 
   /**
-	 * Sets the value of the '{@link xtext.towerDefense.Case#getI <em>I</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link xtext.towerDefense.Case#getI <em>I</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>I</em>' attribute.
-	 * @see #getI()
-	 * @generated
-	 */
+   * @param value the new value of the '<em>I</em>' attribute.
+   * @see #getI()
+   * @generated
+   */
   void setI(int value);
 
   /**
-	 * Returns the value of the '<em><b>J</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>J</b></em>' attribute.
+   * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>J</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>J</em>' attribute.
-	 * @see #setJ(int)
-	 * @see xtext.towerDefense.TowerDefensePackage#getCase_J()
-	 * @model
-	 * @generated
-	 */
+   * @return the value of the '<em>J</em>' attribute.
+   * @see #setJ(int)
+   * @see xtext.towerDefense.TowerDefensePackage#getCase_J()
+   * @model
+   * @generated
+   */
   int getJ();
 
   /**
-	 * Sets the value of the '{@link xtext.towerDefense.Case#getJ <em>J</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link xtext.towerDefense.Case#getJ <em>J</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>J</em>' attribute.
-	 * @see #getJ()
-	 * @generated
-	 */
+   * @param value the new value of the '<em>J</em>' attribute.
+   * @see #getJ()
+   * @generated
+   */
   void setJ(int value);
 
   /**
-	 * Returns the value of the '<em><b>Nature Du Terrain</b></em>' reference.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Nature Du Terrain</b></em>' reference.
+   * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Nature Du Terrain</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>Nature Du Terrain</em>' reference.
-	 * @see #setNatureDuTerrain(NatureTerrain)
-	 * @see xtext.towerDefense.TowerDefensePackage#getCase_NatureDuTerrain()
-	 * @model
-	 * @generated
-	 */
+   * @return the value of the '<em>Nature Du Terrain</em>' reference.
+   * @see #setNatureDuTerrain(NatureTerrain)
+   * @see xtext.towerDefense.TowerDefensePackage#getCase_NatureDuTerrain()
+   * @model
+   * @generated
+   */
   NatureTerrain getNatureDuTerrain();
 
   /**
-	 * Sets the value of the '{@link xtext.towerDefense.Case#getNatureDuTerrain <em>Nature Du Terrain</em>}' reference.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link xtext.towerDefense.Case#getNatureDuTerrain <em>Nature Du Terrain</em>}' reference.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Nature Du Terrain</em>' reference.
-	 * @see #getNatureDuTerrain()
-	 * @generated
-	 */
+   * @param value the new value of the '<em>Nature Du Terrain</em>' reference.
+   * @see #getNatureDuTerrain()
+   * @generated
+   */
   void setNatureDuTerrain(NatureTerrain value);
 
 } // Case

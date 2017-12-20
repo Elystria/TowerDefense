@@ -124,19 +124,10 @@ public class TowerDefenseSemanticSequencer extends AbstractDelegatingSemanticSeq
 	 *     Energie returns Energie
 	 *
 	 * Constraint:
-	 *     (name=ID valeur=INT)
+	 *     (infini?='infini' | valeur=INT)
 	 */
 	protected void sequence_Energie(ISerializationContext context, Energie semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, TowerDefensePackage.Literals.ENERGIE__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TowerDefensePackage.Literals.ENERGIE__NAME));
-			if (transientValues.isValueTransient(semanticObject, TowerDefensePackage.Literals.ENERGIE__VALEUR) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TowerDefensePackage.Literals.ENERGIE__VALEUR));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getEnergieAccess().getNameIDTerminalRuleCall_0_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getEnergieAccess().getValeurINTTerminalRuleCall_1_0(), semanticObject.getValeur());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -165,7 +156,7 @@ public class TowerDefenseSemanticSequencer extends AbstractDelegatingSemanticSeq
 	 *         numVague=INT 
 	 *         caseEntree=[Case|ID] 
 	 *         caseSortie=[Case|ID] 
-	 *         quantiteEnergieMax=[Energie|ID] 
+	 *         quantiteEnergieMax=Energie 
 	 *         tactique=TactiqueType
 	 *     )
 	 */
@@ -195,7 +186,7 @@ public class TowerDefenseSemanticSequencer extends AbstractDelegatingSemanticSeq
 		feeder.accept(grammarAccess.getMobileAccess().getNumVagueINTTerminalRuleCall_8_0(), semanticObject.getNumVague());
 		feeder.accept(grammarAccess.getMobileAccess().getCaseEntreeCaseIDTerminalRuleCall_10_0_1(), semanticObject.eGet(TowerDefensePackage.Literals.MOBILE__CASE_ENTREE, false));
 		feeder.accept(grammarAccess.getMobileAccess().getCaseSortieCaseIDTerminalRuleCall_12_0_1(), semanticObject.eGet(TowerDefensePackage.Literals.MOBILE__CASE_SORTIE, false));
-		feeder.accept(grammarAccess.getMobileAccess().getQuantiteEnergieMaxEnergieIDTerminalRuleCall_14_0_1(), semanticObject.eGet(TowerDefensePackage.Literals.MOBILE__QUANTITE_ENERGIE_MAX, false));
+		feeder.accept(grammarAccess.getMobileAccess().getQuantiteEnergieMaxEnergieParserRuleCall_14_0(), semanticObject.getQuantiteEnergieMax());
 		feeder.accept(grammarAccess.getMobileAccess().getTactiqueTactiqueTypeEnumRuleCall_16_0(), semanticObject.getTactique());
 		feeder.finish();
 	}
@@ -207,7 +198,7 @@ public class TowerDefenseSemanticSequencer extends AbstractDelegatingSemanticSeq
 	 *     NatureTerrain returns NatureTerrain
 	 *
 	 * Constraint:
-	 *     (name=ID volume=INT type=TYPE_TERRAIN fatigue=[Energie|ID])
+	 *     (name=ID volume=INT type=TYPE_TERRAIN fatigue=Energie)
 	 */
 	protected void sequence_NatureTerrain(ISerializationContext context, NatureTerrain semanticObject) {
 		if (errorAcceptor != null) {
@@ -224,7 +215,7 @@ public class TowerDefenseSemanticSequencer extends AbstractDelegatingSemanticSeq
 		feeder.accept(grammarAccess.getNatureTerrainAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getNatureTerrainAccess().getVolumeINTTerminalRuleCall_4_0(), semanticObject.getVolume());
 		feeder.accept(grammarAccess.getNatureTerrainAccess().getTypeTYPE_TERRAINEnumRuleCall_6_0(), semanticObject.getType());
-		feeder.accept(grammarAccess.getNatureTerrainAccess().getFatigueEnergieIDTerminalRuleCall_8_0_1(), semanticObject.eGet(TowerDefensePackage.Literals.NATURE_TERRAIN__FATIGUE, false));
+		feeder.accept(grammarAccess.getNatureTerrainAccess().getFatigueEnergieParserRuleCall_8_0(), semanticObject.getFatigue());
 		feeder.finish();
 	}
 	
@@ -255,7 +246,7 @@ public class TowerDefenseSemanticSequencer extends AbstractDelegatingSemanticSeq
 	 *     Obstacle returns Obstacle
 	 *
 	 * Constraint:
-	 *     (name=ID campement=[Case|ID] quantiteEnergieMax=[Energie|ID] tactique=TactiqueType)
+	 *     (name=ID campement=[Case|ID] quantiteEnergieMax=Energie tactique=TactiqueType)
 	 */
 	protected void sequence_Obstacle(ISerializationContext context, Obstacle semanticObject) {
 		if (errorAcceptor != null) {
@@ -271,7 +262,7 @@ public class TowerDefenseSemanticSequencer extends AbstractDelegatingSemanticSeq
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getObstacleAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getObstacleAccess().getCampementCaseIDTerminalRuleCall_4_0_1(), semanticObject.eGet(TowerDefensePackage.Literals.OBSTACLE__CAMPEMENT, false));
-		feeder.accept(grammarAccess.getObstacleAccess().getQuantiteEnergieMaxEnergieIDTerminalRuleCall_6_0_1(), semanticObject.eGet(TowerDefensePackage.Literals.OBSTACLE__QUANTITE_ENERGIE_MAX, false));
+		feeder.accept(grammarAccess.getObstacleAccess().getQuantiteEnergieMaxEnergieParserRuleCall_6_0(), semanticObject.getQuantiteEnergieMax());
 		feeder.accept(grammarAccess.getObstacleAccess().getTactiqueTactiqueTypeEnumRuleCall_8_0(), semanticObject.getTactique());
 		feeder.finish();
 	}
@@ -282,14 +273,7 @@ public class TowerDefenseSemanticSequencer extends AbstractDelegatingSemanticSeq
 	 *     Partie returns Partie
 	 *
 	 * Constraint:
-	 *     (
-	 *         name=ID 
-	 *         cases+=Case* 
-	 *         cartes+=Carte* 
-	 *         energies+=Energie* 
-	 *         partieElements+=PartieElement* 
-	 *         niveaux+=Niveau*
-	 *     )
+	 *     (name=ID cases+=Case* cartes+=Carte* partieElements+=PartieElement* niveaux+=Niveau*)
 	 */
 	protected void sequence_Partie(ISerializationContext context, Partie semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -309,7 +293,7 @@ public class TowerDefenseSemanticSequencer extends AbstractDelegatingSemanticSeq
 	 *         vitesse=INT 
 	 *         case=[Case|ID] 
 	 *         cible=[Case|ID] 
-	 *         degat=[Energie|ID]
+	 *         degat=Energie
 	 *     )
 	 */
 	protected void sequence_Projectile(ISerializationContext context, Projectile semanticObject) {
@@ -336,7 +320,7 @@ public class TowerDefenseSemanticSequencer extends AbstractDelegatingSemanticSeq
 		feeder.accept(grammarAccess.getProjectileAccess().getVitesseINTTerminalRuleCall_8_0(), semanticObject.getVitesse());
 		feeder.accept(grammarAccess.getProjectileAccess().getCaseCaseIDTerminalRuleCall_10_0_1(), semanticObject.eGet(TowerDefensePackage.Literals.PROJECTILE__CASE, false));
 		feeder.accept(grammarAccess.getProjectileAccess().getCibleCaseIDTerminalRuleCall_12_0_1(), semanticObject.eGet(TowerDefensePackage.Literals.PROJECTILE__CIBLE, false));
-		feeder.accept(grammarAccess.getProjectileAccess().getDegatEnergieIDTerminalRuleCall_14_0_1(), semanticObject.eGet(TowerDefensePackage.Literals.PROJECTILE__DEGAT, false));
+		feeder.accept(grammarAccess.getProjectileAccess().getDegatEnergieParserRuleCall_14_0(), semanticObject.getDegat());
 		feeder.finish();
 	}
 	

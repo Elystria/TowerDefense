@@ -23,320 +23,326 @@ import xtext.towerDefense.*;
 public class TowerDefenseFactoryImpl extends EFactoryImpl implements TowerDefenseFactory
 {
   /**
-	 * Creates the default factory implementation.
-	 * <!-- begin-user-doc -->
+   * Creates the default factory implementation.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public static TowerDefenseFactory init()
   {
-		try {
-			TowerDefenseFactory theTowerDefenseFactory = (TowerDefenseFactory)EPackage.Registry.INSTANCE.getEFactory(TowerDefensePackage.eNS_URI);
-			if (theTowerDefenseFactory != null) {
-				return theTowerDefenseFactory;
-			}
-		}
-		catch (Exception exception) {
-			EcorePlugin.INSTANCE.log(exception);
-		}
-		return new TowerDefenseFactoryImpl();
-	}
+    try
+    {
+      TowerDefenseFactory theTowerDefenseFactory = (TowerDefenseFactory)EPackage.Registry.INSTANCE.getEFactory(TowerDefensePackage.eNS_URI);
+      if (theTowerDefenseFactory != null)
+      {
+        return theTowerDefenseFactory;
+      }
+    }
+    catch (Exception exception)
+    {
+      EcorePlugin.INSTANCE.log(exception);
+    }
+    return new TowerDefenseFactoryImpl();
+  }
 
   /**
-	 * Creates an instance of the factory.
-	 * <!-- begin-user-doc -->
+   * Creates an instance of the factory.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public TowerDefenseFactoryImpl()
   {
-		super();
-	}
+    super();
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public EObject create(EClass eClass)
   {
-		switch (eClass.getClassifierID()) {
-			case TowerDefensePackage.JEU: return createJeu();
-			case TowerDefensePackage.PARTIE: return createPartie();
-			case TowerDefensePackage.PARTIE_ELEMENT: return createPartieElement();
-			case TowerDefensePackage.ENERGIE: return createEnergie();
-			case TowerDefensePackage.OBSTACLE: return createObstacle();
-			case TowerDefensePackage.MOBILE: return createMobile();
-			case TowerDefensePackage.PROJECTILE: return createProjectile();
-			case TowerDefensePackage.NATURE_TERRAIN: return createNatureTerrain();
-			case TowerDefensePackage.NIVEAU: return createNiveau();
-			case TowerDefensePackage.CARTE: return createCarte();
-			case TowerDefensePackage.CASE: return createCase();
-			case TowerDefensePackage.VAGUE: return createVague();
-			default:
-				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
-		}
-	}
+    switch (eClass.getClassifierID())
+    {
+      case TowerDefensePackage.JEU: return createJeu();
+      case TowerDefensePackage.PARTIE: return createPartie();
+      case TowerDefensePackage.PARTIE_ELEMENT: return createPartieElement();
+      case TowerDefensePackage.ENERGIE: return createEnergie();
+      case TowerDefensePackage.OBSTACLE: return createObstacle();
+      case TowerDefensePackage.MOBILE: return createMobile();
+      case TowerDefensePackage.PROJECTILE: return createProjectile();
+      case TowerDefensePackage.NATURE_TERRAIN: return createNatureTerrain();
+      case TowerDefensePackage.NIVEAU: return createNiveau();
+      case TowerDefensePackage.CARTE: return createCarte();
+      case TowerDefensePackage.CASE: return createCase();
+      case TowerDefensePackage.VAGUE: return createVague();
+      default:
+        throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+    }
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public Object createFromString(EDataType eDataType, String initialValue)
   {
-		switch (eDataType.getClassifierID()) {
-			case TowerDefensePackage.TACTIQUE_TYPE:
-				return createTactiqueTypeFromString(eDataType, initialValue);
-			case TowerDefensePackage.TYPE_TERRAIN:
-				return createTYPE_TERRAINFromString(eDataType, initialValue);
-			case TowerDefensePackage.DIFFICULTE:
-				return createDifficulteFromString(eDataType, initialValue);
-			default:
-				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
-		}
-	}
+    switch (eDataType.getClassifierID())
+    {
+      case TowerDefensePackage.TACTIQUE_TYPE:
+        return createTactiqueTypeFromString(eDataType, initialValue);
+      case TowerDefensePackage.TYPE_TERRAIN:
+        return createTYPE_TERRAINFromString(eDataType, initialValue);
+      case TowerDefensePackage.DIFFICULTE:
+        return createDifficulteFromString(eDataType, initialValue);
+      default:
+        throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+    }
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   @Override
   public String convertToString(EDataType eDataType, Object instanceValue)
   {
-		switch (eDataType.getClassifierID()) {
-			case TowerDefensePackage.TACTIQUE_TYPE:
-				return convertTactiqueTypeToString(eDataType, instanceValue);
-			case TowerDefensePackage.TYPE_TERRAIN:
-				return convertTYPE_TERRAINToString(eDataType, instanceValue);
-			case TowerDefensePackage.DIFFICULTE:
-				return convertDifficulteToString(eDataType, instanceValue);
-			default:
-				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
-		}
-	}
+    switch (eDataType.getClassifierID())
+    {
+      case TowerDefensePackage.TACTIQUE_TYPE:
+        return convertTactiqueTypeToString(eDataType, instanceValue);
+      case TowerDefensePackage.TYPE_TERRAIN:
+        return convertTYPE_TERRAINToString(eDataType, instanceValue);
+      case TowerDefensePackage.DIFFICULTE:
+        return convertDifficulteToString(eDataType, instanceValue);
+      default:
+        throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+    }
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public Jeu createJeu()
   {
-		JeuImpl jeu = new JeuImpl();
-		return jeu;
-	}
+    JeuImpl jeu = new JeuImpl();
+    return jeu;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public Partie createPartie()
   {
-		PartieImpl partie = new PartieImpl();
-		return partie;
-	}
+    PartieImpl partie = new PartieImpl();
+    return partie;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public PartieElement createPartieElement()
   {
-		PartieElementImpl partieElement = new PartieElementImpl();
-		return partieElement;
-	}
+    PartieElementImpl partieElement = new PartieElementImpl();
+    return partieElement;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public Energie createEnergie()
   {
-		EnergieImpl energie = new EnergieImpl();
-		return energie;
-	}
+    EnergieImpl energie = new EnergieImpl();
+    return energie;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public Obstacle createObstacle()
   {
-		ObstacleImpl obstacle = new ObstacleImpl();
-		return obstacle;
-	}
+    ObstacleImpl obstacle = new ObstacleImpl();
+    return obstacle;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public Mobile createMobile()
   {
-		MobileImpl mobile = new MobileImpl();
-		return mobile;
-	}
+    MobileImpl mobile = new MobileImpl();
+    return mobile;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public Projectile createProjectile()
   {
-		ProjectileImpl projectile = new ProjectileImpl();
-		return projectile;
-	}
+    ProjectileImpl projectile = new ProjectileImpl();
+    return projectile;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public NatureTerrain createNatureTerrain()
   {
-		NatureTerrainImpl natureTerrain = new NatureTerrainImpl();
-		return natureTerrain;
-	}
+    NatureTerrainImpl natureTerrain = new NatureTerrainImpl();
+    return natureTerrain;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public Niveau createNiveau()
   {
-		NiveauImpl niveau = new NiveauImpl();
-		return niveau;
-	}
+    NiveauImpl niveau = new NiveauImpl();
+    return niveau;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public Carte createCarte()
   {
-		CarteImpl carte = new CarteImpl();
-		return carte;
-	}
+    CarteImpl carte = new CarteImpl();
+    return carte;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public Case createCase()
   {
-		CaseImpl case_ = new CaseImpl();
-		return case_;
-	}
+    CaseImpl case_ = new CaseImpl();
+    return case_;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public Vague createVague()
   {
-		VagueImpl vague = new VagueImpl();
-		return vague;
-	}
+    VagueImpl vague = new VagueImpl();
+    return vague;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public TactiqueType createTactiqueTypeFromString(EDataType eDataType, String initialValue)
   {
-		TactiqueType result = TactiqueType.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
+    TactiqueType result = TactiqueType.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public String convertTactiqueTypeToString(EDataType eDataType, Object instanceValue)
   {
-		return instanceValue == null ? null : instanceValue.toString();
-	}
+    return instanceValue == null ? null : instanceValue.toString();
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public TYPE_TERRAIN createTYPE_TERRAINFromString(EDataType eDataType, String initialValue)
   {
-		TYPE_TERRAIN result = TYPE_TERRAIN.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
+    TYPE_TERRAIN result = TYPE_TERRAIN.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public String convertTYPE_TERRAINToString(EDataType eDataType, Object instanceValue)
   {
-		return instanceValue == null ? null : instanceValue.toString();
-	}
+    return instanceValue == null ? null : instanceValue.toString();
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public Difficulte createDifficulteFromString(EDataType eDataType, String initialValue)
   {
-		Difficulte result = Difficulte.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
+    Difficulte result = Difficulte.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public String convertDifficulteToString(EDataType eDataType, Object instanceValue)
   {
-		return instanceValue == null ? null : instanceValue.toString();
-	}
+    return instanceValue == null ? null : instanceValue.toString();
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
   public TowerDefensePackage getTowerDefensePackage()
   {
-		return (TowerDefensePackage)getEPackage();
-	}
+    return (TowerDefensePackage)getEPackage();
+  }
 
   /**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @deprecated
-	 * @generated
-	 */
+   * @deprecated
+   * @generated
+   */
   @Deprecated
   public static TowerDefensePackage getPackage()
   {
-		return TowerDefensePackage.eINSTANCE;
-	}
+    return TowerDefensePackage.eINSTANCE;
+  }
 
 } //TowerDefenseFactoryImpl

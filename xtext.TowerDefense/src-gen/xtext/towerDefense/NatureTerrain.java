@@ -25,84 +25,84 @@ package xtext.towerDefense;
 public interface NatureTerrain extends PartieElement
 {
   /**
-	 * Returns the value of the '<em><b>Volume</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Volume</b></em>' attribute.
+   * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Volume</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>Volume</em>' attribute.
-	 * @see #setVolume(int)
-	 * @see xtext.towerDefense.TowerDefensePackage#getNatureTerrain_Volume()
-	 * @model
-	 * @generated
-	 */
+   * @return the value of the '<em>Volume</em>' attribute.
+   * @see #setVolume(int)
+   * @see xtext.towerDefense.TowerDefensePackage#getNatureTerrain_Volume()
+   * @model
+   * @generated
+   */
   int getVolume();
 
   /**
-	 * Sets the value of the '{@link xtext.towerDefense.NatureTerrain#getVolume <em>Volume</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link xtext.towerDefense.NatureTerrain#getVolume <em>Volume</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Volume</em>' attribute.
-	 * @see #getVolume()
-	 * @generated
-	 */
+   * @param value the new value of the '<em>Volume</em>' attribute.
+   * @see #getVolume()
+   * @generated
+   */
   void setVolume(int value);
 
   /**
-	 * Returns the value of the '<em><b>Type</b></em>' attribute.
-	 * The literals are from the enumeration {@link xtext.towerDefense.TYPE_TERRAIN}.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Type</b></em>' attribute.
+   * The literals are from the enumeration {@link xtext.towerDefense.TYPE_TERRAIN}.
+   * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Type</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>Type</em>' attribute.
-	 * @see xtext.towerDefense.TYPE_TERRAIN
-	 * @see #setType(TYPE_TERRAIN)
-	 * @see xtext.towerDefense.TowerDefensePackage#getNatureTerrain_Type()
-	 * @model
-	 * @generated
-	 */
+   * @return the value of the '<em>Type</em>' attribute.
+   * @see xtext.towerDefense.TYPE_TERRAIN
+   * @see #setType(TYPE_TERRAIN)
+   * @see xtext.towerDefense.TowerDefensePackage#getNatureTerrain_Type()
+   * @model
+   * @generated
+   */
   TYPE_TERRAIN getType();
 
   /**
-	 * Sets the value of the '{@link xtext.towerDefense.NatureTerrain#getType <em>Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link xtext.towerDefense.NatureTerrain#getType <em>Type</em>}' attribute.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Type</em>' attribute.
-	 * @see xtext.towerDefense.TYPE_TERRAIN
-	 * @see #getType()
-	 * @generated
-	 */
+   * @param value the new value of the '<em>Type</em>' attribute.
+   * @see xtext.towerDefense.TYPE_TERRAIN
+   * @see #getType()
+   * @generated
+   */
   void setType(TYPE_TERRAIN value);
 
   /**
-	 * Returns the value of the '<em><b>Fatigue</b></em>' reference.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Fatigue</b></em>' containment reference.
+   * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Fatigue</em>' reference isn't clear,
+   * If the meaning of the '<em>Fatigue</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-	 * @return the value of the '<em>Fatigue</em>' reference.
-	 * @see #setFatigue(Energie)
-	 * @see xtext.towerDefense.TowerDefensePackage#getNatureTerrain_Fatigue()
-	 * @model
-	 * @generated
-	 */
+   * @return the value of the '<em>Fatigue</em>' containment reference.
+   * @see #setFatigue(Energie)
+   * @see xtext.towerDefense.TowerDefensePackage#getNatureTerrain_Fatigue()
+   * @model containment="true"
+   * @generated
+   */
   Energie getFatigue();
 
   /**
-	 * Sets the value of the '{@link xtext.towerDefense.NatureTerrain#getFatigue <em>Fatigue</em>}' reference.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link xtext.towerDefense.NatureTerrain#getFatigue <em>Fatigue</em>}' containment reference.
+   * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Fatigue</em>' reference.
-	 * @see #getFatigue()
-	 * @generated
-	 */
+   * @param value the new value of the '<em>Fatigue</em>' containment reference.
+   * @see #getFatigue()
+   * @generated
+   */
   void setFatigue(Energie value);
 
 } // NatureTerrain
