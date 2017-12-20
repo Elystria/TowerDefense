@@ -55,7 +55,7 @@ Jeu exemple1 {
 		}
 	
 		
-		/* On définie les projectiles */
+		/* On définit les projectiles */
 		Projectile p {
 			Portee 0
 			Masse 1
@@ -65,7 +65,16 @@ Jeu exemple1 {
 			Degat 1
 		}
 		
-		/* On définie les mobiles -> ce mobile est tres mal defini */
+		Projectile p1 {
+			Portee 1
+			Masse 1
+			Vitesse 2
+			Position c31
+			Direction c23
+			Degat infini
+		}
+		
+		/* On définit les mobiles -> ce mobile est tres mal defini */
 		Mobile m {
 			F 1
 			V  0
@@ -76,14 +85,31 @@ Jeu exemple1 {
 			Tactique procheFirst
 		}
 		
-		/* On définie les obstacles -> il est sur une case deco */
+		Mobile m1 {
+			F 1
+			V  1
+			NumVague 1
+			In c21
+			Out c25
+			PVmax infini
+			Tactique procheFirst
+		}
+		
+		/* On définit les obstacles -> il est sur une case deco */
 		Obstacle o1 {
 			Campement c11
 			PVmax 0
 			Tactique faibleFirst
 		}
 		
-		/* On définie l'unique niveau du jeu */
+		/* On définit les obstacles -> il a une énergie infinie */
+		Obstacle o2 {
+			Campement c31
+			PVmax infini
+			Tactique faibleFirst
+		}
+		
+		/* On définit l'unique niveau du jeu */
 		Niveau niv facile {
 			DureePauses 1
 			Argent 0

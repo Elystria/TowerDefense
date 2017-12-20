@@ -1,7 +1,7 @@
 grammar xtext.TowerDefense with org.eclipse.xtext.common.Terminals
 
 generate towerDefense "http://www.TowerDefense.xtext"
-
+//les projectiles ne sont pas rattachés a d autres éléments :(
 Jeu:
 	'Jeu' name=ID '{'
 		parties+=Partie* 
